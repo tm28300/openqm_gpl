@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove chsize unused.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
  * END-HISTORY
@@ -40,11 +41,10 @@
 
 /* Simple substitutes */
 
-#define chsize(fd,bytes) ftruncate(fd,bytes)
 #define GetCurrentProcessId() getpid()
 #define stricmp(a,b) strcasecmp(a,b)
+#define chsize64(fd,bytes) ftruncate(fd,bytes)
 
-#define chsize64 chsize
 
 /* Functions in linuxlb.c */
 
