@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 25 Feb 20        Add CHANGE statement.
 * 17 Oct 07  2.6-5 0565 A line such as
 *                     123 * This is a comment,
 *                  would treat the trailing comma as an implicit
@@ -452,7 +453,7 @@ $define STACK.MARK 9999         ;* Marks start of sub-expression
 
    statements = "ABORT":@fm:"ABORTE":@fm:"ABORTM"
    statements := @fm:"BEGIN":@fm:"BREAK"
-   statements := @fm:"CALL":@fm:"CASE":@fm:"CHAIN"
+   statements := @fm:"CALL":@fm:"CASE":@fm:"CHANGE":@fm:"CHAIN"
    statements := @fm:"CLEAR":@fm:"CLEARCOMMON"
    statements := @fm:"CLEARDATA":@fm:"CLEARFILE":@fm:"CLEARINPUT"
    statements := @fm:"CLEARSELECT":@fm:"CLOSE":@fm:"CLOSESEQ":@fm:"CLOSE.SOCKET"
@@ -2147,6 +2148,7 @@ is.statement:
                  st.break,
                  st.call,
                  st.case,
+                 st.convert,                   ;* CHANGE
                  st.chain,
                  st.clear,
                  st.clearcommon,
@@ -6547,8 +6549,14 @@ st.continue.exit.common:
 
 *****************************************************************************
 * ST.CONVERT  -  CONVERT statement
+* ST.CHANGE   -  CHANGE statement
 
 st.convert:
+   if u.token.string = "CHANGE" then
+      opcode.byte.convert = OP.SCHANGE
+   end else
+      opcode.byte.convert = OP.CONVERT
+   end
    gosub exprf                  ;* Characters to replace
 
    if u.look.ahead.token.string # "TO" then goto err.to
@@ -6557,7 +6565,7 @@ st.convert:
    if u.look.ahead.token.string # "IN" then goto err.in
    gosub get.token             ;* Skip IN
    gosub simple.lvar.reference  ;* Variable to update
-   opcode.byte = OP.CONVERT ; gosub emit.simple
+   opcode.byte = opcode.byte.convert ; gosub emit.simple
 
    return
 

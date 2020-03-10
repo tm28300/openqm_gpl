@@ -37,9 +37,12 @@
 #include "qm.h"
 #include "header.h"
 
+Private STRING_CHUNK * change (STRING_CHUNK * src_hdr,
+  STRING_CHUNK * old_hdr, STRING_CHUNK * new_hdr, long int change_count,
+  long int skip_count);
 
 /* ======================================================================
-   op_change()  -  Change substrings                                      */
+   op_change()  -  Change substrings - function                           */
 
 void op_change()
 {
@@ -62,19 +65,162 @@ void op_change()
 
  long int skip_count;            /* Occurrences to skip before change */
  long int change_count;          /* Number of occurrences to change */
+ STRING_CHUNK * tgt_hdr;
+ STRING_CHUNK * src_hdr;
+ STRING_CHUNK * old_hdr;
+ STRING_CHUNK * new_hdr;
+ DESCRIPTOR * descr;
 
- STRING_CHUNK * new_str;         /* New substring */
+ /* Fetch start occurrence number */
+
+ descr = e_stack - 1;
+ GetInt(descr);
+ skip_count = descr->data.value;
+
+ /* Fetch count of occurrences to change */
+
+ descr = e_stack - 2;
+ GetInt(descr);
+ change_count = descr->data.value;
+
+ /* Find details of new substring */
+ 
+ descr = e_stack - 3;
+ k_get_string(descr);
+ new_hdr = descr->data.str.saddr;
+
+ /* Make old substring contiguous and find details */
+ 
+ descr = e_stack - 4;
+ k_get_string(descr);
+ descr->data.str.saddr = s_make_contiguous(descr->data.str.saddr, NULL);
+ old_hdr = descr->data.str.saddr;
+
+ /* Find source string */
+
+ descr = e_stack - 5;
+ k_get_string(descr);
+ src_hdr = descr->data.str.saddr;
+
+ /* Change string */
+
+ tgt_hdr = change (src_hdr, old_hdr, new_hdr, change_count, skip_count);
+
+ /* Remove parameters */
+
+ k_pop(1);
+ k_pop(1);
+ k_dismiss();       /* New substring */
+ k_dismiss();       /* Old substring */
+
+ if (tgt_hdr)
+  {
+   k_dismiss();       /* Source string */
+
+   InitDescr(e_stack, STRING);
+   (e_stack++)->data.str.saddr = tgt_hdr;
+  }
+ /* If not changed (tgt == NULL), leave source as result */
+}
+
+/* ======================================================================
+   op_schange()  -  Change substrings - statement                         */
+
+void op_schange()
+{
+ /* Stack:
+
+     |=============================|=============================|
+     |            BEFORE           |           AFTER             |
+     |=============================|=============================|
+ top |  String to modify           |                             |
+     |-----------------------------|-----------------------------| 
+     |  Characters to replace      |                             |
+     |-----------------------------|-----------------------------| 
+     |  Replacement characters     |                             |
+     |=============================|=============================|
+ */
+
+ STRING_CHUNK * tgt_hdr;
+ STRING_CHUNK * src_hdr;
+ STRING_CHUNK * old_hdr;
+ STRING_CHUNK * new_hdr;
+ DESCRIPTOR * descr;
+ DESCRIPTOR * tgt_descr;
+
+ /* Find reference to the source string original descriptor and
+    remember its location                                               */
+
+ descr = e_stack - 1;
+ tgt_descr = descr;
+ while (tgt_descr->type == ADDR)
+ {
+  tgt_descr = tgt_descr->data.d_addr;
+ }
+
+ k_get_string(descr);
+ src_hdr = descr->data.str.saddr;
+
+ /* Find details of new substring */
+ 
+ descr = e_stack - 2;
+ k_get_string(descr);
+ new_hdr = descr->data.str.saddr;
+
+ /* Make old substring contiguous and find details */
+ 
+ descr = e_stack - 3;
+ k_get_string(descr);
+ descr->data.str.saddr = s_make_contiguous(descr->data.str.saddr, NULL);
+ old_hdr = descr->data.str.saddr;
+
+ /* Change string */
+
+ tgt_hdr = change (src_hdr, old_hdr, new_hdr, -1, 1);
+
+ /* Remove parameters */
+
+ k_dismiss();       /* Old substring */
+ k_dismiss();       /* New substring */
+ k_dismiss();       /* Source string */
+
+ if (tgt_hdr)
+  {
+   /* Now save the result in the original data item */
+
+   k_release(tgt_descr);
+   InitDescr(tgt_descr, STRING);
+   tgt_descr->data.str.saddr = tgt_hdr;
+  }
+}
+
+/* ===================================================================
+   change()  -  Common path for op_change() and op_schange()           */
+
+Private STRING_CHUNK * change (STRING_CHUNK * src_hdr,
+  STRING_CHUNK * old_hdr, STRING_CHUNK * new_hdr, long int change_count,
+  long int skip_count)
+{
+ /* Stack:
+
+     |=============================|=============================|
+     |            BEFORE           |           AFTER             |
+     |=============================|=============================|
+ top |  New substring              |                             |
+     |-----------------------------|-----------------------------|
+     |  Old substring              |                             |
+     |-----------------------------|-----------------------------|
+     |  Source string              |                             |
+     |=============================|=============================|
+ */
+
  STRING_CHUNK * str;
 
- char * old_str;               /* old substring */
- short int old_len;              /* Length of old substring */
+ char * old_str;                   /* old substring */
+ short int old_len;                /* Length of old substring */
 
- STRING_CHUNK * src_hdr;         /* Source string chunk pointer */
+ STRING_CHUNK * result_hdr = NULL; /* Modified string chunk pointer */
 
- DESCRIPTOR result_descr;        /* Modified string */
-
- STRING_CHUNK * str_hdr;
- DESCRIPTOR * descr;
  short int n;
  char * p;
 
@@ -94,60 +240,24 @@ void op_change()
 
  nocase = (process.program.flags & HDR_NOCASE) != 0;
 
- /* Fetch start occurrence number */
-
- descr = e_stack - 1;
- GetInt(descr);
- skip_count = descr->data.value;
  if (skip_count < 1) skip_count = 1;
  skip_count--;
 
- /* Fetch count of occurrences to change */
-
- descr = e_stack - 2;
- GetInt(descr);
- change_count = descr->data.value;
-
- /* Make new substring contiguous and find details */
+ /* Find details of old substring */
  
- descr = e_stack - 3;
- k_get_string(descr);
- new_str = descr->data.str.saddr;
-
- /* Make old substring contiguous and find details */
- 
- descr = e_stack - 4;
- k_get_string(descr);
- descr->data.str.saddr = s_make_contiguous(descr->data.str.saddr, NULL);
- str_hdr = descr->data.str.saddr;
- if (str_hdr == NULL) /* Null old string - return source unchanged */
+ if (old_hdr == NULL) /* Null old string - return source unchanged */
   {
-   k_pop(1);
-   k_pop(1);
-   k_dismiss();          /* New substring */
-   k_dismiss();          /* Old substring */
-   goto exit_op_change;  /* Leave source as result */
+   return NULL;
   }
- old_str = str_hdr->data;
- old_len = (short int)(str_hdr->string_len);
+ old_str = old_hdr->data;
+ old_len = (short int)(old_hdr->string_len);
 
- /* Find source string */
-
- descr = e_stack - 5;
- k_get_string(descr);
- src_hdr = descr->data.str.saddr;
- if (src_hdr == NULL)
+ if (src_hdr == NULL) /* Null source string - return source unchanged */
   {
-   k_pop(1);
-   k_pop(1);
-   k_dismiss();          /* New substring */
-   k_dismiss();          /* Old substring */
-   goto exit_op_change;  /* Leave null source as result */
+   return NULL;
   }
 
- InitDescr(&result_descr, STRING);
- result_descr.data.str.saddr = NULL;
- ts_init(&result_descr.data.str.saddr, src_hdr->string_len);
+ ts_init(&result_hdr, src_hdr->string_len);
 
  /* Outer loop - Scan source string for initial character of substring */
 
@@ -212,7 +322,7 @@ void op_change()
 
        /* Insert replacement substring */
 
-       for(str = new_str; str != NULL; str = str->next)
+       for(str = new_hdr; str != NULL; str = str->next)
         {
          ts_copy(str->data, str->bytes);
         }
@@ -229,7 +339,7 @@ void op_change()
       {
        if (skip_count-- > 0) goto no_match;
 
-       for(str = new_str; str != NULL; str = str->next)
+       for(str = new_hdr; str != NULL; str = str->next)
         {
          ts_copy(str->data, str->bytes);
         }
@@ -262,17 +372,9 @@ copy_remainder:
     }
   }
 
- k_pop(1);
- k_pop(1);
- k_dismiss();  /* New substring */
- k_dismiss();  /* Old substring */
- k_dismiss();  /* Source string */
-
  ts_terminate();
- *(e_stack++) = result_descr;
 
-exit_op_change:
- return;
+ return result_hdr;
 }
 
 /* END-CODE */
