@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+*    Dec 19        Replace BP by GPL.BP directory name.
 * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
 * END-HISTORY
 *
@@ -30,8 +31,8 @@
 
 program revstamp
    openseq 'CSRC', 'revstamp.h' to in.f else abort 'Cannot open CSRC revstamp.h'
-   openseq 'BP', 'REVSTAMP.H' to out.f else
-      if status() then abort 'Cannot open BP REVSTAMP.H'
+   openseq 'GPL.BP', 'REVSTAMP.H' to out.f else
+      if status() then abort 'Cannot open GPL.BP REVSTAMP.H'
    end
 
    weofseq out.f

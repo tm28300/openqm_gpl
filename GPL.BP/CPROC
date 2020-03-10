@@ -19,6 +19,11 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+*    Dec 19        Add GPL.BP directory name for compile and execute REVSTAMP
+*                  routine, upcase in the name of insert files to compile in
+*                  Linux case sencitive system, add READU before WRITE stack
+*                  for use MUSTLOCK config option and add READ previous stack
+*                  when launch a new session.
 * 11 Oct 07  2.6-5 Added trap for very early abort.
 * 03 Oct 07  2.6-5 Use parse.pathname.tokens() when processing ACCOUNTS record.
 * 20 Aug 07  2.6-0 Added CMDSTACK parameter.
@@ -211,21 +216,21 @@ $catalog $CPROC
 $flags cproc
 $flags trusted
 
-$execute 'BASIC REVSTAMP'
-$execute 'RUN REVSTAMP'
-$include revstamp.h
+$execute 'BASIC GPL.BP REVSTAMP'
+$execute 'RUN GPL.BP REVSTAMP'
+$include REVSTAMP.H
 
-$include syscom.h
-$include header.h
-$include parser.h
-$include int$keys.h
-$include debug.h
+$include SYSCOM.H
+$include HEADER.H
+$include PARSER.H
+$include INT$KEYS.H
+$include DEBUG.H
 
-$include err.h
-$include keys.h
-$include keyin.h
-$include menu.h
-$include keycode.h
+$include ERR.H
+$include KEYS.H
+$include KEYIN.H
+$include MENU.H
+$include KEYCODE.H
 
 deffun errtext(err) calling '!errtext'
 
@@ -339,6 +344,7 @@ restart.cproc:
       if not(j) then goto abort.cproc
       i = ''
 
+      gosub read.stack
       gosub get.voc.parser.rec
 
       abort.code = 0
@@ -3354,6 +3360,7 @@ exit.actions:
                         create.file s directory on error null
                      end
                      openpath s to stk.f then
+                        readu dummy.s from stk.f, @logname then null
                         write command.stack to stk.f, @logname
                         close stk.f
                      end
@@ -3371,6 +3378,30 @@ exit.actions:
    end
 
    i = ospath("", os$flush.cache)
+
+   return
+
+read.stack:
+
+   if not(is.phantom) then
+* Restore command stack if the $COMMAND.STACK VOC record is present as
+* an X type record.
+
+       read voc.rec from voc,"$COMMAND.STACK" then
+           if voc.rec[1,1] = "X" then
+               if tty = 'console' then  ;* Windows console session
+                   read command.stack from voc,"$COMMAND.STACK" else null
+                   del command.stack<1>
+               end else
+                   s = initial.account.path:@ds:'stacks'
+                   openpath s to stk.f then
+                       read command.stack from stk.f, @logname then null
+                       close stk.f
+                   end
+               end
+           end
+       end
+   end
 
    return
 

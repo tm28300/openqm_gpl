@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 04 Jan 20        Add READU before each WRITE for use MUSTLOCK config option.
 * 09 Oct 07  2.6-5 Resequenced pathname checks to work around problem with
 *                  OS$FULLPATH.
 * 03 Oct 07  2.6-5 If creating account on the flash device holding the QMSYS
@@ -266,6 +267,7 @@ make.account:
             rec<3> = if upcase(s[1,1]) = 'P' then s<1>[1,2] else s[1,1]
          end
 
+         readu null from voc.f, id then null
          write rec to voc.f, id
       end
    repeat
@@ -274,6 +276,7 @@ make.account:
 
    * Set up $COMMAND,STACK VOC entry
 
+   readu null from voc.f, '$COMMAND.STACK' then null
    write 'X' to voc.f, '$COMMAND.STACK'
 
    * Create $HOLD
@@ -337,12 +340,14 @@ create.dir.file:
          stop sysmsg(6024, fn) ;* Unable to open dictionary part of xx
       end
 
+      readu null from dict.f, '@ID' then null
       write raise('Dý0ýý':fn:'ý10LýS') to dict.f, '@ID'
       close dict.f
 
       voc.rec<3> = os.name:'.DIC'
    end
 
+   readu null from voc.f, fn then null
    write voc.rec to voc.f, fn
 
    return
