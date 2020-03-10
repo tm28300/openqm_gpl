@@ -19,6 +19,8 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Use socklen_t instead of int or size_t type and remove
+ *                  _XOPEN_SOURCE_EXTENDED.
  * 18 Oct 07  2.6-5 Test in op_openskt() and op_srvrskt() for IP address was
  *                  inadequate.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
@@ -121,11 +123,7 @@ void op_accptskt()
  SOCKVAR * sockvar;
  DESCRIPTOR result_descr;
  SOCKVAR * sock;
-#ifdef _XOPEN_SOURCE_EXTENDED
- size_t n;
-#else
- int n;
-#endif
+ socklen_t n;
  struct sockaddr_in sinRemote;
  struct sockaddr_in sa;
 
@@ -541,11 +539,7 @@ void op_sktinfo()
  DESCRIPTOR result_descr;
  int key;
  int n;
-#ifdef _XOPEN_SOURCE_EXTENDED
  socklen_t n2;
-#else
- int n2;
-#endif
 
  InitDescr(&result_descr, INTEGER);
  result_descr.data.value = 0;

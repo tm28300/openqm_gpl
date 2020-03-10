@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 12 Dec 19        Correct object name in "Pcode is corrupt" message.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 18 Jun 07  2.5-7 Added -TERM option.
  * 24 Jan 07  2.4-20 Added -F option.
@@ -550,7 +551,7 @@ Private bool load_pcode(char * pname, u_char ** ptr)
     }
    else if (obj->magic != HDR_MAGIC)
     {
-     fprintf(stderr, "Pcode is corrupt (%s)\n", u_pname);
+     fprintf(stderr, "Pcode is corrupt (%s)\n", obj->ext_hdr.prog.program_name);
      return FALSE;
     }
 

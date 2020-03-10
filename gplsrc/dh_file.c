@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove fptr unused variable in dh_get_group_lock function.
  * 01 Jul 07  2.5-7 Extensive changes for PDA merge.
  * 21 Nov 06  2.4-17 Revised interface to dio_open() and removed dh_open_path().
  * 04 Apr 06  2.4-1 Added restart_tx_ref() to handle situations where the tx_ref
@@ -633,12 +634,10 @@ short int dh_get_group_lock(
  short int free_cell;
  static short int pause_ct = 5;
  bool retry = FALSE;
- FILE_ENTRY * fptr;
  int steps = 0;
 
  file_id = dh_file->file_id;
  idx = GLockHash(file_id, group);
- fptr = FPtr(file_id);
 
 again:
  scan_idx = idx;

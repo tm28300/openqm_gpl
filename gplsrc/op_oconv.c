@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove unused exit_time_conversion_ok symbol in time_conversion function.
  * 11 May 13        Correct time_conversion from blank input string.
  * 04 Oct 07  2.6-5 0564 Julian date conversions could have stray characters
  *                  at the end.
@@ -2556,7 +2557,6 @@ Private long int time_conversion(char * p)
    else strcat(s, (am)?"am":"pm");
   }
 
-exit_time_conversion_ok:
  k_pop(1);
  k_put_c_string(s, e_stack);
  e_stack++;

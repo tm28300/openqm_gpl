@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Initialise str variable for SH and SH1.
  * 25 Oct 07  2.6-5 op_config() now sets STATUS().
  * 05 Oct 07  2.6-5 Added PDUMP configuration parameter.
  * 20 Aug 07  2.6-0 Added CMDSTACK parameter.
@@ -308,12 +309,14 @@ void op_pconfig()
  else if (!strcmp(param, "SH"))
   {
    k_get_string(descr);
+   str = descr->data.str.saddr;
    if (str->string_len > MAX_SH_CMD_LEN) goto exit_op_pconfig;
    k_get_c_string(descr, pcfg.sh, MAX_SH_CMD_LEN);
   }
  else if (!strcmp(param, "SH1"))
   {
    k_get_string(descr);
+   str = descr->data.str.saddr;
    if (str->string_len > MAX_SH_CMD_LEN) goto exit_op_pconfig;
    k_get_c_string(descr, pcfg.sh1, MAX_SH_CMD_LEN);
   }

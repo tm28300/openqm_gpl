@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove baud_rate and parity unused variables in op_cnctport function.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 28 Jun 07  2.5-7 Extracted from kernel.c
  * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
@@ -615,9 +616,6 @@ void op_phantom()
  cpid = fork();
  if (cpid == 0)    /* Child process */
   {
-//0387   close(0);
-//0387   close(1);
-//0387   close(2);
    for (i = 3; i < 1024; i++) close(i);  /* 0401 */
 
    daemon(1,1);
@@ -688,8 +686,8 @@ void op_cnctport()
  DESCRIPTOR * descr;
  int stop_bits;
  int bits_per_byte;
- int parity;
- int baud_rate;
+// int parity;
+// int baud_rate;
  char portname[20+1];
 
  process.status = ER_PARAMS;
@@ -704,13 +702,13 @@ void op_cnctport()
  bits_per_byte = descr->data.value;
  if ((bits_per_byte < 7) || (bits_per_byte > 8)) goto exit_op_cnctport;
 
- descr = e_stack - 3;
- GetInt(descr);
- parity = descr->data.value;
+// descr = e_stack - 3;
+// GetInt(descr);
+// parity = descr->data.value;
 
- descr = e_stack - 4;
- GetInt(descr);
- baud_rate = descr->data.value;
+// descr = e_stack - 4;
+// GetInt(descr);
+// baud_rate = descr->data.value;
 
  descr = e_stack - 5;
  if (k_get_c_string(descr, portname, 20) < 1)

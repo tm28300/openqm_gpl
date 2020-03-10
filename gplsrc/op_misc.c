@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Initialise value before get umask value in op_umask function.
  * 08 Nov 07  2.6-5 Removed op_exch(), relinking to indentical op_swap().
  * 03 Sep 07  2.6-1 0560 In itype(), handle difference between I-type and C-type
  *                  when dismissing object code copy for word alignment.
@@ -1606,6 +1607,7 @@ void op_umask()
 
  if (descr->data.value < 0)    /* Query only */
   {
+   n = 0;
    descr->data.value = umask(n) & 0777;
    (void)umask(descr->data.value);
   }

@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove arg_ct unused variable in find_undefined_name_handler function.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 19 Jun 07  2.5-7 k_call() now has additional argument for stack adjustment.
  * 28 Feb 07  2.5-0 Added read-only public variable handling.
@@ -459,7 +460,6 @@ Private bool find_undefined_name_handler(short int mode, OBJDATA * objdata, char
  OBJDATA * nextobj;
  OBJECT_NAME_MAP * p;
  short int key;
- u_char arg_ct;
 
  scanobj = objdata;
  nextobj = objdata->inherits;
@@ -472,12 +472,10 @@ Private bool find_undefined_name_handler(short int mode, OBJDATA * objdata, char
          if (mode == 0)    /* PUT / Method subroutine */
           {
            key = SetKey(p);
-           arg_ct = p->set_arg_ct;
           }
          else              /* GET / Method function */
           {
            key = GetKey(p);
-           arg_ct = p->get_arg_ct;
           }
 
          if (key != 0)   /* Create OBJCODE reference */

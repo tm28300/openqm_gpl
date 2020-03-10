@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Correct int type in shmat return value.
  * 21 Mar 07  2.5-1 Set pid of daemon from here as use of daemon() on startup
  *                  means parent doesn't have this information.
  * 19 Jan 07  2.4-19 Don't hold short code semaphore for entire table scan when
@@ -71,7 +72,7 @@ int main()
  /* Attach the shared memory segment */
 
  if (((shmid = shmget(QM_SHM_KEY, 0, 0666)) == -1)
-    || (((int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0))) == -1))
+    || (((long int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0))) == -1))
   {
    exit(1);
   }

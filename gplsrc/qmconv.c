@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove status variable not used in convert_file function.
  * 24 May 06  2.4-5 0491 AK used_bytes field was being converted as a long int.
  * 17 Mar 06  2.3-8 Convert record count.
  * 20 Sep 05  2.2-11 Use static buffer to minimise stack space.
@@ -196,7 +197,6 @@ usage:
 void convert_file(fn)
    char * fn;
 {
- int status;
  char filename[MAX_PATHNAME_LEN+1];
 
 
@@ -207,13 +207,13 @@ void convert_file(fn)
   {
    if (file_found) printf("\n\n");
    file_found = TRUE;
-   status = process_file(filename);
+   process_file(filename);
   }
  else if (is_object_file(filename))
   {
    if (file_found) printf("\n\n");
    file_found = TRUE;
-   status = process_object_file(filename);
+   process_object_file(filename);
   }
 }
 

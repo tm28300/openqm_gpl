@@ -65,50 +65,50 @@
    #define DLLEntry
 #endif
 
-DLLEntry void QMCall(char * subrname, short int argc, ...);
-DLLEntry char * QMChange(char * src, char * old_string, char * new_string, int occurrences, int start);
+DLLEntry void QMCall(const char * subrname, short int argc, ...);
+DLLEntry char * QMChange(const char * src, const char * old_string, const char * new_string, int occurrences, int start);
 DLLEntry void QMClearSelect(int listno);
 DLLEntry void QMClose(int fno);
-DLLEntry int QMConnect(char * host, int port, char * username, char * password, char * account);
+DLLEntry int QMConnect(const char * host, int port, const char * username, const char * password, const char * account);
 DLLEntry int QMConnected(void);
-DLLEntry int QMConnectLocal(char * account);
-DLLEntry int QMDcount(char * src, char * delim_str);
-DLLEntry char * QMDel(char * src, int fno, int vno, int svno);
-DLLEntry void QMDelete(int fno, char * id);
+DLLEntry int QMConnectLocal(const char * account);
+DLLEntry int QMDcount(char * src, const char * delim_str);
+DLLEntry char * QMDel(const char * src, int fno, int vno, int svno);
+DLLEntry void QMDelete(int fno, const char * id);
 DLLEntry void QMDeleteu(int fno, char * id);
 DLLEntry void QMDisconnect(void);
 DLLEntry void QMDisconnectAll(void);
 DLLEntry void QMEndCommand(void);
 DLLEntry char * QMError(void);
-DLLEntry char * QMExecute(char * cmnd, int * err);
-DLLEntry char * QMExtract(char * src, int fno, int vno, int svno);
-DLLEntry char * QMField(char * src, char * delim, int first, int occurrences);
+DLLEntry char * QMExecute(const char * cmnd, int * err);
+DLLEntry char * QMExtract(const char * src, int fno, int vno, int svno);
+DLLEntry char * QMField(const char * src, const char * delim, int first, int occurrences);
 DLLEntry void QMFree(void * p);
 DLLEntry int QMGetSession(void);
-DLLEntry char * QMIns(char * src, int fno, int vno, int svno, char * new_string);
-DLLEntry int QMLocate(char * item, char * src, int fno, int vno, int svno, int * pos, char * order);
+DLLEntry char * QMIns(const char * src, int fno, int vno, int svno, const char * new_string);
+DLLEntry int QMLocate(const char * item, const char * src, int fno, int vno, int svno, int * pos, const char * order);
 DLLEntry void QMMarkMapping(int fno, int state);
-DLLEntry int QMMatch(char * str, char * pattern);
-DLLEntry char * QMMatchfield(char * str, char * pattern, int component);
-DLLEntry int QMOpen(char * filename);
-DLLEntry char * QMRead(int fno, char * id, int * err);
-DLLEntry char * QMReadl(int fno, char * id, int wait, int * err);
+DLLEntry int QMMatch(const char * str, const char * pattern);
+DLLEntry char * QMMatchfield(const char * str, const char * pattern, int component);
+DLLEntry int QMOpen(const char * filename);
+DLLEntry char * QMRead(int fno, const char * id, int * err);
+DLLEntry char * QMReadl(int fno, const char * id, int wait, int * err);
 DLLEntry char * QMReadList(int listno);
 DLLEntry char * QMReadNext(short int listno);
-DLLEntry char * QMReadu(int fno, char * id, int wait, int * err);
-DLLEntry void QMRelease(int fno, char * id);
-DLLEntry char * QMReplace(char * src, int fno, int vno, int svno, char * new_string);
+DLLEntry char * QMReadu(int fno, const char * id, int wait, int * err);
+DLLEntry void QMRelease(int fno, const char * id);
+DLLEntry char * QMReplace(const char * src, int fno, int vno, int svno, const char * new_string);
 DLLEntry char * QMRespond(char * response, int * err);
 DLLEntry void QMSelect(int fno, int listno);
-DLLEntry void QMSelectIndex(int fno, char * indexname, char * indexvalue, int listno);
-DLLEntry char * QMSelectLeft(int fno, char * indexname, int listno);
-DLLEntry char * QMSelectRight(int fno, char * indexname, int listno);
-DLLEntry void QMSetLeft(int fno, char * indexname);
-DLLEntry void QMSetRight(int fno, char * indexname);
+DLLEntry void QMSelectIndex(int fno, const char * indexname, const char * indexvalue, int listno);
+DLLEntry char * QMSelectLeft(int fno, const char * indexname, int listno);
+DLLEntry char * QMSelectRight(int fno, const char * indexname, int listno);
+DLLEntry void QMSetLeft(int fno, const char * indexname);
+DLLEntry void QMSetRight(int fno, const char * indexname);
 DLLEntry int QMSetSession(int session);
 DLLEntry int QMStatus(void);
-DLLEntry void QMWrite(int fno, char * id, char * data);
-DLLEntry void QMWriteu(int fno, char * id, char * data);
+DLLEntry void QMWrite(int fno, const char * id, char * data);
+DLLEntry void QMWriteu(int fno, const char * id, const char * data);
 
 
 /* Server error status values */

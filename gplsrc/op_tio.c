@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove function unused variable in process_client_input.
  * 05 Nov 07  2.6-5 0566 Applied casts to handle keyin() correctly.
  * 31 Aug 07  2.6-1 Set tio.term_type for PDA.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
@@ -3977,7 +3978,6 @@ Private void process_client_input()
  long int packet_bytes;
  short int chunk_bytes;
  long int n;
- short int function;
 
  /* Send any output */
 
@@ -4038,10 +4038,8 @@ Private void process_client_input()
 
 #ifdef BIG_ENDIAN_SYSTEM
  packet_bytes = swap4(in_packet.packet_len);
- function = swap2(in_packet.function);
 #else
  packet_bytes = in_packet.packet_len;
- function = in_packet.function;
 #endif
 
 

@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 04 Jan 20        Remove _XOPEN_SOURCE and _XOPEN_CRYPT variables in conflict with sys/types.h definition.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 30 May 06  2.4-5 0493 UpperCase() macro should cast its argument to u_char,
  *                  not unsigned int. Otherwise it fails with signed char source
@@ -51,8 +52,6 @@
    #define FALLBACK
    #define HOT_SPOT_MONITOR
 
-   #define _XOPEN_SOURCE
-   #define _XOPEN_CRYPT
    #include <unistd.h>
    #include <endian.h>
    #if __BYTE_ORDER == __BIG_ENDIAN
@@ -142,8 +141,13 @@
    #define TRUE 1
 
 
+#ifdef __GNUC__
+   typedef __INT64_TYPE__ int64;
+   typedef __UINT64_TYPE__ u_int64;
+#else
    typedef long long int64;
    typedef unsigned long long u_int64;
+#endif
 
 /* ======================================================================
    Byte ordering macros                                                   */

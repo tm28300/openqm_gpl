@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove op_flags unused variable in op_createsq function and check_lf in op_readseq function.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 21 Nov 06  2.4-17 Revised interface to dio_open().
  * 29 Jun 06  2.4-5 Added lock_beep() call.
@@ -96,9 +97,7 @@ void op_createsq()
  FILE_VAR * fvar;
  SQ_FILE * sq_file;
  OSFILE fu;
- unsigned short int op_flags;
 
- op_flags = process.op_flags;
  process.op_flags = 0;
 
  process.status = 0;
@@ -1049,7 +1048,6 @@ void op_readseq()
  int64 block;
  short int offset;
  short int bytes;
- bool check_lf;
  char * p;
  unsigned short int op_flags;
  short int n;
@@ -1174,7 +1172,6 @@ void op_readseq()
   {
    /* Copy data until we find EOF or a newline */
 
-   check_lf = FALSE;
    do {
        block = sq_file->posn & ~SEQ_BUFFER_MASK;
        if (block != sq_file->base)

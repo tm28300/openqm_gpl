@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove fvar unused variable in op_close function and fptr in open_file.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 07 Dec 06  2.4-17 Added clearance of TRANS file cache to flush_dh_cache().
  * 27 Jun 06  2.4-5 Maintain user/file map table.
@@ -91,14 +92,12 @@ void op_close()
  */
 
  DESCRIPTOR * descr;
- FILE_VAR * fvar;
 
  process.op_flags = 0;    /* Currently not used - ON ERROR never happens */
 
  descr = e_stack - 1;
  while(descr->type == ADDR) descr = descr->data.d_addr;
  k_get_file(descr);
- fvar = descr->data.fvar;
 
  k_release(descr);                /* This will close the file */
  k_pop(1);
@@ -553,7 +552,6 @@ Private void open_file(bool map_name)  /* Map file name via VOC entry */
  FILE_VAR * fvar = NULL;
  FILE_VAR * cached_fvar;
  DH_FILE * dh_file;
- FILE_ENTRY * fptr;
  unsigned short int op_flags;
  char s[MAX_PATHNAME_LEN+1];
  short int i;
@@ -692,7 +690,6 @@ Private void open_file(bool map_name)  /* Map file name via VOC entry */
      /* File is available via the DH file cache */
 
      dh_file = dh_cache[i].dh_file;
-     fptr = FPtr(dh_file->file_id);
      dh_file->open_count++;
      process.inmat = dh_modulus(dh_file); /* Set INMAT() to current modulus */
      fvar->type = DYNAMIC_FILE;

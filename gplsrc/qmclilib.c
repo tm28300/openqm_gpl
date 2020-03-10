@@ -19,6 +19,19 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 24 Feb 20        Remove match_template function and create new
+ *                  match_template.c file used in qm and qmclilib.
+ * 23 Feb 20        Correct buffer overflow in Abort function and check
+ *                  allocate memory in all functions.
+ *                  Add const qualifier for char* function parameter.
+ * 04 Jan 20        In QMLocalConnect check sysdir initialisation and if qm
+ *                  executable exist and can by executed by the current user.
+ *                  In QMReplace accept the NULL address in source string.
+ *                  Remove print section name in initialisation.
+ *    Dec 19        Modify all types to make a compile for 64 bits processor.
+ * 11 Dec 19        Remove status unused variable in QMReadList function, add
+ *                  call to Abort in context_error function and correct ! and
+ *                  == precedence in condition.
  * 19 Oct 07  2.6-5 Method used to recognise IP address in qmconnect() was
  *                  inadequate.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
@@ -154,7 +167,7 @@
 #include <sys/stat.h>
 
 #define Public
-#include <qmdefs.h>
+#include <qm.h>
 #include <qmnet.h>
 
 void set_default_character_maps(void);
@@ -173,23 +186,22 @@ void set_default_character_maps(void);
 #include <revstamp.h>
 #include <qmclient.h>
 
-
 /* Network data */
-Private bool OpenSocket(char * host, short int port);
+Private bool OpenSocket(const char * host, int16 port);
 Private bool CloseSocket(void);
 Private bool read_packet(void);
-Private bool write_packet(int type, char * data, long int bytes);
-Private void net_error(char * prefix, int err);
-Private void debug(unsigned char * p, int n);
-Private void initialise_client(void);
+Private bool write_packet(int32 type, const char * data, int32 bytes);
+Private void net_error(const char * prefix, int32 err);
+Private void debug(unsigned char * p, int32 n);
+Private bool initialise_client(void);
 Private bool FindFreeSession(void);
 Private void disconnect(void);
 
 
 typedef struct ARGDATA ARGDATA;
 struct ARGDATA {
-                short int argno;
-                long int arglen ALIGN2;
+                int16 argno;
+                int32 arglen ALIGN2;
                 char text[1];
                };
 
@@ -212,7 +224,7 @@ struct INBUFF
                  char reply[1];
                 } execute;
          struct {                  /* QMOpen */
-                 short int fno;
+                 int16 fno;
                 } open;
          struct {                  /* QMRead, QMReadl, QMReadu */
                  char rec[1];
@@ -230,49 +242,46 @@ struct INBUFF
  } ALIGN2;
 
 Private INBUFF * buff = NULL;
-Private long int buff_size;         /* Allocated size of buffer */
-Private long int buff_bytes;        /* Size of received packet */
+Private int32 buff_size;         /* Allocated size of buffer */
+Private int32 buff_bytes;        /* Size of received packet */
 Private FILE * srvr_debug = NULL;
+
+// QMCall
+#define MAX_ARGS 20
 
 #define MAX_SESSIONS 4
 Private struct
 {
  bool is_local;
- short int context;
+ int16 context;
    #define CX_DISCONNECTED  0  /* No session active */
    #define CX_CONNECTED     1  /* Session active but not... */
    #define CX_EXECUTING     2  /* ...executing command (implies connected) */
  char qmerror[512+1];
- short int server_error;
- long int qm_status;
+ int16 server_error;
+ int32 qm_status;
  SOCKET sock;
- int RxPipe[2];
- int TxPipe[2];
- int pid;                      /* 0421 Pid of child process */
+ int32 RxPipe[2];
+ int32 TxPipe[2];
+ int32 pid;                      /* 0421 Pid of child process */
 } session[MAX_SESSIONS];
-Private short int session_idx = 0;
-
-/* Matching data */
-Private char * component_start;
-Private char * component_end;
+Private int16 session_idx = 0;
 
 /* Internally used routines */
 void DLLEntry QMDisconnect(void);
 void DLLEntry QMEndCommand(void);
 
 /* Internal functions */
-Private char * SelectLeftRight(short int fno, char * index_name, short int listno, short int mode);
-Private void SetLeftRight(short int fno, char * index_name, short int mode);
-Private bool context_error(short int expected);
-Private void delete_record(short int mode, int fno, char * id);
-Private char * read_record(int fno, char * id, int * err, int mode);
-Private void write_record(short int mode, short int fno, char * id, char * data);
+Private char * SelectLeftRight(int16 fno, const char * index_name, int16 listno, int16 mode);
+Private void SetLeftRight(int16 fno, const char * index_name, int16 mode);
+Private bool context_error(int16 expected);
+Private void delete_record(int16 mode, int32 fno, const char * id);
+Private char * read_record(int32 fno, const char * id, int32 * err, int32 mode);
+Private void write_record(int16 mode, int16 fno, const char * id, const char * data);
 Private bool GetResponse(void);
-Private void Abort(char * msg, bool use_response);
-Private char * memstr(char * str, char * substr, int str_len, int substr_len);
-Private bool match_template(char * string, char * template, short int component,
-                    short int return_component);
-Private bool message_pair(int type, char * data, long int bytes);
+Private void Abort(const char * msg, bool use_response);
+Private char * memstr(const char * str, const char * substr, int32 str_len, int32 substr_len);
+Private bool message_pair(int32 type, const char * data, int32 bytes);
 Private char * NullString(void);
 Private char * sysdir(void);
 
@@ -283,21 +292,19 @@ Private char * sysdir(void);
 /* ======================================================================
    QMCall()  - Call catalogued subroutine                                 */
 
-void DLLEntry QMCall(char * subrname, short int argc, ...)
+void DLLEntry QMCall(const char * subrname, int16 argc, ...)
 {
  va_list ap;
- short int i;
+ int16 i;
  char * arg;
- int subrname_len;
- long int arg_len;
- long int bytes;     /* Total length of outgoing packet */
- long int n;
+ int32 subrname_len;
+ int32 arg_len;
+ int32 bytes;     /* Total length of outgoing packet */
+ int32 n;
  char * p;
  INBUFF * q;
  struct ARGDATA * argptr;
- int offset;
-
-#define MAX_ARGS 20
+ int32 offset;
 
  if (context_error(CX_CONNECTED)) return;
 
@@ -345,13 +352,13 @@ void DLLEntry QMCall(char * subrname, short int argc, ...)
 
  p = (char *)buff;
 
- *((short int *)p) = ShortInt(subrname_len);    /* Subrname length */
+ *((int16 *)p) = ShortInt(subrname_len);    /* Subrname length */
  p += 2;
 
  memcpy(p, subrname, subrname_len);   /* Subrname */
  p += (subrname_len + 1) & ~1;
  
- *((short int *)p) = ShortInt(argc);            /* Arg count */
+ *((int16 *)p) = ShortInt(argc);            /* Arg count */
  p += 2;
 
  va_start(ap, argc);
@@ -359,7 +366,7 @@ void DLLEntry QMCall(char * subrname, short int argc, ...)
   {
    arg = va_arg(ap, char *);
    arg_len = (arg == NULL)?0:strlen(arg);
-   *((long int *)p) = LongInt(arg_len);        /* Arg length */
+   *((int32 *)p) = LongInt(arg_len);        /* Arg length */
    p += 4;
    if (arg_len) memcpy(p, arg, arg_len);           /* Arg text */
    p += (arg_len + 1) & ~1;
@@ -416,25 +423,28 @@ err:
    QMChange()  -  Change substrings                                       */
 
 char * DLLEntry QMChange(src, old, new, occurrences, start)
-   char * src;
-   char * old;
-   char * new;
-   int occurrences;
-   int start;
+   const char * src;
+   const char * old;
+   const char * new;
+   int32 occurrences;
+   int32 start;
 {
- int src_len;
- int old_len;
- int new_len;
- long int bytes;         /* Remaining bytes counter */
+ int32 src_len;
+ int32 old_len;
+ int32 new_len;
+ int32 bytes;         /* Remaining bytes counter */
  char * start_pos;
  char * new_str;
- long int changes;
- char * pos;
+ int32 changes;
+ const char * pos;
  char * p;
  char * q;
- long int n;
+ int32 n;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  src_len = strlen(src);
  old_len = strlen(old);
@@ -442,8 +452,7 @@ char * DLLEntry QMChange(src, old, new, occurrences, start)
 
  if (src_len == 0)
   {
-   new_str = NullString();
-   return new_str;
+   return NullString();
   }
 
  if (old_len == 0) goto return_unchanged;
@@ -480,6 +489,11 @@ char * DLLEntry QMChange(src, old, new, occurrences, start)
  /* Now make the changes */
 
  new_str = (char *)malloc(src_len + changes * (new_len - old_len) + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMChange", FALSE);
+   return NULL;
+  }
 
  q = new_str;
  pos = src;
@@ -526,6 +540,11 @@ char * DLLEntry QMChange(src, old, new, occurrences, start)
 
 return_unchanged:
  new_str = (char *)malloc(src_len + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMChange", FALSE);
+   return NULL;
+  }
  strcpy(new_str, src);
  return new_str;
 }
@@ -534,10 +553,10 @@ return_unchanged:
    QMClearSelect()  - Clear select list                                   */
 
 void DLLEntry QMClearSelect(listno)
-   int listno;
+   int32 listno;
 {
  struct {
-         short int listno;
+         int16 listno;
         } ALIGN2 packet;
 
 
@@ -565,10 +584,10 @@ exit_qmclearselect:
    QMClose()  -  Close a file                                             */
 
 void DLLEntry QMClose(fno)
-   int fno;
+   int32 fno;
 {
  struct {
-         short int fno;
+         int16 fno;
         } ALIGN2 packet;
 
 
@@ -595,19 +614,23 @@ exit_qmclose:
 /* ======================================================================
    QMConnect()  -  Open connection to server.                             */
 
-int DLLEntry QMConnect(host, port, username, password, account)
-   char * host;
-   int port;
-   char * username;
-   char * password;
-   char * account;
+int32 DLLEntry QMConnect(host, port, username, password, account)
+   const char * host;
+   int32 port;
+   const char * username;
+   const char * password;
+   const char * account;
 {
- int status = FALSE;
+ int32 status = FALSE;
  char login_data[2 + MAX_USERNAME_LEN + 2 + MAX_USERNAME_LEN];
- int n;
+ int32 n;
  char * p;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   strcpy(session[session_idx].qmerror, "Error in initialise_client");
+   goto exit_qmconnect;
+  }
 
  if (!FindFreeSession()) goto exit_qmconnect;
  ClearError;
@@ -631,7 +654,7 @@ int DLLEntry QMConnect(host, port, username, password, account)
    goto exit_qmconnect;
   }
   
- *((short int *)p) = ShortInt(n);            /* User name len */
+ *((int16 *)p) = ShortInt(n);            /* User name len */
  p += 2;
 
  memcpy(p, (char *)username, n);   /* User name */
@@ -645,7 +668,7 @@ int DLLEntry QMConnect(host, port, username, password, account)
    goto exit_qmconnect;
   }
 
- *((short int *)p) = ShortInt(n);            /* Password len */
+ *((int16 *)p) = ShortInt(n);            /* Password len */
  p += 2;
 
  memcpy(p, (char *)password, n);   /* Password */
@@ -698,7 +721,7 @@ exit_qmconnect:
 /* ======================================================================
    QMConnected()  -  Are we connected?                                    */
 
-int DLLEntry QMConnected()
+int32 DLLEntry QMConnected()
 {
  ClearError;
 
@@ -708,19 +731,27 @@ int DLLEntry QMConnected()
 /* ======================================================================
    QMConnectLocal()  -  Open connection to local system as current user   */
 
-int DLLEntry QMConnectLocal(account)
-   char * account;
+int32 DLLEntry QMConnectLocal(account)
+   const char * account;
 {
- int status = FALSE;
+ int32 status = FALSE;
 
 
- int cpid;
+ int32 cpid;
  char option[20];
  char path[MAX_PATHNAME_LEN+1];
 
- initialise_client();
+ if (!initialise_client())
+  {
+   Abort("Error in initialise_client", FALSE);
+   return FALSE;
+  }
 
- if (!FindFreeSession()) goto exit_qmconnect_local;
+ if (!FindFreeSession())
+  {
+   Abort("Can't find session", FALSE);
+   return FALSE;
+  }
  ClearError;
  session[session_idx].is_local = TRUE;
 
@@ -733,12 +764,25 @@ int DLLEntry QMConnectLocal(account)
    goto exit_qmconnect_local;
   }
 
+ /* Check executable */
+ char* sysdir_path = sysdir();
+ if (sysdir_path == NULL)
+ {
+   /* The qmerror variable is set by the sysdir function */
+   goto exit_qmconnect_local;
+ }
+ sprintf(path, "%s/bin/qm", sysdir());
+ if (access (path, X_OK))
+ {
+   sprintf(session[session_idx].qmerror, "Error can't execute %s", path);
+   goto exit_qmconnect_local;
+ }
+
  /* Launch QM process */
 
  cpid = fork();
  if (cpid == 0)    /* Child process */
   {
-   sprintf(path, "%s/bin/qm", sysdir());
    sprintf(option, "-C%d!%d", session[session_idx].RxPipe[1], session[session_idx].TxPipe[0]);
    execl(path, path, "-Q", option, NULL); 
   }
@@ -801,16 +845,19 @@ exit_qmconnect_local:
 /* ======================================================================
    QMDcount()  -  Count fields, values or subvalues                       */
 
-int DLLEntry QMDcount(src, delim_str)
-   char * src;
-   char * delim_str;
+int32 DLLEntry QMDcount(src, delim_str)
+   const char * src;
+   const char * delim_str;
 {
- long int src_len;
+ int32 src_len;
  char * p;
- long int ct = 0;
+ int32 ct = 0;
  char delim;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return 0;
+  }
 
  if (strlen(delim_str) != 0)
   {
@@ -855,21 +902,24 @@ void DLLEntry QMDebug(mode)
    QMDel()  -  Delete field, value or subvalue                            */
 
 char * DLLEntry QMDel(src, fno, vno, svno)
-   char * src;
-   int fno;
-   int vno;
-   int svno;
+   const char * src;
+   int32 fno;
+   int32 vno;
+   int32 svno;
 {
- long int src_len;
- char * pos;             /* Rolling source pointer */
- long int bytes;         /* Remaining bytes counter */
- long int new_len;
+ int32 src_len;
+ const char * pos;             /* Rolling source pointer */
+ int32 bytes;         /* Remaining bytes counter */
+ int32 new_len;
  char * new_str;
  char * p;
- short int i;
- long int n;
+ int16 i;
+ int32 n;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  src_len = strlen(src);
  if (src_len == 0) goto null_result;   /* Deleting from null string */
@@ -978,6 +1028,11 @@ done:
 
  new_len = src_len - bytes;
  new_str = malloc(new_len + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMDel", FALSE);
+   return NULL;
+  }
  p = new_str;
 
  n = pos - src;                /* Length of leading substring */
@@ -1002,6 +1057,11 @@ null_result:
 
 unchanged_result:
  new_str = malloc(src_len + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMDel", FALSE);
+   return NULL;
+  }
  strcpy(new_str, src);
  return new_str;
 }
@@ -1010,8 +1070,8 @@ unchanged_result:
    QMDelete()  -  Delete record                                           */
 
 void DLLEntry QMDelete(fno, id)
-   int fno;
-   char * id;
+   int32 fno;
+   const char * id;
 {
  delete_record(SrvrDelete, fno, id);
 }
@@ -1020,8 +1080,8 @@ void DLLEntry QMDelete(fno, id)
    QMDeleteu()  -  Delete record, retaining lock                          */
 
 void DLLEntry QMDeleteu(fno, id)
-   int fno;
-   char * id;
+   int32 fno;
+   const char * id;
 {
  delete_record(SrvrDeleteu, fno, id);
 }
@@ -1042,7 +1102,7 @@ void DLLEntry QMDisconnect()
 
 void DLLEntry QMDisconnectAll()
 {
- short int i;
+ int16 i;
 
  for (i = 0; i < MAX_SESSIONS; i++)
   {
@@ -1076,10 +1136,10 @@ exit_qmendcommand:
    QMEnterPackage()  -  Enter a licensed package                          */
 
 bool DLLEntry QMEnterPackage(name)
-   char *  name;
+   const char *  name;
 {
  bool status = FALSE;
- int name_len;
+ int32 name_len;
 
  if (context_error(CX_CONNECTED)) goto exit_EnterPackage;
 
@@ -1121,10 +1181,10 @@ exit_EnterPackage:
    QMExitPackage()  -  Exit from a licensed package                       */
 
 bool DLLEntry QMExitPackage(name)
-   char * name;
+   const char * name;
 {
  bool status = FALSE;
- int name_len;
+ int32 name_len;
 
  if (context_error(CX_CONNECTED)) goto exit_ExitPackage;
 
@@ -1174,10 +1234,10 @@ char * DLLEntry QMError()
    QMExecute()  -  Execute a command                                      */
 
 char * DLLEntry QMExecute(cmnd, err)
-   char * cmnd;
-   int * err;
+   const char * cmnd;
+   int32 * err;
 {
- long int reply_len = 0;
+ int32 reply_len = 0;
  char * reply;
 
  if (context_error(CX_CONNECTED)) goto exit_qmexecute;
@@ -1204,6 +1264,11 @@ char * DLLEntry QMExecute(cmnd, err)
 
 exit_qmexecute:
  reply = malloc(reply_len + 1);
+ if (reply == NULL)
+  {
+   Abort("Unable to allocate return string memory in QMExecute", FALSE);
+   return NULL;
+  }
  strcpy(reply, buff->data.execute.reply);
  *err = session[session_idx].server_error;
 
@@ -1214,16 +1279,19 @@ exit_qmexecute:
    QMExtract()  -  Extract field, value or subvalue                       */
 
 char * DLLEntry QMExtract(src, fno, vno, svno)
-   char * src;
-   int fno;
-   int vno;
-   int svno;
+   const char * src;
+   int32 fno;
+   int32 vno;
+   int32 svno;
 {
- long int src_len;
+ int32 src_len;
  char * p;
  char * result;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  src_len = strlen(src);
  if (src_len == 0) goto null_result;   /* Extracting from null string */
@@ -1281,6 +1349,11 @@ char * DLLEntry QMExtract(src, fno, vno, svno)
 
 done:
  result = malloc(src_len + 1);
+ if (result == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMExtract", FALSE);
+   return NULL;
+  }
  memcpy(result, src, src_len);
  result[src_len] = '\0';
  return result;
@@ -1293,22 +1366,25 @@ null_result:
    QMField()  -  Extract delimited substring                              */
 
 char * DLLEntry QMField(src, delim, first, occurrences)
-   char * src;
-   char * delim;
-   int first;
-   int occurrences;
+   const char * src;
+   const char * delim;
+   int32 first;
+   int32 occurrences;
 {
- int src_len;
- int delim_len;
+ int32 src_len;
+ int32 delim_len;
  char delimiter;
- long int bytes;         /* Remaining bytes counter */
- char * pos;
- char * p;
- char * q;
+ int32 bytes;         /* Remaining bytes counter */
+ const char * pos;
+ const char * p;
+ const char * q;
  char * result;
- int result_len;
+ int32 result_len;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  src_len = strlen(src);
 
@@ -1350,6 +1426,11 @@ char * DLLEntry QMField(src, delim, first, occurrences)
 
  result_len = p - pos;
  result = malloc(result_len + 1);
+ if (result == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMField", FALSE);
+   return NULL;
+  }
  memcpy(result, pos, result_len);
  result[result_len] = '\0';
  return result;
@@ -1369,7 +1450,7 @@ void DLLEntry QMFree(void * p)
 /* ======================================================================
    QMGetSession()  -  Return session index                                */
 
-int DLLEntry QMGetSession()
+int32 DLLEntry QMGetSession()
 {
  return session_idx;
 }
@@ -1378,27 +1459,30 @@ int DLLEntry QMGetSession()
    QMIns()  -  Insert field, value or subvalue                            */
 
 char * DLLEntry QMIns(src, fno, vno, svno, new)
-   char * src;
-   int fno;
-   int vno;
-   int svno;
-   char * new;
+   const char * src;
+   int32 fno;
+   int32 vno;
+   int32 svno;
+   const char * new;
 {
- long int src_len;
- char * pos;             /* Rolling source pointer */
- long int bytes;         /* Remaining bytes counter */
- long int ins_len;       /* Length of inserted data */
- long int new_len;
+ int32 src_len;
+ const char * pos;             /* Rolling source pointer */
+ int32 bytes;         /* Remaining bytes counter */
+ int32 ins_len;       /* Length of inserted data */
+ int32 new_len;
  char * new_str;
  char * p;
- short int i;
- long int n;
- short int fm = 0;
- short int vm = 0;
- short int sm = 0;
+ int16 i;
+ int32 n;
+ int16 fm = 0;
+ int16 vm = 0;
+ int16 sm = 0;
  char postmark = '\0';
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  src_len = strlen(src);
  ins_len = strlen(new);
@@ -1502,6 +1586,11 @@ done:
 
  new_len = src_len + fm + vm + sm + ins_len + (postmark != '\0');
  new_str = malloc(new_len + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMIns", FALSE);
+   return NULL;
+  }
  p = new_str;
 
  if (n)    
@@ -1537,34 +1626,37 @@ done:
 /* ======================================================================
    QMLocate()  -  Search dynamic array                                    */
 
-int DLLEntry QMLocate(item, src, fno, vno, svno, pos, order)
-   char * item;
-   char * src;
-   int fno;
-   int vno;
-   int svno;
-   int * pos;
-   char * order;
+int32 DLLEntry QMLocate(item, src, fno, vno, svno, pos, order)
+   const char * item;
+   const char * src;
+   int32 fno;
+   int32 vno;
+   int32 svno;
+   int32 * pos;
+   const char * order;
 {
- int item_len;
- int src_len;
- char * p;
+ int32 item_len;
+ int32 src_len;
+ const char * p;
  char * q;
  bool ascending = TRUE;
  bool left = TRUE;
  bool sorted = FALSE;
- short int idx = 1;
- int d;
+ int16 idx = 1;
+ int32 d;
  bool found = FALSE;
- int i;
- int bytes;
+ int32 i;
+ int32 bytes;
  char mark;
- int n;
- int x;
- char * s1;
- char * s2;
+ int32 n;
+ int32 x;
+ const char * s1;
+ const char * s2;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   goto done;
+  }
 
  /* Establish sort mode */
 
@@ -1696,11 +1788,11 @@ done:
 /* ======================================================================
    QMLogto()  -  LOGTO                                                    */
 
-int DLLEntry QMLogto(account_name)
-   char * account_name;
+int32 DLLEntry QMLogto(account_name)
+   const char * account_name;
 {
  bool status = FALSE;
- int name_len;
+ int32 name_len;
 
  if (context_error(CX_CONNECTED)) goto exit_logto;
 
@@ -1742,12 +1834,12 @@ exit_logto:
    QMMarkMapping()  -  Enable/disable mark mapping on a directory file    */
 
 void DLLEntry QMMarkMapping(fno, state)
-   short int fno;
-   short int state;
+   int16 fno;
+   int16 state;
 {
  struct {
-         short int fno;
-         short int state;
+         int16 fno;
+         int16 state;
         } packet;
 
 
@@ -1763,17 +1855,20 @@ void DLLEntry QMMarkMapping(fno, state)
 /* ======================================================================
    QMMatch()  -  String matching                                          */
 
-int DLLEntry QMMatch(str, pattern)
-   char * str;
-   char * pattern;
+int32 DLLEntry QMMatch(str, pattern)
+   const char * str;
+   const char * pattern;
 {
  char template[MAX_MATCH_TEMPLATE_LEN+1];
  char src_string[MAX_MATCHED_STRING_LEN+1];
- int n;
+ int32 n;
  char * p;
  char * q;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return FALSE;
+  }
 
  component_start = NULL;
  component_end = NULL;
@@ -1810,18 +1905,21 @@ no_match:
    QMMatchfield()  -  String matching                                     */
 
 char * DLLEntry QMMatchfield(str, pattern, component)
-   char * str;
-   char * pattern;
-   int component;
+   const char * str;
+   const char * pattern;
+   int32 component;
 {
  char template[MAX_MATCH_TEMPLATE_LEN+1];
  char src_string[MAX_MATCHED_STRING_LEN+1];
- int n;
+ int32 n;
  char * p;
  char * q;
  char * result;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
  if (component < 1) component = 1;
 
@@ -1849,9 +1947,13 @@ char * DLLEntry QMMatchfield(str, pattern, component)
 
      if (match_template(src_string, p, 0, component))
       {
-       if (component_end != NULL) *(component_end) = '\0';
-       n = strlen(component_start);
+       n = (component_end != NULL) ? (component_end - component_start) : (strlen(component_start));
        result = malloc(n + 1);
+        if (result == NULL)
+         {
+          Abort("Unable to allocate new string memory in QMMatchfield", FALSE);
+          return NULL;
+         }
        memcpy(result, component_start, n);
        result[n] = '\0';
        return result;
@@ -1867,10 +1969,10 @@ no_match:
 /* ======================================================================
    QMOpen()  -  Open file                                                 */
 
-int DLLEntry QMOpen(filename)
-   char * filename;
+int32 DLLEntry QMOpen(filename)
+   const char * filename;
 {
- int fno = 0;
+ int32 fno = 0;
 
 
  if (context_error(CX_CONNECTED)) goto exit_qmopen;
@@ -1900,9 +2002,9 @@ exit_qmopen:
    QMRead()  -  Read record                                               */
 
 char * DLLEntry QMRead(fno, id, err)
-   int fno;
-   char * id;
-   int * err;
+   int32 fno;
+   const char * id;
+   int32 * err;
 {
  return read_record(fno, id, err, SrvrRead);
 }
@@ -1911,10 +2013,10 @@ char * DLLEntry QMRead(fno, id, err)
    QMReadl()  -  Read record with shared lock                             */
 
 char * DLLEntry QMReadl(fno, id, wait, err)
-   int fno;
-   char * id;
-   int wait;
-   int * err;
+   int32 fno;
+   const char * id;
+   int32 wait;
+   int32 * err;
 {
  return read_record(fno, id, err, (wait)?SrvrReadlw:SrvrReadl);
 }
@@ -1923,13 +2025,12 @@ char * DLLEntry QMReadl(fno, id, wait, err)
    QMReadList()  - Read select list                                       */
 
 char * DLLEntry QMReadList(listno)
-   int listno;
+   int32 listno;
 {
  char * list;
- short int status = 0;
- long int data_len = 0;
+ int32 data_len = 0;
  struct {
-         short int listno;
+         int16 listno;
         } ALIGN2 packet;
 
 
@@ -1956,11 +2057,14 @@ char * DLLEntry QMReadList(listno)
       return NULL;
   }
  
- status = session[session_idx].server_error;
- 
 exit_qmreadlist:
 
  list = malloc(data_len + 1);
+ if (list == NULL)
+  {
+   Abort("Unable to allocate new buffer memory in QMReadList", FALSE);
+   return NULL;
+  }
  memcpy(list, buff->data.readlist.list, data_len);
  list[data_len] = '\0';
  return list;
@@ -1970,12 +2074,12 @@ exit_qmreadlist:
    QMReadNext()  - Read select list entry                                 */
 
 char * DLLEntry QMReadNext(listno)
-   short int listno;
+   int16 listno;
 {
  char * id;
- long int id_len = 0;
+ int32 id_len = 0;
  struct {
-         short int listno;
+         int16 listno;
         } ALIGN2 packet;
 
 
@@ -2005,6 +2109,11 @@ char * DLLEntry QMReadNext(listno)
 
 exit_qmreadnext:
  id = malloc(id_len + 1);
+ if (id == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMReadNext", FALSE);
+   return NULL;
+  }
  memcpy(id, buff->data.readnext.id, id_len);
  id[id_len] = '\0';
  return id;
@@ -2014,10 +2123,10 @@ exit_qmreadnext:
    QMReadu()  -  Read record with exclusive lock                          */
 
 char * DLLEntry QMReadu(fno, id, wait, err)
-   int fno;
-   char * id;
-   int wait;
-   int * err;
+   int32 fno;
+   const char * id;
+   int32 wait;
+   int32 * err;
 {
  return read_record(fno, id, err, (wait)?SrvrReaduw:SrvrReadu);
 }
@@ -2026,16 +2135,16 @@ char * DLLEntry QMReadu(fno, id, wait, err)
    QMRecordlock()  -  Get lock on a record                                */
 
 void DLLEntry QMRecordlock(fno, id, update_lock, wait)
-   int fno;
-   char * id;
-   int update_lock;
-   int wait;
+   int32 fno;
+   const char * id;
+   int32 update_lock;
+   int32 wait;
 {
- int id_len;
- short int flags;
+ int32 id_len;
+ int16 flags;
  struct {
-         short int fno;
-         short int flags;        /* 0x0001 : Update lock */
+         int16 fno;
+         int16 flags;        /* 0x0001 : Update lock */
                                  /* 0x0002 : No wait */
          char id[MAX_ID_LEN];
         } ALIGN2 packet;
@@ -2085,12 +2194,12 @@ void DLLEntry QMRecordlock(fno, id, update_lock, wait)
    QMRelease()  -  Release lock                                           */
 
 void DLLEntry QMRelease(fno, id)
-   int fno;
-   char * id;
+   int32 fno;
+   const char * id;
 {
- int id_len;
+ int32 id_len;
  struct {
-         short int fno;
+         int16 fno;
          char id[MAX_ID_LEN];
         } ALIGN2 packet;
 
@@ -2145,28 +2254,31 @@ exit_release:
    QMReplace()  -  Replace field, value or subvalue                       */
 
 char * DLLEntry QMReplace(src, fno, vno, svno, new)
-   char * src;
-   int fno;
-   int vno;
-   int svno;
-   char * new;
+   const char * src;
+   int32 fno;
+   int32 vno;
+   int32 svno;
+   const char * new;
 {
- long int src_len;
- char * pos;             /* Rolling source pointer */
- long int bytes;         /* Remaining bytes counter */
- long int ins_len;       /* Length of inserted data */
- long int new_len;
+ int32 src_len;
+ const char * pos;             /* Rolling source pointer */
+ int32 bytes;         /* Remaining bytes counter */
+ int32 ins_len;       /* Length of inserted data */
+ int32 new_len;
  char * new_str;
  char * p;
- short int i;
- long int n;
- short int fm = 0;
- short int vm = 0;
- short int sm = 0;
+ int16 i;
+ int32 n;
+ int16 fm = 0;
+ int16 vm = 0;
+ int16 sm = 0;
 
- initialise_client();
+ if (!initialise_client())
+  {
+   return NullString();
+  }
 
- src_len = strlen(src);
+ src_len = src ? strlen(src) : 0;
  ins_len = strlen(new);
 
  pos = src;
@@ -2283,6 +2395,11 @@ done:
 
  new_len = src_len - bytes + fm + vm + sm + ins_len;
  new_str = malloc(new_len + 1);
+ if (new_str == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMReplace", FALSE);
+   return NULL;
+  }
  p = new_str;
 
  n = pos - src;    /* Length of leading substring */
@@ -2317,10 +2434,10 @@ done:
    QMRespond()  -  Respond to request for input                           */
 
 char * DLLEntry QMRespond(response, err)
-   char * response;
-   int * err;
+   const char * response;
+   int32 * err;
 {
- long int reply_len = 0;
+ int32 reply_len = 0;
  char * reply;
 
  if (context_error(CX_EXECUTING)) goto exit_qmrespond;
@@ -2351,6 +2468,11 @@ char * DLLEntry QMRespond(response, err)
 
 exit_qmrespond:
  reply = malloc(reply_len + 1);
+ if (reply == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMRespond", FALSE);
+   return NULL;
+  }
  memcpy(reply, buff->data.execute.reply, reply_len);
  reply[reply_len] = '\0';
  *err = session[session_idx].server_error;
@@ -2361,12 +2483,12 @@ exit_qmrespond:
    QMSelect()  - Generate select list                                     */
 
 void DLLEntry QMSelect(fno, listno)
-   int fno;
-   int listno;
+   int32 fno;
+   int32 listno;
 {
  struct {
-         short int fno;
-         short int listno;
+         int16 fno;
+         int16 listno;
         } ALIGN2 packet;
 
 
@@ -2398,20 +2520,20 @@ exit_qmselect:
    QMSelectIndex()  - Generate select list from index entry               */
 
 void DLLEntry QMSelectIndex(fno, index_name, index_value, listno)
-   short int fno;
-   char * index_name;
-   char * index_value;
-   short int listno;
+   int16 fno;
+   const char * index_name;
+   const char * index_value;
+   int16 listno;
 {
  struct {
-         short int fno;
-         short int listno;
-         short int name_len;
+         int16 fno;
+         int16 listno;
+         int16 name_len;
          char index_name[255+1];
-         short int data_len_place_holder;      /* Index name is actually... */
+         int16 data_len_place_holder;      /* Index name is actually... */
          char index_data_place_holder[255+1];  /* ...var length */
         } packet;
- short int n;
+ int16 n;
  char * p;
 
 
@@ -2432,8 +2554,8 @@ void DLLEntry QMSelectIndex(fno, index_name, index_value, listno)
  /* Insert index value */
 
  n = strlen(index_value);   /* 0267 */
- *((short int *)p) = ShortInt(n);
- p += sizeof(short int);
+ *((int16 *)p) = ShortInt(n);
+ p += sizeof(int16);
  memcpy(p, index_value, n);
  p += n;
  if (n & 1) *(p++) = '\0';
@@ -2463,35 +2585,35 @@ exit_qmselectindex:
    QMSelectRight()  - Scan index position to right                        */
 
 char *  DLLEntry QMSelectLeft(fno, index_name, listno)
-   short int fno;
-   char * index_name;
-   short int listno;
+   int16 fno;
+   const char * index_name;
+   int16 listno;
 {
  return SelectLeftRight(fno, index_name, listno, SrvrSelectLeft);
 }
 
 char * DLLEntry QMSelectRight(fno, index_name, listno)
-   short int fno;
-   char * index_name;
-   short int listno;
+   int16 fno;
+   const char * index_name;
+   int16 listno;
 {
  return SelectLeftRight(fno, index_name, listno, SrvrSelectRight);
 }
 
 Private char * SelectLeftRight(fno, index_name, listno, mode)
-   short int fno;
-   char * index_name;
-   short int listno;
-   short int mode;
+   int16 fno;
+   const char * index_name;
+   int16 listno;
+   int16 mode;
 {
- long int key_len = 0;
+ int32 key_len = 0;
  char * key;
  struct {
-         short int fno;
-         short int listno;
+         int16 fno;
+         int16 listno;
          char index_name[255+1];
         } packet;
- short int n;
+ int16 n;
  char * p;
 
 
@@ -2523,6 +2645,11 @@ Private char * SelectLeftRight(fno, index_name, listno, mode)
   }
 
  key = malloc(key_len + 1);
+ if (key == NULL)
+  {
+   Abort("Unable to allocate new string memory in QMSelectRight", FALSE);
+   return NULL;
+  }
  memcpy(key, buff->data.selectleft.key, key_len);
  key[key_len] = '\0';
  return key;
@@ -2533,29 +2660,29 @@ Private char * SelectLeftRight(fno, index_name, listno, mode)
    QMSetRight()  - Set index position at extreme right                    */
 
 void DLLEntry QMSetLeft(fno, index_name)
-   short int fno;
-   char * index_name;
+   int16 fno;
+   const char * index_name;
 {
  SetLeftRight(fno, index_name, SrvrSetLeft);
 }
 
 void DLLEntry QMSetRight(fno, index_name)
-   short int fno;
-   char * index_name;
+   int16 fno;
+   const char * index_name;
 {
  SetLeftRight(fno, index_name, SrvrSetRight);
 }
 
 Private void SetLeftRight(fno, index_name, mode)
-   short int fno;
-   char * index_name;
-   short int mode;
+   int16 fno;
+   const char * index_name;
+   int16 mode;
 {
  struct {
-         short int fno;
+         int16 fno;
          char index_name[255+1];
         } packet;
- short int n;
+ int16 n;
  char * p;
 
 
@@ -2588,7 +2715,7 @@ Private void SetLeftRight(fno, index_name, mode)
 /* ======================================================================
    QMSetSession()  -  Set session index                                   */
 
-int DLLEntry QMSetSession(int idx)
+int32 DLLEntry QMSetSession(int32 idx)
 {
  if ((idx < 0) || (idx >= MAX_SESSIONS)
     || (session[idx].context == CX_DISCONNECTED))
@@ -2603,7 +2730,7 @@ int DLLEntry QMSetSession(int idx)
 /* ======================================================================
    QMStatus()  -  Return STATUS() value                                   */
 
-int DLLEntry QMStatus()
+int32 DLLEntry QMStatus()
 {
  return session[session_idx].qm_status;
 }
@@ -2612,9 +2739,9 @@ int DLLEntry QMStatus()
    QMWrite()  -  Write record                                             */
 
 void DLLEntry QMWrite(fno, id, data)
-   int fno;
-   char * id;
-   char * data;
+   int32 fno;
+   const char * id;
+   const char * data;
 {
  write_record(SrvrWrite, fno, id, data);
 }
@@ -2623,9 +2750,9 @@ void DLLEntry QMWrite(fno, id, data)
    QMWriteu()  -  Write record, retaining lock                            */
 
 void DLLEntry QMWriteu(fno, id, data)
-   int fno;
-   char * id;
-   char * data;
+   int32 fno;
+   const char * id;
+   const char * data;
 {
  write_record(SrvrWriteu, fno, id, data);
 }
@@ -2634,7 +2761,7 @@ void DLLEntry QMWriteu(fno, id, data)
    context_error()  - Check for appropriate context                       */
 
 Private bool context_error(expected)
-   short int expected;
+   int16 expected;
 {
  char * p;
 
@@ -2667,6 +2794,7 @@ Private bool context_error(expected)
         p = "A function has been attempted in the wrong context";
         break;
     }
+   Abort(p, FALSE);
 
    return TRUE;
   }
@@ -2677,13 +2805,13 @@ Private bool context_error(expected)
 /* ====================================================================== */
 
 Private void delete_record(mode, fno, id)
-   short int mode;
-   int fno;
-   char * id;
+   int16 mode;
+   int32 fno;
+   const char * id;
 {
- int id_len;
+ int32 id_len;
  struct {
-         short int fno;
+         int16 fno;
          char id[MAX_ID_LEN];
         } ALIGN2 packet;
 
@@ -2731,17 +2859,17 @@ exit_delete:
    read_record()  -  Common path for READ, READL and READU                */
 
 Private char * read_record(fno, id, err, mode)
-   int fno;
-   char * id;
-   int * err;
-   int mode;
+   int32 fno;
+   const char * id;
+   int32 * err;
+   int32 mode;
 {
- long int status;
- long int rec_len = 0;
- int id_len;
+ int32 status;
+ int32 rec_len = 0;
+ int32 id_len;
  char * rec;
  struct {
-         short int fno;
+         int16 fno;
          char id[MAX_ID_LEN];
         } ALIGN2 packet;
 
@@ -2784,6 +2912,11 @@ Private char * read_record(fno, id, err, mode)
  
 exit_read:
  rec = malloc(rec_len + 1);
+ if (rec == NULL)
+  {
+   Abort("Unable to allocate new string memory in read_record", FALSE);
+   return NULL;
+  }
  memcpy(rec, buff->data.read.rec, rec_len);
  rec[rec_len] = '\0';
  *err = status;
@@ -2793,18 +2926,18 @@ exit_read:
 /* ====================================================================== */
 
 Private void write_record(mode, fno, id, data)
-   short int mode;
-   short int fno;
-   char * id;
-   char * data;
+   int16 mode;
+   int16 fno;
+   const char * id;
+   const char * data;
 {
- int id_len;
- long int data_len;
- int bytes;
+ int32 id_len;
+ int32 data_len;
+ int32 bytes;
  INBUFF * q;
  struct PACKET {
-                short int fno;
-                short int id_len;
+                int16 fno;
+                int16 id_len;
                 char id[1];
                } ALIGN2;
 
@@ -2890,22 +3023,29 @@ Private bool GetResponse()
 /* ====================================================================== */
 
 Private void Abort(msg, use_response)
-   char * msg;
+   const char * msg;
    bool use_response;
 {
+ int32 remain = 1024;
  char abort_msg[1024+1];
- int n;
+ int32 n;
  char * p;
 
- strcpy(abort_msg, msg);
+ strncpy (abort_msg, msg, remain);
+ remain -= strlen (abort_msg);
 
  if (use_response)
   {
    n = buff_bytes - offsetof(INBUFF, data.abort.message);
+   if (n > remain - 1)
+    {
+     n = remain - 1;
+    }
    if (n > 0)
     {
+     --remain; // To add newline
      p = abort_msg + strlen(msg);
-     *(p++) = '\r';
+     *(p++) = '\n';
      memcpy(p, buff->data.abort.message, n);
      *(p + n) = '\0';
     }
@@ -2917,10 +3057,10 @@ Private void Abort(msg, use_response)
 /* ====================================================================== */
 
 Private char * memstr(str, substr, str_len, substr_len)
-   char * str;
-   char * substr;
-   int str_len;
-   int substr_len;
+   const char * str;
+   const char * substr;
+   int32 str_len;
+   int32 substr_len;
 {
  char * p;
 
@@ -2942,367 +3082,12 @@ Private char * memstr(str, substr, str_len, substr_len)
 }
 
 /* ======================================================================
-   match_template()  -  Match string against template                     */
-
-Private bool match_template(string, template, component, return_component)
-   char * string;
-   char * template;
-   short int component;        /* Current component number - 1 (incremented) */
-   short int return_component; /* Required component number */
-{
- bool not;
- short int n;
- short int m;
- short int z;
- char * p;
- char delimiter;
- char * start;
-
-
- while(*template != '\0')
-  {
-   component++;
-   if (component == return_component) component_start = string;
-   else if (component == return_component + 1) component_end = string;
-
-   start = template;
-
-   if (*template == '~')
-    {
-     not = TRUE;
-     template++;
-    }
-   else not = FALSE;
-
-   if (IsDigit(*template))
-    {
-     n = 0;
-     do {
-         n = (n * 10) + (*(template++) - '0');
-        } while(IsDigit(*template));
-
-     switch(UpperCase(*(template++)))
-      {
-       case '\0':              /* String longer than template */
-          /* 0115 rewritten */
-          n = --template - start;
-          if (n == 0) return FALSE;
-          if (!memcmp(start, string, n) == not) return FALSE;
-          string += n;
-          break;
- 
-       case 'A':               /* nA  Alphabetic match */
-          if (n)
-           {
-            while(n--)
-             {
-              if (*string == '\0') return FALSE;
-              if ((IsAlpha(*string) != 0) == not) return FALSE;
-              string++;
-             }
-           }
-          else                 /* 0A */
-           {
-            if (*template != '\0') /* Further template items exist */
-             {
-              /* Match as many as possible further chaarcters */
-
-              for (z = 0, p = string; ; z++, p++)
-               {
-                if ((*p == '\0') || ((IsAlpha(*p) != 0) == not)) break;
-               }
-
-              /* z now holds number of contiguous alphabetic characters ahead
-                 of current position. Starting one byte after the final
-                 alphabetic character, backtrack until the remainder of the
-                 string matches the remainder of the template.               */
-
-              for (p = string + z; z-- >= 0; p--)
-               {
-                if (match_template(p, template, component, return_component))
-                 {
-                  goto match_found;
-                 }
-               }
-              return FALSE;
-             }
-            else
-             {
-              while((*string != '\0') && ((IsAlpha(*string) != 0) != not))
-               {
-                string++;
-               }
-             }
-           }
-          break;
-
-       case 'N':               /* nN  Numeric match */
-          if (n)
-           {
-            while(n--)
-             {
-              if (*string == '\0') return FALSE;
-              if ((IsDigit(*string) != 0) == not) return FALSE;
-              string++;
-             }
-           }
-          else                 /* 0N */
-           {
-            if (*template != '\0') /* Further template items exist */
-             {
-              /* Match as many as possible further chaarcters */
-  
-              for (z = 0, p = string; ; z++, p++)
-               {
-                if ((*p == '\0') || ((IsDigit(*p) != 0) == not)) break;
-               }
-
-              /* z now holds number of contiguous numeric characters ahead
-                 of current position. Starting one byte after the final
-                 numeric character, backtrack until the remainder of the
-                 string matches the remainder of the template.               */
-
-              for (p = string + z; z-- >= 0; p--)
-               {
-                if (match_template(p, template, component, return_component))
-                 {
-                  goto match_found;
-                 }
-               }
-              return FALSE;
-             }
-            else
-             {
-              while((*string != '\0') && ((IsDigit(*string) != 0) != not))
-               {
-                string++;
-               }
-             }
-           }
-          break;
-
-       case 'X':               /* nX  Unrestricted match */
-          if (n)
-           {
-            while(n--)
-             {
-              if (*(string++) == '\0') return FALSE;
-             }
-           }
-          else                 /* 0X */
-           {
-            if (*template != '\0')    /* Further template items exist */
-             {
-              /* Match as few as possible further characters */
-  
-              do {
-                  if (match_template(string, template, component, return_component))
-                   {
-                    goto match_found;
-                   }
-                 } while(*(string++) != '\0');
-              return FALSE;
-             }
-            goto match_found;
-           }
-          break;
-
-       case '-':               /* Count range */
-          if (!IsDigit(*template)) return FALSE;
-          m = 0;
-          do {
-              m = (m * 10) + (*(template++) - '0');
-             } while(IsDigit(*template));
-          m -= n;
-          if (m < 0) return FALSE;
-
-          switch(UpperCase(*(template++)))
-           {
-            case '\0':              /* String longer than template */
-               n = --template - start;
-               if (n)          /* We have found a trailing unquoted literal */
-                {
-                 if ((memcmp(start, string, n) == 0) != not) return TRUE;
-                }
-               return FALSE;
-
-            case 'A':               /* n-mA  Alphabetic match */
-               /* Match n alphabetic items */
- 
-              while(n--)
-                {
-                 if (*string == '\0') return FALSE;
-                 if ((IsAlpha(*string) != 0) == not) return FALSE;
-                 string++;
-                }
-
-               /* We may match up to m further alphabetic characters but must
-                  also match as many as possible.  Check how many alphabetic
-                  characters there are (up to m) and then backtrack trying
-                  matches against the remaining template (if any).           */
-
-               for(z = 0, p = string; z < m; z++, p++)
-                {
-                 if ((*p == '\0') || ((IsAlpha(*p) != 0) == not)) break;
-                }
-
-               /* z now holds max number of matchable characters.
-                  Try match at each of these positions and also at the next
-                  position (Even if it is the end of the string)            */
-
-               if (*template != '\0')    /* Further template items exist */
-                {
-                 for (p = string + z; z-- >= 0; p--)
-                  {
-                   if (match_template(p, template, component, return_component))
-                    {
-                     goto match_found;
-                    }
-                  }
-                 return FALSE;
-                }
-               else string += z;
-               break;
-
-            case 'N':               /* n-mN  Numeric match */
-               /* Match n numeric items */
- 
-              while(n--)
-                {
-                 if (*string == '\0') return FALSE;
-                 if ((IsDigit(*string) != 0) == not) return FALSE;
-                 string++;
-                }
-
-               /* We may match up to m further numeric characters but must
-                  also match as many as possible.  Check how many numeric
-                  characters there are (up to m) and then backtrack trying
-                  matches against the remaining template (if any).           */
-
-               for(z = 0, p = string; z < m; z++, p++)
-                {
-                 if ((*p == '\0') || ((IsDigit(*p) != 0) == not)) break;
-                }
-             
-               /* z now holds max number of matchable characters.
-                  Try match at each of these positions and also at the next
-                  position (Even if it is the end of the string)            */
-
-               if (*template != '\0')    /* Further template items exist */
-                {
-                 for (p = string + z; z-- >= 0; p--)
-                  {
-                   if (match_template(p, template, component, return_component))
-                    {
-                     goto match_found;
-                    }
-                  }
-                 return FALSE;
-                }
-               else string += z;
-               break;
-
-            case 'X':               /* n-mX  Unrestricted match */
-               /* Match n items of any type */
-
-               while(n--)
-                {
-                 if (*(string++) == '\0') return FALSE;
-                }
-
-               /* Match as few as possible up to m further characters */
-
-               if (*template != '\0')
-                {
-                 while(m--)
-                  {
-                   if (match_template(string, template, component, return_component))
-                    {
-                     goto match_found;
-                    }
-                   string++;
-                  }
-                 return FALSE;
-                }
-               else
-                {
-                 if ((signed int)strlen(string) > m) return FALSE;
-                 goto match_found;
-                }
-
-            default:
-               /* We have found an unquoted literal */
-               n = --template - start;
-               if ((memcmp(start, string, n) == 0) == not) return FALSE;
-               string += n;
-               break;
-           }
-          break;
-
-       default:
-          /* We have found an unquoted literal */
-          n = --template - start;
-          if ((memcmp(start, string, n) == 0) == not) return FALSE;
-          string += n;
-          break;
-      }
-    }
-   else if (memcmp(template, "...", 3) == 0)   /* ... same as 0X */
-    {
-     template += 3;
-     if (not) return FALSE;
-     if (*template != '\0')    /* Further template items exist */
-      {
-       /* Match as few as possible further characters */
-
-       while(*string != '\0')
-        {
-         if (match_template(string, template, component, return_component))
-          {
-           goto match_found;
-          }
-         string++;
-        }
-       return FALSE;
-      }
-     goto match_found;
-    }
-   else /* Must be literal text item */
-    {
-     delimiter = *template;
-     if ((delimiter == '\'') || (delimiter == '"')) /* Quoted literal */
-      {
-       template++;
-       p = strchr(template, (char)delimiter);
-       if (p == NULL) return FALSE;
-       n = p - template;
-       if (n)
-        {
-         if ((memcmp(template, string, n) == 0) == not) return FALSE;
-         string += n;
-        }
-       template += n + 1;
-      }
-     else                /* Unquoted literal. Treat as single character */
-      {
-       if ((*(template++) == *(string++)) == not) return FALSE;
-      }
-    }
-  }
-
- if (*string != '\0') return FALSE;  /* String longer than template */
- 
-match_found:
- return TRUE;
-}
-
-/* ======================================================================
    message_pair()  -  Send packet and receive response                    */
 
 Private bool message_pair(type, data, bytes)
-   int type;
-   char * data;
-   long int bytes;
+   int32 type;
+   const char * data;
+   int32 bytes;
 {
  if (write_packet(type, data, bytes))
   {
@@ -3319,6 +3104,12 @@ Private char * NullString()
  char * p;
 
  p = malloc(1);
+ if (p == NULL)
+  {
+   Abort("Unable to allocate new string memory in NullString", FALSE);
+   return NULL;
+  }
+
  *p = '\0';
  return p;
 }
@@ -3326,16 +3117,16 @@ Private char * NullString()
 /* ======================================================================
    OpenSocket()  -  Open connection to server                            */
 
-Private bool OpenSocket(char * host, short int port)
+Private bool OpenSocket(const char * host, int16 port)
 {
  bool status = FALSE;
- unsigned long nInterfaceAddr;
+ u_int32 nInterfaceAddr;
  struct hostent * hostdata;
- int nPort;
+ int32 nPort;
  struct sockaddr_in sock_addr;
  char ack_buff;
- int n;
- unsigned int n1, n2, n3, n4;
+ int32 n;
+ u_int32 n1, n2, n3, n4;
 
 
  if (port < 0) port = 4243;
@@ -3356,7 +3147,7 @@ Private bool OpenSocket(char * host, short int port)
      goto exit_opensocket;
     }
 
-   nInterfaceAddr = *((long int *)(hostdata->h_addr));
+   nInterfaceAddr = *((int32 *)(hostdata->h_addr));
   }
 
 
@@ -3380,7 +3171,7 @@ Private bool OpenSocket(char * host, short int port)
   }
 
  n = TRUE;
- if (setsockopt(session[session_idx].sock, IPPROTO_TCP, TCP_NODELAY, (char *)&n, sizeof(int)))
+ if (setsockopt(session[session_idx].sock, IPPROTO_TCP, TCP_NODELAY, (char *)&n, sizeof(int32)))
   {
    NetErr("setsockopt()", WSAGetLastError(), errno);
    goto exit_opensocket;
@@ -3421,7 +3212,7 @@ exit_closesocket:
 /* ======================================================================
    NetErr                                                               */
 
-static void net_error(char * prefix, int err)
+static void net_error(const char * prefix, int32 err)
 {
  fprintf(stderr, "Error %d from %s\n", err, prefix);
 }
@@ -3431,17 +3222,17 @@ static void net_error(char * prefix, int err)
 
 Private bool read_packet()
 {
- int rcvd_bytes;         /* Length of received packet fragment */
- long int packet_bytes;  /* Total length of incoming packet */
- int rcv_len;
- long int n;
+ int32 rcvd_bytes;         /* Length of received packet fragment */
+ int32 packet_bytes;  /* Total length of incoming packet */
+ int32 rcv_len;
+ int32 n;
  unsigned char * p;
 
  /* 0272 restructured */
  struct {
-         long int packet_length;
-         short int server_error ALIGN2;
-         long int status ALIGN2;
+         int32 packet_length;
+         int16 server_error ALIGN2;
+         int32 status ALIGN2;
         } in_packet_header;
  #define IN_PKT_HDR_BYTES 10
 
@@ -3476,7 +3267,7 @@ Private bool read_packet()
 
  if (srvr_debug != NULL)
   {
-   fprintf(srvr_debug, "IN (%ld bytes)\n", packet_bytes);
+   fprintf(srvr_debug, "IN ("int32_format" bytes)\n", packet_bytes);
   }
 
  if (packet_bytes >= buff_size)      /* Must reallocate larger buffer */
@@ -3489,7 +3280,7 @@ Private bool read_packet()
 
    if (srvr_debug != NULL)
     {
-     fprintf(srvr_debug, "Resized buffer to %ld bytes\n", n);
+     fprintf(srvr_debug, "Resized buffer to "int32_format" bytes\n", n);
     }
   }
 
@@ -3528,12 +3319,12 @@ Private bool read_packet()
 /* ======================================================================
    write_packet()  -  Send QM data packet                                 */
 
-Private bool write_packet(int type, char * data, long int bytes)
+Private bool write_packet(int32 type, const char * data, int32 bytes)
 {
 
  struct {
-         long int length;
-         short int type;
+         int32 length;
+         int16 type;
         } ALIGN2 packet_header;
 #define PKT_HDR_BYTES 6
 
@@ -3553,8 +3344,8 @@ Private bool write_packet(int type, char * data, long int bytes)
 
  if (srvr_debug != NULL)
   {
-   fprintf(srvr_debug, "OUT (%ld bytes). Type %d\n",
-           packet_header.length, (int)packet_header.type);
+   fprintf(srvr_debug, "OUT ("int32_format" bytes). Type %d\n",
+           packet_header.length, (int32)packet_header.type);
   }
 
  if ((data != NULL) && (bytes > 0))
@@ -3577,10 +3368,10 @@ Private bool write_packet(int type, char * data, long int bytes)
 /* ======================================================================
    debug()  -  Debug function                                             */
 
-Private void debug(unsigned char * p, int n)
+Private void debug(unsigned char * p, int32 n)
 {
- short int i;
- short int j;
+ int16 i;
+ int16 j;
  unsigned char c;
  char s[72+1];
  static char hex[] = "0123456789ABCDEF";
@@ -3645,7 +3436,6 @@ Private char * sysdir()
     {
      if ((p = strchr(rec, ']')) != NULL) *p = '\0';
      strcpy(section, rec+1);
-printf("Section '%s'\n", section);
      for(p = section; *p != '\0'; p++) *p = UpperCase(*p);
      continue;
     }
@@ -3673,9 +3463,9 @@ printf("Section '%s'\n", section);
 
 /* ====================================================================== */
 
-Private void initialise_client()
+Private bool initialise_client()
 {
- short int i;
+ int16 i;
 
  if (buff == NULL)
   {
@@ -3683,6 +3473,11 @@ Private void initialise_client()
 
    buff_size = 2048;
    buff = (INBUFF *)malloc(buff_size);
+   if (buff == NULL)
+    {
+     Abort("Unable to allocate buffer memory in initialise_client", FALSE);
+     return FALSE;
+    }
 
    for(i = 0; i < MAX_SESSIONS; i++)
     {
@@ -3696,13 +3491,14 @@ Private void initialise_client()
      session[i].TxPipe[1] = -1;
     }
   }
+  return TRUE;
 }
 
 /* ====================================================================== */
 
 Private bool FindFreeSession()
 {
- short int i;
+ int16 i;
 
  /* Find a free session table entry */
 
@@ -3748,10 +3544,10 @@ Private void disconnect()
 /* ======================================================================
    swap2()                                                                */
 
-short int swap2(short int data)
+int16 swap2(int16 data)
 {
  union {
-        short int val;
+        int16 val;
         unsigned char chr[2];
        } in, out;
 
@@ -3764,10 +3560,10 @@ short int swap2(short int data)
 /* ======================================================================
    swap4()                                                                */
 
-long int swap4(long int data)
+int32 swap4(int32 data)
 {
  union {
-        long int val;
+        int32 val;
         unsigned char chr[4];
        } in, out;
 

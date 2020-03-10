@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19         Correct int type in shmat return value.
  * 11 Oct 05  2.2-14 New program.
  * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
  * END-HISTORY
@@ -646,7 +647,7 @@ bool attach_shared_memory()
 
  if ((shmid = shmget(QM_SHM_KEY, 0, 0666)) != -1)
   {
-   if ((int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
+   if ((long int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
     {
      printf("Error %d attaching to shared segment\n", errno);
      return FALSE;

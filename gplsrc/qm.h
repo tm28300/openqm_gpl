@@ -19,6 +19,10 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 24 Feb 20        Add const in char* parameter for k_put_c_string and
+ *                  k_put_string functions.
+ * 24 Feb 20        Create match_template.c file, used in qm and qmclilib.
+ * 11 Dec 19        Remove chsize64 function define in another file.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 19 Jun 07  2.5-7 k_call() now has additional argument for stack adjustment.
  * 05 Feb 07  2.4-20 Added transparent_newline argument to tio_display_string().
@@ -55,6 +59,23 @@
    #include <sys/stat.h>
 
 #include <qmdefs.h>
+
+
+/* Same types in 32 or 64 bits */
+
+#ifdef __GNUC__
+   typedef __INT16_TYPE__ int16;
+   typedef __UINT16_TYPE__ u_int16;
+   typedef __INT32_TYPE__ int32;
+   typedef __UINT32_TYPE__ u_int32;
+#define int32_format "%d"
+#else
+   typedef short int int16;
+   typedef unsigned short int u_int16;
+   typedef int int32;
+   typedef unsigned int u_int32;
+#define int32_format "%d"
+#endif
 
 
 /* Select list limits */
@@ -262,8 +283,8 @@ void k_deref_image(SCREEN_IMAGE * image);
 void k_deref_string(STRING_CHUNK * str);
 int k_get_c_string(DESCRIPTOR * descr, char * s, int max_bytes);
 void k_incr_refct(DESCRIPTOR * p);
-void k_put_c_string(char * s, DESCRIPTOR * descr);
-void k_put_string(char * s, int len, DESCRIPTOR * descr);
+void k_put_c_string(const char * s, DESCRIPTOR * descr);
+void k_put_string(const char * s, int len, DESCRIPTOR * descr);
 void k_num_to_str(DESCRIPTOR * p);
 bool k_str_to_num(DESCRIPTOR * p);
 STRING_CHUNK * k_copy_string(STRING_CHUNK * src);
@@ -396,9 +417,11 @@ bool find_item(STRING_CHUNK * str, long int field, long int value,
 STRING_CHUNK * copy_string(STRING_CHUNK * tail, STRING_CHUNK ** head,
                       char * src, short int len, short int * chunk_size);
 
-/* OP_STR4.C */
-bool match_template(char * string, char * tmpl,
-                    short int component, short int return_component);
+/* match_template.c */
+Public const char * component_start;
+Public const char * component_end;
+bool match_template(const char * string, const char * tmpl,
+                    int16 component, int return_component);
 
 /* TIME.C */
 long int local_time(void);
@@ -475,7 +498,6 @@ bool stop_qm(void);
 bool login_user(char * username, char * password);
 int64 lseek64(OSFILE handle, int64 offset, int fromwhere);
 int64 filelength64(OSFILE handle);
-int chsize64(OSFILE handle, int64 posn);
 int qmpoll(int fd, int timeout);
 
 /* WINPORT.C / LNXPORT.C */

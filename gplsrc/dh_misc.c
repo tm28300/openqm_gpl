@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 DEc 19        Remove dynamic and ftype usused variables in op_fcontrol function.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 30 Aug 06  2.4-12 Added fcontrol mode 5 to force file rehash.
  * 19 Sep 05  2.2-11 Use dh_buffer to reduce stack space.
@@ -82,8 +83,6 @@ void op_fcontrol()
  long int load;
  FILE_ENTRY * fptr;
  short int header_lock;
- u_char ftype;
- bool dynamic;
 
  process.status = 0;
 
@@ -102,8 +101,6 @@ void op_fcontrol()
  k_get_file(descr);
  fvar = descr->data.fvar;
  fptr = FPtr(fvar->file_id);
- ftype = fvar->type;
- dynamic = (ftype == DYNAMIC_FILE);
  dh_file = fvar->access.dh.dh_file;   /* May be irrelevant */
 
  /* Resolve value of qualifier */

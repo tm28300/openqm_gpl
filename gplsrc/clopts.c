@@ -19,6 +19,9 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove unused pid variable in remove_user function.
+ *                  recover_user() and cleanup move variables in loop or
+ *                  condition.
  * 01 Jul 07  2.5-7 Extensive changes for PDA merge.
  * 18 Jun 07  2.5-7 Extended qm -u to show ttyname and ip address, not just one.
  * 11 May 07  2.5-3 Log use of EVT_TERMINATE.
@@ -62,10 +65,7 @@ Private void remove_user(USER_ENTRY * uptr);
 bool recover_users()
 {
  bool status = FALSE;
- USER_ENTRY * uptr;
- long int pid;
  short int u;
- short int user_no;
 
  /* Be brutal - Lock everything in sight */
 
@@ -76,11 +76,16 @@ bool recover_users()
 
  for (u = 1; u <= sysseg->max_users; u++)
   {
+   USER_ENTRY * uptr;
+   short int user_no;
+
    uptr = UPtr(u);
    user_no = uptr->uid;
-   pid = uptr->pid;
    if (uptr->uid)
     {
+     int pid;
+
+     pid = uptr->pid;
      if (!process_exists(pid))
       {
        remove_user(uptr);
@@ -251,7 +256,6 @@ void cleanup()
  USER_ENTRY * uptr;
  short int u;
  short int user_no;
- int pid;
  char username[MAX_USERNAME_LEN+1];  /* Login user name */
  char errmsg[80+1];
 
@@ -277,6 +281,8 @@ void cleanup()
    uptr = UPtr(u);
    if (uptr->uid != 0)
     {
+     int pid;
+
      pid = uptr->pid;
      if (!process_exists(pid))
       {
@@ -327,7 +333,6 @@ Private void remove_user(USER_ENTRY * uptr)
 {
  short int i;
  short int user_no;
- long int pid;
  FILE_ENTRY * fptr;
  RLOCK_ENTRY * lptr;
  GLOCK_ENTRY * gptr;
@@ -335,7 +340,6 @@ Private void remove_user(USER_ENTRY * uptr)
 
 
  user_no = uptr->uid;
- pid = uptr->pid;
 
  /* Give away process locks */
 
@@ -355,7 +359,6 @@ Private void remove_user(USER_ENTRY * uptr)
       {
        fptr->file_lock = 0;
        clear_waiters(-i);
-// 0538       (fptr->ref_ct)--;   /* Must have been open to us */
       }
     }
   }

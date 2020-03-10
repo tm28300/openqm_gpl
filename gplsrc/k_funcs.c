@@ -19,6 +19,8 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 24 Feb 20        Add const in char* parameter for k_put_c_string and
+ *                  k_put_string functions.
  * 15 Aug 07  2.6-0 Reworked remove pointers.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 11 Jan 07  2.4-19 Added k_get_int32().
@@ -1145,7 +1147,7 @@ void k_num_to_str(DESCRIPTOR * p)
    Create string from C string                                            */
 
 void k_put_c_string(
-   char * s,
+   const char * s,
    DESCRIPTOR * descr)
 {
  k_put_string(s, (s)?strlen(s):0, descr);
@@ -1155,11 +1157,11 @@ void k_put_c_string(
    k_put_string() - Create string from contiguous string of given length  */
 
 void k_put_string(
-   char * s,              /* Data to copy. NULL returns blank string */
+   const char * s,              /* Data to copy. NULL returns blank string */
    int len,               /* Byte count.   Zero returns blank string */
    DESCRIPTOR * descr)    /* Target descriptor */
 {
- char * src;
+ const char * src;
  STRING_CHUNK * tgt_str;
  STRING_CHUNK * next_tgt;
  short int n;

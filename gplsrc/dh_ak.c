@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Replace && by & for check binary flag in delete_ak function.
  * 11 May 13        ak_create default length if file version less than 2.
  * 09 Jul 07  2.5-7 0556 ak_read() for big record set node number incorrectly.
  * 01 Jul 07  2.5-7 Extensive changes for PDA merge.
@@ -2059,7 +2060,7 @@ Private bool delete_ak(
 
  /* Check this AK exists */
 
- if ((header.ak_map && (1 << akno)) == 0)
+ if ((header.ak_map & (1 << akno)) == 0)
   {
    dh_err = DHE_NO_SUCH_AK;
    goto exit_delete_ak;

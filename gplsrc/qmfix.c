@@ -19,6 +19,9 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19        Remove status unused variable in fix_file function and add
+ *                  precompile condition in write_record function for rec_size
+ *                  variable.
  * 07 Nov 07  2.6-5 Extended to handle intermediate unused groups when doing
  *                  rebuild operation.
  * 12 Apr 07  2.5-2 Added remapping of ECB to recover_space().
@@ -349,8 +352,6 @@ usage:
 void fix_file(fn)
    char * fn;
 {
- int status;
-
  strcpy(filename, fn);
 
 
@@ -358,7 +359,7 @@ void fix_file(fn)
   {
    if (file_found) emit("\n\n");
    file_found = TRUE;
-   status = process_file();
+   process_file();
   }
 }
 
@@ -3035,7 +3036,9 @@ bool write_record(DH_RECORD * rec)
  int rec_offset;           /* Offset of record in group buffer */
  DH_RECORD * rec_ptr;      /* Record pointer */
  short int used_bytes;     /* Number of bytes used in this group buffer */
+#ifdef REPLACE_DUPLICATE
  short int rec_size;       /* Size of current record */
+#endif
  long int old_big_rec_head = 0; /* Head of old big record chain */
  int64 overflow_offset;
  DH_BLOCK * obuff = NULL;
@@ -3109,7 +3112,9 @@ bool write_record(DH_RECORD * rec)
      while(rec_offset < used_bytes)
       {
        rec_ptr = (DH_RECORD *)(((char *)buff) + rec_offset);
+#ifdef REPLACE_DUPLICATE
        rec_size = rec_ptr->next;
+#endif
 
        if ((id_len == rec_ptr->id_len)
           && (memcmp(id, rec_ptr->id, id_len)== 0))  /* Found this record */

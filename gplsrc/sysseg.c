@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 Dec 19         Correct int type in shmat return value.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 21 Mar 07  2.5-1 Use daemon() on NIX platforms to detach qmlnxd and startup
  *                  command process from parent.
@@ -316,7 +317,7 @@ Private bool create_shared_segment(bytes, cfg, errmsg)
    return FALSE;
   }
 
- if ((int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
+ if ((long int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
   {
    sprintf(errmsg, "Error %d attaching to new shared segment", errno);
    return FALSE;
@@ -335,7 +336,7 @@ bool attach_shared_memory()
 
  if ((shmid = shmget(QM_SHM_KEY, 0, 0666)) != -1)
   {
-   if ((int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
+   if ((long int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) == -1)
     {
      fprintf(stderr, "Error %d attaching to shared segment\n", errno);
      return FALSE;
@@ -423,7 +424,7 @@ bool stop_qm()
 
    if (shm.shm_nattch)
     {
-     if ((int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) != -1)
+     if ((long int)(sysseg = (SYSSEG *)shmat(shmid, NULL, 0)) != -1)
       {
        /* Send all QM processes the SIGTERM signal */
 
