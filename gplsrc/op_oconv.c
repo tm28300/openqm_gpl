@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 May 13        Correct time_conversion from blank input string.
  * 04 Oct 07  2.6-5 0564 Julian date conversions could have stray characters
  *                  at the end.
  * 04 Oct 07  2.6-5 0563 float_conversion() assumed double to be little endian.
@@ -2493,9 +2494,12 @@ Private long int time_conversion(char * p)
  /* Get the time value */
 
  src_descr = e_stack - 1;
- if ((src_descr->type == STRING) && (k_blank_string(src_descr)))
+ if (src_descr->type == STRING)
   {
-   goto exit_time_conversion_ok;
+   if ((src_descr->data.str.saddr == NULL) || (!k_str_to_num(src_descr)))
+    {
+     return 1;
+    }
   }
 
  GetInt(src_descr);

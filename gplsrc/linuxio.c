@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 May 13        In login_user add support for SHA512 crypt.
  * 05 Nov 07  2.6-5 0566 Applied casts to handle keyin() correctly.
  * 13 Sep 07  2.6-3 0562 Need to inhibit input_handler() when doing SH command.
  * 03 Sep 07  2.6-3 Disable OPOST output mode so that LF is not mapped to CRLF.
@@ -740,7 +741,7 @@ bool login_user(username, password)
 
  if (p != NULL)
   {
-   if (memcmp(p, "$1$", 3) == 0)    /* MD5 algorithm */
+   if ((memcmp(p, "$1$", 3) == 0) || (memcmp(p, "$6$", 3) == 0))   /* MD5 or SHA512 */
     {
      if ((q = strchr(p, ':')) != NULL) *q = '\0';
      if (strcmp((char *)crypt(password, p), p) == 0)

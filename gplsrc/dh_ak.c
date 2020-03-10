@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 May 13        ak_create default length if file version less than 2.
  * 09 Jul 07  2.5-7 0556 ak_read() for big record set node number incorrectly.
  * 01 Jul 07  2.5-7 Extensive changes for PDA merge.
  * 21 Nov 06  2.4-17 Revised interface to dio_open().
@@ -1892,7 +1893,14 @@ Private short int create_ak(
  big_dict_rec = (dict_rec_len > AK_CODE_BYTES);
  if (big_dict_rec)
   {
-   ak_header.itype_ptr = ak_header_size + DH_AK_NODE_SIZE;
+   if (header.file_version < 2)
+    {
+     ak_header.itype_ptr = ak_header_size + DH_AK_NODE_SIZE;
+    }
+   else
+    {
+     ak_header.itype_ptr = 2;
+    }
   }
  else   /* Short enough to store in AK header */
   {

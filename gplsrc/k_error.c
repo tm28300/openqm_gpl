@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 11 May 13        Add "none" string parameter for 1120 system error.
  * 13 Sep 07  2.6-3 0562 Reset in_sh flag at error.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 05 Feb 07  2.4-20 Added transparent_newline argument to tio_display_string().
@@ -243,7 +244,7 @@ void k_error(char * message, ...)
  n = strlen(s); 
  if (process.program.flags & HDR_ITYPE)
   {
-   sprintf(s + n, sysmsg(1120)); /* in dictionary expression */
+   sprintf(s + n, sysmsg(1120), "none"); /* in dictionary expression */
   }
  else
   {
