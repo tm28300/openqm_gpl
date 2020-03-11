@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_index.htm"; }
+else { parent.quicksync('a7.5.118'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>INDEX()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="INDEX(),INDEXS()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">INDEX(), INDEXS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_in.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_indices.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">INDEX()</span><span style="color: #000000;"> function returns the position of a specified occurrence of a substring within a string. The </span><span style="font-weight: bold; color: #000000;">INDEXS()</span><span style="color: #000000;"> function is similar to </span><span style="font-weight: bold; color: #000000;">INDEX()</span><span style="color: #000000;"> but operates on each element of a dynamic array element separately, locating the required occurrence of </span><span style="font-style: italic; color: #000000;">substring</span><span style="color: #000000;"> and returning a similarly structured dynamic array of results.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">INDEX(</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">substring</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">occurrence</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the string in which the search is to occur.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">substring</span></td><td><span style="color: #000000;">evaluates to the substring to be located.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">occurrence</span></td><td><span style="color: #000000;">evaluates to the position of the occurrence of the substring to be located.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">INDEX()</span><span style="color: #000000;"> function locates the specified</span><span style="font-style: italic; color: #000000;"> occurrence</span><span style="color: #000000;"> of </span><span style="font-style: italic; color: #000000;">substring</span><span style="color: #000000;"> within </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> and returns its character position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">occurrence</span><span style="color: #000000;"> is less than one or the desired </span><span style="font-style: italic; color: #000000;">occurrence</span><span style="color: #000000;"> of </span><span style="font-style: italic; color: #000000;">substring</span><span style="color: #000000;"> is not found, the </span><span style="font-weight: bold; color: #000000;">INDEX()</span><span style="color: #000000;"> function returns zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">substring</span><span style="color: #000000;"> is null, the value of </span><span style="font-style: italic; color: #000000;">occurrence</span><span style="color: #000000;"> is returned.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_nocase_strings.htm">$NOCASE.STRINGS</a></span><span style="color: #000000;"> compiler directive makes the comparison case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = INDEX(S, &quot;*&quot;, 3)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement assigns N with the character position of the third asterisk in variable S.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = &quot;ABABABABABAB&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = INDEX(S, &quot;ABA&quot;, 2)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">sets N to 5.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

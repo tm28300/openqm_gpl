@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_selectindex.htm"; }
+else { parent.quicksync('a7.5.231'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SELECTINDEX</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SELECTINDEX" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SELECTINDEX()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_selecte.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_selectinfo.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> statement creates a select list from an&nbsp; <a href="ak.htm">alternate key index</a> entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">index.name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">index.name</span></td><td><span style="color: #000000;">is the name of the alternate key index to be processed.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">is the value to be located in the index.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with an open file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">list.no</span></td><td><span style="color: #000000;">is the select list number of the list to be created. If omitted, select list zero is used.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> is omitted, the </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> statement constructs a select list containing all the values of the index identified by </span><span style="font-style: italic; color: #000000;">index.name</span><span style="color: #000000;">. If the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> is included, the </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> statement constructs a select list containing keys of records for which the index indentifed by </span><span style="font-style: italic; color: #000000;">index.name</span><span style="color: #000000;"> has the given </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Thus, in a file of orders with an index on the customer number field, the first form would return a list of customers referenced by the orders file and the second form would return a list of orders for a specific customer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function returns zero if the </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> is successful, non-zero if it fails because the index does not exist. Selecting records for a </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> that is not present in the index will return an empty list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="at_variables.htm#selected">@SELECTED</a> </span><span style="color: #000000;">variable is set to the number of entries in the returned list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> operation leaves the internal index pointer used by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTLEFT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTRIGHT</a></span><span style="color: #000000;"> statements positioned at the item that has been located or, if not found, at the position where such an item would go.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of this statement inside a transaction will not reflect any uncommitted updates to the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SELECTINDEX 'CUST.NO' FROM ORDERS.FILE TO 7</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READNEXT CUST.NO FROM 7 ELSE EXIT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; CRT CUST.NO</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; SELECTINDEX 'CUST.NO', CUST.NO FROM ORDERS.FILE</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LOOP</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READNEXT ORDER.NO ELSE EXIT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; CRT ORDER.NO</span><br>
+<span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REPEAT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program builds a select list of all the customers referenced by the orders file as list 7. The inner loop then constructs a list of the order numbers for each customer in turn.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETLEFT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETRIGHT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTLEFT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTRIGHT</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

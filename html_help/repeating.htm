@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?repeating.htm"; }
+else { parent.quicksync('a6.84'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>REPEATING</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REPEATING" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">REPEATING</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="require_select.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="said.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REPEATING</span><span style="color: #000000;"> keyword causes the query processor to repeat single valued data against further values in other fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REPEATING</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In a report that includes multivalued fields, the value of any single valued items normally only appears once. The </span><span style="font-weight: bold; color: #000000;">REPEATING</span><span style="color: #000000;"> keyword duplicates the single valued items against each multivalued element of other fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The decision as to whether an item is single or multivalued is based on the S/M flag in the D/I-type dictionary definition or use of the equivalent field qualifiers, not by whether the data includes value marks. This is to ensure that a multivalued field with only a single entry does not get repeated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pick style A/S-type dictionary items are always treated as multivalued.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A file containing a multivalued list of order numbers corresponding to each customer might produce a report that includes the following section:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LIST CUST.SALES ORDER.NO HDR.SUP</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">Customer&nbsp;&nbsp; Order No</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">1447&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10045</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">1587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10051</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10059</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Using the </span><span style="font-weight: bold; color: #000000;">REPEATING</span><span style="color: #000000;"> keyword changes this to:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LIST CUST.SALES ORDER.NO HDR.SUP REPEATING</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">Customer&nbsp;&nbsp; Order No</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">1447&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10045</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">1587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10051</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">1587&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10059</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

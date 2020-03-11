@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_display.htm"; }
+else { parent.quicksync('a7.5.68'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DISPLAY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DISPLAY,CRT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DISPLAY, CRT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_disinherit.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_dir.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DISPLAY</span><span style="color: #000000;"> statement sends data to the display. The synonym </span><span style="font-weight: bold; color: #000000;">CRT</span><span style="color: #000000;"> can be used in place of </span><span style="font-weight: bold; color: #000000;">DISPLAY</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DISPLAY </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">print.list</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">print.list</span></td><td><span style="color: #000000;">is a list of items to be displayed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DISPLAY</span><span style="color: #000000;"> statement is equivalent to a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_print.htm">PRINT</a></span><span style="color: #000000;"> statement directed to the display.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">print.list</span><span style="color: #000000;"> contains any number of items (including zero) but must all appear on a single source program line. The individual items are expressions which can be evaluated and represented as strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where multiple items are present, they are separated by commas. The </span><span style="font-weight: bold; color: #000000;">DISPLAY</span><span style="color: #000000;"> statement will replace the comma by a TAB character, causing display to align to the next horizontal tabulation column, initially set to columns 0, 10, 20, 30, etc. The same effect can be achieved by inserting TAB characters in the data to be displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A colon as the final token on the source line is not treated as a concatenation operator but as a special symbol which causes the normal line feed and carriage return at the end of the </span><span style="font-weight: bold; color: #000000;">DISPLAY</span><span style="color: #000000;"> action to be suppressed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When data is output to the display, QM will pause at the end of the screen and ask for confirmation to continue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Press RETURN to continue, A to abort, Q to Quit, S to suppress pagination</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Entering A will cause an abort to occur. Entering Q will quit from the current program or command. Entering S will continue display and suppress this prompt at the end of subsequent pages. Any other character causes display to continue up to the next prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pagination may be suppressed by use of any </span><span style="font-weight: bold; color: #000000;"><a href="qmb_at_fun.htm">@(x, y)</a></span><span style="color: #000000;"> cursor positioning function. Note that this does not have to be sent to the screen; use of the function is sufficient. Thus a statement such as</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DUMMY = @(0,0)</span></p>
+<p><span style="color: #000000;">will suppress pagination even though nothing is displayed by this statement. Pagination may be turned on again by use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_printer_reset.htm">PRINTER RESET</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY &quot;Error code &quot; : STATUS()</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement displays the literal string &quot;Error code &quot; and the value of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function. The cursor is then positioned at the start of the next line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY &quot;Enter product code &quot; :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">INPUT PRODUCT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment displays a prompt for a product code to be entered. Note the use of the trailing colon to suppress the line feed so that the cursor is left after the prompt ready for the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input.htm">INPUT</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FOR I = 1 TO 10</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY I, RATE(I), TOTAL(I)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">NEXT I</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example displays a three column table, lining up the columns with horizontal tabulation positions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_at_fun.htm">@(x,y)</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_print.htm">PRINT</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

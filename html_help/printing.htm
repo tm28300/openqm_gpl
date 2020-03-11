@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?printing.htm"; }
+else { parent.quicksync('a3.8'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Printing</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Printing" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Printing</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="patterns.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="usersecurity.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM applications do not drive printing devices directly. Instead they reference numbered print units with no knowledge of where the output will actually go. This leads to a very flexible printing system where the output can be sent to a printer, a file or the user's screen. QM uses the underlying Print Manager on Windows or the operating system spooler on other platforms to perform output to printer devices.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Windows Mobile and Windows CE used on PDA devices have no built-in printer support. Third party software packages are required to print on these platforms. QM retains support for mode 3 print units as described below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each QM session has its own pool of print units, numbered from 0 to 255. In most cases, if a print unit is not specified in a command, printer 0, the default printer, is used. Application developers are free to use these print units in any way that meets their needs. They might correspond to different printers, different paper types on the one printer, selection of portrait or landscape mode, etc. Although it is unlikely, all 256 print units can be used simultaneously.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Within QMBasic programs printer 0 is treated as a special case. If the program has not used the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_printer.htm">PRINTER ON</a></span><span style="color: #000000;"> statement (or the </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> qualifier to the </span><span style="font-weight: bold; color: #000000;"><a href="run.htm">RUN</a></span><span style="color: #000000;"> command), output to printer 0 is actually sent to the user's screen rather than the printer. This allows an application to use either the screen or the default printer simply by choosing whether to execute the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_printer.htm">PRINTER ON</a></span><span style="color: #000000;"> statement rather than having to implement two alternative paths for every place that performs output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic programs can also reference print unit -1 as a synonym for the user's screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Pick Style Form Queues</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">As an aid to migration from other systems, QM provides limited support for Pick style form queues by use of the </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span><span style="color: #000000;"> command. Internally, QM needs to relate form queue numbers to the equivalent </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> options and this is managed by a mapping file, $FORMS, using the </span><span style="font-weight: bold; color: #000000;"><a href="set_queue.htm">SET.QUEUE</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For more information, see the </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="set_queue.htm">SET.QUEUE</a></span><span style="color: #000000;"> command descriptions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Setting Print Unit Characteristics</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Unless otherwise defined, print unit 0 is directed to the system's default printer and all other print units are directed to the $HOLD file. Almost all applications will need to modify this default behaviour by using the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command. This may be executed from the <a href="command_scripts.htm">MASTER.LOGIN</a> paragraph in the QMSYS account (to affect all users), from the <a href="command_scripts.htm">LOGIN</a> paragraph of a specific account (to affect only users of that account), or from within the application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command defines the shape of the printed page (width, depth, margins), the destination and various options relating to the treatment of the output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A print unit can operate in several modes:</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Mode 1</span><span style="color: #000000;"> directs the output to the underlying operating system print processor, usually to send it to a physical printer.</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Mode 3</span><span style="color: #000000;"> formats the data ready for printing but directs it to a record in the $HOLD file from where it may subsequently be viewed on the screen with a suitable editor or sent on to a printer when required. The hold file is most commonly used to defer printing until a process has completed, to gather diagnostic output, or for testing.</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Mode 4</span><span style="color: #000000;"> directs the output the the stdout (standard output) file unit.</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Mode 5</span><span style="color: #000000;"> buffers the data in the $HOLD file and then sends it to the terminal when the printer is closed, prefixing it with the control code to enable the terminal auxiliary port and disabling this port on completion of the print. This feature relies on the mc5 (aux on) and mc4 (aux off) <a href="terminfo.htm">terminfo</a> items being set correctly.</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Mode 6</span><span style="color: #000000;"> combines the actions of modes 1 and 3, creating a file and also printing the data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A print job commences when the first line of output is sent to the printer and normally terminates when the program closes the print unit either explicitly or implicitly by returning to the command processor. It is possible to merge output from several successive print programs into one job by use of the </span><span style="font-weight: bold; color: #000000;"><a href="printer.htm">PRINTER</a></span><span style="color: #000000;"> command. The </span><span style="font-weight: bold; color: #000000;">KEEP.OPEN</span><span style="color: #000000;"> option used before output commences followed by the </span><span style="font-weight: bold; color: #000000;">CLOSE</span><span style="color: #000000;"> option after the final program completes treats the entire sequence as a single print job.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Printing on Windows</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Windows defines two alternative printing interfaces. The graphical device interface (GDI) allows a Windows application to construct complex text and graphics images whereas the non-GDI mode (known in QM as raw mode) is a much simpler interface that permits only simple text output. QM uses the raw mode by default though, for compatibility with older releases, the <a href="configparams.htm#gdi">GDI</a> configuration parameter can be used to make GDI the default though QM does not provide any functions to generate GDI graphics.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some options of the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command are applicable only to one or other of the two modes. Also, some options may not be supported by all Windows print drivers. In most cases, inapplicable options are simply ignored.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Printing on Other Platforms</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM normally uses the underlying lp command to print data on these platforms though this can be modified by use of the </span><span style="font-weight: bold; color: #000000;"><a href="configparams.htm">SPOOLER</a></span><span style="color: #000000;"> configuration parameter or the SPOOLER option of the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command. </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> options that are not applicable are ignored.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Printing to a File</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command can be used to direct output to a record in the $HOLD file or to any specific pathname on the server system. Hold file entries have a default name of P</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is the print unit number but this can be modified in </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> to use a different name and/or to add a rolling sequence number to the name.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Print Prefix Files</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The PREFIX option of the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command can be used to specify the pathname of a file containing printer initialisation commands. The content of this file is sent to the printer before the first output from the application. A typical use of a prefix file might be to select a paper tray.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PCL Printer Support</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The printing system of QM includes features for greater control of PCL printers. These include font selection, basic graphics and enhanced report formats. The PCL features are enabled by including the PCL option in the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command when defining the printer characteristics.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By default, a PCL printer will print in Courier font at 10 characters per inch and 6 lines per inch. The </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command includes options to specify alternative values for the character and line spacing. The paper size defaults to A4 but can also be amended using </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;">. The LANDSCAPE option will rotate the page through 90 degrees.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The query processor also has special support for PCL printers in report generation commands (e.g. </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;">). Page headings, footings and breakpoint values are printed in bold face. The </span><span style="font-weight: bold; color: #000000;"><a href="boxed.htm">BOXED</a></span><span style="color: #000000;"> option draws a box around the page and separates the heading and footing from the text with horizontal lines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Graphical Overlays</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The OVERLAY option of the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command can be used to specify the name of a catalogued subroutine that will be called at the start of each page of output and can be used to emit printer specific control codes to draw a graphical overlay on the page. The </span><span style="font-weight: bold; color: #000000;"><a href="overlay.htm">OVERLAY</a></span><span style="color: #000000;"> option of the query processor reporting commands performs the same action but applies only to the report in which it is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In either usage, the catalogued subroutine takes a single argument which is the print unit number. Any control strings output by this subroutine should be emitted using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_print.htm">PRINT</a></span><span style="color: #000000;"> statement, normally with the trailing carriage return/line feed suppressed. For PCL printers, it is recommended that the standard QMBasic PCL control string functions should be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">subroutine overlay(pu)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">$catalog overlay</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">$include pcl.h</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; s = pcl.save.csr()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;* Save cursor position</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; s := pcl.box(0,0,2320,3300,2,10) ;* Draw box</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; s := pcl.restore.csr()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;* Restore cursor position</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; s := pcl.left.margin(1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;* Left margin column 1</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; print on pu s :</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; return</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">end</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above subroutine draws a box around an A4 sized page on a PCL printer. Note how it saves the cursor position to ensure that subsequent application output appears at the correct place.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because the subroutine is called before any other output to the page, it is possible for the subroutine to make other changes to the page settings. Note in the above example how the left margin is indented to bring the application output away from the left edge of the box.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Commands Relating to Printing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="clean_account.htm">CLEAN.ACCOUNT</a></span></td><td><span style="color: #000000;">Clears $HOLD and other system temporary files.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="printer.htm">PRINTER</a></span></td><td><span style="color: #000000;">Various printer control operations</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="setptr.htm">SETPTR</a></span></td><td><span style="color: #000000;">Display or set print unit characteristics</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="spool.htm">SPOOL</a></span></td><td><span style="color: #000000;">Sends record(s) to the printer</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Query Processor Keywords Relating to Printing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="footing.htm">FOOTING</a></span></td><td><span style="color: #000000;">Set page footing</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="heading.htm">HEADING</a></span></td><td><span style="color: #000000;">Set page heading</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="lptr.htm">LPTR</a></span></td><td><span style="color: #000000;">Direct output to a printer (applies to many commands)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">QMBasic Statements and Functions Relating to Printing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_footing.htm">FOOTING</a></span></td><td><span style="color: #000000;">Set page footing</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_heading.htm">HEADING</a></span></td><td><span style="color: #000000;">Set page heading</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_getpu.htm">GETPU()</a></span></td><td><span style="color: #000000;">Retrieve print unit characteristics</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_page.htm">PAGE</a></span></td><td><span style="color: #000000;">Force a new page</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_print.htm">PRINT</a></span></td><td><span style="color: #000000;">Emit data to a print unit</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer.htm">PRINTER CLOSE</a></span></td><td><span style="color: #000000;">Close a print unit</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer.htm">PRINTER OFF</a></span></td><td><span style="color: #000000;">Direct print unit 0 to the screen</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer.htm">PRINTER ON</a></span></td><td><span style="color: #000000;">Direct print unit 0 to the printer</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer_reset.htm">PRINTER RESET</a></span></td><td><span style="color: #000000;">Resets the default print unit</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer_display.htm">PRINTER DISPLAY</a></span></td><td><span style="color: #000000;">Direct printer output to the screen</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer_file.htm">PRINTER FILE</a></span></td><td><span style="color: #000000;">Direct printer output to a file</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_printer_name.htm">PRINTER NAME</a></span></td><td><span style="color: #000000;">Direct printer output to a named printer</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="color: #000000;"><a href="qmb_setpu.htm">SETPU</a></span></td><td><span style="color: #000000;">Set print unit characteristics</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

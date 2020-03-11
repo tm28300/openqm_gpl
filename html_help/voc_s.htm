@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_s.htm"; }
+else { parent.quicksync('a3.5.10'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC S-type records - Sentences</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Sentences,VOC S-type records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VOC-S Type Records&nbsp; -&nbsp; Sentences</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_r.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_v.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where a particular command is executed frequently, it may be useful to store it as a </span><span style="font-weight: bold; color: #000000;">sentence</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">S&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2:</span></td><td><span style="color: #000000;">Sentence text</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A sentence is a command containing a verb and, optionally, its arguments. Sentence names may be entered in response to the command prompt in the same way as a verb. Any arguments following the sentence name on the command line entered at the keyboard will be appended to the sentence retrieved from the VOC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Field 1 of a VOC sentence record must commence with a letter </span><span style="font-weight: bold; color: #000000;">S</span><span style="color: #000000;">. Field 2 holds the text of the sentence. This text replaces the sentence name in the current command and parsing continues with the first word of the substituted sentence.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where a sentence is very long it may be broken into multiple lines within the VOC record by terminating all but the final line with an underscore character. When the sentence is executed, the lines are merged, replacing the underscore with a single space.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any additional text following the sentence name in a command that starts the sentence will be appended to the sentence expansion retrieved from the VOC. For example, the </span><span style="font-weight: bold; color: #000000;"><a href="edit_list.htm">EDIT.LIST</a></span><span style="color: #000000;"> command is actually a sentence stored as</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">1:&nbsp; S</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">2:&nbsp; ED $SAVEDLISTS</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Typing</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">EDIT.LIST MYLIST</span></p>
+<p><span style="color: #000000;">actually executes the command</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ED $SAVEDLISTS MYLIST</span></p>
+<p><span style="color: #000000;">This automatic appending of additional text in the command makes stored sentences very useful as the start of commands but prevents effective use of some </span><span style="color: #000000;"><a href="inlineprompts.htm">inline prompt</a></span><span style="color: #000000;"> control codes in the sentence expansion.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A summary of S-type VOC records may be displayed or printed using </span><span style="font-weight: bold; color: #000000;"><a href="lists.htm">LISTS</a></span><span style="font-family: 'Arial'; color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

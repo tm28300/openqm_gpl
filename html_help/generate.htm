@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?generate.htm"; }
+else { parent.quicksync('a5.64'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>GENERATE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GENERATE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">GENERATE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="fstat.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="get_list.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">GENERATE</span><span style="color: #000000;"> command generates a QMBasic include record from a dictionary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">GENERATE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the file to be processed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Well structured QMBasic programs should not reference fields by field number but should instead use names defined using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_equate.htm">EQUATE</a></span><span style="color: #000000;"> tokens. The </span><span style="font-weight: bold; color: #000000;">GENERATE</span><span style="color: #000000;"> command processes the dictionary of a named file and constructs an include record with an entry for each field. Optionally, it can also produce tokens for conversion codes associated with fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The generation process is controlled by an X-type record named $INCLUDE in the dictionary. The fields of this record are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">X</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">Target file name for include record. Defaults to BP.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">3</span></td><td><span style="color: #000000;">Record name to be produced for dynamic array style tokens. Defaults to </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> with .H suffix.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">4</span></td><td><span style="color: #000000;">Token prefix for dynamic array style tokens. Each token produced is constructed from the field name with this prefix. The prefix is separated from the field name by a dot.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">5</span></td><td><span style="color: #000000;">Text to be inserted into copyright line.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">6</span></td><td><span style="color: #000000;">&quot;S&quot; if only a single entry is to be included for any field. This is the default. &quot;M&quot; if multiple D-type records for the same field location should produce separate include tokens.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">7</span></td><td><span style="color: #000000;">Include conversion code tokens?&nbsp; &quot;N&quot; omits conversion tokens. &quot;Y&quot; generates tokens for fields that have conversion codes. &quot;A&quot; generates tokens for all fields including those with a null conversion code.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">8</span></td><td><span style="color: #000000;">Type to create: D for dynamic array tokens (default), M for matrix tokens. Both may be used together.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">9</span></td><td><span style="color: #000000;">Record name to be produced for matrix style tokens. Defaults to </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> with .MAT.H suffix.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">10</span></td><td><span style="color: #000000;">Matrix name for matrix style tokens. Defaults to </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">11</span></td><td><span style="color: #000000;">Token prefix for matrix style tokens. Each token produced is constructed from the field name with this prefix. The prefix is separated from the field name by a dot.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the $INCLUDE record does not exist, it will be created when </span><span style="font-weight: bold; color: #000000;">GENERATE</span><span style="color: #000000;"> is first run for the file. A prompt will be issued for the type of tokens to be generated (field 8) and the prefix character to be inserted into fields 4 and/or 11. All other fields will be left empty except for field 1 (X).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When creating the matrix style include record for use with </span><span style="font-weight: bold; color: #000000;"><a href="qmb_matread.htm">MATREAD</a></span><span style="color: #000000;">, the matrix is dimensioned to have one more element than the highest field number referenced in the dictionary. This allows for the different ways in which normal and Pick style matrices handle unexpected fields.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

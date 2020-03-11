@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_sort.htm"; }
+else { parent.quicksync('a7.8.14'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!SORT()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!SORT()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!SORT()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_setvar.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_username.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!SORT()</span><span style="color: #000000;"> subroutine sorts the elements of a dynamic array according to a specified sorting rule.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !SORT(</span><span style="font-style: italic; color: #000000;">in.list</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">out.list</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">sort.rule</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">in.list</span></td><td><span style="color: #000000;">is the dynamic array containing the items to be sorted. Any mark character (or a mix of different mark characters) may be used to separate the items.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">out.list</span></td><td><span style="color: #000000;">is the variable to receive the sorted dynamic array. The items will be separated by field marks.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">sort.rule</span></td><td><span style="color: #000000;">defines the manner of sorting. This is a string containing characters from the following:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">A</span></td><td><span style="color: #000000;">Sort in ascending order (default)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;">Sort in descending order</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">L</span></td><td><span style="color: #000000;">Sort as left aligned values (default)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">R</span></td><td><span style="color: #000000;">Sort as right aligned values</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">N</span></td><td><span style="color: #000000;">Ignore null elements</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">U</span></td><td><span style="color: #000000;">Return unique items. Multiple occurrences of an item are replaced by just one item.</span></td></tr></table></div><p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">Invalid or conflicting </span><span style="font-style: italic; color: #000000;">sort.rule</span><span style="color: #000000;"> elements are ignored.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!SORT()</span><span style="color: #000000;"> subroutine sorts elements of </span><span style="font-style: italic; color: #000000;">in.list</span><span style="color: #000000;"> into the order defined by </span><span style="font-style: italic; color: #000000;">sort.rule</span><span style="color: #000000;">, returning the sorted list in </span><span style="font-style: italic; color: #000000;">out.list</span><span style="color: #000000;">. The value of </span><span style="font-style: italic; color: #000000;">in.list</span><span style="color: #000000;"> is not changed unless it refers to the same variable as </span><span style="font-style: italic; color: #000000;">out.list</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Right aligned sorts should normally be used when sorting numeric data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CUSTOMER.LIST = &quot;&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT INVOICES</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READNEXT ID ELSE EXIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READ INVOICE.REC FROM INVOICES, ID THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; CUSTOMER.LIST&lt;-1&gt; = INVOICE.REC&lt;CUSTOMER.NAME&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL !SORT(CUSTOMER.LIST, CUSTOMER.LIST, &quot;AU&quot;)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment reads all the records from the INVOICE file and builds a list of customer names. This is then sorted, removing duplicates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This approach will be faster than using </span><span style="font-weight: bold; color: #000000;">LOCATE</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">INS</span><span style="color: #000000;"> to build a sorted list unless there are a very large number of duplicates.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

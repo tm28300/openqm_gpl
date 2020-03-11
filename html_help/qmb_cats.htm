@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_cats.htm"; }
+else { parent.quicksync('a7.5.27'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CATS()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CATS()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CATS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_catalogued.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_chain.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CATS()</span><span style="color: #000000;"> function concatenates corresponding elements of a dynamic array.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CATS(</span><span style="font-style: italic; color: #000000;">string1</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> string2</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string1</span></td><td><span style="color: #000000;">is the string to which </span><span style="font-style: italic; color: #000000;">string2</span><span style="color: #000000;"> is to be concatenated.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string2</span></td><td><span style="color: #000000;">is the concatenation string.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CATS()</span><span style="color: #000000;"> function returns the result of concatenating corresponding dynamic array components (fields, values and subvalues) from the supplied strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span><span style="color: #000000;"> function can be applied to either or both expressions. Without this function, any absent trailing values are taken as null strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S1 = &quot;ABC&quot;:@fm:&quot;DEF&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S2 = &quot;123&quot;:@vm:&quot;456&quot;:@fm:&quot;789&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = CATS(S1,S2)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above code fragment concatenates elements of the two strings yielding a result in X of &quot;ABC123</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">456</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">DEF789&quot;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

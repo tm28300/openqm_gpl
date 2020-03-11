@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?csv.htm"; }
+else { parent.quicksync('a6.37'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CSV</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CSV" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CSV</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="col_sup.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="cumulative.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CSV</span><span style="color: #000000;"> display option keyword specifies that the report should be produced in CSV format.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CSV </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">&quot;</span><span style="font-style: italic; color: #000000;">delimiter</span><span style="font-weight: bold; color: #000000;">&quot;</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">mode</span></td><td><span style="color: #000000;">is a numeric value specifying the format rules to be applied.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">delimiter</span></td><td><span style="color: #000000;">is an alternative delimiting character. This may not be a double quote.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The CSV keyword produces a report in CSV (comma separated variable) format as used by many software products. In this format, each item in the report is separated by a comma instead of the usual tabular style of report. QM extends this format by allowing use of an alternative </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;"> character.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> option specifies the format rules to be applied. A </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> value of 1 (the default if no </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> is given) produces output that conforms to the CSV format specification (RFC 4180). This requires that items containing double quotes or the delimiter character are enclosed in double quotes with embedded double quotes replace by two adjacent double quotes. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> value of 2 encloses all non-null values in double quotes except for numeric items that do not contain a comma. Embedded double quotes are replaced by two adjacent double quotes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;"> may be set to a tab character by use of the special syntax &quot;&lt;TAB&gt;&quot;. Other non-printing characters can be specified by use of the ^</span><span style="font-style: italic; color: #000000;">nnn</span><span style="color: #000000;"> notation where </span><span style="font-style: italic; color: #000000;">nnn</span><span style="color: #000000;"> is the three digit character number from the ASCII character set.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In normal usage, the page heading and record counts would probably need to be suppressed using the </span><span style="font-weight: bold; color: #000000;"><a href="hdr_sup.htm">HDR.SUP</a></span><span style="color: #000000;"> and&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="count_sup.htm">COUNT.SUP</a></span><span style="color: #000000;"> keywords. The </span><span style="font-weight: bold; color: #000000;"><a href="col_sup.htm">COL.SUP</a></span><span style="color: #000000;"> keyword can be used to suppress column headings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="to_delimited.htm">TO</a></span><span style="color: #000000;"> keyword can be used to specify the pathname of a file to receive the output. Use of this option implies use of </span><span style="font-weight: bold; color: #000000;"><a href="hdr_sup.htm">HDR.SUP</a></span><span style="color: #000000;"> as the output is not paginated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CUSTOMERS NAME TEL HDR.SUP COL.SUP COUNT.SUP CSV</span></p>
+<p><span style="color: #000000;">would produce a display such as that below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">17463,Arkright Tool Hire,01726-48745</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">56221,&quot;Smith,Price and Samuel&quot;, 01876-28414</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note how the customer name in the second line has been quoted because it contains a comma.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See also: </span><span style="font-weight: bold; color: #000000;"><a href="delimiter.htm">DELIMITER</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

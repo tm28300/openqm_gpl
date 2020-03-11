@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_csvdq.htm"; }
+else { parent.quicksync('a7.5.55'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CSVDQ()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CSVDQ()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CSVDQ()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_crop.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_data.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CSVDQ()</span><span style="color: #000000;"> function dequotes a CSV (comma separated variable) string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CSVDQ(</span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;">})</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the string to be processed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">delimiter</span></td><td><span style="color: #000000;">is the delimiter character separating the elements of the string. This defaults to a comma if omitted.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CSVDQ()</span><span style="color: #000000;"> function dequotes a CSV string, removing outer double quotes, handling embedded quotes and returning the result as a dynamic array where each element of the original string is represented by a separate field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = 'ABC,&quot;DEF&quot;,&quot;GHI,JKL&quot;,&quot;MN&quot;&quot;O&quot;'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY CSVDQ(S)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment would display</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ABC</span><span style="font-size: 6pt; font-family: 'Courier New'; color: #000000;">FM</span><span style="font-family: 'Courier New'; color: #000000;">DEF</span><span style="font-size: 6pt; font-family: 'Courier New'; color: #000000;">FM</span><span style="font-family: 'Courier New'; color: #000000;">GHI,JKL</span><span style="font-size: 6pt; font-family: 'Courier New'; color: #000000;">FM</span><span style="font-family: 'Courier New'; color: #000000;">MN&quot;O</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">ABC was unquoted and remains unchanged.</span></p>
+<p><span style="color: #000000;">DEF was quoted. The quotes have been removed.</span></p>
+<p><span style="color: #000000;">GHI,JKL contains a comma that has been preserved after removal of the quotes.</span></p>
+<p><span style="color: #000000;">MN&quot;O contains an embedded quote that has been preserved.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

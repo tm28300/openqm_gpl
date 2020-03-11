@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?col_hdg_id.htm"; }
+else { parent.quicksync('a6.31'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>COL.HDG.ID</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="COL.HDG.ID" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">COL.HDR.ID</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="col_hdg.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="col_hdr_supp.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COL.HDG.ID</span><span style="color: #000000;"> keyword causes the query processor to use the display clause field names as the default column headings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">COL.HDG.ID</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The query processor normally uses the display name entry from the dictionary as the column heading in a report. Use of the </span><span style="font-weight: bold; color: #000000;">COL.HDG.ID</span><span style="color: #000000;"> keyword causes use of the actual field name as the column heading for all fields unless overridden by use of </span><span style="font-weight: bold; color: #000000;"><a href="col_hdg.htm">COL.HDG</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command</span></p>
+<p><span style="font-family: 'Courier'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST INVOICES VALUE CUSTOMER.NAME WITH NO AMT.PAID</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would normally produce a display such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST INVOICES VALUE CUSTOMER.NAME WITH NO AMT.PAID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Invoice&nbsp; ...Value&nbsp; Customer...................</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74529&nbsp;&nbsp;&nbsp; &pound;1712.43&nbsp; J McTavish</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74273&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &pound;95.23&nbsp; County Newspapers</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">63940&nbsp;&nbsp;&nbsp;&nbsp; &pound;141.00&nbsp; R Bryant</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74993&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &pound;9.29&nbsp; Write Right Stationery</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">4 records listed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Adding the </span><span style="font-weight: bold; color: #000000;">COL.HDG.ID</span><span style="color: #000000;"> option, the command</span></p>
+<p><span style="font-family: 'Courier'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST INVOICES VALUE CUSTOMER.NAME WITH NO AMT.PAID COL.HDG.ID</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would produce a display such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST INVOICES VALUE CUSTOMER.NAME WITH NO AMT.PAID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">INVOICE&nbsp; ...VALUE&nbsp; CUSTOMER.NAME..............</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74529&nbsp;&nbsp;&nbsp; &pound;1712.43&nbsp; J McTavish</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74273&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &pound;95.23&nbsp; County Newspapers</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">63940&nbsp;&nbsp;&nbsp;&nbsp; &pound;141.00&nbsp; R Bryant</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">74993&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &pound;9.29&nbsp; Write Right Stationery</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">4 records listed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

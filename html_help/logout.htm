@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?logout.htm"; }
+else { parent.quicksync('a5.100'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOGOUT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOGOUT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOGOUT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="logmsg.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="logto.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOGOUT</span><span style="color: #000000;"> command terminates a QM process.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOGOUT</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">user</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOGOUT</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">ALL</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">user</span></td><td><span style="color: #000000;">is the user number of the process to terminate. Multiple user numbers may be given.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOGOUT</span><span style="color: #000000;"> command aborts the specified process. The process is terminated without execution of the </span><span style="color: #000000;"><a href="command_scripts.htm">ON.EXIT</a></span><span style="color: #000000;"> paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">user</span><span style="color: #000000;"> is omitted, the </span><span style="font-weight: bold; color: #000000;">LOGOUT</span><span style="color: #000000;"> command terminates the user's own session. A user who does not have administrator rights can only log out processes running under the same user name.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOGOUT ALL</span><span style="color: #000000;"> form of the command, available only in the QMSYS account to users with administrator rights, logs out all QM processes except the one from which it is issued.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOGOUT 2</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Phantom 2 : forced logout</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example shows forced termination of phantom user 2.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

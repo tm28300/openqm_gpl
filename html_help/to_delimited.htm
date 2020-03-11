@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?to_delimited.htm"; }
+else { parent.quicksync('a6.94'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>TO (Delimited reports)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="TO (Delimited reports)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">TO&nbsp;&nbsp; (Delimited reports)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="to_reformat.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="total.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TO </span><span style="color: #000000;">keyword used in a </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;"> command with the </span><span style="font-weight: bold; color: #000000;"><a href="csv.htm">CSV</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="delimiter.htm">DELIMITER</a></span><span style="color: #000000;"> options specifies the pathname of the output file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TO </span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">APPENDING</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">pathname</span></td><td><span style="color: #000000;">is the pathname of the file to receive the output.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="csv.htm">CSV</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="delimiter.htm">DELIMITER</a></span><span style="color: #000000;"> options of the query processor create a delimited format report which is normally directed to the screen or, by use of the </span><span style="font-weight: bold; color: #000000;"><a href="lptr.htm">LPTR</a></span><span style="color: #000000;"> keyword, to a print unit. The </span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> option can be used to direct the output to the file identified by </span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the target </span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;"> already exists, the user will be prompted to confirm whether it should be overwritten. The </span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;"> option suppresses this prompt, overwriting the existing file. The </span><span style="font-weight: bold; color: #000000;">APPENDING</span><span style="color: #000000;"> option causes the output to be appended to the output file if it already exists. The </span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">APPENDING</span><span style="color: #000000;"> options may not be used together.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of </span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> implies use of </span><span style="font-weight: bold; color: #000000;"><a href="hdr_sup.htm">HDR.SUP</a></span><span style="color: #000000;"> as the output is not paginated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK PROD.NO QOH DESCR CSV TO C:\STOCK.CSV</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command constructs comma separated format report of the STOCK file into the C:\STOCK.CSV file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?build_index.htm"; }
+else { parent.quicksync('a5.14'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>BUILD.INDEX</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BUILD.INDEX" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">BUILD.INDEX</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="break.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="catalogue.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> command populates an <a href="ak.htm">alternate key index</a></span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;">  </span><span style="font-style: italic; color: #000000;">field(s)</span><span style="color: #000000;"> </span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;">  </span><span style="font-weight: bold; color: #000000;">ALL</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">filename</span></td><td><span style="color: #000000;">is the name of the file for which the index is to be built.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field(s)</span></td><td><span style="color: #000000;">is one or more field names for which indices have been created.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> command deletes any existing index data for the named field(s) and populates the index by processing all records currently in the file. The </span><span style="font-weight: bold; color: #000000;">ALL</span><span style="color: #000000;"> keyword can be used to build all indices that have been created for the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> is best performed immediately after using </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;"> to construct the index. Once the index has been built, it will be maintained automatically whenever changes are made to the file and will be used automatically by the query processor.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BUILD.INDEX</span><span style="color: #000000;"> command requires exclusive access to the file and may take some time to complete for a very large file. It is therefore best executed at quiet times.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_index.htm">DELETE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_index.htm">LIST.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="make_index.htm">MAKE.INDEX</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

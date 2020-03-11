@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?dlr_echo.htm"; }
+else { parent.quicksync('a5.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>$ECHO</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="$ECHO" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">$ECHO</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="comment.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="abort.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$ECHO</span><span style="color: #000000;"> command inserted in a paragraph enables or disabled paragraph tracing.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$ECHO </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$ECHO OFF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$ECHO</span><span style="color: #000000;"> command (optionally with a qualifier of </span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;">) enables paragraph tracing. When this mode is active, the command processor displays the paragraph name, line number and sentence for each line executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$ECHO OFF</span><span style="color: #000000;"> command disables paragraph tracing.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following paragraph might be used to delete all items in the BP.OUT file for which there is no corresponding source record in the BP file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">VOC CLEAN.BP</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">1: PA</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">2: $ECHO</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">3: SELECT BP.OUT</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">4: NSELECT BP</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">5: IF @SELECTED = 0 THEN STOP</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">6: DELETE BP.OUT</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">7: DATA Y</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Running this with the $ECHO on line 2 shows are trace of each command prior to execution:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">:CLEAN.BP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLEAN.BP 3: SELECT BP.OUT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">223 record(s) selected to list 0</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLEAN.BP 4: NSELECT BP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">17 record(s) selected to select list 0</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLEAN.BP 5: IF @SELECTED = 0 THEN STOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLEAN.BP 6: DELETE BP.OUT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Use active select list (First item 'J7')? Y</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">17 record(s) deleted</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

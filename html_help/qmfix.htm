@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmfix.htm"; }
+else { parent.quicksync('a9.10'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The qmfix Utility</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="qmfix" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The qmfix Utility</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qm_command_options.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmidx.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM file system is designed to be robust, however, there are situations when power failures, hardware failures or abnormal termination of a process might lead to structural integrity problems within a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The qmfix utility can be used to check the structural integrity of a file and, if an error is detected, then apply an automated correction. Although qmfix should always result in the file being usable, there are error situations where data will be lost because it simply was not in the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To use qmfix, firstly ensure that no users have the file(s) to be processed open. It is safest to run qmfix when no users are using QM. The qmfix utility is run from the operating system command prompt, not from within QM. The command line is</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="color: #000000;">qmfix&nbsp; </span><span style="font-style: italic; color: #000000;">options pathanme</span></p>
+<p><span style="color: #000000;">where</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">are case insensitive option codes from the following set:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-B</span></td><td><span style="color: #000000;">Suppresses progress bar display. This can be of use when capturing the output for later review as repainting of the progress bars may make the captured data less easy to read.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-C</span></td><td><span style="color: #000000;">Check file for errors (implied if B, F, Q and R options all absent)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-F</span></td><td><span style="color: #000000;">Fix errors without querying</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-L</span></td><td><span style="color: #000000;">Log the screen output in qmfix.log</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-L</span><span style="font-style: italic; color: #000000;">path</span></td><td><span style="color: #000000;">Log the screen output in </span><span style="font-style: italic; color: #000000;">path</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-Q</span></td><td><span style="color: #000000;">Query before fixing errors</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-R</span></td><td><span style="color: #000000;">Recover space from unused primary and overflow blocks. Occasional use of this function may improve performance of some large files.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">pathname</span></td><td><span style="color: #000000;">is the pathname of the file to be processed. This may be a list of may include wildcard characters. qmfix will ignore names that do not correspond to QM files. Thus, to check all files in a directory, simply type</span></td></tr></table></div><p style="margin: 10px 0px 0px 150px;"><span style="color: #000000;">qmfix *</span></p>
+<p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Do not run qmfix with the -F option without running it to check for errors first.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that qmfix may report that a dynamic has an incorrect load value or record count if the file was not closed properly at a system failure. These errors are unlikely to cause any serious problems and will be corrected by qmfix if the -F option is used and automatically by select operations that complete without any intervening file updates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">No automated error recovery tool can ever be 100% accurate in its decisions about the nature of errors so there is a very small risk that qmfix could make the situation worse. </span><span style="font-weight: bold; color: #000000;">Always backup a file before fixing any errors in it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Ladybridge Systems aim to provide software of the highest quality. We would be very interested to receive copies of any files that are reported as faulty by qmfix so that we can investigate the cause and improve the resilience of the QM product.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

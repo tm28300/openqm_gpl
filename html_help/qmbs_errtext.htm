@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_errtext.htm"; }
+else { parent.quicksync('a7.8.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!ERRTEXT()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!ERRTEXT()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!ERRTEXT()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_atvar.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_getpu.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!ERRTEXT()</span><span style="color: #000000;"> subroutine returns a text description of an error number.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !ERRTEXT(</span><span style="font-style: italic; color: #000000;">text</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">errno</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">text</span></td><td><span style="color: #000000;">is the returned descriptive text.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">errno</span></td><td><span style="color: #000000;">is the error number.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!ERRTEXT()</span><span style="color: #000000;"> subroutine can be used to retrieve a text description of a QM error number for display to a user or entry into a log file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where relevant, the associated operating system error number will be inserted into the text. For this to be correct, the </span><span style="font-weight: bold; color: #000000;">!ERRTEXT()</span><span style="color: #000000;"> subroutine must be called before any actions are performed that might lose this value (e.g. file operations).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">errno</span><span style="color: #000000;"> is not recognised, the subroutine returns </span><span style="font-style: italic; color: #000000;">errno</span><span style="color: #000000;"> as the </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> description.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL !ERRTEXT(TEXT, STATUS())</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY 'Error ' : STATUS() : ' ' : TEXT</span></p>
+<p><span style="color: #000000;">or</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DEFFUN ERRTEXT(ERRNO) CALLING &quot;!ERRTEXT&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY 'Error ' : STATUS() : ' ' : ERRTEXT(STATUS())</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

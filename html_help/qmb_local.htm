@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_local.htm"; }
+else { parent.quicksync('a7.5.139'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOCAL</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOCAL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOCAL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_ln.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_locate.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> statement introduces an internal function or subroutine that may have private local variables.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOCAL </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FUNCTION</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">SUBROUTINE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">args</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRIVATE </span><span style="font-style: italic; color: #000000;">vars</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">...statements...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is the name of the function subroutine.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">args</span></td><td><span style="color: #000000;">is the comma separated list of arguments to the function or subroutine. An argument may reference a whole matrix by prefixing it with </span><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;">. The variable names used for the arguments are visible only to the one function or subroutine and do not prevent use of the same name in other parts of the program module to reference a different variable.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Further local variables that are private to the function or subroutine may be defined by immediately following the </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> statement by one or more </span><span style="font-weight: bold; color: #000000;">PRIVATE</span><span style="color: #000000;"> statements. These contain a comma separated list of variable names which may be simple scalar items or matrices where the dimension values are numeric constants. Any variables referenced in the local function or subroutine but not declared as private are considered as having scope across the entire program module.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Functions and subroutines declared using </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> must be terminated with an </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement. The private variables declared using the </span><span style="font-weight: bold; color: #000000;">PRIVATE</span><span style="color: #000000;"> statement have scope from the </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> statement until the corresponding </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement. Variables referenced in the main body of the program and in conventional internal subroutines are accessible unless they have the same name as a locally defined variable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A local function must be defined using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_deffun.htm">DEFFUN</a></span><span style="color: #000000;"> statement with the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_local.htm">LOCAL</a></span><span style="color: #000000;"> option before its first use in the program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All labels within the local subroutine are private. It is not possible to jump into a subroutine declared with </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> except by using a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gosub.htm">GOSUB</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_on_gosub.htm">ON&nbsp;GOSUB</a></span><span style="color: #000000;"> to its unique entry point. Similarly, it is not possible to jump to a label outside the local subroutine. Use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_return.htm">RETURN&nbsp;TO</a></span><span style="color: #000000;"> statement is prohibited within a local subroutine.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If a local subroutine is called recursively, either directly or indirectly via some other intermediate subroutine, the local variables are stacked and the new invocation has its own private local variables.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is a small performance cost by comparison to use of conventional internal subroutines due to the dynamic allocation of variables but this should be negligible in most applications.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When using the QMBasic debugger, local variables have a name formed from the subroutine name and variable name separated by a colon.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOCAL SUBROUTINE SCAN.LIST</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; PRIVATE I, N, REC</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; N = DCOUNT(LIST, @FM)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; FOR I = 1 TO N</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READV REC FROM STOCK.F, LIST&lt;I&gt; , 0 ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DISPLAY LIST&lt;I&gt; : ' is not in stock file'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; NEXT</span><span style="font-family: 'Courier'; color: #000000;"> I</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; RETURN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment represents a local subroutine that scans a list, checking that each entry corresponds to a record in a file. By using </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> and three local variables, all risk of overwriting valuable data in variables of the same names in the main body of the program is removed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOCAL FUNCTION NEXT.ID(FILENAME)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; PRIVATE DICT.F, ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; OPEN 'DICT', FILENAME TO DICT.F THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READU ID FROM DICT.F, 'NEXT.ID' THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WRITE ID+1 TO DICT.F, 'NEXT.ID'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETURN ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; RETURN ''</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above local function takes a file name as its argument and gets the next sequential record id from a record stored in the corresponding dictionary, returning this as the value of the function. The dictionary will automatically be closed when the DICT.F variable is discarded on return from the function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

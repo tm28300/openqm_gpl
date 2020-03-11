@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qm_command_options.htm"; }
+else { parent.quicksync('a9.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QM Command Options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QM command options,Command line options" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QM Command Options</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="errorlogging.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmfix.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM executable stored in the bin subdirectory of the QMSYS account has a number of command line options. The command option letters shown below are all case insensitive. Note that to comply with Linux conventions, some of the options have a double hyphen prefix.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Logs the user in as user </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where the value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> must be in the range of user numbers reserved with the <a href="configparams.htm#fixusers">FIXUSERS</a> configuration parameter. If there is already a user logged in with this user number, the login fails. If the value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is not within the reserved range, the parameter is ignored.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-A</span></td><td><span style="color: #000000;">Causes QM to prompt for the account name on entry.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-A</span><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">Enters account </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> unless there is a fixed account name defined for the user name of the user entering QM. Note that there is no space before the account name.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-K </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Kill the QM process for user </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-K </span><span style="font-style: italic; color: #000000;">user</span></td><td><span style="color: #000000;">Kill all QM processes for login id </span><span style="font-style: italic; color: #000000;">user</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-K all</span></td><td><span style="color: #000000;">Kill all QM processes.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-L</span></td><td><span style="color: #000000;">Apply a new licence.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-U</span></td><td><span style="color: #000000;">List current QM users.</span></td></tr></table></div><p style="margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-QUIET</span></td><td><span style="color: #000000;">Suppresses display of release information, etc on entry to QM. Useful in some scripted sessions.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-RESTART</span></td><td><span style="color: #000000;">Restart QM (not Windows).</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-RESUME</span></td><td><span style="color: #000000;">Resume database updates.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-START</span></td><td><span style="color: #000000;">Start QM (not Windows).</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-STDOUT</span></td><td><span style="color: #000000;">(Windows only) QM normally uses the Windows console APIs to output data to the screen. This option causes it to use the stdout file handle and is of use when capturing the output or piping it into other processes. It should not be used for normal terminal output as some display features may not work with this option.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-STOP</span></td><td><span style="color: #000000;">Stop QM (not Windows).</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-SUSPEND</span></td><td><span style="color: #000000;">Suspend database updates.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">-TERM xxx</span></td><td><span style="color: #000000;">Sets the initial terminal type. This may be changed later from within the application. If this option is not used, QM defaults to the value of the operating system TERM environment variable or, if this is not defined, vt100.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">--HELP</span></td><td><span style="color: #000000;">Display usage help.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">--VERSION</span></td><td><span style="color: #000000;">Displays version information.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It is also possible to execute a QM command directly from the operating system command prompt by appending it to the start up of the QM session, after any other command options. For example:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">qm RUN OVERNIGHT</span></p>
+<p><span style="color: #000000;">Note that quotes may be needed if the QM command contains any characters with special meaning to the operating system.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

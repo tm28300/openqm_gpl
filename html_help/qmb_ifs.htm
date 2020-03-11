@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_ifs.htm"; }
+else { parent.quicksync('a7.5.116'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>IFS()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="IFS()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">IFS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_if.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_in.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 0px 0px 5px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IFS()</span><span style="color: #000000;"> function returns a dynamic array constructed from elements chosen from two other dynamic arrays depending on the content of a third dynamic array.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">IFS(</span><span style="font-style: italic; color: #000000;">control.array</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">true.array</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">false.array</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">control.array</span></td><td><span style="color: #000000;">is a dynamic array of true / false values.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">true.array</span></td><td><span style="color: #000000;">holds values to be returned where the corresponding element of </span><span style="font-style: italic; color: #000000;">control.array</span><span style="color: #000000;"> is true.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">false.array</span></td><td><span style="color: #000000;">holds values to be returned where the corresponding element of </span><span style="font-style: italic; color: #000000;">control.array</span><span style="color: #000000;"> is false.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IFS()</span><span style="color: #000000;"> function examines successive elements of </span><span style="font-style: italic; color: #000000;">control.array</span><span style="color: #000000;"> and constructs a result array where elements are selected from the corresponding elements of either </span><span style="font-style: italic; color: #000000;">true.array </span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">false.array </span><span style="color: #000000;">depending on the </span><span style="font-style: italic; color: #000000;">control.array </span><span style="color: #000000;">value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A contains&nbsp; 1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span></p>
+<p><span style="color: #000000;">B contains&nbsp; 11</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">22</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">3</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">4</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">91</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">36</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">7</span></p>
+<p><span style="color: #000000;">C contains&nbsp; 14</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">61</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">2</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">35</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">18</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">3</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D = IFS(A, B, C)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">D now contains&nbsp; 11</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">61</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">2</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">4</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">91</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">36</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">3</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_ands.htm">ANDS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_eqs.htm">EQS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ges.htm">GES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gts.htm">GTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_les.htm">LES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_lts.htm">LTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nes.htm">NES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_not.htm">NOTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ors.htm">ORS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

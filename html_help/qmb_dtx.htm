@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_dtx.htm"; }
+else { parent.quicksync('a7.5.73'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DTX()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DTX()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DTX()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_dparse.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_ebcdic.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DTX()</span><span style="color: #000000;"> function converts a number to hexadecimal.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DTX(</span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to the number to be converted.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">min.width</span></td><td><span style="color: #000000;">specifies the minimum number of digits in the converted result.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DTX()</span><span style="color: #000000;"> function converts the supplied </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> value to hexadecimal. If the converted value is shorter than </span><span style="font-style: italic; color: #000000;">min.width</span><span style="color: #000000;">, leading zeros are added.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In each example, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_display.htm">DISPLAY</a></span><span style="color: #000000;"> statement is followed by the output that it would produce. Note that </span><span style="font-weight: bold; color: #000000;">DTX()</span><span style="color: #000000;"> treats the value as an unsigned 32 bit quantity and hence negative numbers will always appear as 8 hexadecimal digits.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">DISPLAY DTX(87)</span></p>
+<p><span style="color: #000000;">57</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">DISPLAY DTX(87,4)</span></p>
+<p><span style="color: #000000;">0057</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">DISPLAY DTX(-21,4)</span></p>
+<p><span style="color: #000000;">FFFFFFEB</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_xtd.htm">XTD()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

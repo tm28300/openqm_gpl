@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sp_view.htm"; }
+else { parent.quicksync('a5.149'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SP.VIEW</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SP.VIEW" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SP.VIEW</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sp_open.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="spool.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.VIEW </span><span style="color: #000000;">command views and, optionally, prints records from $HOLD or other files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SP.VIEW</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">}&nbsp; { </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> }</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">file</span></td><td><span style="color: #000000;">is the file to be processed. If omitted, $HOLD is used.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">is the record id of the record to be processed. If omitted, a pick list of records is displayed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">specifies the default print unit to be used. If omitted, print unit 0 is used.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If only one name is specified on the command line, it is assumed to be the </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> name if a corresponding VOC F or Q-type record exists and there is no record of that name in $HOLD.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.VIEW </span><span style="color: #000000;">command allows users to view and print records. If no </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> is specified, a pick list of records in </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> is displayed. The cursor keys, page up, page down, home and end keys can be used to move around within this list. Equivalent actions can be performed using the letter keys or the </span><span style="font-weight: bold; color: #000000;"><a href="sed.htm">SED</a></span><span style="color: #000000;"> style control keys.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">U</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Ctrl-Z</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move up one line</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">D</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Ctrl-N</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move down one line</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Page up</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">P</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Ctrl-V</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move to previous page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Page down</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">N</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Esc-V</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move to next page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Home</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">T</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Esc-&lt;</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move to top of list</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">End</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">B</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">Esc-&gt;</span></p>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Move to bottom of list</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><br>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">Q</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Quit from program. Requires use of return key to confirm</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="151px" style="width:151px;"><p><span style="color: #000000;">Return</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><br>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="740px" style="width:740px;"><p><span style="color: #000000;">Dive into selected item</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">After an item has been selected, either as described above or by specifying the </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> name on the command line, the text of the given record is displayed. The cursor keys, page up, page down, home and end keys can be used to move around within the data. Equivalent actions can be performed using the letter keys or the </span><span style="font-weight: bold; color: #000000;"><a href="sed.htm">SED</a></span><span style="color: #000000;"> style control keys.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">U</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Esc-Z</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to previous page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">D</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Ctrl-N</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to next page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Cursor right</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">R</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Ctrl-F</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Pan right</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Cursor left</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">L</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Ctrl-B</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Pan left</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Page up</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">P</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Ctrl-V</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to previous page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Page down</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">N</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Esc-V</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to next page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Home</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">T</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Esc-&lt;</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to top of record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">End</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">B</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">Esc-&gt;</span></p>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Move to bottom of record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><br>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">Q</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><br>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Quit from record. Requires use of return key to confirm</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="149px" style="width:149px;"><p><span style="color: #000000;">Return</span></p>
+</td>
+<td valign="top" width="59px" style="width:59px;"><p><span style="color: #000000;">S</span></p>
+</td>
+<td valign="top" width="85px" style="width:85px;"><br>
+</td>
+<td valign="top" width="742px" style="width:742px;"><p><span style="color: #000000;">Spool item</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The S option prompts for the print unit (defaulting to that in the </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> option, if used), asks whether line numbering is to be used and then prints the item.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

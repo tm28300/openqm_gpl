@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_writecsv.htm"; }
+else { parent.quicksync('a7.5.293'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>WRITECSV</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="WRITECSV" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">WRITECSV</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_writeblk.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_writeseq.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WRITECSV</span><span style="color: #000000;"> statement writes data at the current file position in a record previously opened using </span><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;">. The data to be written is assembled from one or more variables and written in CSV format.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">WRITECSV</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">var1</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> var2</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> ... </span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">var1</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">var2</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> ...</span></td><td><span style="color: #000000;">are the items to be written to the file. If any of the variables contains field marks, each field is treated as a separate item in the resultant CSV data.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statements to be executed depending on the outcome of the </span><span style="font-weight: bold; color: #000000;">WRITECSV</span><span style="color: #000000;"> operation.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At least one of the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses must be present.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The data in the named variables is assembled as a CSV format text string which is then written to the file with a newline appended. The </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> clause is executed if the </span><span style="font-weight: bold; color: #000000;">WRITECSV</span><span style="color: #000000;"> is successful.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause is executed if the </span><span style="font-weight: bold; color: #000000;">WRITCSV</span><span style="color: #000000;"> fails. The&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will indicate the cause of the error.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is executed for serious fault conditions such as errors in a file's internal control structures. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return an error number. If no </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is present, an abort would occur.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">CSV Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">CSV format is used by many applications. QM adheres to the CSV standard (RFC 4180).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Items are enclosed in double quotes if they contain commas or double quotes. Embedded double quotes are replaced by a pair of double quotes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITECSV PROD.NO, QTY TO SEQ.F ELSE STOP 'Write error'</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment writes the contents of the PROD.NO and QTY variables as a CSV item to a file previously opened to file variable SEQ.F.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITECSV S&lt;1&gt;, S&lt;2&gt;, S&lt;3&gt; TO SEQ.F ELSE STOP 'Write error'</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment writes the contents of fields 1 to 3 of S as CSV data to a file previously opened to file variable SEQ.F.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITECSV S TO SEQ.F ELSE STOP 'Write error'</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If dynamic array S in the previous example had only three fields, this program fragment writes exactly the same data, treating each field as a separate CSV item.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_closeseq.htm">CLOSESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nobuf.htm">NOBUF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readblk.htm">READBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readcsv.htm">READCSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_weofseq.htm">WEOFSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

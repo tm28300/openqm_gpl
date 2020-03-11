@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sortclause.htm"; }
+else { parent.quicksync('a6.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The Sort Clause</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Sort clause" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The Sort Clause</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="selectionclause.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="displayclause.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-weight: bold; color: #000000;">sort clause</span><span style="color: #000000;"> determines the order in which records are inserted into the select list (</span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SELECT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SSELECT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="search.htm">SEARCH</a></span><span style="color: #000000;">) or reported (</span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_item.htm">LIST.ITEM</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_item.htm">SORT.ITEM</a></span><span style="color: #000000;">).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Sorting is performed </span><span style="color: #000000; text-decoration: underline;">before</span><span style="color: #000000;"> conversion of data to its external format. Thus sorts of date fields, for example, will correctly sequence dates regardless of their conversion.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The justification mode of the field's format is used to determine whether a left of right aligned sort is performed. For dates, a right aligned sort is required to avoid problems with dates with internal values of differing numbers of digits.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are two sort clause operators for single valued fields, </span><span style="font-weight: bold; color: #000000;"><a href="by.htm">BY</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="by_dsnd.htm">BY.DSND</a></span><span style="color: #000000;">, which differ only in that </span><span style="font-weight: bold; color: #000000;"><a href="by.htm">BY</a></span><span style="color: #000000;"> sorts into ascending order and </span><span style="font-weight: bold; color: #000000;"><a href="by_dsnd.htm">BY.DSND</a></span><span style="color: #000000;"> sorts into descending order. Similarly, there are two </span><span style="font-weight: bold; color: #000000;">exploded sort</span><span style="color: #000000;"> operators, </span><span style="font-weight: bold; color: #000000;"><a href="by_exp.htm">BY.EXP</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="by_exp_dsnd.htm">BY.EXP.DSND</a></span><span style="color: #000000;">, for use with multi-valued fields. These explode the multi-valued records to their single valued equivalents, allowing a query to process values in sequence.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where multiple sort items are specified, the query processor examines them in the order in which they appear in the command. The second and subsequent sort items are only examined where the previous sort was not sufficient to identify the record sequence.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_item.htm">SORT.ITEM</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SSELECT</a></span><span style="color: #000000;"> verbs are equivalent to the </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_item.htm">LIST.ITEM</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SELECT</a></span><span style="color: #000000;"> verbs with a </span><span style="font-weight: bold; color: #000000;"><a href="by.htm">BY</a></span><span style="color: #000000;"> @ID clause as the final sort.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

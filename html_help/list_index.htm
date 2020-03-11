@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list_index.htm"; }
+else { parent.quicksync('a5.76'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST.INDEX</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST.INDEX" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST.INDEX</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_files.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_inter.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.INDEX</span><span style="color: #000000;"> command reports details of one or more <a href="ak.htm">alternate key indices</a>.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST.INDEX </span><span style="font-style: italic; color: #000000;">filename&nbsp; field(s)</span><span style="color: #000000;">  {</span><span style="font-weight: bold; color: #000000;">STATISTICS</span><span style="color: #000000;">}&nbsp; {</span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.INDEX</span><span style="color: #000000;"> command displays information about alternate key indices for the named </span><span style="font-style: italic; color: #000000;">field(s)</span><span style="color: #000000;">. The keyword </span><span style="font-weight: bold; color: #000000;">ALL </span><span style="color: #000000;">can be used to report all indices on the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The basic report appears as below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Alternate key indices for file ORDERS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Number of indices = 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Index name...... En Type Nulls S/M Fmt Field/Expression</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; D&nbsp;&nbsp;&nbsp; Yes&nbsp;&nbsp; S&nbsp;&nbsp; R&nbsp; 17</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The columns following the index name show:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="152"><span style="color: #000000;">En</span></td><td><span style="color: #000000;">Y if the index is enabled (built and active). N if it requires building.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="152"><span style="color: #000000;">Type</span></td><td><span style="color: #000000;">A, C, D, I or S corresponding to the dictionary entry type use to define the index.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="152"><span style="color: #000000;">Nulls</span></td><td><span style="color: #000000;">Yes or No depending whether records with null values of the indexed field are included in the index.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="152"><span style="color: #000000;">S/M</span></td><td><span style="color: #000000;">S or M corresponding to the single/multi-valued nature of the indexed data.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="152"><span style="color: #000000;">Fmt</span></td><td><span style="color: #000000;">L or R corresponding to left or right alignment of the indexed data.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Field/Expression</span></td><td><span style="color: #000000;">The field number or evaluated expression.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;">STATISTICS </span><span style="color: #000000;">(short form </span><span style="font-weight: bold; color: #000000;">STATS</span><span style="color: #000000;">) keyword extends the report to include statistical information about the index showing the number of index entries (different field values) and the minimum, average and maximum number of records per index entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;"> keyword shows the statistics and also shows up to 63 characters of each key value and the number of records for that key value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_index.htm">DELETE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="make_index.htm">MAKE.INDEX</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

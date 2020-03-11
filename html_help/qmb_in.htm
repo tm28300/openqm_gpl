@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_in.htm"; }
+else { parent.quicksync('a7.5.117'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>IN</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="IN" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">IN</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_ifs.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p style="margin: 0px 0px 5px 0px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IN</span><span style="color: #000000;"> statement reads a single byte from the terminal with an optional timeout.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">IN </span><span style="font-style: italic; color: #000000;">var</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">FOR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="91"><span style="font-style: italic; color: #000000;">var</span></td><td><span style="color: #000000;">is the variable to receive the input character value. This is the ASCII character number, not the character itself.</span></td></tr></table></div><p style="text-indent: -91px; margin: 0px 0px 0px 121px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="91"><span style="font-style: italic; color: #000000;">timeout</span></td><td><span style="color: #000000;">is the timeout period in tenths of a second.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IN</span><span style="color: #000000;"> statement reads a single byte from the terminal, returning the character value in </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;">. Unless the character is a non-printing control code, it is echoed to the terminal.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If a </span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;"> is specified, the program will continue execution if no input is received after this period. The </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;"> will be set to zero if a timeout occurs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses can be used with the timeout to determine whether input was received.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_input.htm">INPUT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyin.htm">KEYIN()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyready.htm">KEYREADY()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

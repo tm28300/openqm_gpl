@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?basic.htm"; }
+else { parent.quicksync('a5.10'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>BASIC</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BASIC,$BASIC.OPTIONS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">BASIC</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="autologout.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="bell.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BASIC</span><span style="color: #000000;"> verb runs the QMBasic compiler.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BASIC</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;">...} {</span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the directory file holding the QMBasic source program. If omitted, the </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> defaults to BP.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">record.name</span></td><td><span style="color: #000000;">is the name of the record within the file. Multiple record names may be specified. An asterisk as the only </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> compiles all programs in the file. If no names are specified and the default select list is active, the list will be used to specify the programs to be compiled.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">are as listed below.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When using a select list or an asterisk to compile all programs, record names with a .H or .SCR suffix are ignored.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following options are accepted by the </span><span style="font-weight: bold; color: #000000;">BASIC</span><span style="color: #000000;"> verb</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">CHANGED</span></td><td><span style="color: #000000;">Compile only if the program is not already in the output file or the date and time of modification of the source program record as given in the operating system directory entry is later than that of the compiled program. Used in conjunction with a select list it enables all modified programs to be compiled with a single command.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">DEBUGGING</span></td><td><span style="color: #000000;">Include debugger control information in the compiled program. A program compiled in debug mode can be executed outside the debugger but will be slower than when compiled without the </span><span style="font-weight: bold; color: #000000;">DEBUGGING</span><span style="color: #000000;"> option.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">LISTING</span></td><td><span style="color: #000000;">Generate a compiler listing record with a .LIS suffix.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">NOXREF</span></td><td><span style="color: #000000;">Omit cross reference tables from compiled program. This results in lower memory usage but run time error messages cannot identify source line numbers or variable names.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">XREF</span></td><td><span style="color: #000000;">Generates a compiler listing record as for the </span><span style="font-weight: bold; color: #000000;">LISTING</span><span style="color: #000000;"> option but includes a cross-reference table of all variables and their use.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The compiler output file, named as the source file but with a .OUT suffix, will be created automatically if it does not already exist.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> is set to the number of programs successfully compiled. It will contain a negative error code in the event of a fatal error.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The $BASIC.OPTIONS VOC Record</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Compiler options that you wish to use every time you run the QMBasic compiler can be placed in an X-type VOC record named $BASIC.OPTIONS. To apply these defaults only to programs stored in a specific file, place the $BASIC.OPTIONS record in that file. The compiler looks first in the source file and then, if no record has been found, in the VOC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first line of the record holds the type code X. The second and subsequent lines of this record should contain compiler option keywords from the list below. The keywords allowed are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">CATALOGUE</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">Automatically catalogues programs after compilation using the program name as the catalogue name. The LOCAL and GLOBAL keywords may be used to specify that the program is to be catalogued in the given mode instead of in the private catalogue. The </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_no_catalogue.htm">$NO.CATALOGUE</a></span><span style="color: #000000;"> compiler directive can be used in specific program modules to override this action. Alternatively, the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_catalogue.htm">$CATALOGUE</a></span><span style="color: #000000;"> compiler directive in a program can set an alternative catalogue name or mode. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">DEBUGGING</span></td><td><span style="color: #000000;">Compiles the program in debug mode.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">DEFINE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">Defines token </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> in the same way as the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_define.htm">$DEFINE</a></span><span style="color: #000000;"> compiler directive. The </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> may be a number or a quoted string. If omitted, the token is assigned a null string as its value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">LISTING</span></td><td><span style="color: #000000;">Generates a listing record in the compiler output file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">MODE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">option.name</span></td><td><span style="color: #000000;">Sets the given compilation mode as described for the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_mode.htm">$MODE</a></span><span style="color: #000000;"> compiler directive. Multiple MODE lines must be used to set more than one option.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">NOCASE.STRINGS</span></td><td><span style="color: #000000;">Compiles the program with case insensitive string operations. See the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_nocase_strings.htm">$NOCASE.STRINGS</a></span><span style="color: #000000;"> compiler directive for more details.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">NOXREF</span></td><td><span style="color: #000000;">Compiles the program with no cross reference tables. This results in slightly lower memory usage but prevents QM producing detailed messages in the event of an error.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">WARNINGS.AS.ERRORS</span></td><td><span style="color: #000000;">Causes the compiler to treat warning messages as fatal errors.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">XREF</span></td><td><span style="color: #000000;">Generates a listing record in the compiler output file, including a cross-reference table of all variables and their use.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Unrecognised keywords in this record are ignored. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BASIC PROGRAMS PROG1 LISTING</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command compiles the program in record PROG1 of the PROGRAMS file. A listing record is produced.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT BP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BASIC CHANGED</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This sequence of commands compiles all programs in the BP file which have been updated since they were last compiled. Note that the compiler will omit all records with names ending with .H or .SRC, the two standard suffix codes for include records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="catalogue.htm">CATALOGUE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_catalogue.htm">DELETE.CATALOGUE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="map.htm">MAP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

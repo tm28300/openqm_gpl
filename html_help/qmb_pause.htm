@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_pause.htm"; }
+else { parent.quicksync('a7.5.180'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PAUSE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PAUSE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PAUSE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_page.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_precision.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;"> statement pauses execution until awoken by another process. This function is not available on the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">timeout</span></td><td><span style="color: #000000;">specifies the maximum time to wait in seconds. A value less than one indicates that an infinite timeout should be used.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;"> statement suspends program execution until awoken by another process using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_wake.htm">WAKE</a></span><span style="color: #000000;"> statement. The optional </span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;"> specifies the maximum time in seconds for which the program can remain suspended.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;"> is terminated by detection of a </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> event, the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return zero. If the PAUSE is terminated by a timeout, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$TIMEOUT.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> request occurring before the </span><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;"> is executed is remembered and the program is not suspended. Note that under rare conditions, precise timing of the </span><span style="font-weight: bold; color: #000000;">PAUSE</span><span style="color: #000000;">/</span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> pair can cause a program to appear to wake spuriously. Programs should be written to allow for this possibility.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

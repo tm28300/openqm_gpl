@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?autologout.htm"; }
+else { parent.quicksync('a5.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>AUTOLOGOUT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AUTOLOGOUT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">AUTOLOGOUT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="analyse_file.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="basic.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">AUTOLOGOUT</span><span style="color: #000000;"> command sets an inactivity period after which a process will automatically be logged out.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">AUTOLOGOUT</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">period</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">period</span></td><td><span style="color: #000000;">is the inactivity time in minutes. A value of zero disables the timer.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">AUTOLOGOUT</span><span style="color: #000000;"> command prevents users leaving inactive sessions logged in. If the process is waiting for input for the given time, it will automatically be logged out. The </span><span style="color: #000000;"><a href="command_scripts.htm">ON.EXIT</a></span><span style="color: #000000;"> paragraph will be executed if it exists.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Executing the </span><span style="font-weight: bold; color: #000000;">AUTOLOGOUT</span><span style="color: #000000;"> command with no </span><span style="font-style: italic; color: #000000;">period</span><span style="color: #000000;"> option displays the current setting.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">AUTOLOGOUT</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Autologout is disabled</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">AUTOLOGOUT 4</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">AUTOLOGOUT</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Autologout period is set to 4 minute(s)</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">...wait...</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Inactivity time expired - Process logged out</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Process terminated</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, the </span><span style="font-weight: bold; color: #000000;">AUTOLOGOUT</span><span style="color: #000000;"> command is used to examine the current setting. The inactivity period is then set to four minutes and the setting displayed again. After four minutes of inactivity, the process is automatically logged out.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

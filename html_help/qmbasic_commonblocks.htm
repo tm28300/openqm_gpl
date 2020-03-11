@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbasic_commonblocks.htm"; }
+else { parent.quicksync('a7.1.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMBasic - Common blocks</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Common blocks (QMBasic)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMBasic&nbsp; -&nbsp; Common Blocks </span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbasic_scalarsmatricesanddynamicarrays.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbasic_labels.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Variables are normally available to all statements within a single QMBasic program or subroutine. Although the language provides an internal subroutine call through the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gosub.htm">GOSUB</a></span><span style="color: #000000;"> statement, this does not automatically bring in the concept of the internal subroutine having its own variables or any other aspect of variable scope found in other languages.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic extends the language definition by adding the concept of variables that are private to an internal subroutine. This is achieved by use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_local.htm">LOCAL</a></span><span style="color: #000000;"> statement and the associated&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_private.htm">PRIVATE</a></span><span style="color: #000000;"> variable declaration statement. Variables declared in this way are private to the one internal subroutine and cannot be accessed by other parts of the program. Furthermore, they are stacked if the subroutine calls itself, either directly or indirectly via another intermediate subroutine. For more information, see the description of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_local.htm">LOCAL</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic provides </span><span style="font-weight: bold; color: #000000;">common blocks</span><span style="color: #000000;"> for data which is to be shared between two or more programs. These are declared by a statement of the form</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /name/ var1, var2, var3,...</span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> is the name by which the common block is to be known. A common block may contain any number of variables and is created when it is first referenced. It remains in existence until the user leaves QM. Once a common block is created, subsequent programs using the same common block name access the same data. The number of variables in the common block may not be increased by later definition but programs can define fewer variables than in the actual common block. Normally, the structure of a common block is best defined in an include file so that the same definition is used by all parts of the application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where programs use separate </span><span style="font-weight: bold; color: #000000;"><a href="qmb_common.htm">COMMON</a></span><span style="color: #000000;"> statements to reference the same block, note that the variables are defined by their position in the list, not the names used. Thus it would be valid (but not a good idea) for one program to have</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /MYCOMMON/ A, B, C</span></p>
+<p><span style="color: #000000;">and another program</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /MYCOMMON/ D, E, F</span></p>
+<p><span style="color: #000000;">where the data stored in B by the first program would be visible to the second program as E.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The name of a common block must conform to the same rules as a variable name. There is also an </span><span style="font-weight: bold; color: #000000;">unnamed common</span><span style="color: #000000;"> (sometimes known as blank or unlabelled common) which is defined by a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_common.htm">COMMON</a></span><span style="color: #000000;"> statement without a name:</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON A, B, C</span></p>
+<p><span style="color: #000000;">This operates in exactly the same way except that each command processor level has its own unnamed common. Thus, an </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> statement used to run one program from within another would result in a new unnamed common block being created for the executed program, the original being restored on return.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The variables in a common block are initialised to integer zero when the block is created. It is thus possible to include QMBasic code to perform further initialisation just once by statements of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /MYCOMMON/ INITIALISED,</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VAR1,</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VAR2,</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VAR3,...etc...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF NOT(INITIALISED) THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">do initialisation tasks</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; INITIALISED = @TRUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note how the names of the variables within the common block may extend from one line to the next. The compiler will continue the common block definition over multiple lines wherever the line ends with a comma.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The same common block could be defined as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON/MYCOMMON/ VAR1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON/MYCOMMON/ VAR2</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON/MYCOMMON/ VAR3</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">...etc...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The compiler assumes that definitions of variables with the same common block name are a continuation of the previous definitions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Common blocks may also contain matrices. These are defined by including the row and column bounds in the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_common.htm">COMMON</a></span><span style="color: #000000;"> statement, for example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /MYCOMMON/ MAT1(5,3)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Except when using Pick style matrices, the size of a matrix in common may be changed by a later </span><span style="font-weight: bold; color: #000000;"><a href="qmb_dim.htm">DIM</a></span><span style="color: #000000;"> statement. The size given in the COMMON declaration is the initial size of the matrix.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

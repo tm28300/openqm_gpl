@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_pathtkn.htm"; }
+else { parent.quicksync('a7.8.6'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!PATHTKN()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!PATHTKN()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_parser.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_pcl.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PATHTKN()</span><span style="color: #000000;"> subroutine processes special tokens in a VOC or ACCOUNTS file pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !PATHTKN(</span><span style="font-style: italic; color: #000000;">inpath</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">outpath</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">inpath</span></td><td><span style="color: #000000;">is the pathname to be processed.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">outpath</span></td><td><span style="color: #000000;">is the returned processed pathname. This may be the same variable as </span><span style="font-style: italic; color: #000000;">inpath</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pathnames recorded in the VOC or the QMSYS ACCOUNTS file may include special tokens that represent variable components. The </span><span style="font-weight: bold; color: #000000;">!PATHTKN()</span><span style="color: #000000;"> subroutine processes a pathname, substituting the expansions for these tokens.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The special tokens are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 6px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="color: #000000;">@DRIVE</span></td><td><span style="color: #000000;">The drive letter for the QMSYS directory (Windows only).</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 6px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="color: #000000;">@HOME</span></td><td><span style="color: #000000;">The user's home directory as defined by the operating system HOME environment variable.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 6px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="color: #000000;">@QMSYS</span></td><td><span style="color: #000000;">The full pathname of the QMSYS directory.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 6px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="color: #000000;">@TMP</span></td><td><span style="color: #000000;">The pathname of the system temporary directory as defined by the <a href="configparams.htm#tempdir">TEMPDIR</a> configuration parameter.</span></td></tr></table></div><p style="text-indent: -119px; margin: 0px 0px 0px 149px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The token must be the leading part of the pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PATHTKN()</span><span style="color: #000000;"> subroutine is also defined as a function in the SYSCOM KEYS.H include record:</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">outpath</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">= PARSE.PATHNAME.TOKENS(</span><span style="font-style: italic; color: #000000;">inpath</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The entry for the QMSYS account in the ACCOUNTS register is simply</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">@QMSYS</span></p>
+<p><span style="color: #000000;">This ensures that the entire system can be moved without needing to update the QMSYS account location.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When using QM installed on a USB flash drive on Windows, creating an account on the USB device sets the ACCOUNTS register entry as</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">@DRIVE:pathname</span></p>
+<p><span style="color: #000000;">The account is therefore accessible even if the flash drive takes on a different drive letter in later use.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

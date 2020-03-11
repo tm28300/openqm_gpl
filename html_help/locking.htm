@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?locking.htm"; }
+else { parent.quicksync('a6.60'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOCKING</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOCKING" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOCKING</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="like.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="lptr.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCKING</span><span style="color: #000000;"> keyword locks the file during a report, preventing updates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOCKING</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCKING</span><span style="color: #000000;"> keyword causes the query processor to take a file lock on the file named in the query sentence. This prevents any other process from modifying the file during the report, ensuring that the report reflects a snap shot view of the data at the point when the query began.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files accessed using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> function in I-type dictionary records or using the T conversion code will not be locked and hence may be modified during the report.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It is the user's responsibility to ensure that use of the lock in lengthy reports does not cause operational problems. In particular, be aware that a user who leaves a query on a &quot;Press return to continue&quot; prompt may severely affect the ability of other users to access the file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

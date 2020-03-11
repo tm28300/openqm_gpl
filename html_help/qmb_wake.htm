@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_wake.htm"; }
+else { parent.quicksync('a7.5.288'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>WAKE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="WAKE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">WAKE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="void.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_weofseq.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> statement awakens another process that has executed a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_pause.htm">PAUSE</a></span><span style="color: #000000;">. This function is not available on the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">user.no</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">user.no</span></td><td><span style="color: #000000;">is the QM user number of the process to be awoken.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> statement resumes execution of another process that has executed a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_pause.htm">PAUSE</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> is executed before the other process attempts to pause, the program is not suspended. Multiple wake events occurring in this way will only awaken the target process once.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WAKE</span><span style="color: #000000;"> statement attempts to use an inter-process signalling mechanism to resume execution of the other process. Due to operating system limitations, this is usually only possible if both processes are running with the same user id. If this is not the case, the target process may take up to about a second to restart.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

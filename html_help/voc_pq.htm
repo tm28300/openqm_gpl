@@ -1,0 +1,606 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_pq.htm"; }
+else { parent.quicksync('a3.5.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC PQ-type records - PROCs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PROCs,VOC PQ type records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VOC PQ-Type Records&nbsp; -&nbsp; PROCs</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_ph.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_q.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PROCs are the predecessor of paragraphs. They are generally thought to be much harder to understand and maintain but are supported in QM for compatibility with other systems. New applications should use paragraphs or QMBasic programs in place of PROCs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">PQ{N}&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2+:</span></td><td><span style="color: #000000;">PROC statements</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PROCs come in two styles identified by the VOC record type; standard PROCs (PQ) and new style PROCs (PQN). QM supports the major features of PROCs but is not a full implementation of the various PROC environments found in other multivalue environments.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because development if new PROCs is discouraged, only an overview of what elements of PROCs are supported by QM is given here. It is not intended as a detailed reference document or a learning aid.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Proc Buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A PROC works by manipulating data in a set of buffers, each stored internally as a field mark delimited dynamic array (PQN) or a space delimited string (PQ). These are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The Primary Input Buffer (PIB)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The PIB initially holds the command that started the PROC and any command line options. A PROC can use the PIB to store other data during its operation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The Secondary Input Buffer (SIB)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The SIB is typically used to store user input entered in response to the IN statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The Primary Output Buffer (POB)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The POB is used to construct a command to be executed. Execution of the assembled command is triggered by use of the P statement or by termination of the PROC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The Secondary Output Buffer (SOB)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The SOB, often called the stack, is used to hold data to be processed by the command in the POB. It can also hold supplementary commands to be executed after the POB has been executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At any moment, one input and one output buffer is considered as being active. The SP and SS statements can be used to make the primary or secondary input buffer active respectively. Similarly the STOFF and STON statements can be used to select the primary or secondary output buffers as active.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The input buffer pointer is used to identify a position within the active input buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When a PROC starts, the primary input and output buffers are active and the input buffer pointer points to the start of the PIB.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The File Buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are ten file buffers, numbered from 0 to 9. File buffers 1 to 9 are the standard file buffers. File buffer 0 is the fast file buffer and can be accessed with a special buffer reference syntax.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Select List Buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The eleven numbered select lists can be accessed using the select list buffers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Buffer References</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Many statements can reference buffers using the tokens shown below:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; font-weight: bold; color: #000000;">Token</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; font-weight: bold; color: #000000;">Buffer</span></p>
+</td>
+<td colspan="2" valign="top"><p><span style="font-size: 10pt; font-weight: bold; color: #000000;">Direct</span></p>
+</td>
+<td colspan="2" valign="top"><p><span style="font-size: 10pt; font-weight: bold; color: #000000;">Indirect</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; color: #000000;">%</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; color: #000000;">Primary input buffer</span></p>
+</td>
+<td valign="top" width="68px" style="width:68px;"><p><span style="font-size: 10pt; color: #000000;">%1</span></p>
+</td>
+<td valign="top" width="157px" style="width:157px;"><p><span style="font-size: 10pt; color: #000000;">PIB field 1</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-size: 10pt; color: #000000;">%#2</span></p>
+</td>
+<td valign="top" width="320px" style="width:320px;"><p><span style="font-size: 10pt; color: #000000;">PIB field referenced by #2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; color: #000000;">#</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; color: #000000;">Active output buffer</span></p>
+</td>
+<td valign="top" width="68px" style="width:68px;"><p><span style="font-size: 10pt; color: #000000;">#1</span></p>
+</td>
+<td valign="top" width="157px" style="width:157px;"><p><span style="font-size: 10pt; color: #000000;">AOB field 1</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-size: 10pt; color: #000000;">#%1</span></p>
+</td>
+<td valign="top" width="320px" style="width:320px;"><p><span style="font-size: 10pt; color: #000000;">AOB field referenced by %1</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; color: #000000;">&amp;</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; color: #000000;">File buffer</span></p>
+</td>
+<td valign="top" width="68px" style="width:68px;"><p><span style="font-size: 10pt; color: #000000;">&amp;4.2</span></p>
+</td>
+<td valign="top" width="157px" style="width:157px;"><p><span style="font-size: 10pt; color: #000000;">File 4, field 2</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-size: 10pt; color: #000000;">&amp;%1.%2</span></p>
+</td>
+<td valign="top" width="320px" style="width:320px;"><p><span style="font-size: 10pt; color: #000000;">File %1, field %2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; color: #000000;">&amp;</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; color: #000000;">Fast file buffer</span></p>
+</td>
+<td valign="top" width="68px" style="width:68px;"><p><span style="font-size: 10pt; color: #000000;">&amp;1</span></p>
+</td>
+<td valign="top" width="157px" style="width:157px;"><p><span style="font-size: 10pt; color: #000000;">Field 1</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-size: 10pt; color: #000000;">&amp;%2</span></p>
+</td>
+<td valign="top" width="320px" style="width:320px;"><p><span style="font-size: 10pt; color: #000000;">Field referenced by %2</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="65px" style="width:65px;"><p><span style="font-size: 10pt; color: #000000;">!</span></p>
+</td>
+<td valign="top" width="185px" style="width:185px;"><p><span style="font-size: 10pt; color: #000000;">Select list</span></p>
+</td>
+<td valign="top" width="68px" style="width:68px;"><p><span style="font-size: 10pt; color: #000000;">!5</span></p>
+</td>
+<td valign="top" width="157px" style="width:157px;"><p><span style="font-size: 10pt; color: #000000;">List 5</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-size: 10pt; color: #000000;">!%1</span></p>
+</td>
+<td valign="top" width="320px" style="width:320px;"><p><span style="font-size: 10pt; color: #000000;">List referenced by %1</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An indirect reference uses the content of one buffer to index into another.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In a file buffer, field 0 references the record id associated with the buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">A-References</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An A-reference is a reference to data in the active input buffer using the syntax of the A statement described in the following section. When used in this form, an A-reference does not move the input pointer or change the content of the buffers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PROC Statement Summary</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">A</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Move a field from the active input buffer to the end of the active output buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">A</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}{</span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Move up to </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> characters of field </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> to the output buffer, enclosing the text in character </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> may be any character except a digit, left bracket or comma and defaults to a space. Specifying </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> as a backslash suppresses the surround character. The surround character is ignored if the data is copied to the secondary output buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> is omitted, data is copied from the field addressed by the current position of the input pointer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> is omitted, data is copied until the end of the field is reached.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The input pointer is positioned following the last character moved.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">A</span><span style="font-weight: bold; color: #000000;">(</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Move up to </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> characters, starting at character </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">, to the output buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, data is copied from the current position of the input pointer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> is omitted, data is copied until the end of the field is reached.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The input pointer is positioned following the last character moved.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Data copying normally terminates at the end of the field. Use </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> PROC.A to enable compatibility with D3 where the copy continues past the end of the field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">B</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Move the input pointer back to the previous field.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If the input pointer is at the start of a field, it is moved back to the start of the previous field. Otherwise it is moved back to the start of the current field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">BO</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Move the output pointer back to the previous field</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The output buffer pointer is move back to the previous field, truncating the data at its new position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">C</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Comment</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">C</span><span style="font-style: italic; color: #000000;">text</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">All text following the C is ignored.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">D</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Display fields from the active input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">D</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">+</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is a direct or indirect reference to a buffer containing the field number of the active input buffer that is to be displayed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> is the field number of the active input buffer that is to be displayed. If p is zero, the entire input buffer is displayed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> is the maximum number of characters to be displayed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">+</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">suppresses the normal newline after display</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DB</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Display all input and output buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The content of the primary and secondary input and output buffers is displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DF</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Display file buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DF</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The content of the specified file buffer is displayed. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted or specified as zero, the fast file buffer is displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DS</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Display select buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DS</span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The content of the specified select buffer is displayed. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, it defaults to zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Moves the input buffer pointer forward</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The input buffer pointer is moved forward to the start of the next field. If the pointer was in the last field, it is moved to the end of the buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F;</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Perform stack based arithmetic</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F;</span><span style="font-style: italic; color: #000000;">element</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">;</span><span style="font-style: italic; color: #000000;">element...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">F;</span><span style="color: #000000;"> statement performs integer arithmetic using a stack. The </span><span style="font-style: italic; color: #000000;">element</span><span style="color: #000000;"> list contains values to be added to the stack and operators to be performed against the stack values.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">ref</span></td><td><span style="color: #000000;">A direct or indirect reference to a buffer element to be placed on the stack.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">A numeric constant to be placed on the stack. The value may be preceded by </span><span style="font-weight: bold; color: #000000;">C</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">+</span></td><td><span style="color: #000000;">Adds the top two stack items, replacing them by the result.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">-</span></td><td><span style="color: #000000;">Subtracts the top stack item from the next item, replacing them by the result.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">*</span></td><td><span style="color: #000000;">Multiplies the top two stack items, replacing them by the result.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">/</span></td><td><span style="color: #000000;">Divides the second item on the stack by the first item, replacing them by the truncated integer result.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">R</span></td><td><span style="color: #000000;">Divides the second item on the stack by the first item, replacing them by the remainder value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">{</span></td><td><span style="color: #000000;">Interchanges the top two items on the stack.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">_</span></td><td><span style="color: #000000;">Interchanges the top two items on the stack.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">?P</span></td><td><span style="color: #000000;">Moves the top item from the stack into the primary input buffer at the input pointer position.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">?</span><span style="font-style: italic; color: #000000;">ref</span></td><td><span style="color: #000000;">Moves the top item from the stack into the specified register location.</span></td></tr></table></div><p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-CLEAR</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Clear a file buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-C</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">LEAR</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The file buffer for file </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is cleared.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-DELETE</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Delete a record from an open file</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-D</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELETE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The record identified by the file and id associated with file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is deleted. An error will be reported if there is no open file associated with the file buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-FREE</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Release a record lock in an open file</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-F</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">REE</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">}}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The record identified by the file and id associated with file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is deleted. The record id may be specified using a buffer reference. If no id is specified or it is a null string, all locks in that file are released. An error will be reported if there is no open file associated with the file buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If no file number or id are specified, all locks associated with files opened by the PROC are released. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-OPEN</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Open a file</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-O</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">PEN</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Opens the file specified by </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> or by the buffer addressed by </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">, associating it with file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">. The </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> qualifier specifies that the dictionary portion of the file is to be opened.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If the file cannot be opened, the PROC continues at the next statement, otherwise this statement is skipped.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">All files are closed on return to the command processor.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-READ</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Read a record from an open file</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-R</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">EAD</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The record with id specified by </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> or by the direct or indirect </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is read into file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">. If the record cannot be found, the PROC continues at the next statement, otherwise this statement is skipped. In either case, the record id will be stored as field zero of the file buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-UREAD</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Read a record from an open file with an update lock</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-U</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">READ</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The record with id specified by </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> or by the direct or indirect </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is read into file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">, locking it for update. If the record cannot be found, , the PROC continues at the next statement, otherwise this statement is skipped. In either case, the record id will be stored as field zero of the file buffer and the process will own the lock.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">F-WRITE</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Write a record to an open file</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F-W</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">RITE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The record stored in file buffer </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is written using the id stored in field zero of the file buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">FB</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Read a record into the fast file buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FB</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">U</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">(</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref1</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref2</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The file identified by </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">ref1</span><span style="color: #000000;"> is opened to the fast file buffer and the record identified by </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">ref2</span><span style="color: #000000;"> is read into the buffer. The </span><span style="font-weight: bold; color: #000000;">U</span><span style="color: #000000;"> option specifies that an update lock is required.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If the file cannot be opened or the record cannot be found, the PROC continues at the next statement, otherwise this statement is skipped. Where the action fails because the file was opened but the record could not be found, the id will be stored in field zero of the file buffer and the process will own the update lock if the </span><span style="font-weight: bold; color: #000000;">U</span><span style="color: #000000;"> option was specified.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">GO</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Jump to a label or a mark (Synonyms </span><span style="font-weight: bold; color: #000000;">G</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">GOTO</span><span style="color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">GO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">A-ref</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">F</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The PROC continues execution at the given position.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;"> specifies a numeric label attached to the destination.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">A-ref</span><span style="color: #000000;"> is an A-reference used to determine the destination label.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is a direct or indirect buffer reference to a location containing the label.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">F</span><span style="color: #000000;"> jumps forward to the next </span><span style="font-weight: bold; color: #000000;">M</span><span style="color: #000000;"> statement in the PROC.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;"> jumps to the location of the last </span><span style="font-weight: bold; color: #000000;">M</span><span style="color: #000000;"> statement executed within the PROC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">GOSUB</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Enter a labelled subroutine</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">GOSUB</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">label</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Label specifies a numeric label at the start of the subroutine.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Execution continues at the given location. The subroutine may return to the statement following the </span><span style="font-weight: bold; color: #000000;">GOSUB</span><span style="color: #000000;"> by use of </span><span style="font-weight: bold; color: #000000;">RSUB</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">H</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Add text to the active output buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">H</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The literal </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or the content of the buffer location identified by the direct or indirect </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is added to the active output buffer. Multiple spaces are compressed to a single space. All spaces within the string are then replaced by field marks. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IF</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Conditional execution</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">IF </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">N</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">condition</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">N</span><span style="color: #000000;"> specifies that a numeric comparison is to be performed where only the leading numeric part of the data to be tested is used.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">condition</span><span style="color: #000000;"> may take several alternative forms referencing an </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> which may be:</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="font-style: italic; color: #000000;">A-ref</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Data obtained using an A-reference</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="font-style: italic; color: #000000;">ref</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A direct or indirect buffer reference</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="font-weight: bold; color: #000000;">E</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">The value of @SYSTEM.RETURN.CODE</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="font-weight: bold; color: #000000;">S</span><span style="font-style: italic; color: #000000;">n</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Tests whether select list is active. </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> defaults to 0 if omitted.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">conditions</span><span style="color: #000000;"> are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">Tests that </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> is not blank. Used with </span><span style="font-weight: bold; color: #000000;">E</span><span style="color: #000000;">, this tests whether the value is negative.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">#</span><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">Tests that item is blank. Used with </span><span style="font-weight: bold; color: #000000;">E</span><span style="color: #000000;">, this tests whether the value is not negative.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">op text</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span></td><td><span style="color: #000000;">Compares </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> with unquoted literal </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or a value obtained from a direct or indirect buffer reference. The operator </span><span style="font-style: italic; color: #000000;">op</span><span style="color: #000000;"> may be</span></td></tr></table></div><p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">= &nbsp; &nbsp; &nbsp; &nbsp;Equality</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;"># &nbsp; &nbsp; &nbsp; &nbsp;Inequality</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">&gt; &nbsp; &nbsp; &nbsp; &nbsp;Greater than</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">&lt; &nbsp; &nbsp; &nbsp; &nbsp;Less than</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">] &nbsp; &nbsp; &nbsp; &nbsp;Greater than or equal to</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">[ &nbsp; &nbsp; &nbsp; &nbsp;Less than or equal to</span></p>
+<p style="text-indent: -150px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is enclosed in round brackets and the operator is = or #, it is treated as a pattern match.</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">If the data identified by </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is multivalued and the operator is = or #, the operator tests whether </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> appears in the multivalued data. There are two extended syntaxes available with this style of test:</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">IF </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> = </span><span style="color: #000000;">A</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">B</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">C GO 10</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">20</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">30</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">and</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">IF </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> = </span><span style="color: #000000;">A</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">B</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">C GOSUB 10</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">GO 20</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">XDone</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">The first form, applicable to GO only, jumps to one of a list of labels dependant on the value of the </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">. The second form takes a multivalued list of statements to be executed dependant on the value of </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IH</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Insert test in the active input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">I</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">H</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">\| \</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Copies the unquoted literal </span><span style="font-style: italic; color: #000000;">text </span><span style="color: #000000;">or the data addressed by the direct or indirect buffer </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> to the active input buffer at the position given by the input buffer pointer. If this is positioned at the start of a field, the entire field is replaced. If it is positioned part way though the field, the new data is appended to the portion before the input pointer position.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">\</span><span style="color: #000000;"> token with no preceding space, clears the field addressed by the input buffer pointer. If the pointer is positioned part way through a field, characters before the pointer position are retained.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">\</span><span style="color: #000000;"> token with a preceding space, inserts an empty field.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Leading and trailing spaces are removed and multiple embedded are compressed to single spaces. If the </span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;"> option is not present, the spaces are then converted to field marks.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The input buffer pointer is not moved by this operation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IN</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Input data from the terminal to the secondary input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">I</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">N</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The secondary input buffer is activated and the user input overwrites any existing content. All leading and trailing spaces in the input data are removed and multiple embedded spaces are compressed to a single space. If the </span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;"> option is not present, all remaining spaces are then replaced by field marks. The optional prompt character </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> specifies an alternative to the default of a question mark and remains in effect for subsequent input until another prompt character is set.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IP</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Input data from the terminal to any buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">I</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">}{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}</span><span style="font-style: italic; color: #000000;">ref</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">User input overwrites the location specified by the direct or indirect </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">. If </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is omitted, the field addressed by the input buffer pointer in the primary input buffer is overwritten. All leading and trailing spaces in the input data are removed and multiple embedded spaces are compressed to a single space. If the </span><span style="font-weight: bold; color: #000000;">B</span><span style="color: #000000;"> option is not present, all remaining spaces are then replaced by field marks. The optional prompt character </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> specifies an alternative to the default of a question mark and remains in effect for subsequent input until another prompt character is set. The prompt character must be present if </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is used.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">In a PQ style Proc, entering a blank response retains the existing content of the input buffer. A PQN style Proc would clear the buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IS</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Input data from the terminal to the secondary input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">This is a synonym for </span><span style="font-weight: bold; color: #000000;">IN</span><span style="color: #000000;"> described above.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">L</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Send output to a printer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">L</span><span style="color: #000000;">{'</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">'|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">),</span><span style="color: #000000;">...}{</span><span style="font-weight: bold; color: #000000;">+</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Outputs the items specified in the comma separated list. These may be quoted literal </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or the data addressed by the direct or indirect buffer </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">. Use of </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> may be followed by an input conversion code enclosed in semicolons or an output conversion code enclosed in colons.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> element can be used to move to a specific column number where the leftmost column is column one.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">+</span><span style="color: #000000;"> element suppresses the normal newline at the end of the output.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The list may span multiple lines by breaking it after a comma.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LC</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Close printer</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The printer is closed and the output is passed to the underlying print management system for printing.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LE</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Page eject</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Starts a new page</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LHDR</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Set page header</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LHDR</span><span style="color: #000000;">{'</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">'|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">Z</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">...}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets the page header using the items specified in the comma separated list. These may be quoted literal </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> or the data addressed by the direct or indirect buffer </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">. Use of </span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> may be followed by an input conversion code enclosed in semicolons or an output conversion code enclosed in colons.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> element can be used to move to a specific column number where the leftmost column is column one.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;"> element inserts the page number.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;"> element inserts the date and time.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">Z</span><span style="color: #000000;"> element restarts page numbering.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> element specifies a number of newlines.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The list may span multiple lines by breaking it after a comma.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LN</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Redirect printer output to the terminal</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Specifies that output from the </span><span style="font-weight: bold; color: #000000;">L</span><span style="color: #000000;"> statement is to be directed to the terminal. This is mainly useful for debugging purposes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">M</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Mark</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">M</span><span style="color: #000000;"> statement marks a location in a PROC for use by the </span><span style="font-weight: bold; color: #000000;">GO F</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">GO B</span><span style="color: #000000;"> operations.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">MV</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Move data from one location to another</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MV</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">destination source</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">destination</span><span style="color: #000000;"> is a direct or indirect reference to the buffer location to which data is to be copied.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">source</span><span style="color: #000000;"> is a list of one or more items to be copied. Each item may be direct or indirect buffer reference or a quoted literal string.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A comma separating two items inserts the items as separate fields. Use of two or more consecutive commas with no source item between them skips fields in the destination.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An asterisk between two items concatenates them.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An asterisk after a file buffer reference as the last item in the </span><span style="font-style: italic; color: #000000;">source</span><span style="color: #000000;"> list copies all remaining fields from the file buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An asterisk followed by a number after a file buffer reference in the </span><span style="font-style: italic; color: #000000;">source</span><span style="color: #000000;"> list copies the given number of fields from the file buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An underscore as the last item in the list truncates the destination by removing all fields after the last one copied.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">MVA</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Move data from one location to another as a sorted multivalued field</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MVA</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">destination source</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">destination</span><span style="color: #000000;"> is a direct or indirect reference to the buffer location to which data is to be copied.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">source</span><span style="color: #000000;"> is a direct or indirect buffer reference or an unquoted literal string.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The source data is inserted as a new value in the multivalued destination using a left aligned ascending sort order to determine its position. The item will not be inserted if it would duplicate an existing entry in the list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">MVD</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Delete an entry from a multivalued field</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MVD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">destination item</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">destination</span><span style="color: #000000;"> is a direct or indirect reference to the buffer location from which the data is to be deleted.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">item </span><span style="color: #000000;">is a direct or indirect buffer reference or an unquoted literal string.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The multivalued destination is searched for the first occurrence of </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">, removing this entry from the list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">O</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Output text to the terminal</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">O</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">+</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The unquoted literal </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> is displayed on the user's terminal. The optional </span><span style="font-weight: bold; color: #000000;">+</span><span style="color: #000000;"> token suppresses the normal newline after output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">P</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Process the command in the primary output buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">H</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">X</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">W</span><span style="color: #000000;">}{</span><span style="font-weight: bold; color: #000000;">L</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The command in the primary output buffer is passed to the command processor for execution. Any data in the secondary output buffer is queued up as data for use by the executed command. If there is any unprocessed data remaining after the command has been executed, the first field of this data is passed to the command processor for execution, using the remaining fields as data. This cycle continues until all the data has been processed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;"> option displays the content of the output buffer before execution of the command.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">H</span><span style="color: #000000;"> option suppresses terminal output by the executed command.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">X</span><span style="color: #000000;"> option terminates the PROC after the command has been executed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">W</span><span style="color: #000000;"> option displays the command and prompts the user to confirm whether it should be executed. Valid replies are Y to execute the command, N to terminate the PROC without executing the command and S to skip the command but continue execution of the PROC.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">L</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> option sets process task lock </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> for the duration of the command.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">After the command has been executed, the output buffers are cleared and the primary output buffer is activated.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">There is an implied </span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;"> command at the end of a PROC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Q</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Quit</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">Q</span><span style="font-style: italic; color: #000000;">text</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The PROC and all other underlying programs, paragraphs, menus, etc are terminated, displaying the optional unquoted </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> on the user's terminal. The user is returned to the command prompt, executing any <a href="command_scripts.htm">ON.ABORT</a> VOC entry on the way.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">RI</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Reset input buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RI</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Used with no options, this statement clears both input buffers, resets the pointer to the start of the primary input buffer and makes this the active buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> option specifies that the primary input buffer is to be cleared from field </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> onwards, leaving the input buffer pointer positioned at the end of the remaining data.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> option specifies that the primary input buffer is to be cleared from the given character position, leaving the input buffer pointer positioned at the end of the remaining data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">RO</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Reset output buffers</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Both output buffers are cleared and the primary output buffer is activated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">RSUB</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Return from a GOSUB</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RSUB</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Without the </span><span style="font-style: italic; color: #000000;">n </span><span style="color: #000000;">option, the PROC continues execution at the statement following the last GOSUB executed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> specifies that execution is to continue starting </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> lines following the GOSUB.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The RSUB statement is ignored if the PROC is not in a subroutine.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">RTN</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Return to a calling PROC</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RTN</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The PROC returns to the PROC from which it was called, continuing execution </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> lines after the [] statement that called the current PROC. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, it defaults to 1.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">S</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Set the input buffer pointer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">S</span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;">|</span><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the input buffer pointer of the active input buffer at the specified position.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> specifies that the pointer is to be positioned at field </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">ref</span><span style="color: #000000;"> is a direct or indirect buffer reference used to obtain the field number.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> option sets the pointer to the given character position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">SP</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Active the primary input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The primary input buffer is activated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">SS</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Active the secondary input buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The secondary input buffer is activated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">STOFF</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Active the primary output buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The primary output buffer is activated. This statement can also be written as </span><span style="font-weight: bold; color: #000000;">STOF</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">ST OFF</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">STON</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Active the secondary output buffer</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The secondary output buffer is activated. This statement can also be written as </span><span style="font-weight: bold; color: #000000;">ST ON</span><span style="color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">T</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Terminal output</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">T</span><span style="font-style: italic; color: #000000;">element</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">element</span><span style="color: #000000;">...}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Outputs each element of a comma separated list to the terminal. The elements may be:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">text</span></td><td><span style="color: #000000;">Quoted literal text</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">ref</span></td><td><span style="color: #000000;">A direct or indirect buffer reference identifying the data to be displayed. This may be followed by an input conversion code enclosed in semicolons or an output conversion code enclosed in colons.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Position the cursor to the specified column of the current line. The value of </span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;"> may be given as a number or as a direct or indirect buffer reference.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">row</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Position the cursor to the specified row and column. The value of </span><span style="font-style: italic; color: #000000;">row</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;"> may be given as a number or as a direct or indirect buffer reference.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">B</span></td><td><span style="color: #000000;">Sounds the terminal &quot;bell&quot;.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">C</span></td><td><span style="color: #000000;">Clears the screen.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;">Pauses for one second.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">I</span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Displays character </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> may be given as a number or a buffer reference.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">L</span></td><td><span style="color: #000000;">Terminates a </span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;">...</span><span style="font-weight: bold; color: #000000;">L</span><span style="color: #000000;"> loop.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">S</span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Emits </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> spaces where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> may be given as a number or a buffer reference.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">T</span></td><td><span style="color: #000000;">Starts a </span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;">...</span><span style="font-weight: bold; color: #000000;">L</span><span style="color: #000000;"> loop where the elements enclosed in the loop will be executed three times.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">U</span></td><td><span style="color: #000000;">Moves the cursor up by one line.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">X</span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Displays character </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> may be given as a number or a buffer reference to a two digit hexadecimal value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">+</span></td><td><span style="color: #000000;">Suppresses the normal newline after display.</span></td></tr></table></div><p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">col</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">row</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> elements can also be used to access the terminal control codes that use negative </span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;"> values.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The list of elements for display can span multiple lines by breaking it after a comma.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">TR</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Enable or disable tracing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TR </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;">|</span><span style="font-weight: bold; color: #000000;">OFF</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;"> option causes the PROC processor to display each statement before it is executed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">OFF</span><span style="color: #000000;"> option terminates trace mode.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The space before the mode keyword can be omitted. If no mode is specified, tracing is enabled.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">U</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Call a QMBasic program</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">U</span><span style="font-style: italic; color: #000000;">name</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The catalogued program identified by </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> is called. This program should take no arguments and can access the PROC buffers using @-variables.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">X</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Exit from the PROC</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">X</span><span style="font-style: italic; color: #000000;">text</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Displays the optional unquoted </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;"> and terminates the PROC, returning to the calling PROC, program, menu, etc.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">+</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Add an integer value to a numeric field</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">+</span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The specified numeric value is added to the field of the active input buffer identified by the input buffer pointer. Non-numeric data is treated as zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">-</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Subtract an integer value from a numeric field</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">-</span><span style="font-style: italic; color: #000000;">n</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The specified numeric value is subtracted from the field of the active input buffer identified by the input buffer pointer. Non-numeric data is treated as zero. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">( )</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Transfer control to another PROC</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">(</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">) </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The PROC identified by the given </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is executed, starting at </span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;">, or the first statement if no </span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;"> is specified. If </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is omitted, the record id is obtained from the field of the active input buffer addressed by the input buffer pointer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The buffers and pointers are not changed by this statement.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Control does not return to the current PROC when the called PROC terminates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">[ ]</span> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Transfer control to another PROC</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">[</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">] </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The PROC identified by the given </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is executed, starting at </span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;">, or the first statement if no </span><span style="font-style: italic; color: #000000;">label</span><span style="color: #000000;"> is specified. If </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is omitted, the record id is obtained from the field of the active input buffer addressed by the input buffer pointer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The buffers and pointers are not changed by this statement.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Control returns to the current PROC when the called PROC executes a RTN or X statement.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

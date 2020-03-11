@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?date_format.htm"; }
+else { parent.quicksync('a5.42'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DATE.FORMAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DATE.FORMAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DATE.FORMAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="date.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="debug.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> command selects the date format to be used by default or displays this setting.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">OFF</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> { </span><span style="font-weight: bold; color: #000000;">ON </span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">DISPLAY</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">INFORM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">conv.code</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DATE.FORMAT OFF</span><span style="color: #000000;"> selects American date format (month, day, year) as the default for date conversions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DATE.FORMAT ON</span><span style="color: #000000;">  or </span><span style="font-weight: bold; color: #000000;">DATE.FORMAT </span><span style="color: #000000;">with no qualifying information selects European date format (day, month, year) as the default for date conversions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DATE.FORMAT DISPLAY</span><span style="color: #000000;"> displays the current setting of the date format mode. If a non-default conversion code has been set, this is also displayed. </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> is set to 0 for American date format or 1 for European date format.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DATE.FORMAT INFORM</span><span style="color: #000000;"> sets </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> as described above but does not display the date setting.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DATE.FORMAT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;"><a href="conv_code.htm">conv.code</a></span><span style="color: #000000;"> sets the default conversion code that will be used for date conversions that specify a code of D with no qualifying options. The </span><span style="font-style: italic; color: #000000;"><a href="conv_code.htm">conv.code</a></span><span style="color: #000000;"> must be a valid date conversion code. Specifying </span><span style="font-style: italic; color: #000000;"><a href="conv_code.htm">conv.code</a></span><span style="color: #000000;"> as D reverts to the standard default setting.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DATE.FORMAT ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DATE.FORMAT DISPLAY</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">European date format is on</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above commands set European date format and then confirm this selection.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_close.htm"; }
+else { parent.quicksync('a7.5.38'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CLOSE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CLOSE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CLOSE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_clearselect.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_closeseq.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CLOSE</span><span style="color: #000000;"> statement closes a file previously opened using the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_open.htm">OPEN</a></span><span style="color: #000000;">or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openpath.htm">OPENPATH</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 22px;"><span style="font-weight: bold; color: #000000;">CLOSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="91"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is a file variable for an open file.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file associated with the file variable will be closed. Any other file variable which refers to the same file, either from a separate </span><span style="font-weight: bold; color: #000000;"><a href="qmb_open.htm">OPEN</a></span><span style="color: #000000;"> or from copying the file variable, will be unaffected.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is provided for source program compatibility with other systems and will never be executed by </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files do not always need to be closed explicitly. Local variables are released when a program or subroutine returns and files associated with local file variables are closed automatically. File variables in common areas will not be affected.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Closing a file inside a transaction destroys the file variable but defers the actual close until the transaction ends. Rolling back the transaction will not reinstate the file variable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPEN &quot;STOCK.FILE&quot; TO STOCK ELSE ABORT &quot;Cannot open file&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">...further statements...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLOSE STOCK</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment opens a file, processes it and then closes the file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

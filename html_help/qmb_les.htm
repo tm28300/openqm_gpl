@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_les.htm"; }
+else { parent.quicksync('a7.5.136'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LES()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LES()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LES()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_len.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_listindex.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LES()</span><span style="color: #000000;"> function processes two dynamic arrays, returning a similarly structured result array indicating whether elements of the first array are less than or equal to corresponding elements of the second array.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LES(</span><span style="font-style: italic; color: #000000;">expr1</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">expr2</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">expr1</span><span style="color: #000000;">and </span><span style="font-style: italic; color: #000000;">expr2</span></td><td><span style="color: #000000;">are the dynamic arrays to be compared.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LES()</span><span style="color: #000000;"> function compares corresponding elements of the dynamic arrays </span><span style="font-style: italic; color: #000000;">expr1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">expr2</span><span style="color: #000000;">, returning a similarly structured dynamic array of true / false values indicating the results of the comparison.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span><span style="color: #000000;"> function can be applied to either or both expressions. Without this function, any absent trailing values are taken as zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A contains&nbsp; 11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">14</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">ABC</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">2</span></p>
+<p><span style="color: #000000;">B contains&nbsp; 12</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">14</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">ACB</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">2</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = LES(A, B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">C now contains&nbsp; 1</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">1</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_ands.htm">ANDS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_eqs.htm">EQS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ges.htm">GES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gts.htm">GTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ifs.htm">IFS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_lts.htm">LTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nes.htm">NES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_not.htm">NOTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ors.htm">ORS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?security.htm"; }
+else { parent.quicksync('a5.132'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SECURITY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SECURITY" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SECURITY</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="scrb.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SECURITY</span><span style="color: #000000;"> command enables, disables or reports the state of QM's internal security system.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">User management is not applicable to the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="font-weight: bold; color: #000000;">SECURITY ON</span></td><td><span style="color: #000000;">Enable security</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="font-weight: bold; color: #000000;">SECURITY OFF</span></td><td><span style="color: #000000;">Disable security</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="font-weight: bold; color: #000000;">SECURITY</span></td><td><span style="color: #000000;">Report the current security setting</span></td></tr></table></div><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SECURITY</span><span style="color: #000000;"> command determines how users connecting directly to QM over a network are handled. Users of QMConsole sessions, including users who have made a standard telnet connection and entered QM from an operating system command prompt, are not affected by this command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows 98/ME, network users will be required to enter a valid username and password if security is enabled. This username is private to the QM environment and is created using the </span><span style="font-weight: bold; color: #000000;"><a href="create_user.htm">CREATE.USER</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span><span style="color: #000000;"> commands. If security is not enabled, network users can connect directly to QM with no authentication.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On later versions of Windows, network users will always be required to enter a valid username and password known to Windows. Furthermore, if security is enabled, this username must also be in QM's own register of usernames. It is inserted into the register using the </span><span style="font-weight: bold; color: #000000;"><a href="create_user.htm">CREATE.USER</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span><span style="color: #000000;"> commands. If security is not enabled, any user with a valid Windows username will be able to make a direct network connection to QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, network users will always be required to enter a valid username and password known to the operating system. Furthermore, if security is enabled, this username must also be in QM's own register of usernames. It is inserted into the register using the </span><span style="font-weight: bold; color: #000000;"><a href="create_user.htm">CREATE.USER</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span><span style="color: #000000;"> commands. If security is not enabled, any user with a valid operating system username will be able to make a direct network connection to QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;">SECURITY</span><span style="color: #000000;"> command is restricted to QMConsole users with administrator rights. If security is disabled, all users are considered as administrators.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_user.htm">CREATE.USER</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_user.htm">DELETE.USER</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_users.htm">LIST.USERS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="password.htm">PASSWORD</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

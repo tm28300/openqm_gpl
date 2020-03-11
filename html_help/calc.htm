@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?calc.htm"; }
+else { parent.quicksync('a6.29'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CALC</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CALC,CALCULATE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CALC, CALCULATE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="by_exp_dsnd.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="col_hdg.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CALC</span><span style="color: #000000;"> keyword prefixes an I-type field name or an evaluated expression and causes the calculation to be performed on the total lines using accumulated values from the detail lines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALC</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">is the I-type field or expression for which the calculation is to be performed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CALC</span><span style="color: #000000;"> keyword works in conjunction with the I-type&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_total.htm">TOTAL()</a></span><span style="color: #000000;"> function. During detail lines, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_total.htm">TOTAL()</a></span><span style="color: #000000;"> function accumulates values which are then used on the subtotal and grand total lines to calculate the value in the column to which the </span><span style="font-weight: bold; color: #000000;">CALC</span><span style="color: #000000;"> keyword applies.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">We have a file which includes a calculated PROFIT item defined as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">100 * (SELL - COST) / COST</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST PARTS AVG COST AVG SELL AVG PROFIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This might produce a report such as that below</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST PARTS AVG COST AVG SELL AVG PROFIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Part&nbsp;&nbsp; Cost.&nbsp;&nbsp;&nbsp; Sell.&nbsp; Profit%</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 101&nbsp;&nbsp; 10.00&nbsp;&nbsp;&nbsp; 13.00&nbsp;&nbsp;&nbsp; 30.00</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 102&nbsp;&nbsp; 15.00&nbsp;&nbsp;&nbsp; 18.00&nbsp;&nbsp;&nbsp; 20.00</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 103&nbsp;&nbsp; 14.00&nbsp;&nbsp;&nbsp; 17.00&nbsp;&nbsp;&nbsp; 21.43</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =====&nbsp;&nbsp;&nbsp; =====&nbsp;&nbsp;&nbsp; =====</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.00&nbsp;&nbsp;&nbsp; 16.00&nbsp;&nbsp;&nbsp; 23.81</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 3 records listed.</span></p>
+<p><span style="color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p><span style="color: #000000;">The average profit figure (23.81) is the average of the figures in the column above it. Perhaps what we really want to show is the percentage profit selling for 16.00 something that cost us 13.00 (the average cost and selling prices). To do this, the PROFIT expression is changed to</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">100 * (TOTAL(SELL) - TOTAL(COST)) / TOTAL(COST)</span></p>
+<p><span style="color: #000000;">or, more simply,</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">100 * TOTAL(SELL - COST) / TOTAL(COST)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST PARTS AVG COST AVG SELL CALC PROFIT</span></p>
+<p><span style="color: #000000;">now produces</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST PARTS AVG COST AVG SELL CALC PROFIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Part&nbsp;&nbsp; Cost.&nbsp;&nbsp;&nbsp; Sell.&nbsp; Profit%</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 101&nbsp;&nbsp; 10.00&nbsp;&nbsp;&nbsp; 13.00&nbsp;&nbsp;&nbsp; 30.00</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 102&nbsp;&nbsp; 15.00&nbsp;&nbsp;&nbsp; 18.00&nbsp;&nbsp;&nbsp; 20.00</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> 103&nbsp;&nbsp; 14.00&nbsp;&nbsp;&nbsp; 17.00&nbsp;&nbsp;&nbsp; 21.43</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =====&nbsp;&nbsp;&nbsp; =====&nbsp;&nbsp;&nbsp; =====</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.00&nbsp;&nbsp;&nbsp; 16.00&nbsp;&nbsp;&nbsp; 23.08</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">3 records listed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

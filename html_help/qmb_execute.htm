@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_execute.htm"; }
+else { parent.quicksync('a7.5.82'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>EXECUTE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="EXECUTE,PERFORM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">EXECUTE, PERFORM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_errmsg.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_exit.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement enables a </span><span style="color: #000000;">QMBasi</span><span style="color: #000000;">c program to execute any command. The synonym </span><span style="font-weight: bold; color: #000000;">PERFORM</span><span style="color: #000000;"> can be used in place of </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">TRAPPING ABORTS</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">CAPTURING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">PASSLIST</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">src.list</span><span style="color: #000000;"> }}</span></p>
+<p style="margin: 0px 0px 0px 30px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">RTNLIST</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">tgt.list</span><span style="color: #000000;"> }</span></p>
+<p style="margin: 0px 0px 0px 30px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">status.var</span><span style="color: #000000;">}&nbsp; or&nbsp; {</span><span style="font-weight: bold; color: #000000;">RETURNING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">status.var</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to the command(s) to be executed. Multiple commands are separated by field marks.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">var</span></td><td><span style="color: #000000;">is a variable to receive captured output.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">src.list</span></td><td><span style="color: #000000;">is a select list variable holding a list to be passed into the executed command as list 0. For compatibility with other multivalue environments, the </span><span style="font-weight: bold; color: #000000;">PASSLIST</span><span style="color: #000000;"> clause is ignored if </span><span style="font-style: italic; color: #000000;">src.list</span><span style="color: #000000;"> is omitted.</span></td></tr></table></div><p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">tgt.list</span></td><td><span style="color: #000000;">is a variable to receive a returned select list. This variable may be used in a subsequent </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readnext.htm">READNEXT</a></span><span style="color: #000000;"> to extract&nbsp; items from the list.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">status.var</span></td><td><span style="color: #000000;">is a variable to receive the value of <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a> after the command is executed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement creates a new command level by starting a new version of the command processor and passing it the command line to be executed. On completion of the command, the command processor returns control to the calling program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value in </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> may contain several commands delimited by field marks. These will be processed as a paragraph and may include </span><span style="font-weight: bold; color: #000000;"><a href="qmb_data.htm">DATA</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_loop.htm">LOOP</a></span><span style="color: #000000;"> constructs, etc.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An abort occurring in the command(s) processed by the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement is normally trapped at the highest command processor level that took its command input from the keyboard or </span><span style="font-weight: bold; color: #000000;"><a href="phantom.htm">PHANTOM</a></span><span style="color: #000000;">ed paragraph. The </span><span style="font-weight: bold; color: #000000;">TRAPPING ABORTS</span><span style="color: #000000;"> qualifier to the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement causes aborts to return to the program issuing the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> without execution of the optional <a href="command_scripts.htm">ON.ABORT</a> paragraph. The <a href="at_variables.htm#abort.code">@ABORT.CODE</a> variable may be used to determine whether the command caused an abort to occur. This variable is initially zero and is reset to zero only by the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CAPTURING</span><span style="color: #000000;"> clause captures output that would otherwise have gone to the terminal or phantom log file, saving it in the named variable with field marks in place of newlines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PASSLIST</span><span style="color: #000000;"> clause passes the list in the named select list variable into the executed command as list 0.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RTNLIST</span><span style="color: #000000;"> clause returns the content of the default select list in the named variable, removing the active numbered select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">RETURNING</span><span style="color: #000000;"> clause copies the value of <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a> to the named variable after the command has been executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The unnamed common area is saved by the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement and the new command level may define a new structure for this area. On return from the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement, the original unnamed common area is restored. Named common areas are not affected by the </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Application designers should carefully consider the possible impact of </span><span style="font-weight: bold; color: #000000;">EXECUTE</span><span style="color: #000000;"> inside a transaction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">EXECUTE &quot;LIST STOCK.FILE ITEMS QUANTITY&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement performs the </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;"> command from within the calling program. Control is returned to the program once the </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> command is complete.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

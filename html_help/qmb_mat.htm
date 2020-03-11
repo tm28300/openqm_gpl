@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_mat.htm"; }
+else { parent.quicksync('a7.5.147'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>MAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_mark_mapping.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_matbuild.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;"> statement assigns a value to all elements of a matrix or copies one matrix to another.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">=</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">= MAT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">src.matrix</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">matrix</span></td><td><span style="color: #000000;">is the name of a previously dimensioned matrix to which values are to be assigned</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to the value to be stored in each matrix element.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">src.matrix</span></td><td><span style="color: #000000;">is the name of a previously dimensioned matrix which is to be copied to </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first format of this statement copies the value of </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> into all elements of </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;">. The zero element is set to a null string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The second format copies elements from </span><span style="font-style: italic; color: #000000;">src.matrix</span><span style="color: #000000;"> to </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;"> row by row. If the number of columns differs, the copy behaves as depicted below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table width="300" cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top"><p><span style="font-weight: bold; color: #000000;">Source:</span></p>
+</td>
+<td colspan="4" valign="top"><p><span style="font-weight: bold; color: #000000;">Target:</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="43px" style="width:43px;"><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="49px" style="width:49px;"><p><span style="font-weight: bold; color: #000000;">1</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="font-weight: bold; color: #000000;">2</span></p>
+</td>
+<td valign="top" width="46px" style="width:46px;"><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="53px" style="width:53px;"><p><span style="font-weight: bold; color: #000000;">1</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="font-weight: bold; color: #000000;">2</span></p>
+</td>
+<td valign="top" width="58px" style="width:58px;"><p><span style="font-weight: bold; color: #000000;">3</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="43px" style="width:43px;"><p><span style="font-weight: bold; color: #000000;">1</span></p>
+</td>
+<td valign="top" width="49px" style="width:49px;"><p><span style="color: #000000;">A</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="color: #000000;">B</span></p>
+</td>
+<td valign="top" width="46px" style="width:46px;"><p><span style="font-weight: bold; color: #000000;">1</span></p>
+</td>
+<td valign="top" width="53px" style="width:53px;"><p><span style="color: #000000;">A</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">B</span></p>
+</td>
+<td valign="top" width="58px" style="width:58px;"><p><span style="color: #000000;">C</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="43px" style="width:43px;"><p><span style="font-weight: bold; color: #000000;">2</span></p>
+</td>
+<td valign="top" width="49px" style="width:49px;"><p><span style="color: #000000;">C</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="color: #000000;">D</span></p>
+</td>
+<td valign="top" width="46px" style="width:46px;"><p><span style="font-weight: bold; color: #000000;">2</span></p>
+</td>
+<td valign="top" width="53px" style="width:53px;"><p><span style="color: #000000;">D</span></p>
+</td>
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">E</span></p>
+</td>
+<td valign="top" width="58px" style="width:58px;"><p><span style="color: #000000;">F</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="43px" style="width:43px;"><p><span style="font-weight: bold; color: #000000;">3</span></p>
+</td>
+<td valign="top" width="49px" style="width:49px;"><p><span style="color: #000000;">E</span></p>
+</td>
+<td valign="top" width="95px" style="width:95px;"><p><span style="color: #000000;">F</span></p>
+</td>
+<td valign="top" width="46px" style="width:46px;"><br>
+</td>
+<td valign="top" width="53px" style="width:53px;"><br>
+</td>
+<td valign="top" width="57px" style="width:57px;"><br>
+</td>
+<td valign="top" width="58px" style="width:58px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The zero element of </span><span style="font-style: italic; color: #000000;">src.matrix</span><span style="color: #000000;"> is copied to the zero element of </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">src.matrix</span><span style="color: #000000;"> has more elements than </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;">, the excess elements are ignored. If </span><span style="font-style: italic; color: #000000;">src.matrix</span><span style="color: #000000;"> has fewer elements than </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;">, the remaining elements of </span><span style="font-style: italic; color: #000000;">matrix</span><span style="color: #000000;"> are unchanged.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A single dimensional matrix can be copied to a two dimensional matrix and vice versa.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIM A(25)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MAT A = 0</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment dimensions matrix A to have 25 elements and sets them all to zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIM A(5,5), B(25)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">... statements that set values in matrix A...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MAT B = MAT A</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment dimensions two matrices, sets values into matrix A and then creates a single dimensional copy of A in matrix B.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

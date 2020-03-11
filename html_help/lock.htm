@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?lock.htm"; }
+else { parent.quicksync('a5.97'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOCK</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOCK" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOCK</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="listv.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="login_port.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> command sets a task lock.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">lock.number</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.WAIT</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">lock.number</span></td><td><span style="color: #000000;">is the number of the task lock (0 to 63) to be set.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">NO.WAIT</span></td><td><span style="color: #000000;">specifies that the process is not to wait if the lock is not available.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> command sets one of the 64 system wide task locks. Four situations exist:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the lock is available, the process acquires the lock and continues. </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> will be set to </span><span style="font-style: italic; color: #000000;">lock.number</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the lock is already owned by this process, a warning message is displayed and execution continues. </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> will be set to </span><span style="font-style: italic; color: #000000;">lock.number</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the lock is owned by another process and the </span><span style="font-weight: bold; color: #000000;">NO.WAIT</span><span style="color: #000000;"> option has been used, a message is displayed indicating the unavailability of the lock and the process continues. The value of </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> will be negative (-ER$LCK) and can be tested to check for this situation in paragraphs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the lock is owned by another process and the </span><span style="font-weight: bold; color: #000000;">NO.WAIT</span><span style="color: #000000;"> option has not been used, a message is displayed indicating that the process is waiting and execution is suspended until the lock becomes available. The break key may be used to interrupt this wait.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOCK 5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Set task lock 5</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, task lock 5 was available when the </span><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> command was executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOCK 5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Waiting for task lock to become available</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, task lock 5 held by another process when the </span><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> command was executed. The process waits for the lock to become available.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOCK 5 NO.WAIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Task lock is already in use</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">As in the previous example, task lock 5 was held by another process when the </span><span style="font-weight: bold; color: #000000;">LOCK</span><span style="color: #000000;"> command was executed. In this case, the </span><span style="font-weight: bold; color: #000000;">NO.WAIT</span><span style="color: #000000;"> option causes the process to continue without waiting for the lock to become available.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="clear_locks.htm">CLEAR.LOCKS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_locks.htm">LIST.LOCKS</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

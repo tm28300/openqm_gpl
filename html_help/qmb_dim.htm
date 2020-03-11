@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_dim.htm"; }
+else { parent.quicksync('a7.5.66'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DIMENSION</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DIMENSION,DIM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DIMENSION, DIM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_deleteseq.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_disinherit.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement is used to set the dimensions of a matrix. The short form </span><span style="font-weight: bold; color: #000000;">DIM</span><span style="color: #000000;"> may be used in place of </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">mat</span><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">rows</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">cols</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">mat</span></td><td><span style="color: #000000;">is the name of the matrix.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">rows</span></td><td><span style="color: #000000;">evaluates to the number of rows in the matrix.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">cols</span></td><td><span style="color: #000000;">evaluates to the number of columns in a two dimensional matrix.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A matrix variable is a one or two dimensional array of values. Matrices must be declared by use of the </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement. The </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement must be executed at program run time before the variable is used in any other way.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A one dimensional matrix of ten elements is defined by a statement of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIMENSION A(10)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For a two dimensional matrix with 5 rows of 8 columns this becomes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIMENSION B(5,8)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By default, all matrices have an additional element, </span><span style="font-weight: bold; color: #000000;">the zero element</span><span style="color: #000000;">, which is used by some </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statements. This is referred to as A(0) or B(0,0). The </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_mode.htm">$MODE</a></span><span style="color: #000000;"> compiler directive can be used to select Pick style matrices which do not have a zero element.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The elements of a matrix may be of differing data types.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A matrix may be redimensioned at any time by a further </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement though the number of dimensions cannot be changed. Existing values of matrix elements will be retained in the redimensioned matrix by copying elements on a row by row basis. If the matrix is enlarged , the newly created elements will be unassigned. If it is smaller than before, any values in the excess elements are discarded.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inmat.htm">INMAT()</a></span><span style="color: #000000;"> function may be used to check on the success of a </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement. A sequence such as</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIMENSION A(N)</span></p>
+<p style="margin: 0px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF INMAT() THEN ABORT &quot;Insufficient memory&quot;</span></p>
+<p><span style="color: #000000;">will cause the program to abort if there is insufficient memory to hold the matrix. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inmat.htm">INMAT()</a></span><span style="color: #000000;"> function used in this way returns 0 if the </span><span style="font-weight: bold; color: #000000;">DIMENSION</span><span style="color: #000000;"> statement was successful, 1 if it failed. With the memory sizes found on modern systems, this test is probably totally unnecessary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inmat.htm">INMAT()</a></span><span style="color: #000000;"> function can also be used to find the current dimensions of a matrix.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = DCOUNT(REC, @FM)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIM A(N)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MATPARSE A FROM REC, @FM</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment creates an array with the correct number of elements to receive the result of a </span><span style="font-weight: bold; color: #000000;">MATPARSE</span><span style="color: #000000;"> operation on dynamic array REC and then performs the </span><span style="font-weight: bold; color: #000000;">MATPARSE</span><span style="color: #000000;">.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

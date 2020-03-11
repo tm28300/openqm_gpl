@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?format.htm"; }
+else { parent.quicksync('a5.61'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>FORMAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FORMAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">FORMAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="find_account.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="form_list.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;"> command reformats QMBasic source programs to aid readability.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">CASE</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the directory file holding the QMBasic source program. If omitted, the </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> defaults to BP.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">record.name</span></td><td><span style="color: #000000;">is the name of the record within the file.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> is omitted and select list 0 is active, this is used as the source of record names to be formatted. Entries in this select list with a .H suffix are ignored. Thus the command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT BP</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">is adequate to construct the select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;"> command reformats a QMBasic program to comply with a conventional indentation standard. Programs may be entered with no regard to indentation and subsequently tidied up using </span><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;"> will not move line breaks. Statements must be correctly delimited. The format actions performed are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PROGRAM</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">FUNCTION</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">SUBROUTINE</span><span style="color: #000000;"> statement and compiler directives are adjusted to start at the leftmost column.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Statements inside conditional blocks (</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">CASE</span><span style="color: #000000;">, etc.) are indented by three columns.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">WHILE </span><span style="color: #000000;">and </span><span style="font-weight: bold; color: #000000;">UNTIL </span><span style="color: #000000;">statements are aligned with their corresponding </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">FOR</span><span style="color: #000000;"> statement.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Multiple spaces between language elements are reduced to a single space.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Spaces before commas in statements or argument lists are removed. A single space will follow such a comma.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Labels are aligned to the left margin and any further text except comments is moved to the next line.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A comment on the same line as a statement is not moved unless not to do so would place it over the statement or with less than one space before the semicolon.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Lines holding left aligned comments are not changed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Comment lines which commence with spaces are moved to the alignment of the surrounding code except where the preceding line was a comment (excluding trailing comments) in which case the line is aligned with the preceding line.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">EQUate </span><span style="color: #000000;">and </span><span style="font-weight: bold; color: #000000;">$DEFINE </span><span style="color: #000000;">lines are unchanged to preserve possible user defined column alignment.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CASE</span><span style="color: #000000;"> option converts all language elements, labels and data names to lowercase. Names corresponding to </span><span style="font-weight: bold; color: #000000;">EQUate </span><span style="color: #000000;">or </span><span style="font-weight: bold; color: #000000;">$DEFINE</span><span style="color: #000000;">d tokens retain the casing of the definition.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Where a </span><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;"> directive is encountered, the include record is read to establish any </span><span style="font-weight: bold; color: #000000;">EQUATE</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">$DEFINE </span><span style="color: #000000;">tokens in it. All references to these tokens in the record being formatted are converted to upper case. The include record itself is not changed.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-weight: bold; color: #000000;">FORMAT</span><span style="color: #000000;"> fails because of faulty syntax such as unmatched </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statements, the source record remains unchanged. Diagnostic messages to aid location of such errors are displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">12345678901234567890123456789012345678901234567890123456789</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SUBROUTINE GET.DATE(PROMPT.TEXT, VALUE)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY PROMPT.TEXT:;* Prompt for date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">INPUT NEW.DATE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">VALUE = ICONV(NEW.DATE,&quot;DDMY&quot;);* Convert the date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WHILE STATUS()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A program initially entered as above, after formatting becomes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">12345678901234567890123456789012345678901234567890123456789</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SUBROUTINE GET.DATE(PROMPT.TEXT, VALUE)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; DISPLAY PROMPT.TEXT :&nbsp; ;* Prompt for date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; INPUT NEW.DATE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; VALUE = ICONV(NEW.DATE, &quot;DDMY&quot;)&nbsp; ;* Convert the date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; WHILE STATUS()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">With the </span><span style="font-weight: bold; color: #000000;">CASE</span><span style="color: #000000;"> option this becomes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">12345678901234567890123456789012345678901234567890123456789</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">subroutine get.date(prompt.text, value)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; loop</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; display prompt.text :&nbsp; ;* Prompt for date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; input new.date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; value = iconv(new.date, &quot;DDMY&quot;)&nbsp; ;* Convert the date</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; while status()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; repeat</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">end</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

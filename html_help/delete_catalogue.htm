@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?delete_catalogue.htm"; }
+else { parent.quicksync('a5.46'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DELETE.CATALOGUE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DELETE.CATALOGUE,DELETE.CATALOG,$PRIVATE.CATALOGUE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DELETE.CATALOGUE, DELETE.CATALOG</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="delete_account.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="delete_common.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DELETE.CATALOGUE</span><span style="color: #000000;"> command (synonym </span><span style="font-weight: bold; color: #000000;">DELETE.CATALOG</span><span style="color: #000000;">) removes an entry from the system catalogue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DELETE.CATALOGUE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;">...}&nbsp; {</span><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> </span></td><td><span style="color: #000000;">is a list of the catalogue call names of the programs or subroutines to be deleted. If the default select list is active, this will be used to identify the catalogue entries to be deleted and the </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> should be omitted.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;"> </span></td><td><span style="color: #000000;">indicates that a globally catalogued version of this subroutine is to be removed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> </span></td><td><span style="color: #000000;">indicates that a locally catalogued version of this subroutine is to be removed.</span></td></tr></table></div><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If neither the </span><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;"> nor the </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> keyword is present, the </span><span style="font-weight: bold; color: #000000;">DELETE.CATALOGUE</span><span style="color: #000000;"> command deletes entries from the private catalogue unless </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> has a prefix character that identifies a globally catalogued item.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The private catalogue is normally a subdirectory, cat, under the account directory but can be moved by creating an X-type VOC entry named $PRIVATE.CATALOGUE in which field 2 contains the pathname of the alternative private catalogue directory. This only takes effect when QM is re-entered or on use of the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command. This feature is particularly useful where two or more accounts are to share a common private catalogue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="basic.htm">BASIC</a>, <a href="catalogue.htm">CATALOGUE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="map.htm">MAP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

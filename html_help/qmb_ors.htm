@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_ors.htm"; }
+else { parent.quicksync('a7.5.175'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ORS()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ORS()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ORS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_open_socket.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_os_error.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ORS()</span><span style="color: #000000;"> function performs a logical OR operation on successive elements of a dynamic array, returning a similarly structured dynamic array of results.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 22px;"><span style="font-weight: bold; color: #000000;">ORS(</span><span style="font-style: italic; color: #000000;">expr1</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr2</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 23px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="157"><span style="font-style: italic; color: #000000;">expr1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">expr2</span></td><td><span style="color: #000000;">are the dynamic arrays to be processed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ORS()</span><span style="color: #000000;"> function performs the logical OR operation between corresponding elements of the two dynamic arrays and constructs a similarly structured dynamic array of results as its return value. An element of the returned dynamic array is 1 if either or both of the corresponding elements of </span><span style="font-style: italic; color: #000000;">expr1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">expr2</span><span style="color: #000000;"> are true. Any value other than zero or a null string is treated as true.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span><span style="color: #000000;"> function can be applied to either or both expressions. Without this function, any absent trailing values are taken as false.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A contains&nbsp;&nbsp; 1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">SM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span></p>
+<p><span style="color: #000000;">B contains&nbsp;&nbsp; 1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">SM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = ORS(A, B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">C now contains&nbsp;&nbsp; 1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">SM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">0</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">1</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">1</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_ands.htm">ANDS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_eqs.htm">EQS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ges.htm">GES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gts.htm">GTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ifs.htm">IFS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_les.htm">LES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_lts.htm">LTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nes.htm">NES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_not.htm">NOTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_reuse.htm">REUSE()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

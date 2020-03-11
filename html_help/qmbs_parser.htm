@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_parser.htm"; }
+else { parent.quicksync('a7.8.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!PARSER()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!PARSER(),Command line parser" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!PARSER()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_getpu.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_pathtkn.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PARSER()</span><span style="color: #000000;"> subroutine parses a command line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !PARSER(</span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">type</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">keyword</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">voc.rec</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">identifies the operation to be performed:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$RESET</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Prepares to parse the data in </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$GET.TOKEN</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Returns the next token from the data.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$GET.REST</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Returns all remaining tokens as a single string.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$EXPAND</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Inserts </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> before the remaining tokens.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">4</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$LOOK.AHEAD</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Previews the next token.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="54px" style="width:54px;"><p><span style="color: #000000;">5</span></p>
+</td>
+<td valign="top" width="249px" style="width:249px;"><p><span style="color: #000000;">PARSER$MFILE</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">Like PARSER$GET.TOKEN but allows multifile syntax.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -210px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">type</span></td><td><span style="color: #000000;">is the returned token type:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$END</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">End of data reached.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$TOKEN</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">A token has been returned in </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$STRING</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">A quoted string. The quotes are removed in </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$COMMA</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">A comma has been found.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">4</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$LBR</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">A left bracket has been found.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="55px" style="width:55px;"><p><span style="color: #000000;">5</span></p>
+</td>
+<td valign="top" width="248px" style="width:248px;"><p><span style="color: #000000;">PARSER$RBR</span></p>
+</td>
+<td valign="top" width="528px" style="width:528px;"><p><span style="color: #000000;">A right bracket has been found.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the returned token string. For </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> values 1 and 3, this is the string passed into the parser.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">keyword</span></td><td><span style="color: #000000;">is the returned token keyword number as defined in the VOC and in the SYSCOM PARSER.H record. This is negative if the token is not a VOC keyword. This argument is ignored for </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> values 1 and 3.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">voc.rec</span></td><td><span style="color: #000000;">is an optional argument, returned as the VOC record when </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> corresponds to a VOC key.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PARSER()</span><span style="color: #000000;"> subroutine can be used to parse the elements of a command line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL !PARSER(PARSER$RESET, 0, @SENTENCE, 0)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL !PARSER(PARSER$GET.TOKEN, TOKEN.TYPE, STRING, KEYWORD) ;* Verb</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; CALL !PARSER(PARSER$GET.TOKEN, TOKEN.TYPE, STRING, KEYWORD)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UNTIL TOKEN.TYPE = PARSER$END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; …process token…</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

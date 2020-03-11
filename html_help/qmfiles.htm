@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmfiles.htm"; }
+else { parent.quicksync('a4'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The QM File System</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The QM File System</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="usersecurity.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="creatinganddeletingfiles.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">File Types</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The files used by</span><span style="font-family: 'Souvenir'; font-weight: bold; color: #000000;"> </span><span style="color: #000000;">QM are of two types; <a href="directoryfiles.htm">directory files</a> and <a href="dynamicfiles.htm">dynamic files</a>. Directory files do not give high performance but allow data to be viewed from outside of the QM environment. They are therefore frequently used for data interchange with other software. Dynamic files offer very high performance and are typically used for the bulk of the data stored by an application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Facilities are provided to create data files, enter, modify and retrieve data, produce reports and, where the data processing operation required cannot be achieved using the standard commands, to construct powerful programs with the minimum of effort.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Most files consist of two parts; a <a href="term_datapart.htm">data part</a> holding the actual data and a <a href="term_dictpart.htm">dictionary part</a> holding a description of the structure of data records. Files do not have to have both parts. Files with no dictionary portion are fairly common. Dictionaries with no data part usually exist only to provide a single dictionary common to the data portion of many files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For compatibility with other multivalue database products, QM also supports multifiles. These are a collection of data files that share a common dictionary where the component files are referenced by a two part name consisting of a file name and a subfile name separated by a comma. See the </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> command for further details.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files contain data stored as <a href="recordsandmarks.htm">records</a> which are the basic unit of file access. Records are identified by unique <a href="term_id.htm">keys</a> which may be any sequence of up to 63 characters. This limit can be increased by the system administrator.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Special Filename Syntaxes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Normally, QM commands that reference files use a file name that corresponds to an F or Q-type VOC entry which, in turn, references the actual operating system file to be accessed. There are three special extended syntaxes for filenames that allow access to files without needing a VOC entry. Use of these is controlled by the <a href="configparams.htm#filerule">FILERULE</a> configuration option. Users should consider any impact of the security of their system before enabling these.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The three extended syntaxes are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="color: #000000;">Implicit Q-pointer</span></td><td><span style="font-style: italic; color: #000000;">account</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">file</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="color: #000000;">Implicit QMNet pointer</span></td><td><span style="font-style: italic; color: #000000;">server</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">account:file</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="color: #000000;">Pathname</span></td><td><span style="color: #000000;">PATH:</span><span style="font-style: italic; color: #000000;">pathname</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that in the final form, depending on context, Windows users may need to use forward slash characters (/) as directory delimiters because the backslash (\) is reserved as a string quote. Alternatively, the entire &quot;PATH:</span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;">&quot; construct can be quoted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">These special syntaxes cannot be used with a multifile component name.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For details of file processing from QMBasic programs, see <a href="file_processing.htm">File Processing</a>.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="creatinganddeletingfiles.htm">Creating and Deleting Files</a></span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="creatingandmodifyingdata.htm">Creating and Modifying Data</a></span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="locks.htm">Locks</a></span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="ak.htm">Alternate key indices</a></span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="triggers.htm">Triggers</a></span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;"><a href="fstat.htm">Monitoring the File System</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

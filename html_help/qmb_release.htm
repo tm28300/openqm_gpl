@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_release.htm"; }
+else { parent.quicksync('a7.5.217'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>RELEASE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RELEASE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">RELEASE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_recordlockl.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_rem.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RELEASE</span><span style="color: #000000;"> statement releases read, update or file locks.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RELEASE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">{, </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;">}} {</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">record.id</span></td><td><span style="color: #000000;">evaluates to the key of the record to be unlocked.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statements to be executed depending on the outcome of the operation.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RELEASE</span><span style="color: #000000;"> statement operates in three ways according to whether </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;"> are specified.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">With no </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;">, all file, read and update locks owned by the process on all files are released.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">With </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> but no </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;">, all locks associated with </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> are released.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">With both </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">, a specific lock is released.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is executed if a fatal error occurs. The&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function can be used to obtain an error code to determine the cause.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RELEASE</span><span style="color: #000000;"> statement has no effect inside a transaction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">RELEASE STOCK, &quot;ORDER.LIST&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement releases any locks on record ORDER.LIST of the file open as STOCK.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">RELEASE</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement releases all file, read and update locks held by the user.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

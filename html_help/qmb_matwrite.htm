@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_matwrite.htm"; }
+else { parent.quicksync('a7.5.153'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>MATWRITE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MATWRITE,MATWRITEU" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MATWRITE, MATWRITEU</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_matreadcsv.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_max.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> statement builds a record from successive elements of a matrix and writes this to a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MATWRITEU</span><span style="color: #000000;"> statement is similar but preserves any lock on the record being written.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;"> TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">mat</span></td><td><span style="color: #000000;">is the matrix from which data is to be taken.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">record.id</span></td><td><span style="color: #000000;">evaluates to the key of the record to be written.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statements to be executed depending on the outcome of the operation.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> statement constructs a dynamic array by concatenating elements of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;">, inserting a field mark between each element.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the zero element of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;"> is a null string or unassigned, assembly of the dynamic array terminates after the last non-null element of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;">. No trailing null fields will be written for later unassigned elements of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the zero element of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;"> contains data, all elements of </span><span style="font-style: italic; color: #000000;">mat</span><span style="color: #000000;"> are used and the zero element is concatenated as the final field of the record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pick style matrices do not have a zero element. See the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_common.htm">COMMON</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_dim.htm">DIMENSION</a></span><span style="color: #000000;"> statements for more details.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is taken, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function can be used to determine the cause of the error. Otherwise, for the </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> statement, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function returns 0 if the record was locked by this process prior to the </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> or ER$NLK if it was not locked. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function value is undefined after a successful </span><span style="font-weight: bold; color: #000000;">MATWRITEU</span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;"> statement is equivalent to a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_matbuild.htm">MATBUILD</a></span><span style="color: #000000;"> followed by a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_write.htm">WRITE</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MATBUILD REC FROM </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">mat</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITE REC TO </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">file.var</span><span style="font-family: 'Courier New'; color: #000000;">, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">record.id</span><span style="font-family: 'Courier New'; color: #000000;"> ON ERROR </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">statement(s)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MATWRITE ITEMS TO ITEM.FILE, &quot;ITEM.LIST&quot; ON ERROR</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ABORT &quot;Error &quot; : STATUS() : &quot; writing item list&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF STATUS() = 0 THEN DISPLAY &quot;Lock released&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment writes a record built from elements of matrix ITEMS. If it was locked prior to the </span><span style="font-weight: bold; color: #000000;">MATWRITE</span><span style="color: #000000;">, a message is displayed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

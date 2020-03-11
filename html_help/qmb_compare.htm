@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_compare.htm"; }
+else { parent.quicksync('a7.5.44'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>COMPARE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="COMPARE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">COMPARE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_common.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_config.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COMPARE()</span><span style="color: #000000;"> function compares two strings using the same rules as the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_locate.htm">LOCATE</a></span><span style="color: #000000;"> statement and the </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;"> verb.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">COMPARE(</span><span style="font-style: italic; color: #000000;">string1</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">string2</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">justification</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">string1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">string2</span></td><td><span style="color: #000000;">evaluate to the strings to be compared.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">justification</span></td><td><span style="color: #000000;">evaluates to a string where the first character is &quot;L&quot; for left justified comparison or &quot;R&quot; for right justified comparison. If omitted or invalid, left justification is used.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COMPARE()</span><span style="color: #000000;"> function compares the two strings and returns </span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">1</span></td><td><span style="font-style: italic; color: #000000;">string1</span><span style="color: #000000;"> is greater than </span><span style="font-style: italic; color: #000000;">string2</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">0</span></td><td><span style="font-style: italic; color: #000000;">string1</span><span style="color: #000000;"> is equal to </span><span style="font-style: italic; color: #000000;">string2</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-1</span></td><td><span style="font-style: italic; color: #000000;">string1</span><span style="color: #000000;"> is less than </span><span style="font-style: italic; color: #000000;">string2</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For a left justified comparison, characters are compared one by one and the function return value is determined by the relative ASCII character set positions of the characters at which the first mismatch occurs. If the strings are of different lengths and match up to the end of the shorter, the longer string is treated as the greater.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For a right justified comparison, the </span><span style="font-weight: bold; color: #000000;">COMPARE()</span><span style="color: #000000;"> function behaves as though sufficient spaces were inserted at the start of the shorter string to match the length of the longer string. Characters are then compared one by one and the function return value is determined by the relative ASCII character set positions of the characters at which the first mismatch occurs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COMPARE()</span><span style="color: #000000;"> function is not affected by the setting of the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_nocase_strings.htm">$NOCASE.STRINGS</a></span><span style="color: #000000;"> compiler directive and can therefore be used to force a case sensitive comparison in otherwise case insensitive programs..</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = 0</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">B = '00'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY A = B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY COMPARE(A,B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In the above example, use of the relational equals operator will see A and B as equal because both items can be treated as numbers. B is converted to a number (0) and a numeric comparison is performed. Use of the </span><span style="font-weight: bold; color: #000000;">COMPARE()</span><span style="color: #000000;"> function always treats the items as character strings. A is converted to a string and the two items are compared as left aligned strings, reporting that they are unequal.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DIM ITEM(100)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ITEMS = 0</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; INPUT NEW.ITEM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WHILE LEN(NEW.ITEM)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; * Find position to insert new item</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; I = 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; WHILE I &lt;= ITEMS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; IF COMPARE(NEW.ITEM, ITEM(I)) &lt; 0 THEN EXIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; I += 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; * Insert item at position I</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; FOR J = ITEMS TO I STEP - 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; ITEM(J + 1) = ITEM(J)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; NEXT J</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ITEM(I) = NEW.ITEM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ITEMS += 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment creates a matrix, ITEMS, and then enters a loop to read NEW.ITEM values from the keyboard until a blank line is entered. Each item read is inserted into the matrix in its correct position to maintain the matrix in ascending collating sequence order. Additional statements to detect and handle matrix overflow would be useful in a full application.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

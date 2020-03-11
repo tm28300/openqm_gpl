@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?associations.htm"; }
+else { parent.quicksync('a4.8.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Associations</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Associations" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Associations</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="dict_x.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="itypeexpressions.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An association is a set of two or more multi-valued fields that are related such that the values are inter-dependent. For example, an order processing database might contain a file listing the items in each order. This would require a multi-valued list of products and a corresponding multi-valued list of quantities. A realistic data file may contain several associated sets of fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The query processor needs to know about this relationship. An association is defined by giving it a name which appears in field 7 of the dictionary entry of each field in the association. There is also a </span><span style="color: #000000;"><a href="dict_ph.htm">phrase record</a></span><span style="color: #000000;"> with this name which contains a space separated list of the fields that make up the association.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Thus, starting from any one element of the association, its dictionary entry can be used to find the phrase record which, in turn, allows the query processor to find all the members of the association.</span></p>
+<p><img src="associations.png" width="800" height="300" border="0" alt="Associations"></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

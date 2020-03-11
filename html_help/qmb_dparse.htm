@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_dparse.htm"; }
+else { parent.quicksync('a7.5.72'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DPARSE and DPARSE.CSV</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DPARSE,DPARSE.CSV" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DPARSE, DPARSE.CSV</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_downcase.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_dtx.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DPARSE</span><span style="color: #000000;"> splits the elements of a delimited string into other variables. DPARSE.CSV is similar but unquotes strings according to the rules in the CSV standard.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DPARSE </span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> var1</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> var2</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">...</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">DPARSE.CSV </span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> var1</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;"> var2</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">evaluates to the string to be processed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">delimiter</span></td><td><span style="color: #000000;">evaluates to the substring delimiter. If this is more than one character, only the first character is used.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">var1,var2,...</span></td><td><span style="color: #000000;">is a list of variables to receive the elements extracted from </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">. These may be simple variables, matrix elements or field, value or subvalue references.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DPARSE</span><span style="color: #000000;"> statement extracts successive elements delimited by </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;"> within </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> into the listed variables. A statement such as</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DPARSE S, &quot;,&quot;, A, B, C</span></p>
+<p><span style="color: #000000;">is equivalent to</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = FIELD(S, &quot;,&quot;, 1)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">B = FIELD(S, &quot;,&quot;, 2)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = FIELD(S, &quot;,&quot;, 3)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">DPARSE.CSV</span><span style="color: #000000;"> extends this action by removing quotes that have been applied to meet the CSV standard. CSV format allows optional double quotes around items and specifies that these must be present when the item contains the delimiting character or a double quote. In the latter case, the embedded double quote will be represented by two adjacent double quotes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READSEQ LINE FROM SEQ.F ELSE EXIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; STOCK.REC = &quot;&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DPARSE LINE, &quot;,&quot;, PART.NO, STOCK.REC&lt;1&gt;, STOCK.REC&lt;2&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ...Processing...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This loop dismantles a comma separated string to extract three elements.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = 'abc,&quot;de&quot;&quot;f&quot;'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DPARSE S, ',', A, B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY A,B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DPARSE.CSV S, ',', A, B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY A,B</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program will print</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">abc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;de&quot;&quot;f&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">abc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; def</span></p>
+<p><span style="color: #000000;">showing the difference between the </span><span style="font-weight: bold; color: #000000;">DPARSE</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">DPARSE.CSV</span><span style="color: #000000;"> statements.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

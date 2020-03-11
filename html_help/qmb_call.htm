@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_call.htm"; }
+else { parent.quicksync('a7.5.24'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CALL, ENTER</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CALL,ENTER" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CALL, ENTER</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_break.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_case.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement calls a catalogued subroutine. The </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> statement is a synonym for </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> unless the PICK.ENTER option of the </span><span style="font-weight: bold; color: #000000;">$MODE</span><span style="color: #000000;"> directive is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> {(</span><span style="font-style: italic; color: #000000;">arg.list</span><span style="color: #000000;">)}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">@</span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;"> {(</span><span style="font-style: italic; color: #000000;">arg.list</span><span style="color: #000000;">)}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is the name of the subroutine to be called.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">@var</span></td><td><span style="color: #000000;">is the name of a variable holding the name of the subroutine to be called.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">arg.list</span></td><td><span style="color: #000000;">is the list of arguments to the subroutine.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A subroutine with no arguments is equivalent to a program. A whole matrix can be passed as an argument by prefixing it with </span><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Direct calls</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Placing the subroutine name in the </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement is referred to as a </span><span style="font-weight: bold; color: #000000;">direct call</span><span style="color: #000000;">. QM will search for the subroutine as described below when any </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement referencing the subroutine is first executed in the program or subroutine. For </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statements which occur within catalogued subroutines the search will take place every time the calling subroutine itself is called. QM includes an object code caching mechanism to minimise the performance impact of this repeated search.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Indirect calls</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Executing a </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement using a variable to hold the subroutine name is referred to as an </span><span style="font-weight: bold; color: #000000;">indirect call</span><span style="color: #000000;">. In this case, QM will search for the subroutine as described below when the first </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement is executed. Indirect calls allow an application to call a subroutine where the name of the routine was not known at compile time. This might be of use, for example, in menu systems.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When an indirect call is executed, the variable containing the subroutine name is modified to become a subroutine reference. This can still be used as a string in the program but also contains a pointer to the memory resident copy of the subroutine. The subroutine will remain in memory so long as one or more subroutine references point to it. Overwriting the variable will destroy the subroutine link and may make the subroutine a candidate for removal from the object code cache.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">One advantage of indirect calls is that, by placing the variable in a common block where it is accessible by all modules of the application and will not be discarded, the catalogue search need only be performed once even when the </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> is in a subroutine which itself may be called many times. A direct call works in a similar way but the variable in which the subroutine reference is placed is local to the program containing the </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> and is thus lost when the program terminates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Searching for the subroutine</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Subroutines to be executed using </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> must be placed in the catalogue using the </span><span style="font-weight: bold; color: #000000;"><a href="catalogue.htm">CATALOGUE</a></span><span style="color: #000000;"> command or the equivalent automated cataloguing from within the QMBasic compiler.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Subroutine names must conform to the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> name formats except that two special prefix characters are allow. An exclamation mark prefix character is used on all standard globally catalogued subroutines provided as part of QM that are intended for user use. An asterisk prefix may be used on user written globally catalogued subroutines for compatibility with other products.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Unless the subroutine name commences with one of the global catalogue prefix characters, QM goes through a series of steps when a </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;"> statement searches for a subroutine:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">The local catalogue is checked. This consists of a VOC record of the form</span></td></tr></table></div><p style="margin: 0px 0px 0px 90px;"><span style="color: #000000;">Field 1 &nbsp; &nbsp; &nbsp; &nbsp;V</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="color: #000000;">Field 2 &nbsp; &nbsp; &nbsp; &nbsp;CS</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="color: #000000;">Field 3 &nbsp; &nbsp; &nbsp; &nbsp;Runfile pathname</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">The private catalogue file is checked.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">The global catalogue is checked. </span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that subsequent calls to the same subroutine where the subroutine reference has not been reset will continue to use the original catalogued routine even if it has been deleted from the catalogue or replaced.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The argument list may contain up to 255 items. If a subroutine has no arguments, the brackets may be omitted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each argument is</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="331"><span style="color: #000000;">A constant</span></td><td><span style="font-family: 'Courier New'; color: #000000;">CALL SUB(&quot;MY.FILE&quot;)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="331"><span style="color: #000000;">An expression</span></td><td><span style="font-family: 'Courier New'; color: #000000;">CALL SUB(X + 7)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="331"><span style="color: #000000;">A variable name</span></td><td><span style="font-family: 'Courier New'; color: #000000;">CALL SUB(X)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="331"><span style="color: #000000;">An indexed matrix element name</span></td><td><span style="font-family: 'Courier New'; color: #000000;">CALL SUB(A(5,2))</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="331"><span style="color: #000000;">A matrix name prefixed by MAT</span></td><td><span style="font-family: 'Courier New'; color: #000000;">CALL SUB(MAT A)</span></td></tr></table></div><p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where the argument is a reference to a variable, a matrix element or a whole matrix, the subroutine may update the values in these variables. Except when passing a whole matrix, the calling program can effectively prevent this by forcing the argument to be passed by value rather than by reference by enclosing it in brackets, thus making the argument into an expression.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 20px 0px 5px 0px;"><span style="font-weight: bold; color: #000000;">Pick Style ENTER</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By default, the </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> statement is a synonym for </span><span style="font-weight: bold; color: #000000;">CALL</span><span style="color: #000000;">. Use of the PICK.ENTER option of the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_mode.htm">$MODE</a></span><span style="color: #000000;"> compiler directive causes </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> to behave in the same way as its equivalent in Pick style multivalue database products.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this mode, use of </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> terminates the current program and replaces it with the named program. This new program may not take arguments. If the </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> statement is performed in a program that was started using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> statement, or a subroutine called from such a program, the </span><span style="font-weight: bold; color: #000000;">ENTER</span><span style="color: #000000;"> does not discard the program containing the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COMMON /COM1/ INITIALISED, SUB1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF NOT(INITIALISED) THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  SUB1 = &quot;SUBR1&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  INITIALISED = @TRUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment declares a common block to hold subroutine call references. When the program is first executed, the conditional statements will be performed as common block variables are initially zero. This path sets the name of the subroutine SUBR1 into common variable SUB1.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Later in the program, perhaps in a different subroutine from that in which the common was initialised, a statement of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL @SUB1(ARG1, ARG2)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">will call the SUBR1, changing the common variable to be a subroutine reference for fast access on subsequent calls.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A statement of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL SUBR1(ARG1, ARG2)</span></p>
+<p><span style="font-family: 'Souvenir'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would call the same subroutine but does not use the common block variable. If this call was in a subroutine, the catalogue search would be performed for the first call each time the calling subroutine is entered.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

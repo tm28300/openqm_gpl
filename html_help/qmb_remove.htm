@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_remove.htm"; }
+else { parent.quicksync('a7.5.220'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>REMOVE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REMOVE,REMOVE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">REMOVE, REMOVE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_remark.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_replace.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> statement and </span><span style="font-weight: bold; color: #000000;">REMOVE()</span><span style="color: #000000;"> function extract characters from a dynamic array up to the next mark character.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">var</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REMOVE(</span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">var</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the variable to receive the extracted substring.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">dyn.array</span></td><td><span style="color: #000000;">is the dynamic array from which </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> is to be extracted.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">var</span></td><td><span style="color: #000000;">is the variable to be set according to the delimiter that terminates the extracted substring.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The statement</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = REMOVE(X, Y)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">is equivalent to</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REMOVE S FROM X SETTING Y</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> operation associates a </span><span style="font-weight: bold; color: #000000;">remove pointer</span><span style="color: #000000;"> with the </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> from which data is extracted. Whenever a string is assigned to a variable the remove pointer is set to the start of the string. Subsequent </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> operations extract characters from the position of the remove pointer up to the next mark character or the end of the string. Because the remove pointer gives immediate access to the position at which the </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> should commence, this operation can be much faster than field, value or subvalue extraction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value returned in </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;"> indicates the delimiter that terminated the </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;">. The delimiter character is not stored as part of the extracted substring. Values of </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;"> are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">0 &nbsp; &nbsp; &nbsp; &nbsp;End of string</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">1 &nbsp; &nbsp; &nbsp; &nbsp;Item mark</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">2 &nbsp; &nbsp; &nbsp; &nbsp;Field mark</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">3 &nbsp; &nbsp; &nbsp; &nbsp;Value mark</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">4 &nbsp; &nbsp; &nbsp; &nbsp;Subvalue mark</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">5 &nbsp; &nbsp; &nbsp; &nbsp;Text mark</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The mark character itself can be reconstructed as CHAR(256 - </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;">) for a non-zero value of </span><span style="font-style: italic; color: #000000;">var</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Once the end of the </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> has been reached, the remove pointer remains positioned at the end of the string and further </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> operations would return a null string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The remove pointer may be reset to the start of the string by assigning a new value to </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;">. Where it is required to reset the remove pointer without changing the string, a statement such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = S</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">will assign S to itself thus resetting the remove pointer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is a limit to the number of remove pointers that can be active at one time. A remove pointer that is set to the start of the string is not considered to be active. It is useful to reset remove pointers when they are no longer required if the variable will not be reassigned. Remove pointers associated with a program or subroutine are reset automatically when the program terminates and its variables are released.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that the </span><span style="font-weight: bold; color: #000000;">REMOVE</span><span style="color: #000000;"> operation performs a type conversion on </span><span style="font-style: italic; color: #000000;">dyn.arrray</span><span style="color: #000000;"> if it is not already a string. Thus the program</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = 99</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REMOVE X FROM S SETTING DELIM</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would convert S to be a string &quot;99&quot;. Although this is unlikely to have any undesirable effects, it is a side effect to be aware of.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REMOVE BOOK.NO FROM BOOK.LIST SETTING DELIM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; PRINT &quot;Book number is &quot; : BOOK.NO</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WHILE DELIM</span></p>
+<p><span style="font-family: 'Courier'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment extracts entries from the BOOK.LIST dynamic array and prints then. There is an assumption that BOOK.LIST is not a null string (in which case a single null BOOK.NO would be printed).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = &quot;&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REMOVE FLD FROM REC SETTING DELIM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; S := FLD</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF DELIM = 2 OR DELIM = 0 THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; PRINT S</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; S = &quot;&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; S := CHAR(256 - DELIM)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WHILE DELIM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program prints fields from REC. Note the use of the </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause to append the delimiter that terminated the substring if it was not a field mark or the end of the string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This is equivalent to</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = DCOUNT(REC, @FM)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FOR I = 1 TO N</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; PRINT REC&lt;I&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">NEXT I</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">but may be much faster where REC is large and has a very large number of fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_getrem.htm">GETREM()</a>, <a href="qmb_setrem.htm">SETREM</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

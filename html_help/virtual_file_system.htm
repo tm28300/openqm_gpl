@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?virtual_file_system.htm"; }
+else { parent.quicksync('a4.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The Virtual File System</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Virtual File System,VFS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The Virtual File System</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmnet.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="recordsandmarks.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p><span style="color: #000000;">The Virtual File System (VFS) allows application designers to provide access to data that appears to an application as a file but may actually be something quite different. Possible uses of the VFS include:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Providing access to data in other database environments.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Accessing data transparently over a network where QMNet is not appropriate.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Implementing an alternative encryption layer on top of standard QM files.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The VFS Handler Class Module</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A VFS handler is a globally catalogued QMBasic class module that intercepts all attempts to access the file. It processes requests, storing or retrieving data as appropriate.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A template class module named VFS.CLS is provided in the BP file of the QMSYS account. This includes a brief description of each of its component functions and subroutines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Creating a Virtual File System</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are two steps; creating the VFS handler and creating the VOC entries.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Like all files, a VFS file is identified by an F-type VOC item. It is possible for only some parts of a file to be VFS items. Thus a file might have a VFS data part but a normal dictionary part.&nbsp; The components of a multifile can be a mix of VFS and normal items.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A VFS item is identified by the pathname in the F-type VOC entry being specified as &quot;</span><span style="font-family: 'Courier New'; color: #000000;">VFS:</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">handler</span><span style="color: #000000;">&quot; where </span><span style="font-style: italic; color: #000000;">handler</span><span style="color: #000000;"> is the name of the globally catalogued VFS handler class module. There is an optional third component to this syntax which will be passed to the handler on opening the VFS item. The full syntax of the VOC item is thus</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">VFS:</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">handler</span><span style="font-family: 'Courier New'; color: #000000;">:</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">string</span></p>
+<p><span style="color: #000000;">This third component could be used, for example, when a single </span><span style="font-style: italic; color: #000000;">handler</span><span style="color: #000000;"> class module is used to access many files. The </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> might be the pathname or other reference to the actual file to be opened by the handler.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Partial Select Lists</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM file system optimises select list generation by arranging that the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_select.htm">SELECT</a></span><span style="color: #000000;"> statement (not the query processor equivalent) used against a hashed file actually performs the select group by group as the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readnext.htm">READNEXT</a></span><span style="color: #000000;"> statement is used to walk through the list. Anything that requires the list to be completed (e.g. using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectinfo.htm">SELECTINFO()</a></span><span style="color: #000000;"> to determine the number of items in the list) will cause the remainder of the list to constructed immediately.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A VFS handler can work in much the same way. The V$SELECT function can return the entire list or just the initial part of the list. When a program processing this list reaches the end of the list returned by V$SELECT, the V$CONTINUE.SELECT function is called to return the next part of the list. The V$COMPLETE.SELECT function will be called if the remainder of the list should be returned as a single item and the V$END.SELECT subroutine is called to terminate generation of a partial list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">VFS handlers that do not use partial list construction can omit the V$CONTINUE.SELECT, V$COMPLETE.SELECT and V$END.SELECT entry points.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Alternate Key Indices</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The Virtual File System does not support alternate key indices at this release. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_indices.htm">INDICES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTLEFT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTRIGHT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETLEFT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETRIGHT</a></span><span style="color: #000000;"> operations are not valid with a VFS item.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

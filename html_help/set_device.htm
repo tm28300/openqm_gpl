@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?set_device.htm"; }
+else { parent.quicksync('a5.137'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SET.DEVICE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SET.DEVICE,T.ATT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SET.DEVICE, T.ATT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="set_date.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="set_encryption_key_name.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SET.DEVICE</span><span style="color: #000000;"> command opens a tape or pseudo-tape for processing by QM. The synonym </span><span style="font-weight: bold; color: #000000;">T.ATT</span><span style="color: #000000;"> may be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SET.DEVICE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">device.name</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">device.name</span></td><td><span style="color: #000000;">is the pathname of the device to be opened. This must be enclosed in quotes if it commences with a backslash on Windows.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SET.DEVICE </span><span style="color: #000000;">command assigns a tape device or a file representing a pseudo-tape to the current QM process. The device can then be used by other tape processing commands such as </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="account_restore.htm">ACCOUNT.RESTORE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="t_dump.htm">T.DUMP</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="t_load.htm">T.LOAD</a></span><span style="color: #000000;"> and the </span><span style="font-weight: bold; color: #000000;"><a href="t_xxx.htm">T.xxx</a></span><span style="color: #000000;"> tape utility commands.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Note:</span><span style="color: #000000;"> QM does not support Pick style use of floppy disks as tape devices.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">SET.DEVICE</span><span style="color: #000000;"> attempts to detect the format of the image being attached. A code signifying the format is then stored internally for future use by the other tape processing utilities.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that access to real tape devices (as opposed to pseudo-tapes) may offer limited functionality. In particular, the Pick compatible tape transfer tools require the ability to process file mark blocks, a feature which may not be provided by the underlying operating system device driver. Use of pseudo-tapes is strongly recommended.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The formats currently supported are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">AS</span></td><td><span style="color: #000000;">PICK style ACCOUNT-SAVE image (also the QM </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;"> format)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">FS</span></td><td><span style="color: #000000;">PICK style FILE-SAVE image.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">ULTFS</span></td><td><span style="color: #000000;">Ultimate style FILE-SAVE image.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">JBS</span></td><td><span style="color: #000000;">jBASE ACCOUNT-SAVE image.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The AS type can be either a single ACCOUNT-SAVE or several ACCOUNT-SAVEs on the same tape. These multiple saves are created by successive ACCOUNT-SAVE commands issued without rewinding the tape between saves. If multiple accounts exist, this format is handled like the FS type by the tape utilities and </span><span style="font-weight: bold; color: #000000;"><a href="restore_accounts.htm">RESTORE.ACCOUNTS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="find_account.htm">FIND.ACCOUNT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="sel_restore.htm">SEL.RESTORE</a></span><span style="color: #000000;"> operations may all be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The ULTFS format is a FILE-SAVE format in which several accounts are expected.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The JBS format is essentially the same as the individual files that comprise the ULTFS set. These files have a single label followed immediately by the account data and are treated like individual AS types.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="account_restore.htm">ACCOUNT.RESTORE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="file_save.htm">FILE.SAVE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="find_account.htm">FIND.ACCOUNT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="restore_accounts.htm">RESTORE.ACCOUNTS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="sel_restore.htm">SEL.RESTORE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="t_dump.htm">T.DUMP</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="t_load.htm">T.LOAD</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="t_xxx.htm">T.xxx</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

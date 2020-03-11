@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_end.htm"; }
+else { parent.quicksync('a7.5.77'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>END</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="END" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">END</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_encrypt.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_env.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement terminates a program, subroutine or a block of statements conditioned by the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> keywords.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When used to terminate a program or subroutine, the </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement may not be followed by any further executable statements; only comments and blank lines are allowed. An </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement is not mandatory at the end of a program, subroutine or function but lack of an </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> will cause a warning message to be displayed as this may be symptomatic of a structural problem elsewhere in the program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The compiler will generate a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_return.htm">RETURN</a></span><span style="color: #000000;"> statement at the end of the program or subroutine which will be executed if there is no </span><span style="font-weight: bold; color: #000000;"><a href="qmb_return.htm">RETURN</a></span><span style="color: #000000;"> or other program flow control statement immediately prior to the </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> statement is also used to terminate a group of conditional statements. For details of the use of </span><span style="font-weight: bold; color: #000000;">END</span><span style="color: #000000;"> in this way, see the description of the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statement to which the conditional element applies.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READ REC FROM STOCK.FILE, ITEM THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY &quot;Stock item &quot; : ITEM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; GOSUB PROCESS.ITEM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment reads a record from a file, displays its record id and calls an internal subroutine to process the record. The two indented statements are both conditioned so that they only occur if the read was successful.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

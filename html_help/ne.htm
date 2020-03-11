@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?ne.htm"; }
+else { parent.quicksync('a6.67'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>NE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="NE,NOT,#,&lt;&gt;,&gt;&lt;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">NE, NOT, #, &lt;&gt;, &gt;&lt;</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="multi_value.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="new_page.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">NE</span><span style="color: #000000;"> selection clause operator compares a field or evaluated expression against another field, evaluated expression or literal value and tests for the first item being not equal to the second. The synonyms </span><span style="font-weight: bold; color: #000000;">NOT</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">#</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">&lt;&gt;</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">&gt;&lt;</span><span style="color: #000000;"> can be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">NE</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.CASE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">value</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">is the first field or evaluated expression to be compared.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">is the second field, evaluated expression or literal value to be compared. The optional </span><span style="font-weight: bold; color: #000000;">NO.CASE</span><span style="color: #000000;"> qualifier causes a case insensitive comparison to be applied.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">NE</span><span style="color: #000000;"> selection clause operator returns true if </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> is not equal to </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QTY NE 0</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command lists items found on the STOCK file with a non-zero QTY.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Pick Style Wildcards</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the PICK.WILDCARD option is enabled (see the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command) and the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> item is a literal value, the interpretation is extended to include use of Pick style wildcard characters:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">A [ character at the start of the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> replaces any number of leading characters. It is equivalent to the … action of the </span><span style="font-weight: bold; color: #000000;"><a href="unlike.htm">UNLIKE</a></span><span style="color: #000000;"> operator.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">A ] character at the end of the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> replaces any number of trailing characters. It is equivalent to the … action of the </span><span style="font-weight: bold; color: #000000;"><a href="unlike.htm">UNLIKE</a></span><span style="color: #000000;"> operator.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">A ^ character within the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> replaces a single character. It is equivalent to the 1X action of the </span><span style="font-weight: bold; color: #000000;"><a href="unlike.htm">UNLIKE</a></span><span style="color: #000000;"> operator.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

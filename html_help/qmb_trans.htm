@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_trans.htm"; }
+else { parent.quicksync('a7.5.274'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>TRANS(), RTRANS(), XLATE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RTRANS(),TRANS(),XLATE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">TRANS(), XLATE(), RTRANS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_total.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_transaction.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TRANS()</span><span style="color: #000000;"> function returns a field or the entire record from a named data file. It is normally only used in dictionary I-type items. The synonym </span><span style="font-weight: bold; color: #000000;">XLATE()</span><span style="color: #000000;"> may be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RTRANS()</span><span style="color: #000000;"> function is similar but has a slight difference described below for closer compatibility with some other environments.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TRANS(</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">record.id</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">field</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">action</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RTRANS(</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">record.id</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">field</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">action</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">evaluates to the name of the file from which data is to be retrieved. The optional </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> prefix specifies that the dictionary portion of the file is to be used. Alternatively, the </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> expression may include the uppercase word DICT before the actual file name and separated from it by a single space.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 150px;"><span style="color: #000000;">In a QMBasic program, </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> is evaluated in the same way as any other expression. In a dictionary I-type record, </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> may be specified as a quoted string or as the actual name of the file, optionally preceded by the DICT qualifier.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">record.id</span></td><td><span style="color: #000000;">evaluates to the id of the record to be retrieved. When used in a QMBasic program, this must be the actual record id. When used in an I-type dictionary expression, this may be</span></td></tr></table></div><p style="margin: 10px 0px 0px 180px;"><span style="color: #000000;">the name of a D or I-type item defined in the same dictionary which contains the id of the record to be retrieved.</span></p>
+<p style="margin: 10px 0px 0px 180px;"><span style="color: #000000;">a literal record id enclosed in quotes.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">identifies the field to be returned. A </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> value of zero returns the record id and can be used to check the existence of a record. A </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> value of -1 indicates that the entire record is to be returned. When used in a dictionary I-type expression this can also be</span></td></tr></table></div><p style="margin: 10px 0px 0px 180px;"><span style="color: #000000;">A D or I-type field name as defined in the target file's dictionary.</span></p>
+<p style="margin: 10px 0px 0px 180px;"><span style="color: #000000;">A field number</span></p>
+<p style="margin: 10px 0px 0px 180px;"><span style="font-weight: bold; color: #000000;">@RECORD</span><span style="color: #000000;"> or -1 to return the entire record.</span></p>
+<p style="margin: 10px 0px 0px 180px;"><span style="color: #000000;">An expression that evaluates to the field position. This must be enclosed in brackets to avoid potential syntactic ambiguity.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">action</span></td><td><span style="color: #000000;">determines the action taken if the record does not exist or the required field is null. This may evaluate to:</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">C</span></td><td><span style="color: #000000;">Return the record id.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">V</span></td><td><span style="color: #000000;">Print a warning message and return a null value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">X</span></td><td><span style="color: #000000;">Return a null value (default).</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TRANS()</span><span style="color: #000000;"> function returns the specified data with any mark characters lowered by one level (e.g. value marks become subvalue marks).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;"> is multi-valued, the </span><span style="font-weight: bold; color: #000000;">TRANS()</span><span style="color: #000000;"> function extracts each requested record and returns a multi-valued result with the data from each record separated by a value mark.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RTRANS()</span><span style="color: #000000;"> function is identical to </span><span style="font-weight: bold; color: #000000;">TRANS()</span><span style="color: #000000;"> except that it does not lower the mark characters. This makes it impossible to distinguish between the results of retrieving a multivalued field from a single record and retrieving a single valued field from multiple records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">TOTAL.VALUE = QTY * TRANS('STOCK', PART.NO, 'PRICE', 'X')</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above statement reads from the STOCK file a record (or list of records) whose id(s) can be found in the PART.NO variable. The X error code causes the </span><span style="font-weight: bold; color: #000000;">TRANS()</span><span style="color: #000000;"> function to return a null value for any record that cannot be found.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = TRANS(DICT 'ORDERS', 'DISCOUNT', 'X')</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = TRANS('DICT ORDERS', 'DISCOUNT', 'X')</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Both of the above statements perform the same action. Either might be used, for example, to retrieve an I-type item named DISCOUNT from the dictionary of the ORDERS file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

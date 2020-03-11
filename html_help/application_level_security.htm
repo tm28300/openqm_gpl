@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?application_level_security.htm"; }
+else { parent.quicksync('a9.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Application Level Security</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Security - application level" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Application Level Security</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmtic.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="permissions.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A well designed application never allows an end user to reach a command prompt. This leaves restriction of what a user may do within the control of the application itself. Where it is necessary to provide differing levels of access to different users, QM provides several ways to identify attributes of the current user:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="at_variables.htm#ip.addr">@IP.ADDR</a></span></td><td><span style="color: #000000;">User's IP address for network connections. This is also available in QMBasic as </span><span style="font-weight: bold; color: #000000;"><a href="qmb_system.htm">SYSTEM(42)</a></span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="at_variables.htm#logname">@LOGNAME</a></span></td><td><span style="color: #000000;">User's login name.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="at_variables.htm#tty">@TTY</a></span></td><td><span style="color: #000000;">Terminal device name.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="qmb_system.htm">SYSTEM(1017)</a></span></td><td><span style="color: #000000;">Port number for network connection.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A user could potentially escape from the controlled environment provided by the application if the application were to abort. This can be avoided by a combination of the following techniques:</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Disable the break key. The break key is automatically disabled until completion of the <a href="command_scripts.htm">LOGIN</a> paragraph unless it is enabled within that paragraph by use of the </span><span style="font-weight: bold; color: #000000;"><a href="break.htm">BREAK ON</a></span><span style="color: #000000;"> command. There should never be a need for use of the break key in a working application. In the unlikely event of needing to re-enable it for a specific user as a result of an application fault, the system administrator can use an extended form of the </span><span style="font-weight: bold; color: #000000;"><a href="break.htm">BREAK</a></span><span style="color: #000000;"> command to do this.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Use </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION NO.USER.ABORTS</a></span><span style="color: #000000;"> to suppress all options through which a user can cause an abort to occur. This removes the A option from the &quot;Press return to continue&quot; prompt, the query processor pagination prompt and the break key options.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Implement the <a href="command_scripts.htm">ON.ABORT</a> paragraph. Despite the above techniques, an application may still abort as a result of a run time error or use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_abort.htm">ABORT</a></span><span style="color: #000000;"> statement within the application itself. When an abort occurs, QM discards all programs, menus, paragraphs, etc that are running in the process and returns to the lowest level command processor. Before this displays the command prompt, it checks in the VOC file for an executable item named <a href="command_scripts.htm">ON.ABORT</a> and, if this is found, executes it. A typical <a href="command_scripts.htm">ON.ABORT</a> paragraph terminates the user's session after, perhaps, logging the incident.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some users such as application developers may need to be able to reach a command prompt. In this case, <a href="securitysubroutines.htm">security subroutines</a> can be attached to R or V-type VOC entries to provide control over what can be done.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

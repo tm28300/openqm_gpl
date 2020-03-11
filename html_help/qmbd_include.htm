@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbd_include.htm"; }
+else { parent.quicksync('a7.2.6'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>$INCLUDE compiler directive</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="$INCLUDE,$INSERT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">$INCLUDE Compiler Directive</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbd_ifdef.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbd_list.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;"> directive is used to direct the compiler to include text from another record. Include records may be in either directory or dynamic files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;"> { </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> }&nbsp; </span><span style="font-style: italic; color: #000000;">record.id</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For compatibility with some other systems, </span><span style="font-weight: bold; color: #000000;">$INSERT</span><span style="color: #000000;"> may be used as a synonym for </span><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">$INCLUDE SYSCOM ERR.H</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">$INCLUDE MYKEYS.H</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first example includes record ERR.H from the SYSCOM file. The second example, which has no file name specified, includes MYKEYS.H from the same file as the source program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of a .H suffix is recommended on include records as these will be skipped automatically by the compiler when using a select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file name in the first </span><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;"> is not strictly necessary as the compiler will always look in SYSCOM if no file name is given and the include record is not found in the same file as the source program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because directory files on non-Windows platforms have case sensitive record names, the compiler will look for the record name as entered and then, if it has not been found, in uppercase. Thus programs may be written in either upper or lowercase if the records are always stored with uppercase name. The standard include records in the SYSCOM file follow this rule.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Include files may be nested (one included from within another) though this can lead to difficulties when maintaining complex programs and is discouraged.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For compatibility with other multivalue databases, the </span><span style="font-weight: bold; color: #000000;">$INCLUDE</span><span style="color: #000000;"> directive can also be written without the $ prefix. Used in this way, it must be the only statement on the source line.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

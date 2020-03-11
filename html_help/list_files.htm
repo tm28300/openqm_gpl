@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list_files.htm"; }
+else { parent.quicksync('a5.75'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST.FILES</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST.FILES" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST.FILES</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_diff.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.FILES</span><span style="color: #000000;"> command displays details of open files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST.FILES</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.FILES</span><span style="color: #000000;"> command displays the number of files currently open, the peak number of files open and the limit on the number of open files as set by the <a href="configparams.htm#numfiles">NUMFILES</a> configuration parameter.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;"> option extends the report to show a list of open file pathnames.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The <a href="configparams.htm#numfiles">NUMFILES</a> configuration parameter is a hard limit on the number of files that may be open at one time by all QM users. A file opened by multiple users only counts as one file. Attempting to exceed this limit will cause the application to fail. The displayed peak open count is useful in determining whether the value of <a href="configparams.htm#numfiles">NUMFILES</a> is large enough.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST.FILES DETAIL</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">Number of files open = 4. Peak = 16. Limit (NUMFILES) = 40.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">C:\QM\VOC</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">C:\QMSYS\$IPC</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">C:\QM\BP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">C:\QM\&amp;SED.EXTENSIONS&amp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

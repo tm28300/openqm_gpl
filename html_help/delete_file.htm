@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?delete_file.htm"; }
+else { parent.quicksync('a5.48'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>DELETE.FILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="DELETE.FILE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">DELETE.FILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="delete_common.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="delete_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DELETE.FILE</span><span style="color: #000000;"> command deletes one or both portions of a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -390px; margin: 0px 0px 0px 420px;"><span style="font-weight: bold; color: #000000;">DELETE.FILE</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">subfile</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the VOC name of the file to be deleted. The </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> prefix may be used to delete only the data portion of the file. The </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> prefix may be used to delete only the dictionary portion of the file.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">subfile</span></td><td><span style="color: #000000;">is the subfile to be deleted from a multifile. If omitted and </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> refers to a multifile, the entire multifile will be deleted. Use of a subfile name implies use of the </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> keyword, leaving the dictionary in place.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">are chosen from the following:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">FORCE</span></td><td><span style="color: #000000;">is used to delete files with non-default names.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">NO.QUERY</span></td><td><span style="color: #000000;">suppresses the confirmation prompt when using a select list.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If no file name is specified and the default select list is active, the </span><span style="font-weight: bold; color: #000000;">DELETE.FILE</span><span style="color: #000000;"> command will use this list to determine the files to be deleted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Deleting the data portion of a file deletes the associated operating system directory and clears field 2 of the VOC record describing the file. Deleting the dictionary portion of a file deletes the directory representing the dictionary and clears field 3 of the VOC record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">DELETE.FILE</span><span style="color: #000000;"> command results in a VOC record with fields 2 and 3 both null, the VOC record is also deleted. Thus deleting both portions of a file, the data portion of a file which had no dictionary or the dictionary portion of a file which had no data portion would also delete the VOC record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where the operating system name of the file recorded in the VOC entry is not the default name for the file (</span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> for the data portion, </span><span style="font-style: italic; color: #000000;">file.name</span><span style="font-weight: bold; color: #000000;">.DIC</span><span style="color: #000000;"> for the dictionary portion), the </span><span style="font-weight: bold; color: #000000;">DELETE.FILE</span><span style="color: #000000;"> command prompts for confirmation unless the </span><span style="font-weight: bold; color: #000000;">FORCE</span><span style="color: #000000;"> option is used. This traps accidental deletion of files which are remote to the account or for which </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> is not the primary VOC reference.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DELETE.FILE DICT INVENTORY</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command deletes the dictionary part of the file named INVENTORY.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listf.htm">LISTF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listfl.htm">LISTFL</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listfr.htm">LISTFR</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

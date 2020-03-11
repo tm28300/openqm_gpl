@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_keyin.htm"; }
+else { parent.quicksync('a7.5.132'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>KEYIN()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="KEYIN(),KEYINC(),KEYINR()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">KEYIN(), KEYINC(), KEYINR()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_keyexit.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_keyready.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYIN()</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">KEYINC()</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">KEYINR()</span><span style="color: #000000;"> functions read a single keystroke from the keyboard.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">KEYIN(</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">KEYINC(</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">KEYINR(</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYIN()</span><span style="color: #000000;"> function pauses program execution until a key is pressed. The character associated with that key is returned as the value of the function. The character is not echoed to the display.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYINC()</span><span style="color: #000000;"> function is identical except that the case of alphabetic characters is inverted in case inversion has been enabled.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYINR()</span><span style="color: #000000;"> function reads a single character with no internal processing. In particular, null characters are not removed and char(10) and char(13) are passed through without any special handling.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-style: italic; color: #ff0000;">The KEYINR() function is redundant from release 2.1-8 as QM now honours the setting of the telnet binary mode parameter. The function will be retained as a synonym for KEYIN() for the foreseeable future.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">KEYIN()</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">KEYINC()</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">KEYINR() </span><span style="color: #000000;">do not take data from the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_data.htm">DATA</a></span><span style="color: #000000;">statement queue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;"> parameter specifies a period in seconds after which the function will return if no input is received. In this case the returned value is a null string and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$TIMEOUT. The timeout value may be fractional to specify timeouts of less than one second. Values less than 10mS or greater than 24 hours may not behave correctly.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A null string is also returned when taking input from a pipe if the piped data stream is exhausted. In this case the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$EOF. The value returned by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function is not significant unless </span><span style="font-weight: bold; color: #000000;">KEYIN()</span><span style="color: #000000;"> has returned a null string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Character Values</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The printing characters and control characters are all represented by their normal ASCII characters. Other keystrokes such as the function keys, ALT sequences and special keys (Home, Delete, cursor moves, etc) are represented by characters with values of 128 and upwards. <a href="key_codes.htm">Click here for a table of key code values.</a></span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_in.htm">IN</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_keyready.htm">KEYREADY()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

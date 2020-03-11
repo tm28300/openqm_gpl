@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_break.htm"; }
+else { parent.quicksync('a7.5.23'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>BREAK</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BREAK" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">BREAK</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_bitxor.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_call.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BREAK</span><span style="color: #000000;"> statement allows the action of the break key to be disabled during program execution.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BREAK </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">KEY</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BREAK </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">KEY</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;"> ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BREAK </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">KEY</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;"> CLEAR</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BREAK </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">KEY</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="61"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to a number.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM maintains a break inhibit counter which is set to zero before the command prompt is first displayed. This counter is incremented by the </span><span style="font-weight: bold; color: #000000;">BREAK OFF</span><span style="color: #000000;"> statement and decremented by </span><span style="font-weight: bold; color: #000000;">BREAK ON</span><span style="color: #000000;"> though it cannot become negative. Use of the break key whilst the counter is non-zero will not cause a break action to occur. Instead, the break is remembered and will be handled when the counter returns to zero. Multiple use of the break key will not result in more than one break event being handled. The </span><span style="font-weight: bold; color: #000000;">BREAK CLEAR</span><span style="color: #000000;"> statement cancels any deferred break event.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BREAK</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> format of this statement is equivalent to </span><span style="font-weight: bold; color: #000000;">BREAK OFF</span><span style="color: #000000;"> if the value of </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is zero, </span><span style="font-weight: bold; color: #000000;">BREAK&nbsp;ON</span><span style="color: #000000;"> if </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is positive and </span><span style="font-weight: bold; color: #000000;">BREAK CLEAR</span><span style="color: #000000;"> if </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is negative.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BREAK OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">GOSUB UPDATE.FILES</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BREAK ON</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment inhibits use of the break key while the internal subroutine UPDATE.FILES is executed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmreadlist.htm"; }
+else { parent.quicksync('a8.31'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMReadList()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMReadList()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMReadList()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmreadl.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmreadnext.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMReadList()</span><span style="color: #000000;"> function reads a select list into a dynamic array in the client application</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMReadList(ByVal </span><span style="font-style: italic; color: #000000;">ListNo</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">as Integer, ByRef </span><span style="font-style: italic; color: #000000;">Errno</span><span style="font-weight: bold; color: #000000;"> as Integer) as String</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">char * QMReadList(int </span><span style="font-style: italic; color: #000000;">ListNo</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Obj</span></td><td><span style="font-style: italic; color: #000000;">Str</span><span style="color: #000000;"> = </span><span style="font-style: italic; color: #000000;">Session</span><span style="font-weight: bold; color: #000000;">-&gt;ReadList(</span><span style="font-style: italic; color: #000000;">ListNo</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">ListNo</span></td><td><span style="color: #000000;">is the number of the select list to be read in the range 0 to 10.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 151px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Errno</span></td><td><span style="color: #000000;">receives an error value indicating the outcome of the request.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the action is successful, the returned value contains a field mark delimited set of unprocessed entries from the given list. The original list is destroyed by this action.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The Visual Basic API returns an empty string if there is no data to read. The C API returns NULL in this situation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A server application can read entries from a select list one at a time using the </span><span style="font-weight: bold; color: #000000;"><a href="qmreadnext.htm">QMReadNext()</a></span><span style="color: #000000;"> function. Because the select list is maintained on the server, retrieval of each entry requires passing of a message pair between the client and the server. For best performance, the </span><span style="font-weight: bold; color: #000000;">QMReadList()</span><span style="color: #000000;"> function can be used to transfer the entire select list to the client where entries can then be extracted using the </span><span style="font-weight: bold; color: #000000;"><a href="qmextract.htm">QMExtract()</a></span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are times when use of </span><span style="font-weight: bold; color: #000000;"><a href="qmreadnext.htm">QMReadNext()</a></span><span style="color: #000000;"> may give apparently better performance. When QM performs a select operation against a dynamic file, the file is actually processed as each entry is taken from the list. There is, therefore, no lengthy silence while QM constructs the list before entries can be retrieved. Use of </span><span style="font-weight: bold; color: #000000;">QMReadList()</span><span style="color: #000000;"> requires the list to be fully constructed before it can be returned to the client.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is a further consideration for processes that use </span><span style="font-weight: bold; color: #000000;"><a href="qmreadnext.htm">QMReadNext()</a></span><span style="color: #000000;"> and also update the file by adding new records. Because </span><span style="font-weight: bold; color: #000000;"><a href="qmreadnext.htm">QMReadNext()</a></span><span style="color: #000000;"> is finding records one by one as processing progresses, any records written during the processing may subsequently be found by </span><span style="font-weight: bold; color: #000000;"><a href="qmreadnext.htm">QMReadNext()</a></span><span style="color: #000000;">. Using </span><span style="font-weight: bold; color: #000000;">QMReadList()</span><span style="color: #000000;"> to construct and retrieve the entire list before processing commences ensures that records added during processing will not be included in the list.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

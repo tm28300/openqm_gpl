@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?itypeexpressions.htm"; }
+else { parent.quicksync('a4.8.10'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>I-type expressions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="I-type expressions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">I-Type Expressions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="associations.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="conv_code.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The difference between a D-type and an I-type dictionary item is perhaps best illustrated by a simple example. A file might contain information about employees including their date of birth. If we want to list all employees with their date of birth we could do this by a query of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST EMP.FILE NAME DOB </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If we want the employee's age, this data is not recorded and, of course, changes with time. However, by creating an I-type called AGE we could simply enter</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST EMP.FILE NAME AGE</span></p>
+<p><span style="color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="color: #000000;">What is in this I-type?&nbsp; It is a simple program which calculates the employee's age using the DOB field and today's date.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any I-type has an expression in field 2. This is constructed from the following components:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Field names (D or I-type)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Constants</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">@ variables</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Operators</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">QMBasi</span><span style="color: #000000;">c functions</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Special functions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The AGE I-type referred to above is actually more complex than it may at first seem. It might be written as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OCONV(DATE(), &quot;D4Y&quot;) - OCONV(DOB, &quot;D2Y&quot;); IF OCONV(@DATE,&quot;DMD&quot;) &gt; OCONV(DOB,&quot;DMD&quot;) THEN @ + 1 ELSE @</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An I-type must be compiled before it can be used and whenever the dictionary is changed in a manner that would affect fields used by the I-type. The </span><span style="font-weight: bold; color: #000000;"><a href="compile_dict.htm">COMPILE.DICT</a></span><span style="color: #000000;"> (synonym </span><span style="font-weight: bold; color: #000000;">CD</span><span style="color: #000000;">) command compiles one or more I-types in a dictionary. The </span><span style="font-weight: bold; color: #000000;"><a href="modify.htm">MODIFY</a></span><span style="color: #000000;"> command also provides facilities to compile I-types when they are edited and the query processor commands all compile a previously uncompiled I-type when it is first used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An I-type expression consists of one or more </span><span style="font-weight: bold; color: #000000;">elements</span><span style="color: #000000;"> each of which is similar to a </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> expression.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Whereas a </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> program would refer to variable names, an I-type expression uses field names as defined in the file's dictionary. These names may be either D or I-type items.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Many of the <a href="at_variables.htm">@&shy;variables</a> used by </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> are also available in I-types. The following @-variables are specific to I-types though some can be used by </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs to set up the working environment for the I-type.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">@FILE.NAME</span></td><td><span style="color: #000000;">The name of the file being processed by the command.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">@ID</span></td><td><span style="color: #000000;">The record id of the current record.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">@NB</span></td><td><span style="color: #000000;">Break level number.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">@NI</span></td><td><span style="color: #000000;">Item counter.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">@RECORD</span></td><td><span style="color: #000000;">The data of the record being processed by the command.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">compound I-type</span><span style="color: #000000;"> has multiple elements separated by semicolons. The value of the previous element may be referred to by the symbol </span><span style="font-weight: bold; color: #000000;">@</span><span style="color: #000000;"> and the value of a specific element as </span><span style="font-weight: bold; color: #000000;">@</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is the element number, starting at one. The overall value of the I-type is the value of the final expression.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To simplify editing of compound I-type expressions, the &quot;edit values&quot; mode of both the </span><span style="font-weight: bold; color: #000000;"><a href="ed.htm">ED</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="sed.htm">SED</a></span><span style="color: #000000;"> editors can be used to break the expression such that each element appears on a separate line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Most </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> functions are also available in I-type expressions. The following functions are either specific to I-type expressions or modified from their </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> form:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"><a href="qmb_total.htm">TOTAL()</a></span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"><a href="qmb_subr.htm">SUBR()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?make_index.htm"; }
+else { parent.quicksync('a5.103'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>MAKE.INDEX</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MAKE.INDEX" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MAKE.INDEX</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="loop.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="map.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MAKE.INDEX</span><span style="color: #000000;"> command creates and builds an <a href="ak.htm">alternate key index</a>. It is equivalent to use of </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;"> followed by </span><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MAKE.INDEX</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;">  </span><span style="font-style: italic; color: #000000;">field(s)</span><span style="color: #000000;">  {</span><span style="font-weight: bold; color: #000000;">NO.NULLS</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">PATHNAME</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">index.path</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">filename</span></td><td><span style="color: #000000;">is the name of the file for which the index is to be built.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field(s)</span></td><td><span style="color: #000000;">is one or more field names for which indices are to be created.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MAKE.INDEX</span><span style="color: #000000;"> command creates the file structures to hold an alternate key index and then builds the index.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">field(s)</span><span style="color: #000000;"> referenced in the command must correspond to D, I, A, S or C-type dictionary items. The dictionary items can be deleted once the index has been constructed as all details of the indexed field are stored in the index file but this is not recommended. The value to be indexed must not exceed 255 characters. Values longer than this will not be included in the index.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Indices constructed on I or C-type dictionary items or on A or S-type items that use correlative expressions should be such that they always produce the same result when executed for the same data record. Examples of possibly invalid I-type expressions would be those that use the date or time and those that use the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> function to access other files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">NO.NULLS</span><span style="color: #000000;"> specifies that no entry is to be added to the index for records where the indexed field is null.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Normally, the indices are stored as subfiles in the directory that represents the data file. The </span><span style="font-weight: bold; color: #000000;">PATHNAME</span><span style="color: #000000;"> option allows the indices to be stored in an alternative location. This might be useful, for example, to balance loads across multiple disks or to exclude indices from backups as they can always be recreated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All indices for a single data file must be stored together. The </span><span style="font-weight: bold; color: #000000;">PATHNAME</span><span style="color: #000000;"> option can be used when creating the first index and specifies the pathname of a new directory that will be created at the same time as the index. If this option is included when creating subsequent indices the </span><span style="font-style: italic; color: #000000;">index.path</span><span style="color: #000000;"> must be the same as for the first index. It is suggested that the pathname should be based on the data file name for ease of recognition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Index subfiles can be moved using the operating system level <a href="qmidx.htm">qmidx</a> program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MAKE.INDEX</span><span style="color: #000000;"> command requires exclusive access to the file during the build phase.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Data Encryption</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Alternate key indices may be applied to files that use record level data encryption but developers should be aware that the index itself is not encrypted and hence weakens the security of the indexed fields.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files using field level encryption cannot have indices on encrypted fields. Also, indices constructed from calculated values such as I-types that use encrypted fields will fail if the record is updated by a user that does not have access to the relevant encryption key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MAKE.INDEX ORDERS DATE</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above command creates and builds an index on the DATE field of the ORDERS file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_index.htm">DELETE.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_index.htm">LIST.INDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="make_index.htm">MAKE.INDEX</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_selectleft.htm"; }
+else { parent.quicksync('a7.5.233'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SELECTLEFT and SELECTRIGHT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SELECTLEFT,SELECTRIGHT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SELECTLEFT, SELECTRIGHT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_selectinfo.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_sentence.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTLEFT</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> statements create a select list from the entry in an <a href="ak.htm">alternate key index</a> to the left or right of the last entry processed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SELECTLEFT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">index.name</span><span style="color: #000000;">  </span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">index.name</span><span style="color: #000000;">  </span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">index.name</span></td><td><span style="color: #000000;">is the name of the alternate key index to be processed.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with an open file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">is the variable to be set to the key value associated with the returned list.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">list.no</span></td><td><span style="color: #000000;">is the select list number of the list to be created. If omitted, select list zero is used.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTLEFT</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> statements construct a select list from the alternate key index entry to the left or right of the one most recently returned using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">SELECTLEFT</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;">. The position of the scan can be set to the extreme left using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETLEFT</a></span><span style="color: #000000;"> or the extreme right using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETRIGHT</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">These operations allow a program to find a specific value and then walk through successive values in the sorted data structure that makes up an alternate key index.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a></span><span style="color: #000000;"> is used to locate a value that does not exist in the index, </span><span style="font-weight: bold; color: #000000;">SELECTLEFT</span><span style="color: #000000;"> will return a list of records for the value immediately before the non-existent one and </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> will return a list of records for the value immediately after the non-existent one.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function returns zero if the operation is successful, non-zero if it fails because the index does not exist. The </span><span style="font-weight: bold; color: #000000;"><a href="at_variables.htm#selected">@SELECTED</a> </span><span style="color: #000000;">variable is set to the number of entries in the returned list, or zero if there are no further index entries to be returned.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of these statements inside a transaction will not reflect any uncommitted updates to the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">KEY = 'M'</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SELECTINDEX 'POSTCODE', KEY FROM CLIENTS.FILE</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LOOP</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READNEXT CLIENT.NO ELSE EXIT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; CRT CLIENT.NO</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REPEAT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; SELECTRIGHT 'POSTCODE' FROM CLIENTS.FILE SETTING POSTCODE</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">UNTIL STATUS()</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">WHILE POSTCODE[1,LEN(KEY)] = KEY </span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program displays a list of all clients with postcodes beginning with M.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTINDEX</span><span style="color: #000000;"> looks for an index entry for a postcode of &quot;M&quot;. This is unlikely to exist and hence the select list will probably be empty. If it did find any records, the inner loop would display these. Having processed this initial list, the </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> moves one step right (i.e. in ascending order) through the index tree and builds a list of these records. The POSTCODE variable is returned as the value of the indexed item located. Processing continues until the </span><span style="font-weight: bold; color: #000000;">SELECTRIGHT</span><span style="color: #000000;"> finds an item that does not begin with the characters in KEY.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SELECTINDEX 'TIME', TIMESTAMP FROM LOG.F TO 1</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">IF @SELECTED = 0 THEN</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; SELECTLEFT 'TIME' FROM LOG.F TO 1</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">END IF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment finds the record in the file open as LOG.F with the TIME field equal to TIMESTAMP. If there is no such record it finds the record with the nearest time before the requested timestamp. If multiple records have the same timestamp value, select list 1 will contain all of their ids. If TIME was the id of records in the log file, the select list could never contain multiple values. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a>, <a href="qmb_setleft.htm">SETLEFT</a>, <a href="qmb_setleft.htm">SETRIGHT</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

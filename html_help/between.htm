@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?between.htm"; }
+else { parent.quicksync('a6.21'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>BETWEEN</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BETWEEN" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">BETWEEN</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="average.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="boxed.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BETWEEN</span><span style="color: #000000;"> selection clause operator compares a field or evaluated expression against two other fields, evaluated expressions or literal values, testing whether the value of the first item lies between the other two values.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">BETWEEN</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.CASE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">value1 value2</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">is the first field or evaluated expression to be compared.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">value1</span></td><td><span style="color: #000000;">is the low end of the range of values to be selected.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">value2</span></td><td><span style="color: #000000;">is the high end of the range of values to be selected.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BETWEEN</span><span style="color: #000000;"> selection clause operator returns true if </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> is greater than or equal to </span><span style="font-style: italic; color: #000000;">value1</span><span style="color: #000000;"> and less than or equal to </span><span style="font-style: italic; color: #000000;">value2</span><span style="color: #000000;">. The optional </span><span style="font-weight: bold; color: #000000;">NO.CASE</span><span style="color: #000000;"> qualifier causes a case insensitive comparison to be applied.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When applied to multivalued fields, the test is applied to each value in turn. Note that the query</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST ORDERS WITH PART.NO BETWEEN 200 299</span></p>
+<p><span style="color: #000000;">is not the same as</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST ORDERS WITH PART.NO &gt;= 200 AND PART.NO &lt;= 299</span></p>
+<p><span style="color: #000000;">if PART.NO is a multivalued field. The first query selects only those records which include part numbers in the range 200 to 299. The second query selects those records which include a part number that is greater than or equal to 200 and another part number that is less than or equal to 299.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

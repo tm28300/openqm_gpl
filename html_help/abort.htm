@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?abort.htm"; }
+else { parent.quicksync('a5.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ABORT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ABORT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ABORT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="dlr_echo.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="account_restore.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> command terminates all active processing and returns to the command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">text</span></td><td><span style="color: #000000;">is the optional message text to be displayed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ABORT </span><span style="color: #000000;">command is intended for use where a paragraph detects an application fault and needs to terminate all active processing. All active commands, sentences, paragraphs, menus, etc are discarded. Unless the command was run using the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> statement with the TRAPPING ABORTS option, just before return to the command prompt, QM</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">checks for an executable item (usually a paragraph) in the VOC named </span><span style="color: #000000;"><a href="command_scripts.htm">ON.ABORT</a></span><span style="color: #000000;"> and, if this is found, runs it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="color: #000000;"><a href="command_scripts.htm">ON.ABORT</a></span><span style="color: #000000;"> paragraph may examine the </span><span style="color: #000000;"><a href="at_variables.htm#abort.code">@ABORT.CODE</a></span><span style="color: #000000;"> variable to determine why it was invoked. The </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> command sets this variable to 1. The </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">, if present, will be stored in </span><span style="color: #000000;"><a href="at_variables.htm#abort.message">@ABORT.MESSAGE</a></span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value of </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> is not affected by the </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="clear_abort.htm">CLEAR.ABORT</a>, <a href="stop.htm">STOP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc.htm"; }
+else { parent.quicksync('a3.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The VOC File</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="VOC file" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The VOC File</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="output_pagination.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_d.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="color: #000000;">VOC</span><span style="color: #000000;"> file is central to everything that QM does. This file is the vocabulary of words and symbols that may appear in commands and holds many other things as well. The initial </span><span style="color: #000000;">VOC</span><span style="color: #000000;"> file is a copy of </span><span style="color: #000000;">NEWVOC</span><span style="color: #000000;"> from the </span><span style="color: #000000;">QMSYS</span><span style="color: #000000;"> directory. By modifying the </span><span style="color: #000000;">VOC</span><span style="color: #000000;"> it is possible to change the names of commands to meet particular needs of an application or user. It would be possible, for example, to include French translations of all the command names. More often, changes are made simply to use wording that is more appropriate to the manner in which the product is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Records in the </span><span style="color: #000000;">VOC</span><span style="color: #000000;"> are of differing types, the type of the record being determined by the first one or two characters of field 1 of the record. The remainder of field 1 after the identifying characters may contain any value and is typically used to comment the role of the </span><span style="color: #000000;">VOC</span><span style="color: #000000;"> entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">VOC</span><span style="color: #000000;"> record types are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;"><a href="voc_d.htm">Data item</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Defines a field within a data file. D type entries may appear in the VOC but are more commonly found in dictionaries.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">F</span></td><td><span style="color: #000000;"><a href="voc_f.htm">File</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Defines a file, relating its application level name for use within QM to its operating system pathname.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">K</span></td><td><span style="color: #000000;"><a href="voc_k.htm">Keyword</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Many commands have keywords which affect the behaviour of the command or introduce optional clauses in the command syntax.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">M</span></td><td><span style="color: #000000;"><a href="voc_m.htm">Menu</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A menu record defines a menu that can be displayed by executing the VOC entry.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">PA</span></td><td><span style="color: #000000;"><a href="voc_pa.htm">Paragraph</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A paragraph is a sequence of commands that can be executed by entering the name of the VOC entry.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">PH</span></td><td><span style="color: #000000;"><a href="voc_ph.htm">Phrase</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A phrase is a short form for a sequence of items to be substituted into query processor commands.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">PQ</span></td><td><span style="color: #000000;"><a href="voc_pq.htm">PROC</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A PROC is the predecessor of paragraphs. QM supports PQN style PROCs for use when migrating applications. It is recommended that new developments should use paragraphs or QMBasic programs instead.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">Q</span></td><td><span style="color: #000000;"><a href="voc_q.htm">Remote File</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A remote file pointer refers to a file in another QM account, perhaps on a different server.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">R</span></td><td><span style="color: #000000;"><a href="voc_r.htm">Remote</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">An R type VOC entry points to a record in another file which is constructed in the same way as an executable (M, PA, R, S or V type) VOC entry.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">S</span></td><td><span style="color: #000000;"><a href="voc_s.htm">Sentence</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A sentence is a single command.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">V</span></td><td><span style="color: #000000;"><a href="voc_v.htm">Verb</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">A verb is the portion of a command which identifies the part of QM which will process it.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">X</span></td><td><span style="color: #000000;"><a href="voc_x.htm">Other</a></span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">X type records may be used to store miscellaneous information in the VOC.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Users may add handlers for other VOC record types that are to be usable as commands. This is done by creating a VOC record named $VOC.PARSER:</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Field 1 &nbsp; &nbsp; &nbsp; &nbsp;X</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Field 2 &nbsp; &nbsp; &nbsp; &nbsp;A multivalued list of VOC record type codes.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Field 3 &nbsp; &nbsp; &nbsp; &nbsp;A corresponding multivalued list of catalogued handler subroutine names.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The handler is a QMBasic subroutine taking two arguments; the verb name and the VOC record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The VOC includes an F-type entry referencing itself so that commands that access the VOC do not have to treat it as a special case. Users must not modify this VOC entry as any change is likely to cause QM to malfunction because internal components reference the VOC by pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The VOC also includes a Q-type entry named MD as a synonym for VOC for compatibility with other systems.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

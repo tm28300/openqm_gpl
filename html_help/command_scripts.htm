@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?command_scripts.htm"; }
+else { parent.quicksync('a2.8'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Command Scripts</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Command scripts,LOGIN paragraph,ON.EXIT paragraph,ON.ABORT paragraph,ON.LOGTO paragraph,MASTER.LOGIN paragraph" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Command Scripts</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="loginprocess.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="commandparsing.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM <a href="voc.htm">VOC file</a> normally contains one or more items that represent scripts of commands to be executed automatically at certain events. Although these are usually <a href="voc_pa.htm">paragraphs</a>, all except for the MASTER.LOGIN item may actually be any executable type of VOC record (verbs, menus, Procs, etc). None of these items need exist. They provide the means to perform a fixed sequence of commands at the events described below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LOGIN</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The LOGIN paragraph is executed on entry to QM and also when the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command is used to switch to a new account.&nbsp; The break key is inhibited until execution of this paragraph has been completed. This paragraph is executed for terminal users, phantom processes and QMClient connections. The <a href="at_variables.htm#tty">@TTY</a> variable can be tested to determine the user type. The LOGIN paragraph is typically used to set QM <a href="option.htm">option</a> flags perform security checks, set up printers, set terminal characteristics and enter the application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DATE.FORMAT ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @TTY = 'phantom' THEN STOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PTERM CASE NOINVERT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BELL OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPTION NO.USER.ABORTS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BREAK ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">RUN BP MAIN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">ON.LOGTO</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The ON.LOGTO paragraph is executed on use of the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command before switching to the new account. This paragraph might be used, for example, to clear down application specific data such as named common blocks.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DELETE.COMMON ALL</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">ON.EXIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The ON.EXIT paragraph is executed on leaving QM by use of the </span><span style="font-weight: bold; color: #000000;"><a href="quit.htm">QUIT</a></span><span style="color: #000000;"> command. The break key is inhibited during execution of this paragraph. An abort occurring in this paragraph will terminate the QM session immediately.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT TEMP WITH UNO = &lt;&lt;@USERNO&gt;&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @SELECTED THEN DELETE TEMP NO.QUERY</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">ON.ABORT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The ON.ABORT paragraph is executed when QM aborts a program due to an internally detected error, a </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> program executes an </span><span style="font-weight: bold; color: #000000;"><a href="qmb_abort.htm">ABORT</a></span><span style="color: #000000;"> statement or when the Abort response is chosen after use of the break key. The <a href="at_variables.htm#abort.code">@ABORT.CODE</a> and <a href="at_variables.htm#abort.message">@ABORT.MESSAGE</a> variables may be useful in determining the cause of the error. An abort occurring whilst executing the </span><span style="color: #000000;">ON.ABORT</span><span style="color: #000000;"> paragraph will cause a message to be displayed. The paragraph is not re-entered. Aborts occurring in commands started using the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> statement with the TRAPPING ABORTS option do not execute the ON.ABORT paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The primary role of the ON.ABORT paragraph is to prevent the user reaching a command prompt if the application fails. It may be useful to include logging of the cause of the abort.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">RUN BP LOG.ABORT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">QUIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">MASTER.LOGIN</span><span style="color: #000000;"> (QMSYS account)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This item, if present, must be a paragraph and is executed on initial entry to QM in any account before the </span><span style="color: #000000;">LOGIN </span><span style="color: #000000;">paragraph but not when the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command is used to switch to a new account. This paragraph is executed with the break key inhibited for terminal users and phantom processes. It is not executed for QMClient connections. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DATE.FORMAT ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPTION NO.USER.ABORTS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPTION DUMP.ON.ERROR</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

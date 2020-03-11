@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_recordsbuffersandwindows.htm"; }
+else { parent.quicksync('a5.133.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SED - Records, buffers and windows</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; Records, Buffers and Windows</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed_standardkeybindings.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A record to be edited is held in a </span><span style="font-weight: bold; color: #000000;">buffer</span><span style="color: #000000;">. Buffers may also hold records being created but not yet written to disk or other data such as lists of records in a file. </span><span style="font-weight: bold; color: #000000;">SED</span><span style="color: #000000;"> allows use of up to 20 buffers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The editor displays a </span><span style="font-weight: bold; color: #000000;">window</span><span style="color: #000000;"> in which a number of lines of the record being edited can be seen at any one time. Where a line is wider than the display, the entire window pans from side to side to maintain the cursor within the display area.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The bottom two lines of the screen display status information. The upper status line shows the file and record names of the data being edited. If the data has been changed and hence does not match what is stored in the file, an asterisk is displayed at the start of this line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The lower status line displays several status fields. From left to right these show</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the number of lines in the record</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the current cursor position (line and column, both numbered from one)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the status of macro collection</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the state of insertion overlay mode</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the state of indentation mode</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the search mode</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">the count for repeated functions and operations with a numeric prefix</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The lower status line is also used by some editor functions to request qualifying information. A limited set of editing functions can be used within this prompt area. These are </span><span style="font-weight: bold; color: #000000;">forward char</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">back char</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">start line</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">end line</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">delete char</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">backspace</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;">kill line</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">insert kill buffer</span><span style="color: #000000;">. The </span><span style="font-weight: bold; color: #000000;">kill line</span><span style="color: #000000;"> function used in this area deletes all characters after the cursor without affecting the kill buffer. The </span><span style="font-weight: bold; color: #000000;">insert kill buffer</span><span style="color: #000000;"> function will insert the first line from the kill buffer at the current cursor position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The display may optionally include line numbering. See the </span><span style="font-weight: bold; color: #000000;">LNUM</span><span style="color: #000000;"> command for further details.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

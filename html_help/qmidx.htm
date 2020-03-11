@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmidx.htm"; }
+else { parent.quicksync('a9.11'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The qmidx Utility</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="qmidx" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The qmidx Utility</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmfix.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="system_limits.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM file system supports <a href="ak.htm">alternate key indices</a> for retrieval of data based on the content of a non-key field. Normally, these indices reside in the directory that represents the data file. This helps to ensure that the entire file and its indices are handled as one object when performing backup and restore operations</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Sometimes it may be useful to place the indices elsewhere. This could be to improve load balancing across multiple disk drives or to simplify exclusion of large indices from backups since they can always be recreated from the data file. This separation of the indices from the data can be achieved using the PATHNAME option of the </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="make_index.htm">MAKE.INDEX</a></span><span style="color: #000000;"> commands when the first index is created.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The qmidx program is an operating system level command that allows users to report or modify the location of the indices. It has four modes of operation:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="color: #000000;">qmidx -d </span><span style="font-style: italic; color: #000000;">data.path</span></td><td><span style="color: #000000;">Deletes all indices for the named file.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="color: #000000;">qmidx -m </span><span style="font-style: italic; color: #000000;">data.path index.path</span></td><td><span style="color: #000000;">Moves the indices for the named file to the new location specified by </span><span style="font-style: italic; color: #000000;">index.path</span><span style="color: #000000;">. If the index path is omitted, the indices are returned to their default location in the directory identified by </span><span style="font-style: italic; color: #000000;">data.path</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="color: #000000;">qmidx -p </span><span style="font-style: italic; color: #000000;">data.path index.path</span></td><td><span style="color: #000000;">Sets the index path for the given data file. This operation is required after use of an operating system level tool to copy or move a data file to a new location. </span><span style="font-weight: bold; color: #000000;">Failure to perform this step when duplicating a file may result in any changes to the copied file updating the indices of the original file.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="color: #000000;">qmidx -q </span><span style="font-style: italic; color: #000000;">data.path</span></td><td><span style="color: #000000;">Queries the location of the indices for the given data file.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">This program must only be used when the file is not in use. Failure to adhere to this rule may lead to data corruption or process failure.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list_locks.htm"; }
+else { parent.quicksync('a5.79'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST.LOCKS</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST.LOCKS" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST.LOCKS</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_keys.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_readu.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.LOCKS</span><span style="color: #000000;"> command reports the state of the 64 system wide task locks.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST.LOCKS</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.LOCKS</span><span style="color: #000000;"> command displays a table of locks showing the user number of the process holding each of the 64 task locks where appropriate. The displayed user number is followed by an asterisk if it is the process from which the </span><span style="font-weight: bold; color: #000000;">LIST.LOCKS</span><span style="color: #000000;"> command was executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST.LOCKS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> 0:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7: 1*</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> 8:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:&nbsp;&nbsp;&nbsp;&nbsp; 10:&nbsp;&nbsp;&nbsp;&nbsp; 11:&nbsp;&nbsp;&nbsp;&nbsp; 12:&nbsp;&nbsp;&nbsp;&nbsp; 13:&nbsp;&nbsp;&nbsp;&nbsp; 14:&nbsp;&nbsp;&nbsp;&nbsp; 15:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">16:&nbsp;&nbsp;&nbsp;&nbsp; 17:&nbsp;&nbsp;&nbsp;&nbsp; 18:&nbsp;&nbsp;&nbsp;&nbsp; 19: 3&nbsp;&nbsp; 20:&nbsp;&nbsp;&nbsp;&nbsp; 21:&nbsp;&nbsp;&nbsp;&nbsp; 22:&nbsp;&nbsp;&nbsp;&nbsp; 23:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">24:&nbsp;&nbsp;&nbsp;&nbsp; 25:&nbsp;&nbsp;&nbsp;&nbsp; 26:&nbsp;&nbsp;&nbsp;&nbsp; 27:&nbsp;&nbsp;&nbsp;&nbsp; 28:&nbsp;&nbsp;&nbsp;&nbsp; 29:&nbsp;&nbsp;&nbsp;&nbsp; 30:&nbsp;&nbsp;&nbsp;&nbsp; 31:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">32:&nbsp;&nbsp;&nbsp;&nbsp; 33:&nbsp;&nbsp;&nbsp;&nbsp; 34:&nbsp;&nbsp;&nbsp;&nbsp; 35:&nbsp;&nbsp;&nbsp;&nbsp; 36:&nbsp;&nbsp;&nbsp;&nbsp; 37:&nbsp;&nbsp;&nbsp;&nbsp; 38:&nbsp;&nbsp;&nbsp;&nbsp; 39:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">40:&nbsp;&nbsp;&nbsp;&nbsp; 41:&nbsp;&nbsp;&nbsp;&nbsp; 42:&nbsp;&nbsp;&nbsp;&nbsp; 43:&nbsp;&nbsp;&nbsp;&nbsp; 44:&nbsp;&nbsp;&nbsp;&nbsp; 45:&nbsp;&nbsp;&nbsp;&nbsp; 46:&nbsp;&nbsp;&nbsp;&nbsp; 47:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">48:&nbsp;&nbsp;&nbsp;&nbsp; 49:&nbsp;&nbsp;&nbsp;&nbsp; 50:&nbsp;&nbsp;&nbsp;&nbsp; 51:&nbsp;&nbsp;&nbsp;&nbsp; 52:&nbsp;&nbsp;&nbsp;&nbsp; 53:&nbsp;&nbsp;&nbsp;&nbsp; 54:&nbsp;&nbsp;&nbsp;&nbsp; 55:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">56:&nbsp;&nbsp;&nbsp;&nbsp; 57:&nbsp;&nbsp;&nbsp;&nbsp; 58:&nbsp;&nbsp;&nbsp;&nbsp; 59:&nbsp;&nbsp;&nbsp;&nbsp; 60:&nbsp;&nbsp;&nbsp;&nbsp; 61:&nbsp;&nbsp;&nbsp;&nbsp; 62:&nbsp;&nbsp;&nbsp;&nbsp; 63:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example shows the display when task locks 7 and 19 are in use. Lock 7 is held by user 1 who also issued the </span><span style="font-weight: bold; color: #000000;">LIST.LOCKS</span><span style="color: #000000;"> command. Lock 19 is held by user 3.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST.LOCKS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">No task locks reserved by any user</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, there are no task locks in use.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="clear_locks.htm">CLEAR.LOCKS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="lock.htm">LOCK</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

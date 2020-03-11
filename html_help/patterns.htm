@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?patterns.htm"; }
+else { parent.quicksync('a3.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Pattern Matching</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Matching templates,Pattern matching" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Pattern Matching</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="inlineprompts.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="printing.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pattern matching is a way to test whether data has a particular structure. It can be used for data validation and as a means to extract the part of a data item that matches against a specified element of the pattern. The pattern matching operations are the query processor </span><span style="font-weight: bold; color: #000000;"><a href="like.htm">LIKE</a></span><span style="font-family: 'Arial'; color: #000000;"> </span><span style="color: #000000;">and </span><span style="font-weight: bold; color: #000000;"><a href="unlike.htm">UNLIKE</a></span><span style="color: #000000;"> keywords, the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;"><a href="qmbasic_expressionsandoperators_.htm">MATCHES</a></span><span style="color: #000000;"> operator and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_matchfield.htm">MATCHFIELD()</a></span><span style="color: #000000;"> function, and the </span><span style="font-weight: bold; color: #000000;">M</span><span style="color: #000000;"> search of </span><span style="font-weight: bold; color: #000000;"><a href="ed.htm">ED</a></span><span style="color: #000000;">.</span><span style="color: #000000;"> All of these compare a character string with a pattern template.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pattern matching breaks the character set into three classes of character, each represented by a character type code:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">A</span></td><td><span style="color: #000000;">Alphabetic, upper and lowercase A - Z</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">N</span></td><td><span style="color: #000000;">Numeric, digits 0 - 9</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">X</span></td><td><span style="color: #000000;">Any character, including alphanumerics</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are also three ways to specify how many characters are present:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">4</span></td><td><span style="color: #000000;">Exactly 4 characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2-7</span></td><td><span style="color: #000000;">Between 2 and 7 characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">0</span></td><td><span style="color: #000000;">Any number of characters, including none</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">template</span><span style="color: #000000;"> consists of one or more concatenated items formed from pairs of lengths and character type:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">0X</span></td><td><span style="color: #000000;">Zero or more characters of any type</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">X</span></td><td><span style="color: #000000;">Exactly </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> characters of any type</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">X</span></td><td><span style="color: #000000;">Between </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> characters of any type</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">0A</span></td><td><span style="color: #000000;">Zero or more alphabetic characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">A</span></td><td><span style="color: #000000;">Exactly </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> alphabetic characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">A</span></td><td><span style="color: #000000;">Between </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> alphabetic characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">0N</span></td><td><span style="color: #000000;">Zero or more numeric characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">N</span></td><td><span style="color: #000000;">Exactly </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> numeric characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">N</span></td><td><span style="color: #000000;">Between </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> numeric characters</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">&quot;</span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">&quot;</span></td><td><span style="color: #000000;">A literal string which must match exactly. Either single or double quotation marks may be used.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The values </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> are integers with any number of digits. </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> must be greater than or equal to </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 0px;"><span style="color: #000000;">The 0X code is a wildcard that matches against anything. It has a commonly used synonym:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">...</span></td><td><span style="color: #000000;">Zero or more characters of any type</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The 0A, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">A, 0N, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">N and &quot;</span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">&quot; patterns may be preceded by a tilde (~) to invert the match condition. For example, ~4N matches four non-numeric characters such as ABCD (not a string which is not four numeric characters such as 12C4).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A null string matches patterns ..., 0A, 0X, 0N, their inverses (~0A, etc) and &quot;&quot;.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The 0X and </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">X patterns match against as few characters as necessary before control passes to the next pattern. For example, the string ABC123DEF matched against the pattern 0X2N0X matches the pattern components as ABC, 12 and 3DEF.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The 0N, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">N, 0A, and </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">A patterns match against as many characters as possible. For example, the string ABC123DEF matched against the pattern 0X2-3N0X matches the pattern components as ABC, 123 and DEF.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">template</span><span style="color: #000000;"> string may contain alternative patterns separated by value marks. The source data will match the overall pattern if any of the pattern values match. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&quot;A123BCD&quot; would match successfully against patterns of</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">1A3N3A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">1A1-3N3A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">'A'1-3N3A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">0A0N0A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">1A...3A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">1A~3A3A</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">and many more</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It is often acceptable to omit the quotes around literal components. The above example would also match</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="color: #000000;">A1-3N3A</span></p>
+<p><span style="color: #000000;">There is no confusion between the leading A as a literal or as a character type as it is not preceded by a length value. It is, however, recommended that the quotes should be included. Omitting the quotes in a pattern used in the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_matchfield.htm">MATCHFIELD()</a></span><span style="color: #000000;"> function may affect the function's behaviour as each character of the literal will be counted as a separate component of the pattern.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A program might need to test whether data entered by a user is a non-negative integer (whole number) value. The QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_num.htm">NUM()</a></span><span style="color: #000000;"> function can be used to test for numeric data but this would allow fractional or negative values. Testing against a pattern of &quot;1-4N&quot; would allow only integer values in the range 0 to 9999. To remove the upper limit, a pattern of 1N0N tests for one digit followed by any number of further digits, including none.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_soundex.htm"; }
+else { parent.quicksync('a7.5.249'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SOUNDEX()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SOUNDEX()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SOUNDEX(), SOUNDEXS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_socket_info.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_space.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SOUNDEX()</span><span style="color: #000000;"> function returns a four character string determined by the phonetic content of a string. The </span><span style="font-weight: bold; color: #000000;">SOUNDEXS()</span><span style="color: #000000;"> function is similar to </span><span style="font-weight: bold; color: #000000;">SOUNDEX()</span><span style="color: #000000;"> but operates on successive elements of a dynamic array, returning a similarly structured dynamic array of results.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SOUNDEX(</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the string for which the sound code is to be returned.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SOUNDEX()</span><span style="color: #000000;"> function is useful for situations where it is desired to compare or locate items by their spoken sound. For example, names in a telephone directory could be indexed by their </span><span style="font-weight: bold; color: #000000;">SOUNDEX()</span><span style="color: #000000;"> value to aid location of similar sounding names.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value returned by </span><span style="font-weight: bold; color: #000000;">SOUNDEX()</span><span style="color: #000000;"> is made up from the first letter of </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> in upper case followed by three digits which are found by examination of further characters of </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> according to the following table.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">0</span></td><td><span style="color: #000000;">A&nbsp; E&nbsp; H&nbsp; I&nbsp; O&nbsp; U&nbsp; W&nbsp; Y</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">B&nbsp; F&nbsp; P&nbsp; V</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">C&nbsp; G&nbsp; J&nbsp; K&nbsp; Q&nbsp; S&nbsp; X&nbsp; Z</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">3</span></td><td><span style="color: #000000;">D&nbsp; T</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">4</span></td><td><span style="color: #000000;">L</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">5</span></td><td><span style="color: #000000;">M&nbsp; N</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">6</span></td><td><span style="color: #000000;">R</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Letters in group 0 are ignored. Consecutive letters that result in the same value result in only a single character. If the result is less than four characters long, zeros are added to fill the remaining positions. Thus the word SOUNDEX encodes to S532.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY &quot;Enter name &quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">INPUT NAME</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">KEY = SOUNDEX(NAME)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READ OTHER.NAMES FROM PHONONYMS, KEY THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; NAME = OTHER.NAMES</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment prompts for and reads a name. It then establishes the soundex key for this name and attempts to read a list of similar sounding names from the PHONONYMS file. If found, this list replaces the NAME value.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

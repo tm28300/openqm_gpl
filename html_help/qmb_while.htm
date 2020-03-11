@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_while.htm"; }
+else { parent.quicksync('a7.5.290'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>WHILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="WHILE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">WHILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_weofseq.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_write.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WHILE</span><span style="color: #000000;"> statement is used in conjunction with the </span><span style="font-weight: bold; color: #000000;">FOR</span><span style="color: #000000;"> / </span><span style="font-weight: bold; color: #000000;">NEXT</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> / </span><span style="font-weight: bold; color: #000000;">REPEAT</span><span style="color: #000000;"> constructs to determine whether execution of the loop should continue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">WHILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="91"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to a numeric value</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">WHILE</span><span style="color: #000000;"> statement causes execution of the innermost </span><span style="font-weight: bold; color: #0000ff;"><a href="qmb_for.htm">FOR/NEXT</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_loop.htm">LOOP/REPEAT</a></span><span style="color: #000000;"> construct to terminate if the value of </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is zero. It is equivalent to a statement such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">expr</span><span style="font-family: 'Courier New'; color: #000000;"> = 0 THEN EXIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REMOVE ITEM FROM LIST SETTING DELIMITER</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY ITEM</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WHILE DELIMITER</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment displays items removed from dynamic array LIST. The loop is terminated when the value of DELIMITER becomes zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_exit.htm">EXIT</a>, <a href="qmb_until.htm">UNTIL</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

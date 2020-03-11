@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_v.htm"; }
+else { parent.quicksync('a3.5.11'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC V-type records - Verbs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="VOC verb definitions,VOC V-type records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VOC V-Type Records&nbsp; -&nbsp; Verbs</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_s.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_x.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">V</span><span style="color: #000000;"> type record defines a command name and determines the QM component that will be used to process the command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">V&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">2:</span></td><td><span style="color: #000000;">Dispatch code</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">3:</span></td><td><span style="color: #000000;">Processor</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">4:</span></td><td><span style="color: #000000;">{ Qualifying information }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">5:</span></td><td><span style="color: #000000;">{ <a href="securitysubroutines.htm">Security subroutine</a> }</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The dispatch code identifies the type of processor referenced by field 3. It may be:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">CA</span></td><td><span style="color: #000000;">A catalogued verb. Field 3 holds the catalogue name of the function to be executed. For system supplied verbs, field 4 may also be significant and should not be altered.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">CS</span></td><td><span style="color: #000000;">A locally catalogued function program. This format allows a </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> program to CALL a function that is in the compiler output file rather than in the catalogue.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">IN</span></td><td><span style="color: #000000;">An internal verb. Field 3 holds an identifying number which determines the action of the verb.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">OS</span></td><td><span style="color: #000000;">An operating system command. QM will execute an operating system command made up from the contents of field 3 of the VOC record (which may be null) followed by the remainder of the current sentence after the verb.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Users may add their own V-type records for catalogued programs (usually by use of the </span><span style="font-weight: bold; color: #000000;">CATALOGUE</span><span style="color: #000000;"> verb) or make copies of standard records to provide synonyms for other verbs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A V-type VOC record can optionally hold the name of a catalogued </span><span style="color: #000000;"><a href="securitysubroutines.htm">security subroutine</a></span><span style="color: #000000;"> in field 5. This subroutine can be used to determine whether the user is to be allowed to execute the command. If the validation fails or the subroutine cannot be found in the catalogue a message is displayed:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">This command is restricted (</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">verb</span><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A summary of V-type VOC records may be displayed or printed using </span><span style="font-weight: bold; color: #000000;"><a href="listv.htm">LISTV</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

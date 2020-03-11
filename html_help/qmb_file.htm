@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_file.htm"; }
+else { parent.quicksync('a7.5.88'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>FILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FILE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">FILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_fieldstore.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_fileinfo.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement provides a way to reference data in files using field names defined in the dictionary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement is provided for compatibility with other systems and is not recommended. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> ...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is a comma separated list of files to be processed</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement opens the named files for processing in the current program. The QMBasic compiler will process the associated dictionary to allow use of field names as described below. Note that any change to the dictionary may require the program to be recompiled.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that the </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement has no error handling clause. If the file cannot be opened, any subsequent access to it will fail.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">After a file has been opened using the </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement, a record can be read using a modified form of the </span><span style="font-weight: bold; color: #000000;">READ</span><span style="color: #000000;"> statement:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READ </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">name</span><span style="font-family: 'Courier New'; color: #000000;"> FROM </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">id</span><span style="font-family: 'Courier New'; color: #000000;"> </span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> is the file name in the </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement and </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is the key of the record to be read. This form of the </span><span style="font-weight: bold; color: #000000;">READ</span><span style="color: #000000;"> statement take the same optional clauses as a normal </span><span style="font-weight: bold; color: #000000;"><a href="qmb_read.htm">READ</a></span><span style="color: #000000;">. The locking variants (</span><span style="font-weight: bold; color: #000000;"><a href="qmb_readl.htm">READL</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readu.htm">READU</a></span><span style="color: #000000;">) are also supported.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">After a record has been read, data from that record can be accessed using a construct:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">name</span><span style="font-family: 'Courier New'; font-weight: bold; color: #000000;">(</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">field</span><span style="font-family: 'Courier New'; font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> is the file name and </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> is a field name defined in the dictionary. Note that QMBasic restricts this construct such that </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> must be a D-type item or an A or S-type item with no correlative. Calculated values are not supported.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Records may be written to the file using a modified form of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_write.htm">WRITE</a></span><span style="color: #000000;"> (or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_write.htm">WRITEU</a></span><span style="color: #000000;">) statement:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITE </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">name</span><span style="font-family: 'Courier New'; color: #000000;"> TO </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">id</span><span style="font-family: 'Courier New'; color: #000000;"> </span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> is the file name in the </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement and </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> is the key of the record to be written.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Apart from the above special cases, use of </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> in a file handling statement or function refers to the file variable associated with the file. Use of </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> in any other context refers to the dynamic array that will be used implicitly by </span><span style="font-weight: bold; color: #000000;">READ</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">WRITE</span><span style="color: #000000;"> statements.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> statement is not recommended in new developments as it requires that the file is opened separately in every program that will access it rather than using a file variable in a common block for best performance. The syntax of the associated statements is also likely to be confusing as the same name references either the file variable or the data depending on its context.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FILE 'ORDERS'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READ ORDERS FROM ORDER.NO THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY ORDERS(CUSTOMER.NO)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">This program fragment opens the ORDERS file, reads the record for a given order number and displays the customer number from this record.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

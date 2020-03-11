@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?ur_visual.htm"; }
+else { parent.quicksync('a5.161.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>UPDATE.RECORD visual mode</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="UPDATE.RECORD visual mode" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">UPDATE.RECORD&nbsp; -&nbsp; Visual Mode</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="ur_batch.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="who.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> runs in visual mode if the command line contains no </span><span style="font-style: italic; color: #000000;">field/value </span><span style="color: #000000;">specifications.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Visual mode presents a full screen display of the external (converted) form of fields from a data record. Changes are made by moving the cursor to the desired position and entering or deleting characters. Modified lines are converted back into their internal form within </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> when the cursor is moved to a new line or when the data is to be written back to the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;1:&nbsp;NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Site&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Acme&nbsp;Software&nbsp;Limited</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;2:&nbsp;ADDRESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;42&nbsp;High&nbsp;Street,&nbsp;Anytown</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;3:&nbsp;POSTCODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Postcode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;AN11&nbsp;1XX</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;6:&nbsp;DATE.PAID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Date&nbsp;Paid&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;12&nbsp;Feb&nbsp;98&yacute;17&nbsp;Mar&nbsp;98</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;7:&nbsp;INVOICES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Invoices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;001763&yacute;001966</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;8:&nbsp;LICENCES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Licences&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;907881792&yacute;1907881802&yacute;1907881808</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">&nbsp;9:&nbsp;EXPIRED.LICENCES:&nbsp;Expired&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">10:&nbsp;COUNTRY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">11:&nbsp;CLASS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">12:&nbsp;DEALER.SALES&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Sales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">13:&nbsp;CALLBACK.DATE&nbsp;&nbsp;&nbsp;:&nbsp;Callback&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;01&nbsp;Jul&nbsp;98</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">14:&nbsp;CALLBACK.TEXT&nbsp;&nbsp;&nbsp;:&nbsp;Callback&nbsp;note:&nbsp;Interested&nbsp;in&nbsp;new&nbsp;product&nbsp;range</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">15:&nbsp;VAT.NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;VAT&nbsp;no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;614&nbsp;1210&nbsp;25</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">16:&nbsp;SITE.TEXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Site&nbsp;text&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Acme&nbsp;Software</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">17:&nbsp;CONTACT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Anne&nbsp;McIntosh</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">18:&nbsp;POSITION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Position&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">19:&nbsp;TEL.NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Tel&nbsp;no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;01234-56789&yacute;01234-64526</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">20:&nbsp;FAX.NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Fax&nbsp;no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;01234-21767</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">21:&nbsp;MOBILE.NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Mobile&nbsp;no&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">22:&nbsp;EMAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;acme@mailer.com</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">23:&nbsp;SALES.TOTAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Sales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&pound;12783.33</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; color: #000000;">24:&nbsp;NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold; color: #000000;">*CLIENTS&nbsp;00106</span></p>
+<p style="white-space: nowrap; margin: 0px 0px 0px 30px;"><span style="font-size: 10pt; font-family: 'Courier New'; font-weight: bold; color: #000000;">&lt;6,1,1&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;D2DMYL[,A3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;9R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;PAYDATE&nbsp;&nbsp;&nbsp;|&nbsp;S&nbsp;|</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By default, the display shows all fields for which a D-type dictionary entry or an A/S=type entry with no correlative exists. A specific subset of fields can be displayed by creating a dictionary phrase named @UPDATE.RECORD which lists the required fields (and possibly keywords).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For each field, the display shows:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The field number</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The field name (unless suppressed by use of </span><span style="font-weight: bold; color: #000000;">ID.SUP</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The display name (unless suppressed by </span><span style="font-weight: bold; color: #000000;">COL.SUP</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The data in its external form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The last two lines of the screen are used as a status area. The upper status line displays the file name and record id. An asterisk is shown at the start of this line if the data has been changed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The lower status line shows the field, value and subvalue in which the cursor is positioned and the dictionary conversion code, format code, association name and single/multi-value flag for the field. The final field of this status line shows a letter O if </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> is in overlay mode (see below).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> uses a subset of the default key bindings of the </span><span style="font-weight: bold; color: #000000;"><a href="sed.htm">SED</a></span><span style="color: #000000;"> full screen editor. These all consist of keystrokes which are</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Control shift + key</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">ESCape followed by another key</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Ctrl-X followed by another key</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The table below summarises the key bindings. All other keystrokes except for unused control shift codes cause the character to be inserted into the record text at the current cursor position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><br>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Ctrl-</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Esc-</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Ctrl-X -</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">A</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Home</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">B</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor left</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">C</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Repeat</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Quit</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">D</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Delete char</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">E</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">End</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">F</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor right</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">G</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cancel</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Goto</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">H</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Backspace</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">I</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">J</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">(Return)</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">K</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Kill line</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">L</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Refresh</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">M</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">(Return)</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">N</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">O</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Overlay</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Overlay</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">P</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">Q</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Quote char</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Quote char</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">R</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">S</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Save</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">T</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">U</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Repeat</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">V</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Page down</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Page up</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">W</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cut</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Copy</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">X</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Ctrl-X prefix</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Command</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">Y</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Paste</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Paste</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">Z</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="color: #000000;">.</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Mark</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">=</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><p><span style="color: #000000;">Expand char</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">&lt;</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Top</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="font-weight: bold; color: #000000;">&gt;</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><br>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">Bottom</span></p>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="color: #000000;">Bkspc</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Backspace</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="color: #000000;">Del</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Delete char</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="79px" style="width:79px;"><p><span style="color: #000000;">Return</span></p>
+</td>
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><br>
+</td>
+<td valign="top" width="135px" style="width:135px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> also recognises the following terminal control keys:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Home</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">End</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Cursor left</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Cursor right</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Insert (Overlay)</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Delete</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Page up</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">Page down</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><br>
+</td>
+<td valign="top" width="238px" style="width:238px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some functions are available using alternative key sequences. Such alternatives are shown above and in the descriptions that follow.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">repeat</span><span style="color: #000000;"> function (Ctrl-C or Ctrl-U) repeats the previous function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">cancel</span><span style="color: #000000;"> function (Ctrl-G) can be used to abort partially entered incorrect key sequences and to terminate certain functions as described below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor Movement Functions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Note:</span><span style="color: #000000;">  A confirmation prompt appears if the cursor is moved from a line that contains a data conversion error.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Home</span><span style="color: #000000;"> (Ctrl-A or Home)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Arial'; color: #000000;">Moves the cursor to the start of the current line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">End</span><span style="color: #000000;"> (Ctrl-E or End)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor to the position after the last character in the current line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Top</span><span style="color: #000000;"> (Esc-&lt;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves to the start of the first displayed field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Bottom (Esc- &gt;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves to the start of the last displayed field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor down</span><span style="color: #000000;"> (Ctrl-N or Ctrl-P or Cursor down)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor vertically down one line. If this position is beyond the end of the data in the new line, the cursor is displayed immediately to the right of the final character. </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> remembers the column position from which the cursor was moved so that a further vertical movement will continue to place the cursor at the lesser of its original column position and the end of the current line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor up</span><span style="color: #000000;"> (Ctrl-P or Ctrl-Z or Cursor up)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor vertically up one line. The same process is used for determining the column position as for the </span><span style="font-weight: bold; color: #000000;">cursor down</span><span style="color: #000000;"> operation described above.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor right</span><span style="color: #000000;"> (Ctrl-F or Cursor right)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor right.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor left</span><span style="color: #000000;"> (Ctrl-B or Cursor left)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor left.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Page down</span><span style="color: #000000;"> (Ctrl-V or Page down)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor down by one screen or to the last line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Page up</span><span style="color: #000000;"> (Esc-V or Page up)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves the cursor up by one screen or to the first line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Goto</span><span style="color: #000000;"> (Esc-G)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Prompts for a field, value and subvalue position and moves the cursor to that position. The position may be specified as:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">go to specified field, value 1, subvalue 1</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field, value</span></td><td><span style="color: #000000;">go to specified field and value, subvalue 1</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field, value, subvalue</span><span style="color: #000000;"> </span></td><td><span style="color: #000000;">go to specified field, value and subvalue</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Fields may be specified by number or name. Omitted </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> components mean &quot; within the current field/value&quot; unless a higher level component is specified in which case the default is 1. For example:</span></p>
+<p style="text-indent: -150px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">go to specified value in current field</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">subvalue</span></td><td><span style="color: #000000;">go to specified value/subvalue in current field</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">,,</span><span style="font-style: italic; color: #000000;">subvalue</span></td><td><span style="color: #000000;">go to specified subvalue in current field/value</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">,,</span><span style="font-style: italic; color: #000000;">subvalue</span></td><td><span style="color: #000000;">go to specified field, value 1, specified subvalue</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">An asterisk can be use to imply &quot;no change&quot;. This is useful when processing associated multi-valued fields. For example:</span></p>
+<p style="text-indent: -150px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">*,</span><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">go to specified value in current field</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">,*</span></td><td><span style="color: #000000;">go to current value position in specified field</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">,*,*</span></td><td><span style="color: #000000;">go to current value and subvalue in specified field</span></td></tr></table></div><p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">If the specified value or subvalue does not exists, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> will offer to create it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Data Insertion</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Data is inserted at the current cursor position. If overlay mode is set the new data overwrites any existing data at this position, otherwise it is inserted before the character under the cursor. Overlay mode may be toggled using the </span><span style="font-weight: bold; color: #000000;">overlay</span><span style="color: #000000;"> function (Ctrl-O or Ctrl-X O or Insert).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any character other than a field mark or item mark may be inserted. The </span><span style="font-weight: bold; color: #000000;">quote character</span><span style="color: #000000;"> function (Ctrl-Q or Esc-Q) allows insertion of non-printing characters. It may be used in three ways:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Followed by a number of up to three digits, it inserts the character with that decimal ASCII sequence.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Followed by V, S or T, it inserts a value mark, subvalue mark or text mark respectively.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Followed by any other character, usually a non-printing character, it will insert that character.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Copying, Deleting and Restoring Data</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Delete char</span><span style="color: #000000;"> (Ctrl-D or Del, Delete)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Arial'; color: #000000;">The character at the current cursor position is deleted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Backspace</span><span style="color: #000000;"> (Backspace or Ctrl-H)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">backspace</span><span style="color: #000000;"> function removes the character to the left of the cursor.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Kill line</span><span style="color: #000000;"> (Ctrl-K)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">kill line</span><span style="color: #000000;"> function deletes all characters following the cursor.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Copy</span><span style="color: #000000;"> (Esc-W)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">copy</span><span style="color: #000000;"> copies part of a field to the clipboard buffer. The required sequence of actions is:</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Position the cursor on the first character to be copied.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Execute the </span><span style="font-weight: bold; color: #000000;">mark</span><span style="color: #000000;"> function (Esc-.).</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Position the cursor after the last character to be copied. Where the terminal device allows, the selected characters will be highlighted.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Press the </span><span style="font-weight: bold; color: #000000;">copy</span><span style="color: #000000;"> key.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">copy</span><span style="color: #000000;"> function can be cancelled using the </span><span style="font-weight: bold; color: #000000;">cancel</span><span style="color: #000000;"> function (Ctrl-G).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cut</span><span style="color: #000000;"> (Ctrl-W)</span></p>
+<p style="margin: 0px 0px 0px 22px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">cut</span><span style="color: #000000;"> function cuts (deletes) part of a field, placing a copy of the deleted text in the clipboard buffer. The required sequence of actions is:</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Position the cursor on the first character to be cut.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Execute the </span><span style="font-weight: bold; color: #000000;">mark</span><span style="color: #000000;"> function (Esc-.).</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Position the cursor after the last character to be cut. Where the terminal device allows, the selected characters will be highlighted.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Press the </span><span style="font-weight: bold; color: #000000;">cut</span><span style="color: #000000;"> key.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">cut</span><span style="color: #000000;"> function can be cancelled using the </span><span style="font-weight: bold; color: #000000;">cancel</span><span style="color: #000000;"> function (Ctrl-G).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Paste</span><span style="color: #000000;"> (Ctrl-Y or Esc-Y)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">paste</span><span style="color: #000000;"> function inserts a copy of the clipboard buffer as set using </span><span style="font-weight: bold; color: #000000;">copy</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">cut</span><span style="color: #000000;"> at the current cursor position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Miscellaneous Functions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Save</span><span style="color: #000000;"> (Ctrl-X S or Ctrl-X Ctrl-S)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">save</span><span style="color: #000000;"> function saves the modified data record. </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> remains in the current record allowing further changes if required.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">save</span><span style="color: #000000;"> function cannot be executed if the current line contains a data conversion error.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Quit</span><span style="color: #000000;"> (Ctrl-X C or Ctrl-X Ctrl-C)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">quit</span><span style="color: #000000;"> function moves to the next record to be processed (if any). A confirmation prompt is displayed if the current record has been modified and not saved.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Expand char</span><span style="color: #000000;"> (Ctrl-X =)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Certain control characters (e.g. tab, form feed) are represented on the screen by question marks. The </span><span style="font-weight: bold; color: #000000;">expand char</span><span style="color: #000000;"> function displays the character sequence number for the character at the cursor position on the lower status line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Command</span><span style="color: #000000;"> (Esc-X)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The command function allows executing of any valid QM command from within </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;">. In addition, it supports the following built-in commands:</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">SPOOL</span></td><td><span style="color: #000000;">Used without any following file name etc.</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">, this command spools a copy of the record to the default printer.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 180px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 60px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">QUIT</span></td><td><span style="color: #000000;">Terminates processing of the current record and exits </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;">, abandoning any further records specified for processing.</span></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

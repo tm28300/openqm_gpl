@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?clear_data.htm"; }
+else { parent.quicksync('a5.18'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CLEAR.DATA</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CLEAR.DATA,CLEARDATA" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CLEAR.DATA, CLEARDATA</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="clear_abort.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="clear_file.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CLEAR.DATA</span><span style="color: #000000;"> command (synonym </span><span style="font-weight: bold; color: #000000;">CLEARDATA</span><span style="color: #000000;">) clears the data queue created by the </span><span style="font-weight: bold; color: #000000;"><a href="data.htm">DATA</a></span><span style="color: #000000;"> command or the QMBasic</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_data.htm">DATA</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CLEAR.DATA</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The data queue is cleared automatically on return to the command prompt. The </span><span style="font-weight: bold; color: #000000;">CLEAR.DATA</span><span style="color: #000000;"> command allows the queue to be cleared within a paragraph, for example, when recovering from premature termination of a program that uses the data queue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">is not affected by this command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">RUN ARCHIVE.PREVIOUS.YEAR</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">DATA Y</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SELECT ORDERS WITH DATE BEFORE &quot;1 JAN &lt;&lt;@YEAR&gt;&gt;&quot;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">DELETE ORDERS</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above paragraph might be used to archive old order data at the start of a new business year and then delete the old records from the ORDERS file. The archive program asks the user if a report is to be printed and the DATA statement is used to provide the answer to this question from within the paragraph. Because it is using a select list, the DELETE command will prompt the user for confirmation before deleting the selected records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the archive program fails before asking whether a report is required, the &quot;Y&quot; in the data queue will not be read by this program and will still be in the queue when the </span><span style="font-weight: bold; color: #000000;">DELETE</span><span style="color: #000000;"> command is executed. It will therefore be used erroneously to answer the delete confirmation prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This sort of situation can be avoided by inserting a </span><span style="font-weight: bold; color: #000000;">CLEAR.DATA</span><span style="color: #000000;"> statement before the </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;">. In general, it is good practice to insert a </span><span style="font-weight: bold; color: #000000;">CLEAR.DATA</span><span style="color: #000000;"> after any command that uses </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> and could terminate without reading the queued data. This action is not automatic because the data queue is frequently used to pass data from one program to another.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="clear_input.htm">CLEAR.INPUT</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

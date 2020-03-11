@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_rem.htm"; }
+else { parent.quicksync('a7.5.218'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>REM()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REM()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">REM()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_release.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_remark.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REM()</span><span style="color: #000000;"> function returns the remainder when one value is divided by another.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REM(</span><span style="font-style: italic; color: #000000;">dividend</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">divisor</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">dividend</span></td><td><span style="color: #000000;">evaluates to a number or a numeric array.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">divisor</span></td><td><span style="color: #000000;">evaluates to a number or a numeric array.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REM()</span><span style="color: #000000;"> function returns the remainder of dividing </span><span style="font-style: italic; color: #000000;">dividend</span><span style="color: #000000;"> by </span><span style="font-style: italic; color: #000000;">divisor</span><span style="color: #000000;">. This is defined as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REM(x, y) = SIGN(x) * MOD(ABS(X), ABS(Y))</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where the SIGN() function returns 1 for x &gt; 0, -1 for x &lt; 0 and 0 for x = 0.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REM()</span><span style="color: #000000;"> function differs from the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_mod.htm">MOD()</a></span><span style="color: #000000;"> function when one of its arguments is negative. The following table shows the result of the </span><span style="font-weight: bold; color: #000000;">REM()</span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="font-weight: bold; color: #000000;">Dividend</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="font-weight: bold; color: #000000;">Divisor</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="font-weight: bold; color: #000000;">REM()</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">530</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">-530</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">-30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">530</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">-100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">-530</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">-100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">-30</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">-100</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">0</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">100</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">100</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="129px" style="width:129px;"><p><span style="color: #000000;">-100</span></p>
+</td>
+<td valign="top" width="137px" style="width:137px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="130px" style="width:130px;"><p><span style="color: #000000;">-100</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If either </span><span style="font-style: italic; color: #000000;">dividend</span><span style="color: #000000;"> or </span><span style="font-style: italic; color: #000000;">divisor</span><span style="color: #000000;"> is a numeric array (a dynamic array where all elements are numeric), the </span><span style="font-weight: bold; color: #000000;">REM()</span><span style="color: #000000;"> function operates on each element in turn and returns another numeric array. The structure of this array will be the same as that of the </span><span style="font-style: italic; color: #000000;">dividend</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">divisor</span><span style="color: #000000;"> arrays if they are identical. For arrays of differing structure, the structure of the result depends on whether the </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = REM(T, 30)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement finds the remainder of dividing T by 30 and assigns this to N.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_mod.htm">MOD()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

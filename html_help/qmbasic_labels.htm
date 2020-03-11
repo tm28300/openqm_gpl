@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbasic_labels.htm"; }
+else { parent.quicksync('a7.1.4'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMBasic - Labels</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Labels (QMBasic)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMBasic&nbsp; -&nbsp; Labels </span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbasic_commonblocks.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbasic_expressionsandoperators_.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any statement of a QMBasic program may be labelled. A label may take one of three formats; a name of the same format as a variable name followed by a colon, a sequence of digits and periods followed by a colon, or a sequence of digits and periods with no trailing colon.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following are all valid label names.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REDISPLAY:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">100</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">12.9.6:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The label must appear as the first item on the source line. Labels and variables may have the same name though this may lead to some confusion when maintaining a program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Statements that reference the label (e.g. </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gosub.htm">GOSUB</a></span><span style="color: #000000;">) may optionally include the colon after the label name. This is not recommended as it can make using an editor to search for a label in a program more difficult as the search will also find references to the label.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Numeric labels are provided for compatibility with other products. Use of numeric labels is discouraged as the &quot;names&quot; do not impart any information about the role of the label. For example, a statement such as</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">GOSUB 9600</span></p>
+<p><span style="color: #000000;">gives the reader no clue about the action performed by the subroutine at label 9600 whereas</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">GOSUB GET.CUSTOMER.ID</span></p>
+<p><span style="color: #000000;">suggests what the subroutine does.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

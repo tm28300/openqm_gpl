@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?logto.htm"; }
+else { parent.quicksync('a5.101'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOGTO</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOGTO" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOGTO</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="logout.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="loop.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOGTO</span><span style="color: #000000;"> command moves to an alternative account directory without leaving QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOGTO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">RESET</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is the name of the target account. This may be an account name as in the </span><span style="color: #000000;">ACCOUNTS</span><span style="color: #000000;"> register of the </span><span style="color: #000000;">QMSYS</span><span style="color: #000000;"> account or the pathname of the new account directory.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">RESET</span></td><td><span style="color: #000000;">causes the command processor to discard all active paragraphs, menus, etc.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Multiple accounts are useful where there are several distinct projects. They can also be used to separate development and production versions of an application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOGTO</span><span style="color: #000000;"> command closes the current VOC, moves to the account directory specified by </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> and opens the VOC of the new directory. If the </span><span style="font-weight: bold; color: #000000;">RESET</span><span style="color: #000000;"> keyword is present, any active programs, menus, etc at the current command processor level are discarded. This is particularly useful when using LOGTO in a menu.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the VOC of the current account contains an executable item named <a href="command_scripts.htm">ON.LOGTO</a>, usually a paragraph, this will be executed before moving to the new account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the VOC of the new account contains an executable item named </span><span style="color: #000000;"><a href="command_scripts.htm">LOGIN</a></span><span style="color: #000000;">, this will be executed on arrival in the new account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">LOGTO</span><span style="color: #000000;"> action is successful, the account name as reported by the </span><span style="font-weight: bold; color: #000000;"><a href="who.htm">WHO</a></span><span style="color: #000000;"> command or returned as the value of the </span><span style="color: #000000;"><a href="at_variables.htm#who">@WHO</a></span><span style="color: #000000;"> system variable is set to the new account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">LOGTO</span><span style="color: #000000;"> will fail if </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> cannot be found or is not a valid account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="quit.htm">QUIT</a></span><span style="color: #000000;"> command to leave QM will return to the original account directory before exiting.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

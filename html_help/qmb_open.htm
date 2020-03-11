@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_open.htm"; }
+else { parent.quicksync('a7.5.171'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>OPEN</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="OPEN" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">OPEN</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_on_goto.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_openpath.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> statement opens a directory file or dynamic file, associating it with a file variable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">dict.expr</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">filename.expr</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">READONLY</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">dict.expr</span></td><td><span style="color: #000000;">evaluates to DICT to open the dictionary portion of the file or to a null string to open the data portion. If omitted or any other value, the data portion is opened.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">filename.expr</span></td><td><span style="color: #000000;">evaluates to the VOC name of the file to be opened.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the name of the variable to hold the file reference for use in later operations on this file.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statements to be executed depending on the outcome of the </span><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> operation.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At least one of the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses must be present.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A file opened by the </span><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> statement may be referenced using the file variable in subsequent statements that operate on the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-weight: bold; color: #000000;">READONLY</span><span style="color: #000000;"> clause opens the file for read only access. Any attempt to write will fail.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the file is opened successfully, the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> clause is executed. If the open fails the </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause is executed and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function may be used to determine the cause of the failure.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is taken only in the case of serious errors such as damage to the file's internal control structures. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will contain an error number. If no </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is present, a fatal error results in an abort.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM allows more files to be open than the underlying operating system limit. This is achieved by automatically closing files at the operating system level if the&nbsp; limit is reached, retaining information to reopen them automatically when the next access to the file occurs. This process allows greater freedom of application design but has a performance penalty if a large number of files are used frequently.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For dynamic files, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inmat.htm">INMAT()</a></span><span style="color: #000000;"> function used immediately after the </span><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> returns the modulus of the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPEN &quot;STOCK.FILE&quot; TO STOCK ELSE ABORT &quot;Cannot open file&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement opens a file with VOC name STOCK.FILE. If the open fails, the program aborts with an error message.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_openpath.htm">OPENPATH</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_openseq.htm">OPENSEQ</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

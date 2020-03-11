@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_extensionprogramming.htm"; }
+else { parent.quicksync('a5.133.18'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title> SED - Extension Programming</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; Extension Programming</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed_dynamickeybindings.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed_extensionsvarconstfunc.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The extension programming feature allows users to add new functions to the editor. These may range from simple insertion or modification of text with a single keystroke to complex programs that manipulate the data to achieve tasks that are specific to your own editor usage.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Extensions may be stored in any QM file. Ideally, this should be a dynamic hashed file and SED uses &amp;SED.EXTENSIONS&amp; by default. The editor looks for and executes an extension named START.UP on loading the first data record. Extension names must be upper case and consist only of letters, digits, periods (.) and dollar signs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Extensions must be compiled before use. This is performed using SED</span><span style="color: #000000;">’</span><span style="color: #000000;">s </span><span style="font-weight: bold; color: #000000;">COMPILE</span><span style="color: #000000;"> command which recognises extension programs as distinct from QMBasic programs. The compiled version is stored in the same file as the source but with a suffix of -EXT added to the record name.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An extension is executed by the SED </span><span style="font-weight: bold; color: #000000;">run extension </span><span style="color: #000000;">function which is normally bound as Esc-E. Extensions may also be bound directly to user defined key sequences or made available via the </span><span style="font-weight: bold; color: #000000;">command</span><span style="color: #000000;"> function. Typically this would be performed by the optional START.UP extension.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">All those Brackets...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The extension programming language is based on the LISP language. This yields programs with very simple, though somewhat strange looking, structure. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Extension programs come in two types; </span><span style="font-weight: bold; color: #000000;">procedures</span><span style="color: #000000;"> perform some operation whereas </span><span style="font-weight: bold; color: #000000;">functions</span><span style="color: #000000;"> also return a value. The outermost structure of a procedure is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PROC</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"> &nbsp; ...</span><span style="font-style: italic; color: #000000;">operations</span><span style="color: #000000;">...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">and for a function it is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FUNC</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"> &nbsp; ...</span><span style="font-style: italic; color: #000000;">operations</span><span style="color: #000000;">...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where ...</span><span style="font-style: italic; color: #000000;">operations</span><span style="color: #000000;">... is a sequence of steps that makes up the program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A function returns a value using the </span><span style="font-weight: bold; color: #000000;">return</span><span style="color: #000000;"> operation at any point in its execution. There is an implicit return of a zero value at the end of the function text.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each of these operations is also a procedure or a function in that they perform some operation on the editing environment and/or they return information that can be used by other operations.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each complete operation and any data items on which it works are enclosed in a further layer of brackets. Since the language allows functions to be nested to a high degree, a typical program at first appears to contain a large number of brackets. By applying some thought to the layout of the program, the actual structure can be made very clear to the reader. The language has no built-in format rules except that no token (individual word, constant, variable name, etc.) can span lines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For example, a simple program to provide the equivalent of the STAMP command of ED could be written as:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PROC</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (goto.col 1)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (insert </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">*Last updated by </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> @who </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> (</span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> @logname </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">)</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> at </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> (oconv @time </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">MTS</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> on </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;"> (oconv @date </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">D4/</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;">))</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (newline 1)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">) </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The screen is not updated during execution of an extension program except by functions that are documented as doing so. This allows the extension program to perform complex data movements without the screen continually tracking the internal workings of the extension. The screen is updated when the extension terminates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For detailed information follow the links below:</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"><a href="sed_extensionsvarconstfunc.htm">Variables, constants and functions</a></span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"><a href="sed_extensionsstdvarfunc.htm">Standard variables and functions</a></span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"><a href="sed_extensionsargpassing.htm">Argument passing</a></span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"><a href="sed_extensionslocalprocs.htm">Local procedures and functions</a></span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"><a href="sed_extensionsexample.htm">An example of a complex extension</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

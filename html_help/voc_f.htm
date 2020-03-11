@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_f.htm"; }
+else { parent.quicksync('a3.5.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC F-type records - File definitions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="File definitions,VOC F-type records,F-pointers" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VOC F-Type Records&nbsp; -&nbsp; File Definitions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_d.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_k.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Every file referenced by an application is accessed via an F-type VOC record. This record maps the QM name of the file to the pathnames of the data and dictionary components.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">F&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2:</span></td><td><span style="color: #000000;">The pathname(s) of the data portion of the file. In a multi-file, the pathname of each subfile appears as a separate value in this field</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">3:</span></td><td><span style="color: #000000;">Dictionary pathname. This field is empty if the file has no dictionary.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">4:</span></td><td><span style="color: #000000;">Subfile names for a multifile. This field is empty for a simple file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">5:</span></td><td><span style="color: #000000;">File inclusion flags for </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="file_save.htm">FILE.SAVE</a></span><span style="color: #000000;">.</span></td></tr></table></div><p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">There are three possible values:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 90px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">D</span></td><td><span style="color: #000000;">Include only the dictionary of this file in the save</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 90px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">E</span></td><td><span style="color: #000000;">Exclude this file from the save</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 90px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">I</span></td><td><span style="color: #000000;">Include this file in the save</span></td></tr></table></div><p style="margin: 0px 0px 0px 59px;"><span style="color: #000000;">Leaving the field empty causes </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="font-family: 'NewCenturySchlbk'; color: #000000;"> </span><span style="color: #000000;">and</span><span style="font-family: 'NewCenturySchlbk'; color: #000000;"> </span><span style="font-weight: bold; color: #000000;"><a href="file_save.htm">FILE.SAVE</a></span><span style="color: #000000;"> to fall back on alternative file selection methods.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Either pathname field may be blank to indicate that the file portion does not exist.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Three special pathname prefixes are allowed:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">@QMSYS will be replaced by the QMSYS account directory pathname, ensuring that references to items in the QMSYS account will still function if a new release is installed at a different location.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">@TMP will be replaced by the pathname in the <a href="configparams.htm">TEMPDIR</a> configuration parameter.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">@HOME will be replaced by the value of the HOME environment variable. Windows users may need to create this variable before using this feature.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where two or more accounts share a file, the VOC files in each account could have F-type records mapping the QM name to the pathnames. This is not recommended. Instead, the account that owns the file should have an F-type record and all other accounts should have <a href="voc_q.htm">Q-type records</a> to access the file indirectly.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The pathname of either or data or dictionary portion of a file may be specified as</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">VFS:</span><span style="font-style: italic; color: #000000;">handler</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">detail</span></p>
+<p><span style="color: #000000;">to make use of the <a href="virtual_file_system.htm">Virtual File System</a>.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A summary of F-type VOC records may be displayed or printed using</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;"><a href="listf.htm">LISTF</a></span></td><td><span style="color: #000000;">Show all F-type entries</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;"><a href="listfl.htm">LISTFL</a></span></td><td><span style="color: #000000;">Show only local files (in the account directory)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;"><a href="listfr.htm">LISTFR</a></span></td><td><span style="color: #000000;">Show only remote files (not in the account directory)</span></td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

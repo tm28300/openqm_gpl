@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?merge_list.htm"; }
+else { parent.quicksync('a5.106'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>MERGE.LIST</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MERGE.LIST" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MERGE.LIST</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="med.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="message.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MERGE.LIST</span><span style="color: #000000;"> command creates a new active select list by merging two other lists according to one of three relational operators.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MERGE.LIST</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">list1 rel.op list2</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">tgt.list</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">COUNT.SUP</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">list1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">list2</span></td><td><span style="color: #000000;">identify the select lists to be merged. These must be select list numbers in the range 0 to 10. They may not reference the same list.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">rel.op</span></td><td><span style="color: #000000;">is the relational operator and is one of</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">INTERSECTION</span></td><td><span style="color: #000000;">Create a new list containing only those record keys that appear in both </span><span style="font-style: italic; color: #000000;">list1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">list2</span><span style="color: #000000;">. The keyword may be abbreviated to </span><span style="font-weight: bold; color: #000000;">INTERSECT</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 390px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">UNION</span></td><td><span style="color: #000000;">Create a new list containing all record keys from both </span><span style="font-style: italic; color: #000000;">list1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">list2</span><span style="color: #000000;">. Keys appearing in both lists appear only once in the resultant list.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 390px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-weight: bold; color: #000000;">DIFFERENCE</span></td><td><span style="color: #000000;">Create a new list containing all record keys from </span><span style="font-style: italic; color: #000000;">list1</span><span style="color: #000000;"> except those that are also in </span><span style="font-style: italic; color: #000000;">list2</span><span style="color: #000000;">. The keyword may be abbreviated to </span><span style="font-weight: bold; color: #000000;">DIFF</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">tgt.list</span></td><td><span style="color: #000000;">is the number of the select list (0 to 10) to receive the result. If omitted, select list zero is used. It is valid for </span><span style="font-style: italic; color: #000000;">tgt.list</span><span style="color: #000000;"> to reference one of the source lists.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">COUNT.SUP</span></td><td><span style="color: #000000;">indicates that display of the record count in the merged list is to be suppressed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MERGE.LIST</span><span style="color: #000000;"> command allows construction of one select list from two others. Use of </span><span style="font-weight: bold; color: #000000;">MERGE.LIST</span><span style="color: #000000;"> can be significantly faster than a full select of the file to create the new list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If either source list has already been partially processed before the </span><span style="font-weight: bold; color: #000000;">MERGE.LIST</span><span style="color: #000000;"> command is executed, only the remaining unprocessed items are used. The resultant list will replace any already active </span><span style="font-style: italic; color: #000000;">tgt.list</span><span style="color: #000000;">. The source lists are cleared after the new list has been set up. The ordering of </span><span style="font-style: italic; color: #000000;">tgt.list</span><span style="color: #000000;"> is undefined.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> is set to the number of items in the new list or a negative error code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">GET.LIST FRANCE.CUSTOMERS TO 1</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">27 records selected.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">GET.LIST GERMANY.CUSTOMERS TO 2</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">31 records selected.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">MERGE.LIST 1 UNION 2 TO 3</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">58 records selected.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example restores two saved select lists, one holding keys for customers in France, the other for customers in Germany and merges these to form select list 3 as a list of customers in either of these countries.</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="list_diff.htm">LIST.DIFF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_inter.htm">LIST.INTER</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_union.htm">LIST.UNION</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

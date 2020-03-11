@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?acorrelatives.htm"; }
+else { parent.quicksync('a4.8.2.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>A-Correlatives</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="A-Correlatives" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">A-Correlatives</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="correlatives.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="fcorrelatives.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An A-correlative is an algebraic expression that applies operators to fields, constants and other data to produce a result. It is similar in concept to an I-type expression but very limited and often difficult to maintain.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The expression is prefixed by A and an optional semicolon.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Data items</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">A field number. This field is extracted from the current record</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">N(</span><span style="font-style: italic; color: #000000;">name</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">A field name. This name is looked up in the dictionary when the correlative is compiled and run time code generated to extract the field from the current record.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">&quot;</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">&quot;</span></td><td><span style="color: #000000;">A constant. All constants, including numeric values, must be enclosed in single quotes, double quotes or backslashes.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="color: #000000;">Any of the above three data item types may be followed by </span><span style="font-weight: bold; color: #000000;">R</span><span style="color: #000000;"> to indicate that the </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function is to be applied to the data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;">The internal date. This is the actual date at the point when the function is executed, not a reference to the @DATE variable (which does not change during a command).</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">T</span></td><td><span style="color: #000000;">The internal time. This is the actual time at the point when the function is executed, not a reference to the @TIME variable (which does not change during a command).</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">@NB</span></td><td><span style="color: #000000;">The breakpoint level. </span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">@ND</span></td><td><span style="color: #000000;">The detail line counter. </span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">@NI</span></td><td><span style="color: #000000;">The item counter. </span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">@NS</span></td><td><span style="color: #000000;">The subvalue counter. </span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">@NV</span></td><td><span style="color: #000000;">The value counter. </span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Functions and Operators</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">+</span></td><td><span style="color: #000000;">Adds operands</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">-</span></td><td><span style="color: #000000;">Subtracts operands</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">*</span></td><td><span style="color: #000000;">Multiplies operands</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">/</span></td><td><span style="color: #000000;">Divides operands. Note that this is an integer division.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">=</span></td><td><span style="color: #000000;">Relational equality test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;"># </span><span style="color: #000000;">or </span><span style="font-weight: bold; color: #000000;">&lt;&gt;</span></td><td><span style="color: #000000;">Relational inequality test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">&gt;</span></td><td><span style="color: #000000;">Relational greater than test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">&lt;</span></td><td><span style="color: #000000;">Relational less than test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">&gt;=</span></td><td><span style="color: #000000;">Relational greater than or equal to test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">&lt;=</span></td><td><span style="color: #000000;">Relational less than or equal to test.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">p</span><span style="font-weight: bold; color: #000000;">[</span><span style="font-style: italic; color: #000000;">q</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">r</span><span style="font-weight: bold; color: #000000;">]</span></td><td><span style="color: #000000;">Returns a substring of </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> starting at character </span><span style="font-style: italic; color: #000000;">q</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">r</span><span style="color: #000000;"> characters long. </span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">R(</span><span style="font-style: italic; color: #000000;">p</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">q</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Returns the remainder from dividing </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> by </span><span style="font-style: italic; color: #000000;">q</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">S(</span><span style="font-style: italic; color: #000000;">p</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Returns the sum of all the values in multivalued item </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="font-weight: bold; color: #000000;">IF </span><span style="font-style: italic; color: #000000;">p</span><span style="font-weight: bold; color: #000000;"> THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;"> q</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;"> r</span></p>
+<p style="text-indent: -90px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Returns </span><span style="font-style: italic; color: #000000;">q</span><span style="color: #000000;"> if </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> is true, </span><span style="font-style: italic; color: #000000;">r</span><span style="color: #000000;"> if </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> is false.</span></p>
+<p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">(</span><span style="font-style: italic; color: #000000;">conv</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Applies the given conversion code to the expression value. Note that </span><span style="font-style: italic; color: #000000;">conv</span><span style="color: #000000;"> is not quoted.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">AND</span></td><td><span style="color: #000000;">Logical AND</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">OR</span></td><td><span style="color: #000000;">Logical OR.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;3*2</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Multiplies the content of field 3 by the content of field 2.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;(N(PRICE)+N(TAX))(MD2)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Adds the PRICE and TAX fields. The result is then converted using an MD2 conversion code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;N(PRICE)*&quot;1175&quot;/&quot;1000&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Adds 17.5% tax to the single valued PRICE field. Note the need to perform the calculation in two steps because correlatives use integer arithmetic.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;N(PRICE)*&quot;1175&quot;R/&quot;1000&quot;R</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Adds 17.5% tax to each value in the multivalued PRICE field. Note the use of the R qualifier on both constants in this expression.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;DESCRIPTION[&quot;1&quot;,&quot;20&quot;]</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Extracts the first 20 characters of the DESCRIPTION field.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">A;IF N(QTY)&lt;&quot;10&quot; THEN &quot;Re-order&quot; ELSE &quot;&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Returns &quot;Re-order&quot; if the QTY field is less than 10, otherwise returns a null string.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

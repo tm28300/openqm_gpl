@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_errmsg.htm"; }
+else { parent.quicksync('a7.5.81'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ERRMSG</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ERRMSG" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ERRMSG</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_equate.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_execute.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ERRMSG</span><span style="color: #000000;"> statement displays a Pick style message from the ERRMSG file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ERRMSG</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">msg.id</span><span style="color: #000000;"> {, </span><span style="font-style: italic; color: #000000;">arg</span><span style="color: #000000;">...}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">msg.id</span></td><td><span style="color: #000000;">evaluates to the id of a record in the ERRMSG file which holds the message to be displayed. If this id is numeric, it will be copied to <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a>.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">arg</span><span style="color: #000000;">...</span></td><td><span style="color: #000000;">is an optional comma separated list of arguments to be substituted into the message.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A standard Pick ERRMSG file is supplied with QM. Many of the messages in this file are irrelevant on QM.</span><span style="font-family: 'Arial'; color: #000000;"> </span><span style="color: #000000;">Users may modify this to add new messages or to change existing ones. QM only uses this file through </span><span style="font-weight: bold; color: #000000;">ERRMSG</span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_stop.htm">STOP</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_abort.htm">ABORT</a></span><span style="color: #000000;"> statements in user written programs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The ERRMSG file entry consists of one or more fields, each prefixed by an action code. The message is built up and displayed by processing each code in turn. The codes are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">A{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">Display the next argument left aligned in a field of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> characters. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, the argument is displayed without any additional spaces.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">B</span></td><td><span style="color: #000000;">Sound the terminal &quot;bell&quot;.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">D</span></td><td><span style="color: #000000;">Outputs the system date in the form </span><span style="font-style: italic; color: #000000;">dd mmm yyyy</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">E</span></td><td><span style="color: #000000;">Outputs the </span><span style="font-style: italic; color: #000000;">msg.id</span><span style="color: #000000;"> enclosed in square brackets.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">H</span><span style="font-style: italic; color: #000000;">text</span></td><td><span style="color: #000000;">Outputs the given </span><span style="font-style: italic; color: #000000;">text</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">L{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">Outputs </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> newlines. The value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> defaults to 1 if omitted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">R{</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">Display the next argument right aligned in a field of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> characters. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, the argument is displayed without any additional spaces.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">S</span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Displays </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> spaces.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">T</span></td><td><span style="color: #000000;">Outputs the system time in the form </span><span style="font-style: italic; color: #000000;">hh:mm:ss</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The component parts of the message are output with no insertion of newlines except as explicitly specified in the ERRMSG entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

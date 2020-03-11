@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbasic_limits.htm"; }
+else { parent.quicksync('a7.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMBasic Limits</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMBasic limits,Limits (QMBasic)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMBasic Limits</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbd_qmcall.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbasicbytype.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Number of local variables or elements in a matrix</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Dependant on system swap file size.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum file size</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Dynamic files may have up to 2147483647 groups (16384Gb with 8kb group size) unless a lower limit is imposed by the underlying operating system.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum string size</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">There is effectively no limit imposed by QMBasic. The actual limit will be determined by the total dynamic memory size which must be mapped to the swap file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Number of open files</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The underlying operating system may impose a limit on the number of files which may be open simultaneously. QMBasic provides an automated file sharing scheme whereby files may be closed at the operating system level if the limit is reached. QMBasic will save details of the file which has been closed and will reopen it automatically when required.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">This scheme provides access to a virtually unlimited number of files but can have severe performance effects when many files are used in frequent rotation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum precision</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">14 decimal places</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum variable name or statement label length</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">No limit</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum characters in a string constant</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">No limit though long string constants are broken into fragments of no more than 255 characters by the compiler and reassembled at run time.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum arguments to a subroutine</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">255</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum labels in an ON GOSUB or ON GOTO</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">65535</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum characters in a catalogue call name</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">63 (32 for trigger functions)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Maximum characters in a record id</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Default 63 but can be increased up to 255 using the </span><span style="font-weight: bold; color: #000000;"><a href="configparams.htm#maxidlen">MAXIDLEN</a></span><span style="color: #000000;"> configuration parameter.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

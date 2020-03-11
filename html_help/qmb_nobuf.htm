@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_nobuf.htm"; }
+else { parent.quicksync('a7.5.162'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>NOBUF</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="NOBUF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">NOBUF</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_nes.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_not.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">NOBUF</span><span style="color: #000000;"> statement turns off buffering for a record opened using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">NOBUF</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.var</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the record by a previous </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;"> statement.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statement(s) to be executed depending on the outcome of the </span><span style="font-weight: bold; color: #000000;">NOBUF</span><span style="color: #000000;"> statement.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At least one of the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses must be present.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Normally, QM buffers data for records opened using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;">. The </span><span style="font-weight: bold; color: #000000;">NOBUF</span><span style="color: #000000;"> statement turns off this buffering such that </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readblk.htm">READBLK</a></span><span style="color: #000000;"> will read the exact number of bytes specified and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span><span style="color: #000000;"> write immediately without intermediate buffering. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;"> statement continues to use buffering as this is necessary for locating the end of a text line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Using unbuffered processing will result in lower performance than normal operation but may be useful, for example, when the item opened using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;"> is actually a device rather than a file system data record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_closeseq.htm">CLOSESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readblk.htm">READBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readcsv.htm">READCSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_seek.htm">SEEK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_weofseq.htm">WEOFSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writecsv.htm">WRITECSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

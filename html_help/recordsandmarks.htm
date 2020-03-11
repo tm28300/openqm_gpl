@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?recordsandmarks.htm"; }
+else { parent.quicksync('a4.6'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Database Records and Mark Characters</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Dynamic arrays,Mark characters,Records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Database Records and Mark Characters</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="virtual_file_system.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="creatingandmodifyingdata.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A database record may have any number of fields (table columns). The entire record and the constituent fields are of variable length, there being no restriction applied by</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">QM. A record may exist in the database with no data or with many megabytes of data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The record stored on disk or manipulated in memory may be divided into fields by </span><span style="font-weight: bold; color: #000000;">field mark</span><span style="color: #000000;"> characters. A field may be divided into values by use of </span><span style="font-weight: bold; color: #000000;">value mark</span><span style="color: #000000;"> characters and values may be further divided by use of </span><span style="font-weight: bold; color: #000000;">subvalue mark</span><span style="color: #000000;"> characters.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Two additional mark characters are defined. The </span><span style="font-weight: bold; color: #000000;">text mark</span><span style="color: #000000;"> is typically used to mark points in text data where newlines should be inserted. This mark character is often inserted by programs manipulating data in memory rather than being stored in the database. The </span><span style="font-weight: bold; color: #000000;">item mark</span><span style="color: #000000;"> is defined mainly for compatibility with other database systems. Its </span><span style="color: #000000;">only reserved use within QM is to separate items in the <a href="data.htm">DATA</a> queue.</span></p>
+<p><span style="font-weight: bold; color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="color: #000000;">The internal representation of the mark characters uses the last five characters of the ASCII character set:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Item mark</span></td><td><span style="color: #000000;">char(255)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Field mark</span></td><td><span style="color: #000000;">char(254)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Value mark</span></td><td><span style="color: #000000;">char(253)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Subvalue mark</span></td><td><span style="color: #000000;">char(252)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Text mark</span></td><td><span style="color: #000000;">char(251)</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The</span><span style="color: #000000;"> memory representation of a record containing mark characters for use in </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs is known as a </span><span style="font-weight: bold; color: #000000;">dynamic array</span><span style="color: #000000;"> and there are many specialised program operations for working on this data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Fields, values within a field and subvalues within a value are numbered from one upwards. By convention the record key is sometimes referred to as field zero though it is not part of the dynamic array and references to field zero are only recognised by QM in certain contexts.</span></p>
+<p><span style="color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="color: #000000;">Database records are often entered, modified or retrieved by the </span><span style="font-weight: bold; color: #000000;"><a href="ed.htm">ED</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="sed.htm">SED</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="modify.htm">MODIFY</a></span><span style="color: #000000;"> commands. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In directory files, the internal field mark character is replaced by the ASCII newline character when a record is written to disk so that fields appear as lines if the record is viewed, edited or printed from outside QM. Conversely, ASCII newlines are converted to field marks on reading a record. Mechanisms are provided in QMBasic (see the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_mark_mapping.htm">MARK.MAPPING</a></span><span style="color: #000000;"> statement) to turn off this translation when handling binary data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

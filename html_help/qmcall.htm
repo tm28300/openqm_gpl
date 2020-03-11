@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmcall.htm"; }
+else { parent.quicksync('a8.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMCall</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMCall" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMCall</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmclientsecurity.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmchange.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMCall</span><span style="color: #000000;"> function calls a catalogued subroutine on the server.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="61"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMCall ByVal </span><span style="font-style: italic; color: #000000;">SubrName</span><span style="font-weight: bold; color: #000000;"> as String, ByVal </span><span style="font-style: italic; color: #000000;">ArgCount</span><span style="font-weight: bold; color: #000000;"> as Integer, Optional ByRef </span><span style="font-style: italic; color: #000000;">Arg1</span><span style="font-weight: bold; color: #000000;"> as String, ...</span></td></tr></table></div><p style="text-indent: -61px; margin: 0px 0px 0px 91px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="61"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">QMCall(char * </span><span style="font-style: italic; color: #000000;">SubrName</span><span style="font-weight: bold; color: #000000;">, short int </span><span style="font-style: italic; color: #000000;">ArgCount</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">ArgList</span><span style="font-weight: bold; color: #000000;">...)</span></td></tr></table></div><p style="text-indent: -61px; margin: 0px 0px 0px 91px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="61"><span style="color: #000000;">Obj</span></td><td><span style="font-style: italic; color: #000000;">Session</span><span style="font-weight: bold; color: #000000;">-&gt;Call(</span><span style="font-style: italic; color: #000000;">SubrName</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">ArgList...</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -91px; margin: 0px 0px 0px 91px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="font-style: italic; color: #000000;">SubrName</span></td><td><span style="color: #000000;">is the name of the subroutine to be called.</span></td></tr></table></div><p style="text-indent: -119px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="font-style: italic; color: #000000;">ArgCount</span></td><td><span style="color: #000000;">is the number of arguments following (not present in the QMBasic class module API).</span></td></tr></table></div><p style="text-indent: -119px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="119"><span style="font-style: italic; color: #000000;">ArgList</span></td><td><span style="color: #000000;">is a list of arguments to be passed to the subroutine.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMCall</span><span style="color: #000000;"> function calls the named catalogued subroutine on the server system. This subroutine may take up to 20 arguments. QMClient</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">does not provide a method to call subroutines with a greater number of arguments.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In the Visial Basic as C APIs, there may be at most 20 variables named as arguments and these must be declared as strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In the C API, the size of any argument variable that may be overwritten by the subroutine must be large enough to receive the updated value. Failure to observe this rule will result in memory corruption.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the subroutine modifies the values of any of its arguments, this will be reflected in the variables specified in </span><span style="font-style: italic; color: #000000;">ArgList</span><span style="color: #000000;">. It is a good idea to ensure that arguments that are only used for values returned from the subroutine are set to empty strings before the call to minimise data unnecessarily sent across the network.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The called subroutine may make use of any of the standard QMBasic programming statements and functions, however, it may not perform terminal input or output as there is no terminal associated with a server process.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

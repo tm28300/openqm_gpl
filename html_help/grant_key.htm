@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?grant_key.htm"; }
+else { parent.quicksync('a5.68'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>GRANT.KEY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="GRANT.KEY" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">GRANT.KEY</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="go.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="help.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">GRANT</span><span style="font-weight: bold; color: #000000;">.KEY</span><span style="color: #000000;"> command grants access to a specific data encryption key. This command can only be executed by users with administrator rights in the QMSYS account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">GRANT.KEY</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">keyname</span><span style="color: #000000;">  {</span><span style="font-weight: bold; color: #000000;">GROUP</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> ...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">keyname</span></td><td><span style="color: #000000;">is the name of the encryption key. This is case insensitive</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name ...</span></td><td><span style="color: #000000;">is a list if usernames for users to be granted access. If prefixed by the </span><span style="font-weight: bold; color: #000000;">GROUP</span><span style="color: #000000;"> keyword, this is a list of user groups. On Windows systems, user and group names are stored as entered but treated as case insensitive internally. On other platforms, user and group names are case sensitive.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">GRANT</span><span style="font-weight: bold; color: #000000;">.KEY</span><span style="color: #000000;"> command grants access to an encryption key to one or more users or user groups. The user will be asked to enter the master key unless it has already been entered during this session.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">No error occurs if the user or group specified already has access to the key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">GRANT.KEY CARDNO jsmith bjones</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above command grants access to the encryption key named CARDNO for users jsmith and bjones.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="color: #000000;"><a href="encryption.htm">Data encryption</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_key.htm">CREATE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_key.htm">DELETE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="encrypt_file.htm">ENCRYPT.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_keys.htm">LIST.KEYS</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="reset_master_key.htm">RESET.MASTER.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="revoke_key.htm">REVOKE.KEY</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="set_encryption_key_name.htm">SET.ENCRYPTION.KEY.NAME</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

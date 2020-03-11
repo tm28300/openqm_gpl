@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?set_queue.htm"; }
+else { parent.quicksync('a5.141'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SET.QUEUE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SET.QUEUE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SET.QUEUE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="set_file.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="set_trigger.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SET.QUEUE</span><span style="color: #000000;"> command creates a relationship between a Pick style form queue number and the corresponding </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> print unit options.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SET.QUEUE </span><span style="font-style: italic; color: #000000;">queue</span><span style="color: #000000;"> {, </span><span style="font-style: italic; color: #000000;">width</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">depth</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">top.margin</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">bottom.margin</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;"> }}</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SET.QUEUE DISPLAY</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">unit</span><span style="color: #000000;">}}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">queue</span></td><td><span style="color: #000000;">is the form queue number in the range 0 to 999.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">width</span></td><td><span style="color: #000000;">is the page width in characters, excluding any left margin.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">depth</span></td><td><span style="color: #000000;">is the total page length in lines, including the top and bottom margins. A value of zero implies no pagination of the output data.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">top.margin</span></td><td><span style="color: #000000;">is the number of lines to be left blank at the top of the page.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">bottom.margin</span></td><td><span style="color: #000000;">is the number of lines to be left blank at the bottom of the page.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">mode</span></td><td><span style="color: #000000;">is the print unit mode.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">qualify the output destination. There should be a comma between each option.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If only </span><span style="font-style: italic; color: #000000;">queue</span><span style="font-style: italic; color: #000000;"> </span><span style="color: #000000;">is given, the current settings of the form queue are reported.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SET.QUEUE</span><span style="color: #000000;"> command creates or modifies an entry in the $FORMS file to relate a Pick style form queue number to the corresponding </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR </a></span><span style="color: #000000;">options. This form queue number can then be used in the </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span><span style="color: #000000;"> command. See </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> for details of the command options.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SET.QUEUE DISPLAY</span><span style="color: #000000;"> command displays a report of the settings of all defined form queues. The optional </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> keyword directs this report to a printer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SET.QUEUE 0,80,66,3,3,1,AT laser</span></p>
+<p><span style="color: #000000;">Directs form queue 0 output to a printer named &quot;laser&quot; with a page shape of 80 columns by 66 lines and a 3 line top and bottom margin.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SET.QUEUE 4,80,66,0,0,3,AS SALES_REPORT,BRIEF</span></p>
+<p><span style="color: #000000;">Directs form queue 4 output to a record named &quot;SALES_REPORT&quot; in the $HOLD file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

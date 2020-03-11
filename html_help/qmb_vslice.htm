@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_vslice.htm"; }
+else { parent.quicksync('a7.5.286'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VSLICE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="VSLICE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VSLICE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_upcase.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="void.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">VSLICE()</span><span style="color: #000000;"> function returns a string formed by extracting a given value position from a dynamic array.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">VSLICE(</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">value</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the string from which the value is to be extracted.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">evaluates to the value position to be extracted.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">VSLICE()</span><span style="color: #000000;"> function processes </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> to build a new dynamic array containing only the specified </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> position from each field. Subvalues are returned as part of each value in the result string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> is less than one, the </span><span style="font-weight: bold; color: #000000;">VSLICE()</span><span style="color: #000000;"> function returns the source </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">. If </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> is greater than the number of values in all fields of </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">, a null string is returned.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If S holds the string &quot;AA</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">BB</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">CC</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">DD</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">EE</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">FF&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = VSLICE(S, 2)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would set X to &quot;BB</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">EE&quot;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?usersecurity.htm"; }
+else { parent.quicksync('a3.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>User Management and System Security</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="User management,System security" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">User Management and System Security</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="printing.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmfiles.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This section applies to Windows users only.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because QM runs on all multi-tasking Windows environments, some of which do not feature particularly good security systems, QM supports two methods of user authentication.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows 98/ME, QM supplies its own user name and password checking for network users. This can be disabled if required so that no user name or password is requested on connecting to the system.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On later versions of Windows, QM uses the Windows security system. This cannot be disabled and a valid user name and password must be supplied for all network connections. Many of the user name management commands described here are still relevant as they handle the QM aspects of user control.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">User name management is handled by four commands, available from all accounts but restricted to users with administrator rights. QMConsole users and users logging in with user names that are defined as administrators at the operating system level always have administrator rights. Other users can be registered as QM administrators using the commands described below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The user name management&nbsp; commands are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span></td><td><span style="color: #000000;">User name administration tool</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="create_user.htm">CREATE.USER</a></span></td><td><span style="color: #000000;">Creates a new user name</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="delete_user.htm">DELETE.USER</a></span></td><td><span style="color: #000000;">Deletes a user name</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="list_users.htm">LIST.USERS</a></span></td><td><span style="color: #000000;">Lists all defined user names</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In addition, Windows 98/ME users can change their passwords using the </span><span style="font-weight: bold; color: #000000;"><a href="password.htm">PASSWORD</a></span><span style="color: #000000;"> command. This command can be used by users with administrator rights to change other users' passwords.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By default on Windows 98/ME, all network connections to a QM system require a username and password to be supplied. This security system can be disabled by the System Administrator if a simpler but less secure system is desired. This is achieved using the </span><span style="font-weight: bold; color: #000000;"><a href="security.htm">SECURITY</a></span><span style="color: #000000;"> command in the QMSYS account:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="security.htm">SECURITY ON</a></span></td><td><span style="color: #000000;">to enable security checks</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="security.htm">SECURITY OFF</a></span></td><td><span style="color: #000000;">to disable security checks</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;"><a href="security.htm">SECURITY</a></span></td><td><span style="color: #000000;">to display the current setting</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command can only be executed from a QMConsole session. If security checking is enabled, the </span><span style="font-weight: bold; color: #000000;"><a href="security.htm">SECURITY</a></span><span style="color: #000000;"> command can only be used by a user with administrator rights. If disabled, all QMConsole users have access to this command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

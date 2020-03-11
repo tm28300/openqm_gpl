@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?dynamicfiles.htm"; }
+else { parent.quicksync('a4.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Dynamic Files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Dynamic files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Dynamic Files</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="directoryfiles.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmnet.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">dynamic file</span><span style="color: #000000;"> is represented by an operating system directory, the records within it stored in a fast access file format in the directory. Users should not place any other files in the directory or make any modifications to the files placed there by QM. Dynamic files are so called because of the dynamic reconfiguration of the file which takes place automatically to compensate for changes in the file's size and record distribution.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Record keys may have between 1 and 63 characters but these may not include mark characters or the ASCII null character. This length limit can be increased to a maximum of 255 by changing the value of the <a href="configparams.htm#maxidlen">MAXIDLEN</a> configuration parameter but this can lead to compatibility problems when transferring data to other systems and significantly increases the size of QM's internal locking tables.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A dynamic file has two parts; a </span><span style="font-weight: bold; color: #000000;">primary subfile</span><span style="color: #000000;"> which is examined first when looking for data and an </span><span style="font-weight: bold; color: #000000;">overflow subfile</span><span style="color: #000000;"> which contains data which does not fit into its correct location in the primary subfile. Users do not need to understand the mechanisms that are involved in accessing dynamic files though the following information will help in determining settings for the parameters which control file configuration and hence performance. In most cases these can be left at their default values.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Data within a dynamic file is stored in record </span><span style="font-weight: bold; color: #000000;">groups</span><span style="color: #000000;">. The number of groups in the files is known as the </span><span style="font-weight: bold; color: #000000;">modulus</span><span style="color: #000000;">. The group in which a record is located is determined mathematically by using the </span><span style="font-weight: bold; color: #000000;">hashing algorithm</span><span style="color: #000000;"> associated with the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A group consists of a fixed sized area in the primary subfile and, if the data assigned to the group does not all fit into this area, as many additional overflow subfile blocks as are needed will be created. A dynamic file performs best when the data is distributed evenly across each group and no group extends into the overflow area. In reality, this is almost impossible to achieve whilst still keeping each group reasonably full. A well tuned dynamic file typically has less than 20 percent of its data in overflow.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">group size</span><span style="color: #000000;"> parameter determines the size of the primary subfile groups as a multiple of 1024 bytes. This parameter may have a value in the range 1 to 8 and defaults to 1 though this default can be changed using the <a href="configparams.htm#grpsize">GRPSIZE</a> configuration parameter. It should be set to a multiple of the disk block size if this value is known. As a general rule, use values of 1, 2, 4 or 8.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where a file contains very large records, performance can be improved by placing these in disk blocks of their own with just the record key and a reference to their location stored in the primary subfile. Such records are known as </span><span style="font-weight: bold; color: #000000;">large records</span><span style="color: #000000;"> and the size above which data is handled in this way is configurable. The default value of 80% of the group size is good for most purposes. Because a large record has only its key stored in the primary subfile, a </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> operation will be faster if the group is mainly large records but reading the record's data will require at least two disk accesses. Also, since large records are held in their own disk block(s) rather than sharing with other records, surplus space at the end of the final block is wasted resulting in higher disk space usage. If the file will be used frequently in </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> operations where selection is based only on the record id, a lower large record size may be beneficial. If data records are frequently read from the file, a higher large record size may help. In general it is best only to change the large record size if performance problems are seen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The number of groups in a dynamic file changes with time. QM uses two parameters to determine when the number of groups should change. At any time, the file's </span><span style="font-weight: bold; color: #000000;">load value</span><span style="color: #000000;"> is the total size of the data records (excluding large records) as a percentage of the primary subfile size. This value changes as records are added, modified or deleted. It may have a value in excess of 100%, indicating that there is very high usage of overflow space. The </span><span style="font-weight: bold; color: #000000;">split load</span><span style="color: #000000;"> value (default 80%) determines the load percentage at which an additional group will be added to the file by splitting the records in one group into two. The </span><span style="font-weight: bold; color: #000000;">merge load</span><span style="color: #000000;"> value (default 50%) determines the point at which two groups are merged back into one. A split may result in the load falling below the merge load or, conversely, a merge may result in a new load value above the split load. In neither case will the file be immediately reconfigured back again.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The split and merge loads</span><span style="color: #000000;"> determine the way in which the file's modulus and hence actual load vary. A low load results in reduced overflow at the expense of increased disk space. Conversely, a high load increases overflow but reduces disk usage. High overflow in turn results in poor performance as more disk blocks must be read to find a record. The split load value determines the load at which a group will be split into two, the merge load determines the load at which groups will be merged. The difference between the two values needs to be reasonably large to avoid continual splitting and merging of groups.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">minimum modulus</span><span style="color: #000000;"> value determines the size below which the file will not merge groups. The default setting of this parameter is one, resulting in full dynamic reconfiguration. If the file is subject to frequent addition or deletion of large numbers of records so that its modulus varies widely, it may be worth setting the minimum modulus to a typical average size or higher, however, a file with a higher modulus than is necessary is relatively slow in </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> operations that must read the entire file. The </span><span style="color: #000000;">minimum modulus</span><span style="color: #000000;"> parameter can also be used to pre-allocate primary subfile disk space when creating a new file, minimising fragmentation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Record ids in dynamic files are normally case sensitive. Case insensitive ids can be selected when the file is created or a file can be converted at a later date using the </span><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The total size of a dynamic file is limited to 2Gb for file versions 0 and 1, and 2147483647 groups (up to 16384Gb) for version 2 upwards.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Disabling File Resizing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although dynamic files are very reliable, the split/merge mechanism that maintains optimum file performance introduces the possibility of file corruption in the event of a power failure or other situation that causes outstanding write operations not to be completed. QM offers a mode of operation that forms a hybrid between the dynamic file system and the static files found in many other database products.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The NO.RESIZE option of the </span><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a></span><span style="color: #000000;"> command can be used to disable splits and merges, locking the file at its configuration when the command is issued. As new data is added, the file will extend into overflow, reducing performance. Conversely, if large volumes of data are deleted, the groups will become less tightly packed, again resulting in reduced performance. Files can be created with this mode set by use of the NO.RESIZE option to the </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file can be reconfigured using the IMMEDIATE mode of the </span><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a></span><span style="color: #000000;"> command. This performs the outstanding splits or merges, bringing the file back to the configuration that it would have had if resizing had not been disabled. For typical file update patterns and reasonably frequent use, this should be considerably faster than the equivalent resizing of a static file system.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">One scenario for use of this mechanism would be to operate the file(s) with resizing disabled during normal day time activity, perform backups at the start of an overnight downtime period and then use </span><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a></span><span style="color: #000000;"> to reconfigure the files ready for the next day. In the unlikely event of a system failure during the reconfiguration process, the backup provides an up to date copy of the data. This resizing operation is fully interruptable and can be performed while the file is in use.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

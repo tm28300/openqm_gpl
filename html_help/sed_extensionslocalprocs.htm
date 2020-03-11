@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_extensionslocalprocs.htm"; }
+else { parent.quicksync('a5.133.18.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SED Extensions - Local procedures and functions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; Local Procedures and Functions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed_extensionsexample.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sel_restore.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A single extension source record may contain local procedures and functions that are only accessible to the other components of that extension. These must follow the main procedure or function are take the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LPROC </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">name</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ARGS </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">arg1</span><span style="font-family: 'Courier New'; color: #000000;">, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">arg2</span><span style="font-family: 'Courier New'; color: #000000;">,</span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> arg3</span><span style="font-family: 'Courier New'; color: #000000;">...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">...</span><span style="font-style: italic; color: #000000;">operations</span><span style="color: #000000;">...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">or</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LFUNC name</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ARGS arg1, arg2, arg3...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">...</span><span style="font-style: italic; color: #000000;">operations</span><span style="color: #000000;">...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is no concept of local variable scope. Variable names used within local PROCs and FUNCs refer to the same set of variables as in the main PROC or FUNC. In particular, note that the argument variables simply provide an easy way to transfer information into the local PROC or FUNC. The two alternatives below are exact equivalents.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PROC</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; ...</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (MYPROC 12 A)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; ...</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LPROC MYPROC</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">ARGS X, Y</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; ...</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PROC</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp; ...</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (SET X 12)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (SET Y A)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> (MYPROC)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp; ...</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">LPROC MYPROC</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">(</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; </span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">)...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although local procedures may recurse (that is call themselves) it is likely that the lack of scoped variables makes this of limited use.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

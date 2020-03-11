@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?configure_file.htm"; }
+else { parent.quicksync('a5.30'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CONFIGURE.FILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CONFIGURE.FILE,MINIMUM.MODULUS,PATHNAME,GROUP.SIZE,LARGE.RECORD,SPLIT.LOAD,MERGE.LOAD,VERSION" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CONFIGURE.FILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="config.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="copy.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CONFIGURE.FILE</span><span style="color: #000000;"> command changes the configuration of a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CONFIGURE.FILE</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name&nbsp; parameters</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the file to be configured.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">parameters</span></td><td><span style="color: #000000;">are the new settings of the file configuration parameters. The following parameters may be specified:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">DYNAMIC</span></td><td><span style="color: #000000;">Converts file to dynamic hashed type. Ignored if file is already dynamic.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">DIRECTORY</span></td><td><span style="color: #000000;">Converts file to directory type. Ignored if file is already a directory.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">GROUP.SIZE </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">sets the group size in units of 1024 bytes. Values in the range 1 to 8 are permitted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">MINIMUM.MODULUS</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">sets the minimum modulus for the file. Any positive non-zero value may be used.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">LARGE.RECORD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">bytes</span></td><td><span style="color: #000000;">sets the large record size in bytes.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">SPLIT.LOAD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">pct</span></td><td><span style="color: #000000;">sets the split load factor for the file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">MERGE.LOAD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">pct</span></td><td><span style="color: #000000;">sets the merge load factor for the file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">DEFAULT</span></td><td><span style="color: #000000;">resets all parameters to their default values.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">NO.CASE</span></td><td><span style="color: #000000;">converts the file to use case insensitive record ids.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">CASE</span></td><td><span style="color: #000000;">converts the file to use case sensitive record ids.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">NO.RESIZE</span></td><td><span style="color: #000000;">disables file resizing.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">RESIZE</span></td><td><span style="color: #000000;">enables file resizing.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 182px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">IMMEDIATE</span></td><td><span style="color: #000000;">causes an immediate file resize, if required.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Parameters which are not specified retain their existing values.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CONFIGURE.FILE</span><span style="color: #000000;"> command adjusts the settings of one or more file parameters. Changes to the file type or group size result in immediate restructuring of the file and require exclusive access. Changes only affecting other <a href="dynamicfiles.htm">dynamic file parameters</a> will occur steadily as the file is updated unless the IMMEDIATE option is used. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that converting a file from case sensitive ids to case insensitive ids will result in loss of data if the file contains records that contain two or more record using keys with alternative casing of the same text.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The NO.RESIZE option disables the normal automatic split/merge operations that occur in dynamic files. The IMMEDIATE option can be used later to force the deferred splits/merges to be applied. See the description of <a href="dynamicfiles.htm">dynamic files</a> for more details on the use of this feature.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The resizing operations of the IMMEDIATE option are fully interruptable and can be performed while the file is in use.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CONFIGURE STOCK MINIMUM.MODULUS 200 SPLIT.LOAD 75</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command changes the minimum modulus and split load percentage of the STOCK file. The actual change will take effect as the file is updated by future access.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CONFIGURE STOCK DIRECTORY</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command changes the file to be a directory file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

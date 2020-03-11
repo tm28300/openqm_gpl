@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?reformat.htm"; }
+else { parent.quicksync('a6.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>REFORMAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REFORMAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">REFORMAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_label.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="count.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REFORMAT</span><span style="color: #000000;"> verb constructs a new file from data in the source file. It is of use, for example, when constructing intermediate files in complex reporting processes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REFORMAT</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">new.file.name</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">REFORMAT</span><span style="color: #000000;"> behaves like </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> except that the data identified by the display clause is used to populate a new file instead of being displayed or printed. The first item in the data is used as the record id for the item in the new file. The remaining items form the fields within the record. </span><span style="font-weight: bold; color: #000000;">REFORMAT</span><span style="color: #000000;"> does not automatically prefix the display clause with @ID.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> clause can be used to name the target file on the command line. If this clause is not present, a prompt is displayed for the file name. The file must already exist.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REFORMAT CUSTOMERS ZIP.CODE CUST.NO NAME TO CUST.BY.ZIP</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command constructs a new file, CUST.BY.ZIP, keyed by zip code and containing two data fields, the customer number and name. Note that if two or more customers share the same zip code, the record will be overwritten by the second and subsequent items.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

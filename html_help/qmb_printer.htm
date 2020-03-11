@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_printer.htm"; }
+else { parent.quicksync('a7.5.188'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PRINTER</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PRINTER ON,PRINTER OFF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PRINTER ON/OFF</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_printer_name.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_printer_reset.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER ON</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">OFF</span><span style="color: #000000;"> statements determine whether output from </span><span style="font-weight: bold; color: #000000;">PRINT</span><span style="color: #000000;"> statements to the default print unit (unit 0) is directed to the display or to the printer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRINTER ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRINTER OFF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER ON</span><span style="color: #000000;"> statement causes subsequent output to print unit zero to be directed to the printer. A later </span><span style="font-weight: bold; color: #000000;">PRINTER OFF</span><span style="color: #000000;"> statement resumes output to the display.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function returns the previous state of the </span><span style="font-weight: bold; color: #000000;">PRINTER</span><span style="color: #000000;"> setting. A value of zero indicates that the printer was on. A value of one indicates that it was off.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">By using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_print.htm">PRINT</a></span><span style="color: #000000;"> statements instead of </span><span style="font-weight: bold; color: #000000;"><a href="qmb_display.htm">DISPLAY</a></span><span style="color: #000000;"> in programs it is possible to select whether the output is directed to the display or to a printer. The </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> option to the </span><span style="font-weight: bold; color: #000000;"><a href="run.htm">RUN</a></span><span style="color: #000000;"> command is equivalent to a </span><span style="font-weight: bold; color: #000000;">PRINTER ON</span><span style="color: #000000;"> at the start of the program followed by a </span><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> on return to the command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 20px 0px 0px 0px;"><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PRINTER ON</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PRINT &quot;This is sent to the printer&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PRINTER OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PRINT &quot;This is sent to the display&quot;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmlocate.htm"; }
+else { parent.quicksync('a8.23'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMLocate()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMLocate()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMLocate()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmins.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmlogto.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMLocate()</span><span style="color: #000000;"> function searches a dynamic array for a field, value or subvalue matching a given string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMLocate(ByVal </span><span style="font-style: italic; color: #000000;">Item</span><span style="font-weight: bold; color: #000000;"> as String, ByVal </span><span style="font-style: italic; color: #000000;">DynArray</span><span style="font-weight: bold; color: #000000;"> as String, ByVal </span><span style="font-style: italic; color: #000000;">Fno</span><span style="font-weight: bold; color: #000000;"> as Integer, ByVal </span><span style="font-style: italic; color: #000000;">Vno</span><span style="font-weight: bold; color: #000000;"> as Integer, ByVal </span><span style="font-style: italic; color: #000000;">Svno</span><span style="font-weight: bold; color: #000000;"> as Integer, ByRef </span><span style="font-style: italic; color: #000000;">Pos</span><span style="font-weight: bold; color: #000000;"> as Integer, ByVal </span><span style="font-style: italic; color: #000000;">Order</span><span style="font-weight: bold; color: #000000;"> as String) as Boolean</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">int QMLocate(char * </span><span style="font-style: italic; color: #000000;">Item</span><span style="font-weight: bold; color: #000000;">, char * </span><span style="font-style: italic; color: #000000;">DynArray</span><span style="font-weight: bold; color: #000000;">, int </span><span style="font-style: italic; color: #000000;">Fno</span><span style="font-weight: bold; color: #000000;">, int </span><span style="font-style: italic; color: #000000;">Vno</span><span style="font-weight: bold; color: #000000;">, int </span><span style="font-style: italic; color: #000000;">Svno</span><span style="font-weight: bold; color: #000000;">, int * </span><span style="font-style: italic; color: #000000;">Pos</span><span style="font-weight: bold; color: #000000;">, char * </span><span style="font-style: italic; color: #000000;">Order</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Item</span></td><td><span style="color: #000000;">is the item to find.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">DynArray</span></td><td><span style="color: #000000;">is the dynamic array to be processed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Fno</span></td><td><span style="color: #000000;">is the number of the field at which the search is to begin. If less than 1, 1 is assumed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Vno</span></td><td><span style="color: #000000;">is the number of the value at which the search is to begin. If less than 1, the function searches for a field containing </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Svno</span></td><td><span style="color: #000000;">is the number of the subvalue at which the search is to begin. If less than 1, the function searches for a value containing </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Pos</span></td><td><span style="color: #000000;">is an integer variable to receive the position information.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Order</span></td><td><span style="color: #000000;">identifies the sort method to the applied. This may be:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">AL</span></td><td><span style="color: #000000;">Ascending, left aligned</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">AR</span></td><td><span style="color: #000000;">Ascending, right aligned</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">DL</span></td><td><span style="color: #000000;">Descending, left aligned</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">DR </span></td><td><span style="color: #000000;">Descending, right aligned</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">If omitted, no sort order is applied.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMLocate()</span><span style="color: #000000;"> function searches a dynamic array at one of three levels:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">Vno</span><span style="color: #000000;"> is less than 1, the function searches the dynamic array for a field matching </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">, starting at the field position given by </span><span style="font-style: italic; color: #000000;">Fno</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">Vno</span><span style="color: #000000;"> is given but </span><span style="font-style: italic; color: #000000;">Svno</span><span style="color: #000000;"> is less than 1, the function searches field </span><span style="font-style: italic; color: #000000;">Fno</span><span style="color: #000000;"> of the dynamic array for a value matching </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">, starting at the value position given by </span><span style="font-style: italic; color: #000000;">Vno</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">Vno</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">Svno</span><span style="color: #000000;"> are given, the function searches field </span><span style="font-style: italic; color: #000000;">Fno</span><span style="color: #000000;">, value </span><span style="font-style: italic; color: #000000;">Vno</span><span style="color: #000000;"> of the dynamic array for a subvalue matching </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">, starting at the value position given by </span><span style="font-style: italic; color: #000000;">Svno</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> argument determines the sorting system to be applied during the search:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> is a null string, no sort rules are applied. The function scans all applicable dynamic array elements for a match against </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">. The </span><span style="font-style: italic; color: #000000;">Pos</span><span style="color: #000000;"> variable will be returned as the position at which the item was found. If the item is not found, </span><span style="font-style: italic; color: #000000;">Pos</span><span style="color: #000000;"> will be returned as the position at which a new element could be appended.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the first character of </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> is A, an ascending sort is applied. If the first character of </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> is D, a descending sort is applied. In either case, the search terminates if an entry is found that would be beyond the correct position for </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;">. In this case, if the item is not found, </span><span style="font-style: italic; color: #000000;">Pos</span><span style="color: #000000;"> will be returned as the position at which to insert </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;"> to maintain the correct sort order.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the second character of </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> is L, a left aligned comparison is performed. Each entry of the dynamic array is compared with </span><span style="font-style: italic; color: #000000;">Item</span><span style="color: #000000;"> character by character from the left until a difference is found.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the second character of </span><span style="font-style: italic; color: #000000;">Order</span><span style="color: #000000;"> is R, a right aligned comparison is performed. If the two items being compared are of different lengths, spaces are added to the front of the shorter item before comparison.</span></p>
+<p><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMLocate()</span><span style="color: #000000;"> function returns True if the item is found, False if it is not found. </span></p>
+
+</td></tr></table>
+
+</body>
+</html>

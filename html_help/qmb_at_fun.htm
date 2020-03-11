@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_at_fun.htm"; }
+else { parent.quicksync('a7.5.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>@(x,y) Function</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="@(x,y) function" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">@(x, y) Function</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbasicbyname.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_abort.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">x</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">y</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> function is used to control the format of displayed output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">col </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">line</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Cursor movement</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">arg</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></td><td><span style="color: #000000;">Device control functions</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">col</span></td><td><span style="color: #000000;">evaluates to a display column position.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">line</span></td><td><span style="color: #000000;">evaluates to a display line position.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">mode</span></td><td><span style="color: #000000;">evaluates to a mode value as described below.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">arg</span></td><td><span style="color: #000000;">provides qualifying information for use with some </span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;"> values.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">x</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">y</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> functions return string values which can be used in the same way as any other strings. They only take effect when the string is used in a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_display.htm">CRT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_display.htm">DISPLAY</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_print.htm">PRINT</a></span><span style="color: #000000;"> statements directed to the display. The actual value returned by the function is a control code to be sent to the terminal and is dependant on the type of terminal in use (see the </span><span style="font-weight: bold; color: #000000;"><a href="term.htm">TERM</a></span><span style="color: #000000;"> command).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When output is directed to a printer or to a file for later printing rather than to the display, escape sequences relevant to the printer may be used for formatting, etc. Because the </span><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">x</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">y</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> function returns codes specific for the terminal in use, it is unlikely that these codes are relevant for printers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Cursor Positioning</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;"> {, </span><span style="font-style: italic; color: #000000;">line</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> format specifies that subsequent output is to appear at the given column and, optionally, line position. Columns and lines are numbered from zero where the top left of the screen is line 0, column 0. The effect of attempting to move to a cursor position outside the display area is undefined.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;"> {, </span><span style="font-style: italic; color: #000000;">line</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> function disables screen pagination (automatic display of the &quot;Press return to continue&quot; prompt after each screen of output). Pagination remains disabled until the program executes the </span><span style="font-weight: bold; color: #000000;">PRINTER RESET</span><span style="color: #000000;"> statement or return to the command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> statement enables screen pagination, executes the command(s) and then restores pagination to its state when the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> was performed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Special Functions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">@(</span><span style="font-style: italic; color: #000000;">x</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">y</span><span style="font-weight: bold; color: #000000;">)</span><span style="color: #000000;"> functions with negative values of </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> are used to provide a variety of control functions. These are largely in common with the functions defined for other systems. The token names shown in the table below are defined in the KEYS.H include record in the SYSCOM file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Functions not supported by the terminal device in use return a null string and hence will be ignored. Note that individual terminal types may place restrictions on use of display attributes such as flashing, underline, colour, etc. For example, although each attribute has a corresponding start and end control code pair, many terminals can only apply a single attribute to any particular screen region.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Display attributes are also implemented in two fundamentally distinct ways. Most modern terminals maintain an attribute for each character position on the display and data is stored by the terminal using the currently active attributes regardless of any intervening cursor movements. On some other terminals, the code sent by an </span><span style="font-weight: bold; color: #000000;">@()</span><span style="color: #000000;"> function to set or clear an attribute occupies a character position on the screen. Starting at the top left of the screen and working row by row through each character position, the attributes of any particular character are determined by the most recent attribute setting encountered.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For example,</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY @(-1):@(-15):'ABC':@(-16):'DEF'</span></p>
+<p><span style="color: #000000;">on a terminal that stores the attribute for each character position would result in a display of</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000; text-decoration: underline;">ABC</span><span style="font-family: 'Courier New'; color: #000000;">DEF</span></p>
+<p><span style="color: #000000;">whereas a terminal that uses a character cell to store the attribute would display</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000; text-decoration: underline;">ABC</span><span style="font-family: 'Courier New'; color: #000000;"> DEF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Furthermore, if the program then executed</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY @(3,0):'X'</span></p>
+<p><span style="color: #000000;">the first terminal would display</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000; text-decoration: underline;">ABC</span><span style="font-family: 'Courier New'; color: #000000;">XEF</span></p>
+<p><span style="color: #000000;">but the second would display</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000; text-decoration: underline;">ABCXDEF&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p><span style="color: #000000;">with the underline extending to the end of the screen or the next cell holding an attribute setting.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="font-weight: bold; color: #000000;">Value</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="font-weight: bold; color: #000000;">Token</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="font-weight: bold; color: #000000;">Function</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="font-weight: bold; color: #000000;">Argument</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-1</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CS</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Clear screen</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-2</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CAH</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Cursor home</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-3</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CLEOS</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Clear to end of screen</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-4</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CLEOL</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Clear to end of line</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-5</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SBLINK</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Start flashing text</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-6</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$EBLINK</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">End flashing text</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-9</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CUB</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Backspace</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of characters (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-10</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CUU</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Cursor up</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of lines (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-11</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SHALF</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Start half brightness</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-12</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$EHALF</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">End half brightness</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-13</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SREV</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Start reverse video</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-14</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$EREV</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">End reverse video</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-15</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SUL</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Start underline</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-16</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$EUL</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">End underline</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-17</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$IL</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Insert line</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of lines (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-18</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$DL</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Delete line</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of lines (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-19</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$ICH</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Insert character</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of characters (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-22</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$DCH</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Delete character</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of characters (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-23</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$AUXON</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Turn on printer</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-24</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$AUXOFF</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Turn off printer</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-29</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$E80</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set 80 column mode</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-30</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$E132</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set 132 column mode</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-31</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$RIC</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Reset inhibit cursor</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-32</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SIC</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Inhibit cursor</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-33</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CUD</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Cursor down</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of lines (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-34</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$CUF</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Cursor forward</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">No of characters (default 1)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-37</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$FGC</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set foreground colour</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">Colour</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-38</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$BGC</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set background colour</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">Colour</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-54</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SLT</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set line truncation</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-55</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$RLT</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Reset line truncation</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-58</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SBOLD</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Set bold mode</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-59</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$RBOLD</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Reset bold mode</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-100 to -107</span></p>
+</td>
+<td colspan="3" valign="top" width="744px" style="width:744px;"><p><span style="color: #000000;">User definable via the u0 to u7 terminfo keys</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-108</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$ACMD</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Asynchronous command</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">Command to execute</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-109</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$SCMD</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Synchronous command</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">Command to execute</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-250</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$STYLUS</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Enable/disable stylus taps</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">0 = disable, 1 = enable (PDA)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="102px" style="width:102px;"><p><span style="color: #000000;">-251</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px;"><p><span style="color: #000000;">IT$KEYS</span></p>
+</td>
+<td valign="top" width="236px" style="width:236px;"><p><span style="color: #000000;">Display/hide screen keyboard</span></p>
+</td>
+<td valign="top" width="322px" style="width:322px;"><p><span style="color: #000000;">0 = hide, 1 = display (PDA)</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'NewCenturySchlbk'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'NewCenturySchlbk'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Descriptions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CS (Clear screen)</span></p>
+<p><span style="color: #000000;">The screen is cleared to the current background colour. The cursor is positioned at the top left of the screen (position 0,0).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CAH (Cursor home)</span></p>
+<p><span style="color: #000000;">The cursor is positioned at the top left of the screen (position 0,0).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CLEOS (Clear to end of screen)</span></p>
+<p><span style="color: #000000;">All screen positions between the current cursor position and the end of the screen are cleared. Some terminal devices/emulators set the cleared character positions to have the current background colour.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CLEOL (Clear to end of line)</span></p>
+<p><span style="color: #000000;">All screen positions between the current cursor position and the end of the line are cleared. Some terminal devices/emulators set the cleared character positions to have the current background colour.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CUB (Backspace)</span></p>
+<p><span style="color: #000000;">The cursor moves left by the number of positions specified in the second argument which defaults to one or until the left edge of the screen is reached.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CUU (Cursor up)</span></p>
+<p><span style="color: #000000;">The cursor moves up by the number of lines specified in the second argument which defaults to one or until the top line of the screen is reached.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$SHALF (Start half brightness)</span></p>
+<p><span style="color: #000000;">Displays subsequent data in half brightness (dim) mode. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$EHALF (End half brightness)</span></p>
+<p><span style="color: #000000;">Terminates half brightness (dim) mode. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$SREV (Start reverse video)</span></p>
+<p><span style="color: #000000;">If not already in reverse video mode, the foreground and background colours are interchanged for subsequent output. Selecting this mode does not directly affect any data which is already displayed. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$EREV (End reverse video)</span></p>
+<p><span style="color: #000000;">If in reverse video mode, this operation reverts to the normal display colours for subsequent text output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$IL (Insert line)</span></p>
+<p><span style="color: #000000;">The number of lines specified in the second argument (default value one) are inserted at the current cursor position. Data at the bottom of the screen will be lost. The newly inserted lines are set to the background colour.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$DL (Delete line)</span></p>
+<p><span style="color: #000000;">The number of lines specified in the second argument (default value one) are deleted at the current cursor position. Blank lines are inserted at the bottom of the screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$ICH (Insert character)</span></p>
+<p><span style="color: #000000;">The number of characters specified in the second argument (default value one) are inserted at the current cursor position. Data at the right of the screen will be lost.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$DCH (Delete character)</span></p>
+<p><span style="color: #000000;">The number of characters specified in the second argument (default value one) are deleted at the current cursor position. Blanks are inserted at the right edge of the screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$AUXON (Turn on printer)</span></p>
+<p><span style="color: #000000;">For terminals with attached printers, this mode directs output to the printer. The mc5 <a href="terminfo.htm">terminfo</a> entry must be set correctly for this to work.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$AUXOFF (Turn off printer)</span></p>
+<p><span style="color: #000000;">For terminals with attached printers, this mode turns off output to the printer. The mc4 <a href="terminfo.htm">terminfo</a> entry must be set correctly for this to work.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$E80 (Set 80 column mode)</span></p>
+<p><span style="color: #000000;">The display window is set to be 80 characters wide.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$E132 (Set 132 column mode)</span></p>
+<p><span style="color: #000000;">The display window is set to be 132 characters wide.</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$RIC (Reset inhibit cursor)</span></p>
+<p><span style="color: #000000;">The cursor is displayed if it was previously inhibited.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$SIC (Inhibit cursor)</span></p>
+<p><span style="color: #000000;">Display of the cursor is inhibited. All cursor positioning functions continue to work whilst the cursor is not visible.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CUD (Cursor down)</span></p>
+<p><span style="color: #000000;">The cursor moves down by the number of lines specified in the second argument which defaults to one or until the bottom line of the screen is reached.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$CUF (Cursor forward)</span></p>
+<p><span style="color: #000000;">The cursor moves right by the number of positions specified in the second argument which defaults to one or until the right edge of the screen is reached.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$FGC (Set foreground colour)</span></p>
+<p><span style="color: #000000;">The foreground colour is set according to the value of the second argument. This may be set using the tokens listed below from the KEYS.H record of the SYSCOM file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BLACK</span></td><td><span style="color: #000000;">0</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BLUE </span></td><td><span style="color: #000000;">1</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$GREEN</span></td><td><span style="color: #000000;">2</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$CYAN</span></td><td><span style="color: #000000;">3</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$RED </span></td><td><span style="color: #000000;">4</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$MAGENTA</span></td><td><span style="color: #000000;">5</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BROWN</span></td><td><span style="color: #000000;">6</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$WHITE</span></td><td><span style="color: #000000;">7</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$GREY</span></td><td><span style="color: #000000;">8</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.BLUE</span></td><td><span style="color: #000000;">9</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.GREEN</span></td><td><span style="color: #000000;">10</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.CYAN</span></td><td><span style="color: #000000;">11</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.RED</span></td><td><span style="color: #000000;">12</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.MAGENTA</span></td><td><span style="color: #000000;">13</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$YELLOW</span></td><td><span style="color: #000000;">14</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 31px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="208"><span style="color: #000000;">IT$BRIGHT.WHITE</span></td><td><span style="color: #000000;">15</span></td></tr></table></div><p style="text-indent: -208px; margin: 0px 0px 0px 239px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some terminal emulators provide the ability to map these colour values to an alternative colour palette. The <a href="terminfo.htm">terminfo</a> COLOURMAP setting can be used to translate the internal QM values listed above to an alternative set relevant to a specific terminal emulator.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$BGC (Set background colour)</span></p>
+<p><span style="color: #000000;">The background colour is set according to the value of the second argument. This may be set using the tokens from the KEYS.H record of the SYSCOM file as listed above.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$SLC (Set line truncation)</span></p>
+<p><span style="color: #000000;">With this mode enabled, the cursor does not automatically move to a new line when data is displayed in the final column of the screen. Any further output on the line will overwrite the final character.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$RLT (Reset line truncation)</span></p>
+<p><span style="color: #000000;">Clears line truncation mode so that the cursor automatically moves to a new line when data is displayed in the final column of the screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$ACMD (Asynchronous command)</span></p>
+<p><span style="color: #000000;">Executes the given command on the client system without suspending the QM session. This operation depends on correct setting of the <a href="terminfo.htm">terminfo</a> u8 token.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$SCMD (Synchronous command)</span></p>
+<p><span style="color: #000000;">Executes the given command on the client system, suspending the QM session until the command completes. This operation depends on correct setting of the <a href="terminfo.htm">terminfo</a> u9 token.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$STYLUS (Enable/disable stylus taps)</span></p>
+<p><span style="color: #000000;">Applicable only to QM on a PDA, this operation allows an application to receive stylus taps via input operations. When enabled, a stylus tap appears as char(200) (K$MOUSE) followed by the column and row coordinates separated by a comma and terminated with a carriage return. Set the second argument to a non-zero value to enable stylus taps, zero to disable them. Stylus input is disabled by default when QM starts.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">IT$KEYS (Display/hide screen keyboard)</span></p>
+<p><span style="color: #000000;">Applicable only to QM on a PDA, this operation displays or hides the on screen keyboard. Set the second argument to a non-zero value to show the keyboard, zero to hide it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY @(IT$CS) : @(34,10) : &quot;Please wait&quot; :</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement clears the screen and displays &quot;Please wait&quot; .</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY @(IT$FGC, IT$BRIGHT.RED) : &quot;Error &quot; : STATUS()</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement displays the value of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function in bright red. Further output to the display will continue to be in this colour until the foreground colour is reset.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

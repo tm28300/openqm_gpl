@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?loop.htm"; }
+else { parent.quicksync('a5.102'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LOOP / REPEAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LOOP / REPEAT,LOOP,REPEAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LOOP / REPEAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="logto.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="make_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">REPEAT</span><span style="color: #000000;"> commands define the top and bottom of a group of sentences to be repeated within a paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;"> &nbsp;&nbsp;&nbsp; </span><span style="font-style: italic; color: #000000;">sentence(s)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">sentence(s)</span></td><td><span style="color: #000000;">are the sentence(s) to be executed within the loop.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">REPEAT</span><span style="color: #000000;"> statements surround one or more sentences to be repeated. The loop continues until the paragraph terminates by use of </span><span style="font-weight: bold; color: #000000;"><a href="stop.htm">STOP</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="abort.htm">ABORT</a></span><span style="color: #000000;">, something run by the paragraph causes an abort event, or a </span><span style="font-weight: bold; color: #000000;"><a href="go.htm">GO</a></span><span style="color: #000000;"> statement is used to leave the loop.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Loops may be nested to any depth. Each </span><span style="font-weight: bold; color: #000000;">REPEAT</span><span style="color: #000000;"> statement is paired with a corresponding </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> statement and is equivalent to a </span><span style="font-weight: bold; color: #000000;"><a href="go.htm">GO</a></span><span style="color: #000000;"> statement that allows backward jumps to a label at the position of the </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> statement. The behaviour of paragraphs that branch into or out of loops can be determined by this label and </span><span style="font-weight: bold; color: #000000;"><a href="go.htm">GO</a></span><span style="color: #000000;"> equivalent.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The keywords </span><span style="font-weight: bold; color: #000000;">LOOP</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">REPEAT</span><span style="color: #000000;"> are recognised by the paragraph pre-processor and not via the VOC and hence cannot be replaced by alternative words.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF &lt;&lt;A,File to delete&gt;&gt; = &quot;&quot; THEN GO DONE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DELETE.FILE &lt;&lt;File to delete&gt;&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DONE:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This paragraph prompts for names of files to delete until a blank line is entered. Note the need for the A control option on the first <a href="inlineprompts.htm">inline prompt</a> in the loop so that the prompt is repeated on each cycle.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because the DONE label is at the end of the paragraph, the above example could alternatively be written as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF &lt;&lt;A,File to delete&gt;&gt; = &quot;&quot; THEN STOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DELETE.FILE &lt;&lt;File to delete&gt;&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">REPEAT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

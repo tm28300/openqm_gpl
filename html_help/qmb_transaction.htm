@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_transaction.htm"; }
+else { parent.quicksync('a7.5.275'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>TRANSACTION ABORT, TRANSACTION COMMIT, TRANSACTION START</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="TRANSACTION ABORT,TRANSACTION COMMIT,TRANSACTION START" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">TRANSACTION START/COMMIT/ABORT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_trans.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_trim.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TRANSACTION START/COMMIT/ABORT</span><span style="color: #000000;"> statements provide an alternative to use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">BEGIN TRANSACTION</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">COMMIT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">ROLLBACK</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">END TRANSACTION</a></span><span style="color: #000000;"> statements.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TRANSACTION START</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">statements</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">statements</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TRANSACTION COMMIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">statements</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">statements</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">TRANSACTION ABORT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A transaction is a group of updates that must either be performed in their entirety or not at all. The </span><span style="font-weight: bold; color: #000000;">TRANSACTION START</span><span style="color: #000000;"> statement starts a new transaction. All updates within the transaction are cached&nbsp; and only applied to the database when the </span><span style="font-weight: bold; color: #000000;">TRANSACTION COMMIT</span><span style="color: #000000;"> statement is executed. Execution of the program then continues at the statement following the </span><span style="font-weight: bold; color: #000000;">TRANSACTION COMMIT</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">TRANSACTION ABORT</span><span style="color: #000000;"> statement terminates the transaction, discarding any cached updates. Execution continues at the statement following the </span><span style="font-weight: bold; color: #000000;">TRANSACTION ABORT</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses are optional and are provided for compatibility with other products. Within QM any errors occurring in a </span><span style="font-weight: bold; color: #000000;">TRANSACTION START</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">TRANSACTION COMMIT</span><span style="color: #000000;"> will result in run time errors.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Deletes and writes inside a transaction will fail unless the program holds an update lock on the record or the file. All locks obtained inside the transaction are retained until the transaction terminates and are then released. Locks already owned when the transaction begins will still be present after the transaction terminates, even if the record is updated or deleted within the transaction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Closing a file inside a transaction appears to work in that the file variable is destroyed though the actual close is deferred until the transaction terminates and any updates have been applied to the file. Rolling back the transaction will not reinstate the file variable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Access to indices using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTLEFT</a></span><span style="color: #000000;"> or&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTRIGHT</a></span><span style="color: #000000;">inside a transaction will not reflect any updates within the transaction as these have not been committed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Updates to sequential records opened using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;"> are not affected by transactions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Transactions may be nested. If the </span><span style="font-weight: bold; color: #000000;">TRANSACTION START</span><span style="color: #000000;"> statement is executed inside an active transaction, the active transaction is stacked and a new transaction commences. Termination of the new transaction reverts to the stacked transaction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following operations are banned inside transactions:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">CLEARFILE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">PHANTOM</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">TRANSACTION START</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READU CUST1.REC FROM CUST.F, CUST1.ID ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; TRANSACTION ABORT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; RETURN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CUST1.REC&lt;C.BALANCE&gt; -= TRANSFER.VALUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITE CUST1.REC TO CUST.F, CUST1.ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">READU CUST2.REC FROM CUST.F, CUST2.ID ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; TRANSACTION ABORT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; RETURN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CUST2.REC&lt;C.BALANCE&gt; += TRANSFER.VALUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WRITE CUST2.REC TO CUST.F, CUST2.ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">TRANSACTION COMMIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment transfers money between two customer accounts. The updates are only committed if the entire transaction is successful.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

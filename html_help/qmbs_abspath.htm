@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_abspath.htm"; }
+else { parent.quicksync('a7.8.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!ABSPATH()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!ABSPATH()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!ABSPATH()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="standardsubroutines.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_atvar.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!ABSPATH()</span><span style="color: #000000;"> subroutine forms an absolute pathname from a directory and file path.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !ABSPATH(</span><span style="font-style: italic; color: #000000;">path</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">dir</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">file</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">path</span></td><td><span style="color: #000000;">is the returned absolute pathname.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">dir</span></td><td><span style="color: #000000;">is the directory path to be used when prefixing the pathname.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">file</span></td><td><span style="color: #000000;">is the file path to be processed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!ABSPATH()</span><span style="color: #000000;"> subroutine uses the supplied directory and file path to construct an absolute pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> commences with @QMSYS, </span><span style="font-style: italic; color: #000000;">path</span><span style="color: #000000;"> is returned as the </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> value with the @QMSYS token replaced by the QMSYS account pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> commences with a directory separator character, </span><span style="font-style: italic; color: #000000;">path</span><span style="color: #000000;"> is returned as </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;"> commences with a Windows drive specification, </span><span style="font-style: italic; color: #000000;">path</span><span style="color: #000000;"> is returned as </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Otherwise, </span><span style="font-style: italic; color: #000000;">path</span><span style="color: #000000;"> is formed by concatenating </span><span style="font-style: italic; color: #000000;">dir</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">file</span><span style="color: #000000;">, inserting a directory separator character if required.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p style="margin: 20px 0px 5px 0px;"><span style="font-weight: bold; color: #000000;">Dir</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p style="margin: 20px 0px 5px 0px;"><span style="font-weight: bold; color: #000000;">File</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p style="margin: 20px 0px 5px 0px;"><span style="font-weight: bold; color: #000000;">Path</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p><span style="color: #000000;">Any</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">@QMSYS\ACCOUNTS</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\QMSYS\ACCOUNTS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p><span style="color: #000000;">Any</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">\SALES\CUSTOMERS</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">\SALES\CUSTOMERS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p><span style="color: #000000;">Any</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\SALES\CUSTOMERS</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\SALES\CUSTOMERS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\SALES</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">CUSTOMERS</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\SALES\CUSTOMERS</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="162px" style="width:162px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\</span></p>
+</td>
+<td valign="top" width="259px" style="width:259px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">CUSTOMERS</span></p>
+</td>
+<td valign="top" width="407px" style="width:407px; border: solid 1px #000000;"><p><span style="font-family: 'Courier New'; color: #000000;">C:\CUSTOMERS</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

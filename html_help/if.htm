@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?if.htm"; }
+else { parent.quicksync('a5.72'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>IF</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="IF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">IF</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="hush.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_common.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IF</span><span style="color: #000000;"> command allows conditional execution of sentences within paragraphs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">IF</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">value.1 rel.op value.2</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">sentence</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">value.1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">value.2</span></td><td><span style="color: #000000;">are two items to be compared. These may be inline prompts, constants or @&shy;variables as described below.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">rel.op</span></td><td><span style="color: #000000;">is the relational operator to be applied to the two values.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">sentence</span></td><td><span style="color: #000000;">is the sentence to be executed if the condition is true.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">IF</span><span style="color: #000000;"> command compares two values using a specified relational operator. The values may be <a href="inlineprompts.htm">inline prompts</a>, constants or <a href="at_variables.htm">@-variables</a>. Null strings or string constants which include spaces should be enclosed in single or double quotation marks. The </span><span style="font-style: italic; color: #000000;">value.1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">value.2</span><span style="color: #000000;"> items need to be quoted if they may evaluate to strings with embedded spaces or to reserved words such as the relational operators.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that because inline prompts are evaluated as the first stage of processing a command, an inline prompt in the </span><span style="font-style: italic; color: #000000;">sentence</span><span style="color: #000000;"> component of an </span><span style="font-weight: bold; color: #000000;">IF</span><span style="color: #000000;"> statement will be evaluated before determining whether the condition is true. To avoid this problem, a statement such as</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @SYSTEM.RETURN.CODE = 1 THEN LIST &lt;&lt;Filename&gt;&gt;</span></p>
+<p><span style="color: #000000;">must be written as</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @SYSTEM.RETURN.CODE # 1 THEN GO SKIP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LIST &lt;&lt;Filename&gt;&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SKIP:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The relational operator may be any of:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">&lt;</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">LT</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">BEFORE</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><p><span style="color: #000000;">LESS</span></p>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">&lt;=</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">LE</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">=&lt;</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">=</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">EQ</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">EQUAL</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">&gt;=</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">GE</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">=&gt;</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">&gt;</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">GT</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">AFTER</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><p><span style="color: #000000;">GREATER</span></p>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">#</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">NE</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">&lt;&gt;</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><p><span style="color: #000000;">&gt;&lt;</span></p>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><p><span style="color: #000000;">NOT</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">LIKE</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">MATCHES</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">MATCHING</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">UNLIKE</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">NOT.MATCHES</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><br>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="93px" style="width:93px; height:30px;"><p><span style="color: #000000;">~</span></p>
+</td>
+<td valign="top" width="167px" style="width:167px; height:30px;"><p><span style="color: #000000;">SAID</span></p>
+</td>
+<td valign="top" width="128px" style="width:128px; height:30px;"><p><span style="color: #000000;">SPOKEN</span></p>
+</td>
+<td valign="top" width="118px" style="width:118px; height:30px;"><br>
+</td>
+<td valign="top" width="63px" style="width:63px; height:30px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The function of each relational operator as applied to values of different types is the same as its QMBasic equivalent </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Multiple conditions may be linked by the keywords </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">OR</span><span style="color: #000000;">. These operators are of equal priority and are evaluated left to right. Use of brackets to alter the order of interpretation is not supported in the </span><span style="font-weight: bold; color: #000000;">IF</span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PA</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BASIC &lt;&lt;Program name&gt;&gt;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @SYSTEM.RETURN.CODE = 1 THEN CATALOGUE &lt;&lt;Program name&gt;&gt;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This paragraph compiles a QMBasic program (the record name of which it obtains using an inline prompt) and, if successful, adds the program to the system catalogue. In this example, use of the inline prompt in the conditioned statement is not a problem as the prompt was displayed as part of processing of the previous line.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

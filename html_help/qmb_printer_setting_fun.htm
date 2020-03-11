@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_printer_setting_fun.htm"; }
+else { parent.quicksync('a7.5.191'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PRINTER.SETTING()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PRINTER.SETTING()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PRINTER.SETTING()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_printer_setting.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_printerr.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER.SETTING()</span><span style="color: #000000;"> function sets or retrieves a control parameter for a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-style: italic; color: #ff0000;">This function is obsolete. The </span><span style="font-style: italic; font-weight: bold; color: #000000;"><a href="qmb_setpu.htm">SETPU</a></span><span style="font-style: italic; color: #ff0000;"> statement or </span><span style="font-style: italic; font-weight: bold; color: #000000;"><a href="qmb_getpu.htm">GETPU()</a></span><span style="font-style: italic; color: #ff0000;"> function should be used in its place.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRINTER.SETTING</span><span style="color: #000000;">(</span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">param</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">new.value</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> </span></td><td><span style="color: #000000;">evaluates to the print unit on which the action is be to performed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">param</span></td><td><span style="color: #000000;">identifies the parameter to be changed using the keys shown below.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">new.value</span></td><td><span style="color: #000000;">is the value to be set. A </span><span style="font-style: italic; color: #000000;">new.value</span><span style="color: #000000;"> of -1 sets the parameter to its default value. A </span><span style="font-style: italic; color: #000000;">new.value</span><span style="color: #000000;"> of -2 returns the current value without changing it.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER.SETTING()</span><span style="color: #000000;"> function returns the new (or unchanged) value of the parameter.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The parameters which may be set or retrieved by this statement are identified by </span><span style="font-style: italic; color: #000000;">param</span><span style="color: #000000;"> numbers. Tokens for these are defined in the KEYS.H include record in the SYSCOM file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="font-weight: bold; color: #000000;">Key</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="font-weight: bold; color: #000000;">Token</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="font-weight: bold; color: #000000;">Default</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="font-weight: bold; color: #000000;">Function</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$WIDTH</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">80</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Page width</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$LINES</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">66</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Lines per page for printer</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><br>
+</td>
+<td valign="top" width="298px" style="width:298px;"><br>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">or&nbsp; 24</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Lines per page for display</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$TOP.MARGIN</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Top margin size (lines)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">4</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$BOTTOM.MARGIN</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Bottom margin size (lines)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">5</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$LEFT.MARGIN</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Left margin size (characters)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">6 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$DATA.LINES</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Lines excluding page heading and footing</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">7 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$HEADING.LINES</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Heading lines per page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">8 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$FOOTING.LINES</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Footing lines per page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">9 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$MODE</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Printer mode number</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">10 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$NAME</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Printer or file name</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">11</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$FLAGS</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Printer mode flags</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">12 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$LINE.NO</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Current position on page within data area</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">13 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$PAGE.NO</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Current page number</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">14 *</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$LINES.LEFT</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Lines remaining on current page</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><p><span style="color: #000000;">15</span></p>
+</td>
+<td valign="top" width="298px" style="width:298px;"><p><span style="color: #000000;">LPTR$COPIES</span></p>
+</td>
+<td valign="top" width="87px" style="width:87px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="422px" style="width:422px;"><p><span style="color: #000000;">Number of copies to print</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="86px" style="width:86px;"><br>
+</td>
+<td valign="top" width="298px" style="width:298px;"><br>
+</td>
+<td valign="top" width="87px" style="width:87px;"><br>
+</td>
+<td valign="top" width="422px" style="width:422px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">Modes marked with an asterisk are query only.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value of lines per page is best set to at least one less than the physical page size to prevent the automatic page throw of most printers after the final line of the page is printed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">WIDTH = PRINTER.SETTING(1, LPTR$WIDTH, -1)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement sets the page width on print unit 1 to the default value and stores this value in WIDTH.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

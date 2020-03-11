@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?style.htm"; }
+else { parent.quicksync('a6.91'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>STYLE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="STYLE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">STYLE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="single_value.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="to.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">STYLE </span><span style="color: #000000;">keyword selects the report style to be used, overriding any style selected using the </span><span style="font-weight: bold; color: #000000;"><a href="report_style.htm">REPORT.STYLE</a></span><span style="color: #000000;"> or&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> commands or the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setpu.htm">SETPU</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">STYLE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is the name of a VOC style record. Use of </span><span style="font-weight: bold; color: #000000;">STYLE NONE</span><span style="color: #000000;"> will disable use of any style selected using the </span><span style="font-weight: bold; color: #000000;"><a href="report_style.htm">REPORT.STYLE</a></span><span style="color: #000000;"> or&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> commands or the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setpu.htm">SETPU</a></span><span style="color: #000000;"> statement.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each line of a report falls into one of the following classifications: Heading, Column heading, Detail, Subtotal, Total, Footing, Other. Report styles allow users to attribute each of these classifications a colour for a displayed report or a font weight for a report directed to a PCL printer. An additional style, Exit, is used to determine how the screen is left on exit from the query processor. If this is absent, the query processor sends the <a href="terminfo.htm">terminfo</a> sgr0 code to turn off all display attributes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Report styles are defined using an X-type VOC record where fields 2 onwards consist of a line classification, foreground colour, background colour and font weight in the form:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="color: #000000;">Heading=Bright blue,Black,Bold</span></p>
+<p><span style="color: #000000;">Only the first character of the line classification name is used. Thus the above line could be written as</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">H=Bright blue,Black,Bold</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The colour names are taken from the following list:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Black, Blue, Green, Cyan, Red, Magenta, Brown, White, Grey, Bright Blue, Bright Green, Bright Cyan, Bright Red, Bright Magenta, Yellow, Bright White</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any non-alphabetic characters are ignored. Thus Bright Green can also be written as, for example, Bright.Green, Bright-Green or BrightGreen. Numeric colour values of 0 to 15 can be used where these correspond to the order of the colour names above.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that the colour palette used by AccuTerm may need to be amended from its default settings to improve the rendering of the non-bright colours. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Font weights are taken from the list defined in SYSCOM $PCLDATA which defaults to:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Ultra-Thin, Extra-Thin, Thin, Extra-Light, Light, Demi-Light, Semi-Light, Medium, Semi-Bold, Demi-Bold, Bold, Extra-Bold, Black, Extra-Black, Ultra-Black</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any non-alphabetic characters are ignored in the same way as for colour names Numeric font weight values in the range -7 to +7 can be used where these correspond to the order of the font weight names above.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All components of a style definition are case insensitive. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any classification not defined in the style record, or any omitted component within a classification, takes on the values of the Other classification which itself defaults to White foreground, Black background, Medium font weight if not defined.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When the </span><span style="font-weight: bold; color: #000000;"><a href="det_sup.htm">DET.SUP</a></span><span style="color: #000000;"> keyword is used, subtotals are reported using the detail line style.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">X</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">H=Bright Blue,,Bold</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">S=Blue</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">T=Bright Red,,Bold</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="report_style.htm">REPORT.STYLE</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

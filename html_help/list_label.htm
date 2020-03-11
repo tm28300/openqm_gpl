@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list_label.htm"; }
+else { parent.quicksync('a6.8'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST.LABEL and SORT.LABEL</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST.LABEL,SORT.LABEL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST.LABEL and SORT.LABEL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_item.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="reformat.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.LABEL</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SORT.LABEL</span><span style="color: #000000;"> verbs are used to print address labels from </span><span style="color: #000000;">QM</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">files. The </span><span style="font-weight: bold; color: #000000;">LIST.LABEL</span><span style="color: #000000;"> verb processes records in the order in which they are encountered in the file unless a sort clause in present in the command. The </span><span style="font-weight: bold; color: #000000;">SORT.LABEL</span><span style="color: #000000;"> verb is equivalent to </span><span style="font-weight: bold; color: #000000;">LIST.LABEL</span><span style="color: #000000;"> with a final sort by record id.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST.LABEL</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SORT.LABEL</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional clauses to </span><span style="font-weight: bold; color: #000000;">LIST.LABEL </span><span style="color: #000000;">and </span><span style="font-weight: bold; color: #000000;">SORT.LABEL </span><span style="color: #000000;">work in exactly the same way as for </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;"> except that arithmetic field modifiers (</span><span style="font-weight: bold; color: #000000;"><a href="average.htm">AVERAGE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="enumerate.htm">ENUMERATE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="max.htm">MAX</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="min.htm">MIN</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="percentage.htm">PERCENTAGE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="total.htm">TOTAL</a></span><span style="color: #000000;">), breakpoints (</span><span style="font-weight: bold; color: #000000;"><a href="break_on.htm">BREAK.ON</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="break_sup.htm">BREAK.SUP</a></span><span style="color: #000000;">) and the page format keywords (</span><span style="font-weight: bold; color: #000000;"><a href="col_sup.htm">COL.SUP</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="col_hdr_supp.htm">COL.HDR.SUPP</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="col_spaces.htm">COL.SPACES</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="hdr_sup.htm">HDR.SUP</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="dbl_spc.htm">DBL.SPC</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="footing.htm">FOOTING</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="grand_total.htm">GRAND.TOTAL</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="heading.htm">HEADING</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="pan.htm">PAN</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="scroll.htm">SCROLL</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="vertically.htm">VERTICALLY</a></span><span style="color: #000000;">) are not allowed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.LABEL</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SORT.LABEL</span><span style="color: #000000;"> commands produce a vertical style report set out into the positions of labels on the printed page. The label page shape may be defined by a record in the dictionary of the file or in the VOC file, or it may be entered in response to prompts.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the command includes the </span><span style="font-weight: bold; color: #000000;"><a href="label.htm">LABEL</a></span><span style="color: #000000;"> keyword, this may be followed by the name of an X-type label template record stored in the dictionary or in the VOC. This record contains the page shape as a series of lines. Only the leading numeric part of each line is used thus allowing comments to be inserted explaining what each number represents. A typical label might read:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">1: X</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">2: 2&nbsp;&nbsp; Count of labels across the page</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">3: 8&nbsp;&nbsp; Count of labels per column</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">4: 42&nbsp; Characters per line on each label</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">5: 7&nbsp;&nbsp; Lines per label</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">6: 0&nbsp;&nbsp; Indentation to first column of leftmost label</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">7: 6&nbsp;&nbsp; Horizontal space between labels</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">8: 3&nbsp;&nbsp; Lines between labels</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">9: 1&nbsp;&nbsp; Omit blanks</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The final field determines whether blank lines within a label should be omitted. It should be set to 1 to omit or 0 to include such lines.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If no </span><span style="font-weight: bold; color: #000000;"><a href="label.htm">LABEL</a></span><span style="color: #000000;"> keyword is present in the command line (or any phrase use by the query), the query processor looks for a default label template stored in a record named @LABEL in the dictionary of the file or in the VOC. This action can be suppressed by use of </span><span style="font-weight: bold; color: #000000;">LABEL NO.DEFAULT</span><span style="color: #000000;"> in the command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If no label template has been specified and either there is no @LABEL record or the </span><span style="font-weight: bold; color: #000000;">NO.DEFAULT</span><span style="color: #000000;"> keyword has been used, the query processor will prompt the user to enter the label shape parameters in the same order as above. The omit blanks option must be entered as Y or N.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It may be necessary to check that a printer font is chosen where the line spacing fits correctly onto the label page. The </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a> </span><span style="color: #000000;">command top margin may also need to be set to fit the page.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST.LABEL CUSTOMERS NAME ADDRESS ID.SUP LABEL ADDR.LABELS LPTR</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command prints address labels from all records in the CUSTOMERS file. Each label contains data from the NAME and ADDRESS fields. A label template named ADDR.LABELS is used.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_keytrap.htm"; }
+else { parent.quicksync('a7.5.134'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>KEYTRAP</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="KEYTRAP" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">KEYTRAP</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_keyready.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_len.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYTRAP</span><span style="color: #000000;"> statement defines trap keys for use with </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT @</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">KEYTRAP (</span><span style="font-style: italic; color: #000000;">action</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">), (</span><span style="font-style: italic; color: #000000;">action</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">), </span><span style="color: #000000;">...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">action</span></td><td><span style="color: #000000;">is a user defined value in the range 1 to 255 to be returned by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function following an </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT&nbsp;@</a></span><span style="color: #000000;"> that is terminated by use of the key defined by </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;">.</span></td></tr></table></div><p style="margin: 10px 0px 0px 120px;"><span style="color: #000000;">A negative </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value removes the key binding specified by </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;">.</span></p>
+<p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">identifies the key to be bound to the given </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;">. This is specified as a numeric value:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">1 to 31</span></td><td><span style="color: #000000;">Use the control key with this character value. Ctrl-A is 1, Ctrl-B is 2, etc.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">32 to 159</span></td><td><span style="color: #000000;">Use the Escape key followed by the key with this character value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="color: #000000;">160+</span></td><td><span style="color: #000000;">Use a sequence of up to four characters constructed from the bytes of (</span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> &nbsp;160) starting from the low order byte.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYTRAP</span><span style="color: #000000;"> statement defines one or more keys that will terminate an </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT&nbsp;@</a></span><span style="color: #000000;"> statement. When any of these keys in pressed the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT&nbsp;@</a></span><span style="color: #000000;"> returns with the original value of the input variable. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return the value defined by </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> for the key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyexit.htm">KEYEXIT</a></span><span style="color: #000000;"> statement for a method to return the input data as entered up to the moment when this key was used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_bindkey.htm">BINDKEY()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT@</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inputfield.htm">INPUTFIELD</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyedit.htm">KEYEDIT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyexit.htm">KEYEXIT</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

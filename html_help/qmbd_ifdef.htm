@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbd_ifdef.htm"; }
+else { parent.quicksync('a7.2.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>$IFDEF and $IFNDEF compiler directives</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="$IFDEF,$ELSE,$ENDIF,$IFNDEF" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">$IFDEF and $IFNDEF Compiler Directives</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbd_execute.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbd_include.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$IFDEF</span><span style="color: #000000;"> directive provides conditional compilation. The format of this directive is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$IFDEF</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">name</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">...statements..</span><span style="font-style: italic; color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-style: italic; color: #000000;">...statements...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$ENDIF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$ELSE</span><span style="color: #000000;"> and associated statements are optional. Statements conditioned by the </span><span style="font-weight: bold; color: #000000;">$IFDEF</span><span style="color: #000000;"> directive are ignored if </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> has not been defined by a previous <a href="qmbd_define.htm">$DEFINE</a> directive. Statements under the </span><span style="font-weight: bold; color: #000000;">$ELSE</span><span style="color: #000000;"> directive are ignored if </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> has been defined by a previous <a href="qmbd_define.htm">$DEFINE</a> directive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$IFNDEF</span><span style="color: #000000;"> directive provides the inverse action of </span><span style="font-weight: bold; color: #000000;">$IFDEF</span><span style="color: #000000;">, compiling the following statements if </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> has not been defined.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">$IFDEF</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">$IFNDEF</span><span style="color: #000000;"> statements may be nested to any depth though nesting more than two deep can make program maintenance very difficult.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

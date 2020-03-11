@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sp_open.htm"; }
+else { parent.quicksync('a5.148'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SP.OPEN, SP.CLOSE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SP.OPEN,SP.CLOSE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SP.OPEN, SP.CLOSE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sp_assign.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sp_view.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.OPEN</span><span style="color: #000000;"> command sets the &quot;keep open&quot; flag on the default printer, merging multiple print requests into a single print job. The </span><span style="font-weight: bold; color: #000000;">SP.CLOSE</span><span style="color: #000000;"> command resets this option.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SP.OPEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SP.CLOSE</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.OPEN</span><span style="color: #000000;"> command is equivalent to use of the O option of the </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span><span style="color: #000000;"> command or the KEEP.OPEN option of the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When this mode is set, output directed to the default printer (print unit 0) from successive commands or programs is merged into a single print job. The job is terminated and queued for printing by use of </span><span style="font-weight: bold; color: #000000;">SP.CLOSE</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="printer.htm">PRINTER CLOSE</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">SP.OPEN</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CUSTOMERS,NORTH LPTR</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CUSTOMERS,SOUTH LPTR</span></p>
+<p style="margin: 0px 0px 0px 29px;"><span style="font-family: 'Courier New'; color: #000000;">SP.CLOSE</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above sequence of commands lists records from two elements of the CUSTOMERS multifile as a single print job.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="sp_assign.htm">SP.ASSIGN</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

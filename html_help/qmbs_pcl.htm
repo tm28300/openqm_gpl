@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_pcl.htm"; }
+else { parent.quicksync('a7.8.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!PCL()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!PCL()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!PCL()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_pathtkn.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_pick.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PCL ()</span><span style="color: #000000;"> subroutine constructs PCL control strings for various useful operations. It is intended for use as a series of functions defined in the SYSCOM PCL.H include record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !PCL(</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">arg1</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">...</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">is the returned control string.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">identifies the operation to be performed. See the PCL.H include record for the relationship between the </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> values and the functions described below.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">arg1,...</span></td><td><span style="color: #000000;">are arguments defining the exact action. The !PCL() subroutine takes a variable length argument list.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PCL()</span><span style="color: #000000;"> subroutine should be called using the function interfaces defined below. The returned string can be sent to a PCL compatible printer to perform the requested action.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All page positioning values are measured using the PCL coordinate grid where (0,0) is at the top left of the page and the grid scale is 300 per inch. There is a useful grid template printing program, PCL.GRID, in the BP file of the QMSYS account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Note:</span><span style="color: #000000;"> The quality of PCL implementations varies widely and these functions may not give the expected results on some printers. In particular, setting some font metrics may cause inconsistent character placement. It is the application developer's responsibility to ensure that the printed results are acceptable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following functions are defined in the SYSCOM PCL.H include record.&nbsp; Each returns the relevant control string to perform its action.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.BOX(</span><span style="font-style: italic; color: #000000;">left</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">top</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">width</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">height</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">radius</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Draws a rectangular box using the given position (</span><span style="font-style: italic; color: #000000;">left</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">top</span><span style="color: #000000;">) and size (</span><span style="font-style: italic; color: #000000;">width</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">height</span><span style="color: #000000;">) values. The </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;"> determines the width of the lines used to draw the box. The </span><span style="font-style: italic; color: #000000;">radius</span><span style="color: #000000;"> value determines the radius of rounded corners. A value of zero results in square corners .</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.COPIES(</span><span style="font-style: italic; color: #000000;">copies</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets the number of copies to be printed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.CURSOR(</span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">y</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets the current cursor position to the given coordinates. Subsequent text output will occur at this point.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.DUPLEX(</span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets duplex mode. 0 = off, 1 = long edge binding, 2 = short edge binding.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.FONT(</span><span style="font-style: italic; color: #000000;">font</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets the font details for text output. The </span><span style="font-style: italic; color: #000000;">font</span><span style="color: #000000;"> argument consists of comma separated list of case insensitive items chosen from the following list. Features that are not specified retain their previous values. Not all printers support all options.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Font names:</span></td><td><span style="color: #000000;">ARIAL, COURIER, CG-TIMES, LETTER-GOTH, LINEPRINTER, UNIVERS</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Character sets:</span></td><td><span style="color: #000000;">ASCII, LATIN-1, PC-8, ROMAN-8</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Type style:</span></td><td><span style="color: #000000;">UPRIGHT, COMPRESSED, CONDENSED, CONDENSEDITALIC, EXPANDED, INLINE, ITALIC, OUTLINE, OUTLINESHADOW, SHADOW</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Weight:</span></td><td><span style="color: #000000;">ULTRA-THIN, EXTRA-THIN, THIN, EXTRA-LIGHT, LIGHT, DEMI-LIGHT, SEMI-LIGHT, MEDIUM, SEMI-BOLD, DEMI-BOLD, BOLD, EXTRA-BOLD, BLACK, EXTRA-BLACK, ULTRA-BLACK</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Spacing:</span></td><td><span style="color: #000000;">FIXED, PROPORTIONAL</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Size:</span></td><td><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">PT (point size), PITCH </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> (characters per inch)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="color: #000000;">Composite:</span></td><td><span style="color: #000000;">REGULAR (equivalent to UPRIGHT, MEDIUM)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.HLINE(</span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">y</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">length</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Draws a horizontal line starting at the given position and extending to the right, using the specified </span><span style="font-style: italic; color: #000000;">length</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;"> values.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.LEFT.MARGIN(</span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Sets the left margin at column </span><span style="font-style: italic; color: #000000;">col</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.ORIENTATION(</span><span style="font-style: italic; color: #000000;">layout</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Specifies the page format. The </span><span style="font-style: italic; color: #000000;">layout</span><span style="color: #000000;"> argument is a string and may be PORTRAIT or LANDSCAPE.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.PAPER.SIZE(</span><span style="font-style: italic; color: #000000;">size</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Specifies the page size. The </span><span style="font-style: italic; color: #000000;">size</span><span style="color: #000000;"> argument is a string chosen from A3, A4, B5, C5, COM10, DL, EXECUTIVE, LEDGER, LEGAL, LETTER and MONARCH.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.RESET()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Resets the printer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.RESTORE.CURSOR()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Restores a previously saved cursor position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.SAVE.CURSOR()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Saves the current cursor position. Note that there is a limit to the number of nested cursor save operations.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PCL.VLINE(</span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">y</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">length</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;">)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Draws a vertical line starting at the given position and extending downwards, using the specified </span><span style="font-style: italic; color: #000000;">length</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">pen.width</span><span style="color: #000000;"> values.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The source version of the </span><span style="font-weight: bold; color: #000000;">!PCL()</span><span style="color: #000000;"> subroutine is in the BP file of the QMSYS account so that users can add further options. A copy of any changes should be retained as this item will be replaced when an upgrade is installed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PRINTER ON</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PRINT PCL.RESET() :</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PRINT PCL.FONT('Courier, Pitch 10, Regular') :</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PRINT PCL.BOX(300,300,300,100,2,15) :</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PRINT PCL.CURSOR(350, 380) : 'Hello' :</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">The above program prints the word Hello in a box with rounded corners.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

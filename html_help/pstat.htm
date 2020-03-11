@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?pstat.htm"; }
+else { parent.quicksync('a5.118'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PSTAT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PSTAT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PSTAT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="printer.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="pterm.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PSTAT</span><span style="color: #000000;"> command displays the status of one or all QM processes. This command is not available on the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PSTAT </span><span style="color: #000000;">{ </span><span style="font-weight: bold; color: #000000;">USER</span><span style="font-style: italic; color: #000000;"> userno</span><span style="color: #000000;"> }&nbsp; { </span><span style="font-weight: bold; color: #000000;">LEVEL</span><span style="font-style: italic; color: #000000;"> level</span><span style="color: #000000;"> }</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">userno</span></td><td><span style="color: #000000;">is the QM user number of the process to report.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">level</span></td><td><span style="color: #000000;">is the reporting level.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PSTAT </span><span style="color: #000000;">command displays diagnostic status information about the process with user number </span><span style="font-style: italic; color: #000000;">userno</span><span style="color: #000000;"> or, if the </span><span style="font-weight: bold; color: #000000;">USER</span><span style="color: #000000;"> option is omitted, all QM processes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For each process reported, </span><span style="font-weight: bold; color: #000000;">PSTAT</span><span style="color: #000000;"> shows the account name, the last command executed and the current execution point (program name, line number and execution address).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">level</span><span style="color: #000000;"> parameter specifies extended report features and is formed by adding together the following components:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">Report each program and subroutine in the call stack. If not included, only the currently active program is reported.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">Report internal subroutine calls within each reported program and subroutine. If not included, only external subroutine calls are reported.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PSTAT USER 2 LEVEL 3</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">User Detail</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp; 2 Account: SALES</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; Command: RUN INVOICES</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; !SCREEN 953 (14E6)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 750 (118E)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 450 (08F3)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 323 (061B)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; D:\LBS\QM\BP.OUT\INVOICES 105 (01BE)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; Command processor</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; D:\LBS\QM\BP.OUT\PROC 104 (05B8)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; Command processor</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, the most recent command executed by user 2 was RUN INVOICES. It is currently executing the !SCREEN subroutine at line 953, address 14E6. Because the LEVEL parameter includes level 2, internal subroutine calls are also shown. The !SCREEN subroutine was called from The INVOICES program at line 105 (address 01BE). This program was started from the command processor which was itself started from line 104 of program PROC which was itself started from the command processor.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The same process could be reported in less detail using other values of the LEVEL option as shown below:</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">Level 2 (Internal subroutine stack but exclude external calls)</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PSTAT USER 2 LEVEL 2</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">User Detail</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp; 2 Command: RUN INVOICES</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; !SCREEN 953 (14E6)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 750 (118E)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 450 (08F3)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 323 (061B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">Level 1 (External subroutine stack but exclude internal calls)</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PSTAT USER 2 LEVEL 1</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">User Detail</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp; 2 Command: RUN INVOICES</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; !SCREEN 953 (14E6)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; D:\LBS\QM\BP.OUT\INVOICES 105 (01BE)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; Command processor</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; D:\LBS\QM\BP.OUT\PROC 104 (05B8)</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; Command processor</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">Level 0 (Current location only)</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">PSTAT USER 2</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">User Detail</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp; 2 Command: RUN INVOICES</span></p>
+<p><span style="font-family: 'Courier New'; font-style: italic; color: #000000;"> &nbsp;&nbsp;&nbsp; !SCREEN 953 (14E6)</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

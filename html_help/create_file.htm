@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?create_file.htm"; }
+else { parent.quicksync('a5.35'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CREATE.FILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Multifiles,CREATE.FILE,MINIMUM.MODULUS,PATHNAME,GROUP.SIZE,LARGE.RECORD,SPLIT.LOAD,MERGE.LOAD,VERSION" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CREATE.FILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="create_account.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="create_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CREATE.FILE</span><span style="color: #000000;"> command is used to create a QM file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CREATE.FILE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">portion</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">subfile</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">type</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">configuration</span><span style="color: #000000;">}</span></p>
+<p style="text-indent: 30px; margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING DICT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">other.file</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">ENCRYPT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">keyname</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">portion</span></td><td><span style="color: #000000;">identifies the part of the file to create. This may be </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> to create just the data portion, </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> to create just the dictionary portion or omitted to create both.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the VOC record to be created to refer to the file. The operating system pathname used for the data file is the same as </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">. The directory for the dictionary component of a file has a .DIC suffix.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">subfile</span></td><td><span style="color: #000000;">is the name of the subfile to be created in a multifile.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">type</span></td><td><span style="color: #000000;">specifies the file type as </span><span style="font-weight: bold; color: #000000;">DIRECTORY</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">DYNAMIC</span><span style="color: #000000;">. If omitted, a <a href="dynamicfiles.htm">dynamic file</a> is created by default. Dictionaries are always created as dynamic files regardless of any </span><span style="font-style: italic; color: #000000;">type</span><span style="color: #000000;"> argument.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The</span><span style="font-style: italic; color: #000000;"> configuration</span><span style="color: #000000;"> options are available only when creating a dynamic file and specify the file's configuration and location. These options are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">PATHNAME</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">path</span></td><td><span style="color: #000000;">specifies the pathname of an existing operating system directory under which the file is to be created.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">MINIMUM.MODULUS</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">sets the minimum modulus for the file. Any positive non-zero value may be used. The default is 1.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">GROUP.SIZE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">size</span></td><td><span style="color: #000000;">sets the group size as a multiple of 1024 bytes. This must be in the range 1 to 8. If omitted, the default group size is taken from the <a href="configparams.htm#grpsize">GRPSIZE</a> configuration parameter.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">LARGE.RECORD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">bytes</span></td><td><span style="color: #000000;">sets the large record size in bytes. The default is 80% of the group size.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">SPLIT.LOAD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">pct</span></td><td><span style="color: #000000;">sets the split load factor for the file. The default is 80%.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">MERGE.LOAD</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">pct</span></td><td><span style="color: #000000;">sets the merge load factor for the file. The default is 50%.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">VERSION</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">vno</span></td><td><span style="color: #000000;">allows creation of files with internal formats compatible with older releases of QM.</span></td></tr></table></div><p style="text-indent: -240px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">NO.CASE</span></td><td><span style="color: #000000;">creates a file where the record ids will be treated as case insensitive. QM will write records preserving the casing specified by whatever performs the write. Reads will locate records regardless of casing.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-weight: bold; color: #000000;">NO.RESIZE</span></td><td><span style="color: #000000;">creates the file with resizing disabled. See </span><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a></span><span style="color: #000000;"> and <a href="dynamicfiles.htm">dynamic files</a> for more information.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">USING DICT</span><span style="color: #000000;"> clause allows creation of a data file that is to share the dictionary of an existing file. The effect of this option is to copy the content of field 3 of the VOC entry for </span><span style="font-style: italic; color: #000000;">other.file</span><span style="color: #000000;"> into field 3 of the newly created entry rather than setting up a new dictionary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ENCRYPT</span><span style="color: #000000;"> keyword enables record level <a href="encryption.htm">data encryption</a> and prefixes the name of the encryption key to be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;"> option suppresses any confirmation prompts associated with the requested action.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Multifiles</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A multifile is a collection of data files that share a common dictionary. Commands and application software refer to an individual subfile within the multifile by using a name that consists of the file name and subfile name separated by a comma.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When creating a multifile element, the default action of </span><span style="font-weight: bold; color: #000000;">CREATE.FILE</span><span style="color: #000000;"> is to create a subdirectory named </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> under the account and create the element within this directory as </span><span style="font-style: italic; color: #000000;">subfile</span><span style="color: #000000;">. An alternative location can be specified using the </span><span style="font-weight: bold; color: #000000;">PATHNAME</span><span style="color: #000000;"> parameter.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CREATE.FILE</span><span style="color: #000000;"> command can convert an existing simple file into a multifile. The existing data becomes a subfile with the same name as the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CREATE.FILE STOCK MINIMUM.MODULUS 150 GROUP.SIZE 4</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement creates a dynamic file named STOCK with minimum modulus of 150 and group size 4.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CREATE.FILE SALES ENCRYPT SALESKEY</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement creates a dynamic file named SALES and applies record level data encryption using the SALESKEY key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CREATE.FILE DATA PROGRAMS DIRECTORY PATHNAME D:\APPS</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement creates the data portion of a directory file named PROGRAMS. The full pathname for this directory file is specified as D:\APPS\PROGRAMS&nbsp; rather than using the default location.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CREATE.FILE ACCOUNTS,NORTH</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement creates a multifile component named NORTH within the ACCOUNTS file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="configure_file.htm">CONFIGURE.FILE</a>, <a href="delete_file.htm">DELETE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listf.htm">LISTF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listfl.htm">LISTFL</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listfr.htm">LISTFR</a>, </span><span style="color: #000000;"><a href="encryption.htm">data encryption</a>, </span><span style="font-weight: bold; color: #000000;"><a href="create_key.htm">CREATE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="encrypt_file.htm">ENCRYPT.FILE</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

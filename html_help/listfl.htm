@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?listfl.htm"; }
+else { parent.quicksync('a5.85'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LISTFL</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LISTFL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LISTFL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="listf.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="listfr.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LISTFL</span><span style="color: #000000;"> command lists all files defined in the VOC that are local to the account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LISTFL </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LISTFL</span><span style="color: #000000;"> command is a sentence to list all <a href="voc_f.htm">F type VOC entries</a> referencing files that are local to the account. Selection is performed by reporting only those records for which the data portion pathname does not contain a back slash. It is thus possible to defeat this selection process by using absolute pathnames for local files. The </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> command always uses the file name only for a local file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The listing shows the VOC name of the file, the file type, the description (field 1 of the VOC entry), the data portion pathname (field 2) and the dictionary pathname (field 3). The report is sorted by file name.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file type column shows:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">DH</span></td><td><span style="color: #000000;">for a dynamic hash file. This type code will be followed by</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">E</span></td><td><span style="color: #000000;">the file uses encryption</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">I</span></td><td><span style="color: #000000;">the file has alternate key indices</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">S</span></td><td><span style="color: #000000;">file statistics are enabled</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">T</span></td><td><span style="color: #000000;">the file has a trigger function defined</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Dir</span></td><td><span style="color: #000000;">for a directory file</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Mult</span></td><td><span style="color: #000000;">for a multifile</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Err</span></td><td><span style="color: #000000;">if the file cannot be opened</span></td></tr></table></div><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The column is blank for a VOC entry with no data pathname.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> keyword will direct the output to the printer. Other query processor keywords can be appended to the command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_file.htm">DELETE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listf.htm">LISTF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="listfr.htm">LISTFR</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

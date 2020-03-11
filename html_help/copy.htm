@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?copy.htm"; }
+else { parent.quicksync('a5.31'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>COPY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="COPY" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">COPY</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="configure_file.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="copyp.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COPY</span><span style="color: #000000;"> command copies selected records from one file to another, or within the same file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">COPY FROM</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">src.file</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">tgt.file</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">src.rec</span><span style="color: #000000;">{,</span><span style="font-style: italic; color: #000000;">tgt.rec</span><span style="color: #000000;">}} {</span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">src.file</span></td><td><span style="color: #000000;">is the file from which the records are to be copied.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">tgt.file</span></td><td><span style="color: #000000;">is the file to which the records are to be copied. If omitted, records are copied within the </span><span style="font-style: italic; color: #000000;">src.file</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">src.rec</span></td><td><span style="color: #000000;">is the name of the record to be copied.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">tgt.rec</span></td><td><span style="color: #000000;">is the name of the record to which </span><span style="font-style: italic; color: #000000;">src.rec</span><span style="color: #000000;"> is to be copied. If omitted, the record is not renamed.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">are taken from the following:</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">ALL</span></td><td><span style="color: #000000;">Copy all records from </span><span style="font-style: italic; color: #000000;">src.file</span><span style="color: #000000;"> to </span><span style="font-style: italic; color: #000000;">tgt.file</span><span style="color: #000000;">. This option cannot be used with named records or a select list.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">BINARY</span></td><td><span style="color: #000000;">Copy data in binary mode, suppressing translation between field marks and newlines when copying between a hashed file and a directory file in either direction. This mode is implied if both are directory files.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">DELETING</span></td><td><span style="color: #000000;">Delete the record(s) from </span><span style="font-style: italic; color: #000000;">src.file</span><span style="color: #000000;"> after copying.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">NO.QUERY</span></td><td><span style="color: #000000;">Suppresses confirmation prompt when using a select list.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">OVERWRITING</span></td><td><span style="color: #000000;">Overwrite existing record(s) of the same name in </span><span style="font-style: italic; color: #000000;">tgt.file</span><span style="color: #000000;">. Without this option, records which already exist are not copied. This option may not be used with </span><span style="font-weight: bold; color: #000000;">UPDATING</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">REPORTING</span></td><td><span style="color: #000000;">Display the id of each record as it is copied.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 330px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-weight: bold; color: #000000;">UPDATING</span></td><td><span style="color: #000000;">Only copy records if they already exist in the target file. This option may not be used with </span><span style="font-weight: bold; color: #000000;">OVERWRITING</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any number of source and target record pairs may be specified. If all records in the file are to be copied, the keyword </span><span style="font-weight: bold; color: #000000;">ALL</span><span style="color: #000000;"> may be used in place of specified record names.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If no source records are specified and the default select list is active, this list is used to determine the records to be copied. A confirmation prompt is issued before copying commences unless the </span><span style="font-weight: bold; color: #000000;">NO.QUERY</span><span style="color: #000000;"> keyword is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COPY</span><span style="color: #000000;"> command does not normally overwrite existing records. The keyword </span><span style="font-weight: bold; color: #000000;">OVERWRITING</span><span style="color: #000000;"> allows this operation. Thus a command of the form</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COPY FROM</span><span style="font-family: 'Courier New'; color: #000000;"> </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">src.file</span><span style="font-family: 'Courier New'; color: #000000;"> </span><span style="font-family: 'Courier New'; color: #000000;">TO</span><span style="font-family: 'Courier New'; color: #000000;"> </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">tgt.file</span><span style="font-family: 'Courier New'; color: #000000;"> </span><span style="font-family: 'Courier New'; color: #000000;">ALL</span></p>
+<p><span style="color: #000000;">would only copy records that do not already exist in the target file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Conversely, the keyword </span><span style="font-weight: bold; color: #000000;">UPDATING</span><span style="color: #000000;"> copies records </span><span style="color: #000000; text-decoration: underline;">only</span><span style="color: #000000;"> if they already exist in the target file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">DELETING</span><span style="color: #000000;"> keyword causes </span><span style="font-weight: bold; color: #000000;">COPY</span><span style="color: #000000;"> to delete records from the source file after they have been successfully copied to the target file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REPORTING</span><span style="color: #000000;"> keyword causes a message to be displayed for each record copied.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> is returned as the number of records copied or a negative error code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">COPY FROM NEWVOC TO VOC ALL OVERWRITING</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command copies all records from the NEWVOC file to the VOC, replacing existing records of the same name. This could be used, for example, if the VOC had been damaged by an accidental deletion of some standard records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="copyp.htm">COPYP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?commandparsing.htm"; }
+else { parent.quicksync('a3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The Command Environment</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Command Parsing,VOC file" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The Command Environment</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="command_scripts.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="commandstack.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although applications commonly use the graphical interface capabilities of QM, developers normally work from the character mode interface command prompt using a terminal emulator or directly from the system console. Commands can also originate from within application programs.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Commands entered at the terminal or generated from within a QM application are processed by the command processor. This uses the <a href="voc.htm">vocabulary file</a> (VOC) to determine the meaning of each word or symbol within the command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The terminal command prompt is the colon character. Whenever this is displayed at the start of a line, QM is ready to accept a new command. The command prompt changes to a double colon if the default <a href="selectlists.htm">select list</a> is active. This serves as a warning that the select list may impact execution of the next command. The prompt characters may be modified using the </span><span style="font-weight: bold; color: #000000;"><a href="pterm.htm">PTERM</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first word of a command entered at the command prompt must identify an executable item within the VOC. This will be the name of a verb, sentence, paragraph, menu or Proc. It is also possible to run a program from the <a href="catalogue.htm">system catalogue</a> by typing its name as a command. Other valid actions at the command prompt are:</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="color: #000000;"><a href="commandstack.htm">Command stack operations</a>, prefixed by a dot character</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;"><a href="commandeditor.htm">Command editor keystrokes</a></span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Save the command without execution by appending a question mark</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A command usually commences with a </span><span style="font-weight: bold; color: #000000;">verb</span><span style="color: #000000;"> which may also require one or more </span><span style="font-weight: bold; color: #000000;">arguments</span><span style="color: #000000;"> to determine exactly what the verb is to do.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command processor performs the VOC look-up for a verb in three stages; firstly by looking for a record with the name of the verb exactly as entered. If this fails, it then tries again with the name mapped to uppercase. All system verbs have uppercase names and can therefore be entered in lowercase, uppercase or a mix. For compatibility with Pick databases, a third attempt is made with any hyphens in the uppercase version of the verb name replaced by dots. Thus a command such as </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> can be entered as </span><span style="font-weight: bold; color: #000000;">create.file</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">CREATE-FILE</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the command is not found in the VOC, a final check is made in the private and global catalogues. If the name exists here, the catalogued program is executed. The names of catalogued programs executed in this way must commence with a letter or an asterisk.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Many commands perform the first two phases of this look-up for file names, keywords, etc, however, commands that might have a detrimental effect if used in error (</span><span style="font-weight: bold; color: #000000;"><a href="delete_file.htm">DELETE.FILE</a></span><span style="color: #000000;">, for example) either insist on the file name being entered exactly as it appears in the VOC or prompt for confirmation if the name is not an exact match.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Command lines commencing with an asterisk followed by at least one space are treated as comments and ignored except that <a href="inlineprompts.htm">inline prompts</a> are still processed. Although comments are primarily of use within paragraphs, they can be entered directly at the keyboard when they will appear in any active <a href="como.htm">como file</a>.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Many QM commands return status values via the </span><span style="color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">variable. In general, a positive or zero value indicates success. A negative value is an error code and the actual value is the negative of the codes listed in the ERR.H include record in SYSCOM.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

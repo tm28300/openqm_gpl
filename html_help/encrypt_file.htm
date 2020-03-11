@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?encrypt_file.htm"; }
+else { parent.quicksync('a5.58'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ENCRYPT.FILE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ENCRYPT.FILE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ENCRYPT.FILE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="edit_list.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="file_save.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ENCRYPT.FILE</span><span style="color: #000000;"> command sets the data encryption key for specific fields or the entire record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ENCRYPT.FILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">field</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">keyname </span><span style="color: #000000;">...</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ENCRYPT.FILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">keyname</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">filename</span></td><td><span style="color: #000000;">is the name of the file to which encryption is to be applied.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">is the name or field number of the field to which encryption is to be applied.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">keyname</span></td><td><span style="color: #000000;">is the name of the encryption key to be used. This is case insensitive.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first form of the </span><span style="font-weight: bold; color: #000000;">ENCRYPT.FILE</span><span style="color: #000000;"> command sets the encryption key for one or more fields within a file that uses field level encryption. Encryption cannot be applied to a field that is used for an alternate key index.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The second form of the </span><span style="font-weight: bold; color: #000000;">ENCRYPT.FILE</span><span style="color: #000000;"> command sets the encryption key for record level encryption. Alternate key indices can be defined in files that use record level encryption but, because the index itself is not encrypted, the indexed fields have reduced security.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the file contains data records when this command is used, the file is processed to apply the encryption. A system failure or other process abort during this update will leave the file in a partially encrypted state and hence render it unusable. Always back up a file before using this command if the file contains data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ENCRYPT.FILE CUSTOMERS CCARD,CARDNO</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above command encrypts the CCARD field of the CUSTOMERS file using the CARDNO encryption key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">ENCRYPT.FILE CUSTOMERS CKEY</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above command encrypts the CUSTOMERS file using the CKEY encryption key for record level encryption.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="color: #000000;"><a href="encryption.htm">Data encryption</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_key.htm">CREATE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_key.htm">DELETE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="grant_key.htm">GRANT.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_keys.htm">LIST.KEYS</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="reset_master_key.htm">RESET.MASTER.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="revoke_key.htm">REVOKE.KEY</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="set_encryption_key_name.htm">SET.ENCRYPTION.KEY.NAME</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

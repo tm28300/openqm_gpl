@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_chain.htm"; }
+else { parent.quicksync('a7.5.28'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CHAIN</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CHAIN" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CHAIN</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_cats.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_change.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> statement terminates the current program and executes a command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">expr</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to a command.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The current program terminates immediately, discarding local variables but retaining common variables. The command defined by </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is executed as though it replaced the sentence which invoked the program in which the </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> statement occurs. If this sentence is in a paragraph, the remainder of the paragraph will be executed when the </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;">'ed program terminates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The exact behaviour of </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> when executed from a program started by a PROC depends on the VOC record type of the target item referenced by </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;">. If this is a further PROC, any stacked PROCs leading up to the program that performed the </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> are discarded. If the target is not a PROC, control will return to the PROC that executed the program performing the </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> when the chained command terminates.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The unnamed common block is discarded on execution of a </span><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> unless the CHAIN.KEEP.COMMON mode of the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command is active.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">CHAIN</span><span style="color: #000000;"> is provided primarily for compatibility with other systems. The same effect can usually be better achieved using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CHAIN &quot;RUN PROGRAM2&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment terminates the current program and executes PROGRAM2 in its place.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?printer.htm"; }
+else { parent.quicksync('a5.117'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PRINTER</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PRINTER" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PRINTER</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="phantom.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="pstat.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER</span><span style="color: #000000;"> command provides control for print units.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRINTER</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">action</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> argument identifies the print unit on which the action is to occur and must be in the range -1 to 255. If omitted, print unit zero is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> may be any of the following. Multiple actions may be specified in a single </span><span style="font-weight: bold; color: #000000;">PRINTER</span><span style="color: #000000;"> command and will be performed in the order in which they occur on the command line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">AT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">printer.name</span></td><td><span style="color: #000000;">Output is directed to the named printer</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">BOTTOM.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Sets the bottom margin size.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">CLOSE</span></td><td><span style="color: #000000;">The print unit is closed.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename recordname</span></td><td><span style="color: #000000;">Selects the destination for printed output.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">LEFT.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Sets the left margin size.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">LINES</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Sets the number of lines per page.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">KEEP.OPEN</span></td><td><span style="color: #000000;">Keeps the printer open to merge successive printer output.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">QUERY</span></td><td><span style="color: #000000;">Reports the current settings</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">RESET</span></td><td><span style="color: #000000;">Resets to the default parameter values.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">TOP.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Sets the top margin size.</span></td></tr></table></div><p style="text-indent: -270px; margin: 0px 0px 0px 300px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="270"><span style="font-weight: bold; color: #000000;">WIDTH</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">Sets the number of characters per line.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER</span><span style="color: #000000;"> command sets or reports the settings of printer control parameters. The action of each keyword is described in detail below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">AT</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">printer.name</span></p>
+<p><span style="color: #000000;">Subsequent output is directed to the named printer. The </span><span style="font-style: italic; color: #000000;">printer.name</span><span style="color: #000000;"> must be a printer defined in Windows.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> BOTTOM.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p><span style="color: #000000;">Sets the bottom margin size. On reaching the foot of the page, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> blank lines will be output to reach the start of the next page. This value defaults to 0 and is reset on closing a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> CLOSE</span></p>
+<p><span style="color: #000000;">The print unit is closed. This action overrides any previous use of the </span><span style="font-weight: bold; color: #000000;">KEEP.OPEN</span><span style="color: #000000;"> option. If this print unit was directed to a spool file, the data will be printed. Any heading and footing text or file name associated with the printer is discarded and further use of this print unit by a program or command will start a new file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">FILE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">filename recordname</span></p>
+<p><span style="color: #000000;">Selects the destination for printed output. Output to print units 1 to 255 is normally directed to a hold file. This command associates a record of a directory file with the print unit. The record is not created until the first output is directed to the print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> KEEP.OPEN</span></p>
+<p><span style="color: #000000;">Allows merging of successive printer output into a single print job. Any request from a program to close the print unit clears the heading and footing but leaves the print job open to receive further output. The print unit is finally closed, and the job printed, by using the </span><span style="font-weight: bold; color: #000000;">CLOSE</span><span style="color: #000000;"> option to this command. On Windows systems it may be important that the Print Manager option to start printing while a print job is being created is disabled as this could result in the printer being assigned to an incomplete job.</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">LEFT.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p><span style="color: #000000;">Sets the left margin size. Each line will be indented by </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> spaces. This value defaults to 0 and is reset on closing a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> LINES</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p><span style="color: #000000;">Sets the number of lines per page. No validation of the value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is performed. The effect of specifying a number of lines per page greater than that of the physical device on which the data is subsequently printed is undefined. This value defaults to 66 and is reset on closing a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> QUERY</span></p>
+<p><span style="color: #000000;">Reports the current settings of the width, lines per page, top margin, bottom margin and left margin</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> RESET</span></p>
+<p><span style="color: #000000;">Resets to the default values for width, lines per page, top margin, bottom margin and left margin. This function does not affect any file association.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> TOP.MARGIN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p><span style="color: #000000;">Sets the top margin size. Each page of output will commence with </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> blank lines. This value defaults to 0 and is reset on closing a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">PRINTER </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="font-weight: bold; color: #000000;"> WIDTH</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span></p>
+<p><span style="color: #000000;">Sets the number of characters per line. No validation of the value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is performed. The effect of specifying a width greater than that of the physical device on which the data is subsequently printed is undefined. This value defaults to 80 and is reset on closing a print unit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

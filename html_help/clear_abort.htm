@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?clear_abort.htm"; }
+else { parent.quicksync('a5.17'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CLEAR.ABORT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CLEAR.ABORT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CLEAR.ABORT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="clean_account.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="clear_data.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CLEAR.ABORT</span><span style="color: #000000;"> command clears the abort status in an <a href="command_scripts.htm">ON.ABORT</a> paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CLEAR.ABORT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When an application generates an abort event, QM discards all programs, paragraphs, menus, etc running in the process and returns to the command processor. Before displaying the command prompt, the system checks for an <a href="command_scripts.htm">ON.ABORT</a> item in the VOC (usually a paragraph) and, if found, executes it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The <a href="command_scripts.htm">ON.ABORT</a> paragraph is intended as a means of preventing a user ever arriving at the command prompt if the application fails. Typically, the <a href="command_scripts.htm">ON.ABORT</a> paragraph simply terminates the session but it might log the event or perform other processing. If the processing in the <a href="command_scripts.htm">ON.ABORT</a> paragraph causes a further abort, the session is terminated.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Sometimes, it may be useful to restart the application from the <a href="command_scripts.htm">ON.ABORT</a> paragraph. In this case, a further abort should probably re-enter the <a href="command_scripts.htm">ON.ABORT</a> paragraph. The normal action of automatic termination of the session on the second abort can be suppressed by clearing the abort status in the <a href="command_scripts.htm">ON.ABORT</a> paragraph. It then becomes the developer's responsibility to avoid endless loops if the <a href="command_scripts.htm">ON.ABORT</a> action generates a further abort.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="abort.htm">ABORT</a></span><span style="color: #000000;"> command, QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_abort.htm">ABORT</a></span><span style="color: #000000;"> statement</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

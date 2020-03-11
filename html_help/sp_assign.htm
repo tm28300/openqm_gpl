@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sp_assign.htm"; }
+else { parent.quicksync('a5.147'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SP.ASSIGN</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SP.ASSIGN" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SP.ASSIGN</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sleep.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sp_open.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.ASSIGN</span><span style="color: #000000;"> command uses a form queue number to set the destination and other options for printer output.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SP.ASSIGN </span><span style="font-style: italic; color: #000000;">options</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;"> are chosen from:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">is the number of copies to print.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">F</span><span style="font-style: italic; color: #000000;">qno</span></td><td><span style="color: #000000;">specifies the form queue number in the range 0 to 999.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">H</span></td><td><span style="color: #000000;">directs output to the hold file.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">O</span></td><td><span style="color: #000000;">keeps the print unit open until the </span><span style="font-weight: bold; color: #000000;"><a href="printer.htm">PRINTER CLOSE</a></span><span style="color: #000000;"> command is used.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">Q</span><span style="font-style: italic; color: #000000;">qno</span></td><td><span style="color: #000000;">Same as </span><span style="font-weight: bold; color: #000000;">F</span><span style="font-style: italic; color: #000000;">qno</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">R</span><span style="font-style: italic; color: #000000;">unit</span></td><td><span style="color: #000000;">uses the specified print unit, zero if omitted.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">S</span></td><td><span style="color: #000000;">Suppresses printing.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 270px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SP.ASSIGN</span><span style="color: #000000;"> command references the $FORMS file (set up using </span><span style="font-weight: bold; color: #000000;"><a href="set_queue.htm">SET.QUEUE</a></span><span style="color: #000000;">) to relate Pick style form queue numbers to the corresponding </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> options. The options to </span><span style="font-weight: bold; color: #000000;">SP.ASSIGN</span><span style="color: #000000;"> can be used to override the settings in the form queue definition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">F</span><span style="font-style: italic; color: #000000;">qno</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">Q</span><span style="font-style: italic; color: #000000;">qno</span><span style="color: #000000;"> options specify the form queue to be used. This defaults to zero if omitted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The queue number is used to read the corresponding print unit details from the $FORMS file. The remaining options can be used to override settings in the $FORMS entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of both the </span><span style="font-weight: bold; color: #000000;">H</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">S</span><span style="color: #000000;"> options selects mode 3 printing, directing output to the hold file. When the </span><span style="font-weight: bold; color: #000000;">H</span><span style="color: #000000;"> option is used without the </span><span style="font-weight: bold; color: #000000;">S</span><span style="color: #000000;"> option, print mode 6 is selected causing the output to be written to a file and also printed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">SP.ASSIGN</span><span style="color: #000000;"> sets the characteristics of print unit zero, the default printer, unless the </span><span style="font-weight: bold; color: #000000;">R</span><span style="font-style: italic; color: #000000;">unit</span><span style="color: #000000;"> option is given.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note: </span><span style="font-weight: bold; color: #000000;">SP.ASSIGN</span><span style="color: #000000;"> is provided to ease migration of applications from Pick style environments. It is strongly recommended that new applications should make direct use of </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SP.ASSIGN F3</span></p>
+<p><span style="color: #000000;">This command uses the definition of form queue 3 to process output sent to the default printer (print unit 0).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SP.ASSIGN HSF3</span></p>
+<p><span style="color: #000000;">This command uses the definition of form queue 3 but forces use of print mode 3 to send the data to a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SP.ASSIGN HF3</span></p>
+<p><span style="color: #000000;">This is similar to the previous example except that the data is saved to a file and also printed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">SP.ASSIGN 2R4F6</span></p>
+<p><span style="color: #000000;">This command uses the definition of form queue 6 to process output sent to print unit 4 but forces the number of copies to be 2.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="set_queue.htm">SET.QUEUE</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

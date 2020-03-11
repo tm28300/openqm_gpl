@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_keycode.htm"; }
+else { parent.quicksync('a7.5.129'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>KEYCODE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="KEYCODE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">KEYCODE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_itype.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_keyedit.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYCODE()</span><span style="color: #000000;"> function reads a single keystroke from the keyboard.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">KEYCODE(</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;">}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYCODE()</span><span style="color: #000000;"> function pauses program execution until a key is pressed. The character associated with that key is returned as the value of the function. The character is not echoed to the display.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">KEYCODE()</span><span style="color: #000000;"> does not take data from the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_data.htm">DATA</a></span><span style="color: #000000;"> statement queue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-style: italic; color: #000000;">timeout</span><span style="color: #000000;"> parameter specifies a period in seconds after which the function will return if no input is received. In this case the returned value is a null string and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$TIMEOUT.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A null string is also returned when taking input from a pipe if the piped data stream is exhausted. In this case the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$EOF. The value returned by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function is not significant unless </span><span style="font-weight: bold; color: #000000;">KEYCODE()</span><span style="color: #000000;"> has returned a null string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">KEYCODE()</span><span style="color: #000000;"> function differs from </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyin.htm">KEYIN()</a></span><span style="color: #000000;"> in that it uses the terminfo database to identify certain special keys and returns the character representing the internal representation of that key as defined in the KEYIN.H include record in the SYSCOM file. The special keys recognised by this function are:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Function keys F1 to F12</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Left, right, up and down cursor keys</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Page up and Page down keys</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Home and End</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Insert and Delete</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Backtab</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Mouse</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the Escape key will return char(27) if no further characters are received within 200mS. This mechanism can be disabled using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_bindkey.htm">BINDKEY()</a></span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Mouse Input on AccuTerm</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The mouse code is returned when the mouse control prefix sequence defined in the terminfo database is detected. The way in which mouse clicks are handled varies considerably between different terminal emulators and will almost certainly require device specific programming. The following code sample works for the AccuTerm emulator in its vt100 mode if the terminfo kmous key is defined as &quot;\E[101~&quot;.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = KEYCODE()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF SEQ(C) = K$MOUSE THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; S = ''</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; LOOP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; C = KEYIN()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;UNTIL C = 'R'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; S := C</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; REPEAT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ROW = MATCHFIELD(S, '0X0N;0N', 2)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; COL = MATCHFIELD(S, '0X0N;0N', 4)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment is for QM version 2.1-0 upwards as earlier versions used a different terminfo entry. Note that AccuTerm numbers rows and columns from one.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Stylus Input on a PDA</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Stylus taps are enabled on a PDA using the @(IT$STYLUS) function. When enabled, a stylus tap sends char(200) (K$MOUSE) followed by the column and row coordinates, separated by a comma and terminated by a carriage return. The following function extends KEYCODE to recognise stylus taps, returning the mouse code to the caller and leaving the screen coordinates in a common block.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FUNCTION KEY()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; $CATALOGUE KEY</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; $INCLUDE KEYS.H</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; $INCLUDE KEYIN.H</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; COMMON /STYLUS/STYLUS.ROW, STYLUS.COL</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY @(IT$STYLUS,1):</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; K = KEYCODE()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY @(IT$STYLUS,0):</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF SEQ(K) = K$MOUSE THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; ECHO OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; INPUT S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;* Get coordinate data</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; HUSH OFF</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; STYLUS.COL = MATCHFIELD(S, '0N&quot;,&quot;0N', 1)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; STYLUS.ROW = MATCHFIELD(S, '0N&quot;,&quot;0N', 3)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; RETURN K</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

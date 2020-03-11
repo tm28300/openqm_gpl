@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?conv_tfile.htm"; }
+else { parent.quicksync('a4.9.17'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>File translation conversion</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Translation conversion,File translation conversion" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">File Translation (Tfile)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="conv_s.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="conv_tn.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;"> conversion code uses the source data as a record id to the named file and returns data from this record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The format of the conversion code is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">T</span><span style="font-style: italic; color: #000000;">file</span><span style="font-weight: bold; color: #000000;">;</span><span style="font-style: italic; color: #000000;">cv</span><span style="font-weight: bold; color: #000000;">;</span><span style="font-style: italic; color: #000000;">i</span><span style="font-weight: bold; color: #000000;">;</span><span style="font-style: italic; color: #000000;">o</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">file</span></td><td><span style="color: #000000;">is the file name. This may be prefixed by either DICT followed by a space or by an asterisk with no space to reference the dictionary part of the file. Where necessary to avoid ambiguity, the file name may be enclosed in quotes.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">c</span></td><td><span style="color: #000000;">identifies the action to be taken if the requested record does not exist of the field to be extracted is null. This is a single letter:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">C</span></td><td><span style="color: #000000;">Returns the record id.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">V</span></td><td><span style="color: #000000;">Displays a warning message and returns a null value.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">X</span></td><td><span style="color: #000000;">Returns a null value</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">I</span></td><td><span style="color: #000000;">Like V for input conversion, C for output conversion</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 120px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">O </span></td><td><span style="color: #000000;">Like C for input conversion, V for output conversion</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">v</span></td><td><span style="color: #000000;">specifies the value position to be extracted from the returned data. If omitted, all values are returned with value and subvalue marks replaced by spaces.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">i</span></td><td><span style="color: #000000;">specifies the field position of the data to be returned when performing an input conversion.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">o</span></td><td><span style="color: #000000;">specifies the field position of the data to be returned when performing an output conversion.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This conversion code is closely related to the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> function. Where possible, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> should be used in preference to the T conversion code for best performance.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

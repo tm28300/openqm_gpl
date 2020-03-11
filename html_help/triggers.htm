@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?triggers.htm"; }
+else { parent.quicksync('a4.13'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Triggers</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Triggers" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Triggers</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="ak.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="encryption.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">trigger</span><span style="color: #000000;"> is an optional user written function associated with a hashed file and configured to be executed when certain file operations are performed. Executed before a write or delete, the trigger can be used to apply data validation. Executed after a record is written or deleted, the function can trigger other events such as related file updates. Trigger functions can also be executed after a read and before or after a clear file operation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The trigger function is simply a catalogued </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> subroutine which is automatically executed as part of the file operation. The subroutine is passed a mode flag to indicate the action being performed, the record id, the record data (read or write operations) and a flag indicating whether the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> ON&nbsp;ERROR clause is present. The subroutine may do whatever processing the application designer wishes. If the write or delete is to be disallowed, the pre-write or pre-delete trigger function should set the <a href="at_variables.htm#trigger.return.code">@TRIGGER.RETURN.CODE</a> variable to a non-zero value such as an error number or an error message text to cause the write or delete to take its ON&nbsp;ERROR clause if present or to abort if omitted. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return ER$TRIGGER when executed in the program that initiated the file operation. Programs should test </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> rather than testing for <a href="at_variables.htm#trigger.return.code">@TRIGGER.RETURN.CODE</a> being non-zero to determine whether the trigger function has disallowed the write or delete as <a href="mailto:@TRIGGER.RETURN.CODE" class="weblink">@TRIGGER.RETURN.CODE</a> is only updated when the error status is set.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The trigger function is set up using the </span><span style="font-weight: bold; color: #000000;"><a href="set_trigger.htm">SET.TRIGGER</a></span><span style="color: #000000;"> command. After it has been set up, the trigger function is loaded into memory when the file is opened and is called for all write or delete operations. Modifying and recataloguing the trigger function will have no effect on processes that have the file open until they close and reopen it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the trigger function is not in the catalogue or has the incorrect number of arguments, no error occurs until the first write or delete is attempted. Note that the trigger function must be visible to all accounts that may reference the file. Where a file is used by multiple accounts, this can be achieved by using global cataloguing, sharing a private catalogue, or ensuring that the VOC entry for a locally catalogued trigger function is present in each account. Although it would be possible for a shared file to use a different trigger function depending on the account from which it is referenced, this is not recommended. Files that are to be accessed via <a href="qmnet.htm">QMNet</a> require that associated trigger functions are globally catalogued.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The interface into a trigger function is:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">SUBROUTINE </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;">(</span><span style="font-style: italic; color: #000000;">mode</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">data</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">on.error</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">fvar</span><span style="color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">is the trigger subroutine name.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">mode</span></td><td><span style="color: #000000;">indicates the point at which the trigger function is being called:</span></td></tr></table></div><div style="text-align: left; text-indent: -90px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 120px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.PRE.WRITE</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">before writing a record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.PRE.DELETE</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">before deleting a record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">4</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.POST.WRITE</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">after writing a record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">8</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.POST.DELETE</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">after deleting a record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">16</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.READ</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">after reading a record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">32</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.PRE.CLEAR</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">before clearing the file</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="48px" style="width:48px;"><p><span style="color: #000000;">64</span></p>
+</td>
+<td valign="top" width="293px" style="width:293px;"><p><span style="color: #000000;">FL$TRG.POST.CLEAR</span></p>
+</td>
+<td valign="top" width="590px" style="width:590px;"><p><span style="color: #000000;">after clearing the file</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">Other values may be used in the future. Trigger functions should be written to ignore unrecognised values.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">id</span></td><td><span style="color: #000000;">is the id of the record to be written or deleted.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">data</span></td><td><span style="color: #000000;">is the data. This is a null string for a delete or clearfile action.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">on.error</span></td><td><span style="color: #000000;">indicates whether the program performing the file operation has used the ON&nbsp;ERROR clause to catch aborts.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">fvar</span></td><td><span style="color: #000000;">is the file variable that can be used to access the file. Beware that reading, writing or deleting records via this file variable may cause a recursive call to the trigger function. This argument can be omitted for compatibility with earlier releases.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When writing trigger functions, the original data of the record to be written or deleted can be examined by reading it in the usual way. Trigger functions should not attempt to write the record for which they are called. Neither should they release the update lock on this record as this could cause concurrent update of the record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the value of </span><span style="font-style: italic; color: #000000;">data</span><span style="color: #000000;"> is changed by a pre-write trigger function, the modified data is written to the file. Similarly, a read trigger can modify the data that will be returned to the application that requested the read. Changes to the value of </span><span style="font-style: italic; color: #000000;">id</span><span style="color: #000000;"> will not affect the database update in any way.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Trigger functions may perform all of the actions available to other </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> subroutines including performing updates that may themselves cause trigger functions to be executed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

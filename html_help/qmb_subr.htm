@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_subr.htm"; }
+else { parent.quicksync('a7.5.259'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SUBR()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SUBR()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SUBR()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_str.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_subroutine.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function calls a subroutine as a function in an expression. It is normally only used in dictionary I-type items.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SUBR</span><span style="color: #000000;">(</span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="font-style: italic; color: #000000;">arg1</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">arg2</span><span style="color: #000000;">...}</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">name</span></td><td><span style="color: #000000;">evaluates to the name of the subroutine to be called.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">arg1</span><span style="color: #000000;">, etc</span></td><td><span style="color: #000000;">are the arguments to the subroutine.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function calls catalogued subroutine </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;">, passing </span><span style="font-style: italic; color: #000000;">arg1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">arg2</span><span style="color: #000000;">, etc to it as its arguments. The subroutine must be written to have an additional first argument through which it returns its result which is used as the value of the </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A statement such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = B + SUBR(&quot;EVALUATE&quot;, C, D)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">is equivalent to</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CALL EVALUATE(X, C, D)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = B + X</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">name</span><span style="color: #000000;"> argument may be any expression that evaluates to the name of the subroutine. The catalogue look-up process is performed for each execution of the </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function unlike a&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_call.htm">CALL</a></span><span style="color: #000000;">statement where the look-up is performed just once for each invocation of the calling program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When used in a QMBasic program, the </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function does not support the </span><span style="font-weight: bold; color: #000000;">MAT</span><span style="color: #000000;"> keyword to pass a whole matrix as an argument. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_call.htm">CALL</a></span><span style="color: #000000;"> statement must be used to achieve this.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; SUBROUTINE CUST.ORD(RESULT, CUST.NO)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; $INCLUDE FILES.H</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; SELECTINDEX 'CUST', CUST.NO FROM ORDERS.F TO 1</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READLIST RESULT FROM 1 ELSE NULL</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; RETURN</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above subroutine takes a customer number as its second argument and uses this to access an alternate key index, returning a list of all orders that were placed by the given customer. This example assumes that the ORDERS.F file variable is in a common block defined in the FILES.H include record and that the file is already open.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The subroutine could alternatively be written as a function:</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; FUNCTION CUST.ORD(CUST.NO)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; $INCLUDE FILES.H</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; SELECTINDEX 'CUST', CUST.NO FROM ORDERS.F TO 1</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; READLIST RESULT FROM 1 ELSE NULL</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp;&nbsp; RETURN RESULT</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In either case, assuming that the subroutine or function is catalogued as CUST.ORD, it could be used from within a dictionary I-type item by use of a </span><span style="font-weight: bold; color: #000000;">SUBR()</span><span style="color: #000000;"> function such as:</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; SUBR('CUST.ORD', CUST.NO)</span></p>
+<p><span style="color: #000000;">where CUST.NO is the name of a field within the data records being processed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

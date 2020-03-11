@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmopen.htm"; }
+else { parent.quicksync('a8.28'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMOpen()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMopen()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMOpen()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmmatchfield.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmread.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMOpen()</span><span style="color: #000000;"> function opens a file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMOpen(ByVal </span><span style="font-style: italic; color: #000000;">FileName</span><span style="font-weight: bold; color: #000000;"> as String) as Integer</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">int QMOpen(char * </span><span style="font-style: italic; color: #000000;">FileName</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Obj</span></td><td><span style="font-style: italic; color: #000000;">FileNo</span><span style="color: #000000;"> = </span><span style="font-style: italic; color: #000000;">Session</span><span style="font-weight: bold; color: #000000;">-&gt;Open(</span><span style="font-style: italic; color: #000000;">FileName</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">FileName</span></td><td><span style="color: #000000;">is the name of the file to be opened. This must correspond to an F or Q-type entry in the VOC of the QM account in which the server is running.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMOpen()</span><span style="color: #000000;"> function opens a QM database file. The returned integer value is the file number which must be used in all subsequent operations against this file. If the file cannot be opened, the function returns zero. The </span><span style="font-weight: bold; color: #000000;"><a href="qmstatus.htm">QMStatus()</a></span><span style="color: #000000;"> function can be used to retrieve the error cause.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To open a dictionary, the </span><span style="font-style: italic; color: #000000;">FileName</span><span style="color: #000000;"> argument should commence with &quot;DICT&quot; and a single space separating this prefix from the file name, for example:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="font-family: 'Courier New'; color: #000000;">DictNo = QMOpen(&quot;DICT READERS&quot;)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is no practical limit to the number of files that can be open at one time.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?catalogue.htm"; }
+else { parent.quicksync('a5.15'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CATALOGUE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CATALOGUE,CATALOG,$PRIVATE.CATALOGUE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CATALOGUE, CATALOG</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="build_index.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="clean_account.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CATALOGUE</span><span style="color: #000000;"> command (which may be entered with the American spelling for compatibility with other products) adds a compiled QMBasic program to the global or private catalogue file or as a locally catalogued entry in the VOC.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CATALOGUE</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">catalogue.name</span><span style="color: #000000;">}} </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">options</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">is the name of the directory file holding the program. If omitted, this defaults to BP, the .OUT suffix being added automatically.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">catalogue.name</span></td><td><span style="color: #000000;">is the name by which the program or subroutine is to be catalogued. If omitted, the </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> is used. The catalogue name is translated to uppercase though calls from QMBasic programs are case insensitive. Except as described below, catalogue names must start with a letter. Subsequent characters may be letters, digits, periods, percent signs, dollar signs, hyphens or underscores.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 210px;"><span style="color: #000000;">For compatibility with other database systems, the </span><span style="font-style: italic; color: #000000;">catalogue.name</span><span style="color: #000000;"> may also commence with a digit though such catalogued items can only be used as user defined conversion codes and not as call names in programs.</span></p>
+<p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">record.name</span></td><td><span style="color: #000000;">is the name of the record within the specified file. The </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> may be specified as an asterisk to catalogue all programs in </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">. If </span><span style="font-style: italic; color: #000000;">record.name</span><span style="color: #000000;"> is omitted and the default select list is active, this list will be used to determine the programs to be catalogued.</span></td></tr></table></div><p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="180"><span style="font-style: italic; color: #000000;">options</span></td><td><span style="color: #000000;">are any of the following:</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">LOCAL</span></td><td><span style="color: #000000;">The program is to be catalogued in the VOC.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">GLOBAL</span></td><td><span style="color: #000000;">The program is to be catalogued for use by all accounts.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">NO.QUERY</span></td><td><span style="color: #000000;">Suppresses all confirmation prompts.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 240px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">NOXREF</span></td><td><span style="color: #000000;">Catalogues the program without any symbol and line cross-reference information. This results in lower disk and memory usage but prevents full diagnostic messages in case of run time errors.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CATALOGUE</span><span style="color: #000000;"> command makes a program or subroutine available for access via the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_call.htm">CALL</a></span><span style="color: #000000;"> statement. Catalogued programs can also be executed as command simply by entering their name at the command prompt or within a stored sentence or paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Private Cataloguing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Without either the </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;"> keyword, the program is copied to the private catalogue in the account from which the command is executed and is available only to users of that account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The private catalogue is normally a subdirectory, cat, under the account directory but can be moved by creating an X-type VOC entry named $PRIVATE.CATALOGUE in which field 2 contains the pathname of the alternative private catalogue directory. This only takes effect when QM is re-entered or on use of the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command. This feature is particularly useful where two or more accounts are to share a common private catalogue.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Global Cataloguing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">With the </span><span style="font-weight: bold; color: #000000;">GLOBAL</span><span style="color: #000000;"> keyword, the program is copied to the global catalogue file in the </span><span style="color: #000000;">QMSYS</span><span style="color: #000000;"> directory and is available from all accounts. Global cataloguing is also implied by adding one of the following prefix characters to the </span><span style="font-style: italic; color: #000000;">catalogue.name</span><span style="color: #000000;"> of the program:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">*</span></td><td><span style="color: #000000;">User subroutine prefix provided for compatibility with other systems</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">!</span></td><td><span style="color: #000000;">User callable system supplied subroutines</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">_</span></td><td><span style="color: #000000;">Internal undocumented subroutines</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">$</span></td><td><span style="color: #000000;">System subroutines, only callable from internal mode programs</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Local Cataloguing</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">With the </span><span style="font-weight: bold; color: #000000;">LOCAL</span><span style="color: #000000;"> keyword, an entry is written to the VOC file allowing calls only from the account in which the program is catalogued. This is useful during testing or for functions that are not called frequently. The first call to programs catalogued in this way are slower than to private or globally catalogued programs. Once the program has been loaded into memory, speed will be identical.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The VOC entry for a locally catalogued program is of type V (verb) and has a dispatch field of CS. The third field holds the pathname of the executable program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="basic.htm">BASIC</a>, <a href="delete_catalogue.htm">DELETE.CATALOGUE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="map.htm">MAP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_k.htm"; }
+else { parent.quicksync('a3.5.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC K-type records - Keywords</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Keywords,VOC K-type records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p><span style="font-size: 14pt; font-family: 'Arial'; font-weight: bold; color: #ffffff;">VOC K-Type Records&nbsp; -&nbsp; Keywords</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_f.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_m.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Keywords affect the behaviour of commands or introduce optional components in the command syntax. Keywords are defined by K-type VOC records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">K&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">2:</span></td><td><span style="color: #000000;">Keyword number</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">3:</span></td><td><span style="color: #000000;">{ alternative expansion }</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Each keyword is assigned a number which appears in field 2 of a keyword VOC entry.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Keywords with internal number 0 in field 2 are ignored by the query processor and some other parts of QM. They are provided to allow construction of more natural English sentences. For example, the THAN keyword can be used with other elements such as GREATER and LESS to allow a query such as</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH PRICE GREATER THAN 100</span></p>
+<p><span style="color: #000000;">instead of</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH PRICE GREATER 100</span></p>
+<p><span style="color: #000000;">Users can freely add new keywords with internal number 0 as required.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In some cases, a keyword is also needed as a command name (e.g. </span><span style="font-weight: bold; color: #000000;">OFF</span><span style="color: #000000;"> which is a synonym for </span><span style="font-weight: bold; color: #000000;"><a href="quit.htm">QUIT</a></span><span style="color: #000000;"> but also a modifier in several other commands). A keyword can never be the first token in a command. If the command processor finds a K-type VOC item used as the first token in a command, it looks for an alternative VOC record structure starting at field 3.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Thus, as an example, the OFF VOC entry reads</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">1: K</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">2: 20</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">3: V</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">4: IN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">5: 1</span></p>
+<p><span style="color: #000000;">where fields 3 onwards contain an alternative V-type (verb) definition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A summary of K-type VOC records may be displayed or printed using </span><span style="font-weight: bold; color: #000000;"><a href="listk.htm">LISTK</a></span><span style="font-family: 'Arial'; color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

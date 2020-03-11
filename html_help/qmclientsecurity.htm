@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmclientsecurity.htm"; }
+else { parent.quicksync('a8.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Security Issues of the QMClient API</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMClient security" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Security Issues of the QMClient API</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmclient.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmcall.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In most systems, a normal terminal user is taken directly into the application on logging in and the application itself controls what the user can do. The </span><span style="color: #000000;"><a href="command_scripts.htm">ON.ABORT</a></span><span style="color: #000000;"> paragraph provides a mechanism to ensure that, even if the application fails, the user cannot fall back to a command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">With QMClient, the client session is effectively at a command prompt from which it can open, read and write files, execute commands, or call subroutines. It becomes the responsibility of the client software to control what the user can do. A knowledgeable user with a valid user name and password could, however, develop a client session that connects in the same way as the application and then goes on to do almost anything. Setting appropriate access rights on files may help but is unlikely to be a perfect solution to this potential security threat.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="configparams.htm#qmclient">QMCLIENT</a></span><span style="color: #000000;"> configuration parameter can be used to control the level of access that a QMClient session has. It starts with the value defined in the QM configuration parameters and can be modified to a higher level using the </span><span style="font-weight: bold; color: #000000;"><a href="config.htm">CONFIG</a></span><span style="color: #000000;"> command but cannot be taken to a lower level in this way. Because QMClient sessions execute the </span><span style="color: #000000;"><a href="command_scripts.htm">LOGIN</a></span><span style="color: #000000;"> paragraph on connection, the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="config.htm">CONFIG</a></span><span style="color: #000000;"> command is easily executed from this paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It may also be useful to validate the client network address (See </span><span style="font-weight: bold; color: #000000;"><a href="at_variables.htm#ip.addr">@IP.ADDR</a></span><span style="color: #000000;">) in the </span><span style="color: #000000;"><a href="command_scripts.htm">LOGIN</a></span><span style="color: #000000;"> paragraph.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

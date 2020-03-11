@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_openseq.htm"; }
+else { parent.quicksync('a7.5.173'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>OPENSEQ</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="OPENSEQ" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">OPENSEQ</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_openpath.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_open_socket.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> statement opens a record of a directory file for sequential access.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">file.name</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">id</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">APPEND</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">OVERWRITE</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">READONLY</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">TO </span><span style="font-style: italic; color: #000000;">file.var</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">or</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">pathname</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">APPEND</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">OVERWRITE</span><span style="color: #000000;"> | </span><span style="font-weight: bold; color: #000000;">READONLY</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">TO </span><span style="font-style: italic; color: #000000;">file.var</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">evaluates to the VOC name of the directory file holding the record to be opened.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">id</span></td><td><span style="color: #000000;">evaluates to the name of the record to be opened.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">pathname</span></td><td><span style="color: #000000;">evaluates to the operating system pathname of the record to be opened.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the name of a variable to be used in later statements accessing this record.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statement(s) to be executed depending on the outcome of the </span><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> statement.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At least one of the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses must be present.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The named record is opened and associated with </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> for later operations.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The optional </span><span style="font-weight: bold; color: #000000;">READONLY</span><span style="color: #000000;"> clause opens the item for read only access. Any attempt to write will fail.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of </span><span style="font-weight: bold; color: #000000;">APPEND</span><span style="color: #000000;"> causes the </span><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> statement to position at the end of any existing data in the record such that subsequent write operations will append new data. Use of </span><span style="font-weight: bold; color: #000000;">OVERWRITE</span><span style="color: #000000;"> truncates the record to remove any existing data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the record already exists, the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> clause is executed. An update lock will be set on this record unless the record is read-only in which case a shared read lock is set.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the record does not already exist, the </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause is executed and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function returns zero. The record will have been locked and use of </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_weofseq.htm">WEOFSEQ</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_create.htm">CREATE</a></span><span style="color: #000000;"> with the returned </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> will create the record. Alternatively, the lock can be released using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_release.htm">RELEASE</a></span><span style="color: #000000;"> or closing the </span><span style="font-style: italic; color: #000000;">file.var</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause is also executed if the specified item cannot be opened due to an error. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will contain the error code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> clause is executed if the record is already locked by another process.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ON ERROR</span><span style="color: #000000;"> clause is executed if a fatal error occurs when opening the record. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function will return an error code relating to the problem.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A record open for sequential access may be read and written using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;"> respectively. The </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span><span style="color: #000000;"> statement provides a forced write and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_weofseq.htm">WEOFSEQ</a></span><span style="color: #000000;"> sets an end of file marker. The record should be closed using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_closeseq.htm">CLOSESEQ</a></span><span style="color: #000000;"> though it will be closed automatically when the program in which the file variable lies terminates. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The second form of </span><span style="font-weight: bold; color: #000000;">OPENSEQ</span><span style="color: #000000;"> may be used to open a serial port by using the device name as </span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;">. On Windows, this name is COM1, COM2, etc. On other platforms, it is the device driver name. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPENSEQ &quot;STOCKS&quot;, &quot;STOCK.LIST&quot; TO STOCK.LIST ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF STATUS() THEN ABORT &quot;Cannot open stocks list&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment opens the record STOCK.LIST of directory file STOCKS. If it fails to either open an existing record or to create a new record, the program aborts.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPENSEQ &quot;C:\TEMP\IMPORT.DATA&quot; TO DAT.F ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; IF STATUS() THEN ABORT &quot;Cannot open import data file&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment opens the operating system file in C:\TEMP\IMPORT.DATA for sequential processing.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_closeseq.htm">CLOSESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nobuf.htm">NOBUF</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readblk.htm">READBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readcsv.htm">READCSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_seek.htm">SEEK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_weofseq.htm">WEOFSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writecsv.htm">WRITECSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

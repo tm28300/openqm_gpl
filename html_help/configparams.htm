@@ -1,0 +1,426 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?configparams.htm"; }
+else { parent.quicksync('a9.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Configuration parameters</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Configuration parameters" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Configuration Parameters</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sysadmin.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="terminfo.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM has a number of configuration parameters that determine major settings for the system. On Windows systems, these are stored in a file named QM.INI in the Windows directory. Modifications should preferably be made using the Configuration Editor from the QM program menu rather than by editing the file itself because the Configuration Editor includes some validation of the parameter values. On other platforms, the configuration parameters are stored in /etc/qmconfig.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file is divided into a number of sections, each with a section title enclosed in square brackets.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Configuration parameters may be global or private. Global parameters apply to all users of QM. Private parameters, although initially set to the state defined in the configuration file, may be updated for an individual process using the </span><span style="font-weight: bold; color: #000000;"><a href="config.htm">CONFIG</a></span><span style="color: #000000;"> command. Private configuration parameters are marked with an asterisk in the table below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM configuration parameters are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="100%" cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="cmdstack"></a><span style="color: #000000;">CMDSTACK</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Determines the size of the command stack for all users. The value must be in the range 20 to 999 and defaults to 99 if this parameter is not present.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="codepage"></a><span style="color: #000000;">CODEPAGE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Windows only. Specifies the code page to be used for QMConsole connections. If omitted, QM uses the default console code page. Note that a restriction in Windows requires that the console session is set to use Lucida Console font for this feature to work. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="deadlock"></a><span style="color: #000000;">DEADLOCK</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">If set to 1, QM aborts any program that attempts to wait for a lock that would result in a deadlock situation. The default value (0) allows deadlocks to occur. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="dumpdir"></a><span style="color: #000000;">DUMPDIR *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The pathname of the directory to receive process dump files.&nbsp; If this parameter is null, the QMSYS directory is used.&nbsp; On some systems, users may not have write access to this directory. DUMPDIR may be specified as a full pathname or relative to the account directory. </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="errlog"></a><span style="color: #000000;">ERRLOG</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets the maximum size in kilobytes of the error log maintained in the errlog file in the QMSYS account directory. When the file reaches this size, the first half of the logged data is discarded. If set to zero, error logging is disabled. The minimum non-zero value is 10. A lower value will be treated as 10. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="exclrem"></a><span style="color: #000000;">EXCLREM *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">If set to 1, remote files are omitted from </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;"> unless this exclusion is over-ridden by other mechanisms within the </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;"> command processing. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="filerule"></a><span style="color: #000000;">FILERULE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets rules for special filename syntax usage. This value is formed by adding together the following options as required:</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"> &nbsp; 1&nbsp; Allow </span><span style="font-style: italic; color: #000000;">account</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">file</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"> &nbsp; 2&nbsp; Allow </span><span style="font-style: italic; color: #000000;">server</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">account</span><span style="color: #000000;">:</span><span style="font-style: italic; color: #000000;">file</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;"> &nbsp; 4&nbsp; Allow PATH:</span><span style="font-style: italic; color: #000000;">pathname</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="config.htm">CONFIG</a></span><span style="color: #000000;"> command can be used to modify this value within an individual process but only to remove options. Thus, the setting of this parameter in the configuration file represents the most powerful set of filename option rules that can be used.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="fixusers"></a><span style="color: #000000;">FIXUSERS</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Reserves a range of user numbers for exclusive use of users specifying a fixed user number when logging in using qm -</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is the required user number.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The format of this parameter is</span></p>
+<p style="margin: 5px 0px 5px 31px;"><span style="color: #000000;">FIXUSERS=u,n</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">u is the lowest user number in the reserved range.</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">n is the number of user numbers to be reserved.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The highest available QM user number is normally 1023. Therefore, the value of u + n must not exceed 1024.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This feature is provided for compatibility with other environments in applications that rely on a fixed user numbers to recognise users. It is recommended that user login names should be used for this purpose in new applications as this gives a more secure system. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="fltdiff"></a><span style="color: #000000;">FLTDIFF *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The FLTDIFF configuration parameter determines how floating point values are compared.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Just as some numbers such as one third cannot be represented accurately in decimal, there are numbers that cannot be represented accurately in the binary notation used in computer systems.&nbsp; Often, numbers that are accurate in one number base, are inaccurate in the other.&nbsp; The inaccuracy is extremely small, typically at about the fourteenth decimal place.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">A program that tests a floating point value for equality with some other value must allow for this inaccuracy rather than enforcing a strict equality.&nbsp; The FLTDIFF parameter determines how close two values must be to be considered as equal.&nbsp; The default value, 2.91E-11 (2</span><span style="color: #000000; vertical-align: super;">-35</span><span style="color: #000000;">), is an industry standard but this can be set to any positive value less than one.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The format of the data in the parameter setting may be either a simple number (0.0000000000291) or a number with an exponent (2.91E-11).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="fsync"></a><span style="color: #000000;">FSYNC *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Additive values determining when an fsync operation is performed to flush all updated data to disk:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 8px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">Every time that a file's header is updated.&nbsp; This corresponds to all structural changes within the file (overflow, split, merge, etc) and on closing the file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 7px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="33"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">At transaction commit.</span></td></tr></table></div><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Use of FSYNC can have a severe effect on performance but gives greater resilience to system failures.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">File synchronisation always occurs on use of the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQF</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_flush.htm">FLUSH</a></span><span style="color: #000000;"> statements regardless of the setting of this parameter. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="gdi"></a><span style="color: #000000;">GDI *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting this parameter non-zero on Windows systems causes the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command to use GDI mode by default. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="grpsize"></a><span style="color: #000000;">GRPSIZE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Determines the default group size in units of 1kb used when creating a dynamic file.&nbsp; This parameter must be in the range 1 - 8 and defaults to 1.&nbsp; For best performance, it should be a multiple of the operating system disk block size.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="intprec"></a><span style="color: #000000;">INTPREC *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Determines the rounding applied when converting a floating point number to an integer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Just as there are numbers that cannot be written accurately in decimal such as one third, so there are numbers that cannot be stored accurately in the floating point formats used by computer systems. For example, entering a value of 17.9 will actually result in a stored value of approximately 17.8999999999999986.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The language definition for conversion of floating point values to integers states that the fractional part is discarded. To do so without rounding would mean that</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY INT(17.9 * 100)</span></p>
+<p><span style="color: #000000;">would display the value 1789 rather than the more intuitively obvious 1790.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To avoid this problem, QM applies rounding to the floating point value based on the INTPREC setting when converting floating point values to integers in the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_int.htm">INT()</a></span><span style="color: #000000;"> function or any implicit conversion such as dynamic array indices. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The parameter value identifies the decimal place at which rounding is applied. The default value is 13. Setting a value of 0 causes no rounding to be applied.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="licence"></a><span style="color: #000000;">LICENCE</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Licence parameters. Use the </span><span style="font-weight: bold; color: #000000;"><a href="update_licence.htm">UPDATE.LICENCE</a></span><span style="color: #000000;"> command in the QMSYS account to apply new licence parameters.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="lptrhigh"></a><span style="color: #000000;">LPTRHIGH *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Determines the default number of lines per page when a print unit is first referenced.&nbsp; This must be in the range 1 to 32767 and may be overridden using the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command or equivalent QMBasic print unit modification functions. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="lptrwide"></a><span style="color: #000000;">LPTRWIDE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Determines the default number of characters per line when a print unit is first referenced.&nbsp; This must be in the range 1 to 1000 and may be overridden using the </span><span style="font-weight: bold; color: #000000;"><a href="setptr.htm">SETPTR</a></span><span style="color: #000000;"> command or equivalent QMBasic print unit modification functions. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="maxcall"></a><span style="color: #000000;">MAXCALL *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets the maximum depth of nested subroutine calls including internal components of QM such as the command processor. If this limit is reached due to, for example, a program error resulting in a recursive call loop, QM will abort the program gracefully rather than failing in unpredictable ways when it runs out of memory. The value must be in the range 10 to 1000000 and defaults to 1000. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="maxidlen"></a><span style="color: #000000;">MAXIDLEN</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets the maximum allowed length of a record id. This must be in the range 63 to 255 and defaults to 63. Increasing this value has a significant effect on the size of the internal lock tables. It is therefore recommended that the value used should be consistent with the needs of the application.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">QM tracks the length of the longest id ever written to a file. Attempting to access a file where this exceeds the value of the MAXIDLEN parameter will cause the operation to fail. The <a href="qmfix.htm">qmfix</a> utility will correct the recorded longest id value if records have been deleted from the file.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="mustlock"></a><span style="color: #000000;">MUSTLOCK *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting this parameter to 1 enforces use of locks when writing or deleting records.&nbsp; If a program attempts to write or delete a record when it does not own a record update (</span><span style="font-weight: bold; color: #000000;"><a href="qmb_readu.htm">READU</a></span><span style="color: #000000;">) lock on the record or a file lock on the file being updated, the program will abort with error ER$NOLOCK.&nbsp; The ON ERROR clause can be used to trap this error.&nbsp; Leaving the parameter at its default value of 0 allows writes or deletes when no lock is in place. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="netfiles"></a><span style="color: #000000;">NETFILES</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">By default QM does not allow access to files on remote drives.&nbsp; This is because the locking system cannot detect that two systems are accessing the file simultaneously.&nbsp; Where it is certain that a file will </span><span style="color: #000000; text-decoration: underline;">never</span><span style="color: #000000;"> be opened from two systems concurrently, setting this parameter to 1 will enable access to remote files.&nbsp; Incorrect use of this feature can result in corrupt data files.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting NETFILES to 2 enables incoming connections from other QM servers accessing files via the QMNet interface.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">These two mode settings are additive and can be used together. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="numfiles"></a><span style="color: #000000;">NUMFILES</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum number of QM data files that may be opened at one time. This is a system wide limit. Use of the same file by multiple users counts as one file. Attempting to open more than this number of files will cause an application to fail. Setting the parameter significantly too high may have a small performance impact. The </span><span style="font-weight: bold; color: #000000;"><a href="list_files.htm">LIST.FILES</a></span><span style="color: #000000;"> command can be used to determine whether the value of this parameter is appropriate.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="numlocks"></a><span style="color: #000000;">NUMLOCKS</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum number of record locks that can be held at one time as a system wide limit. If the limit is reached, processes attempting to get locks will wait for space to become available in the lock table. Setting the parameter significantly too high may have a small performance impact. The DETAIL option of the </span><span style="font-weight: bold; color: #000000;"><a href="list_readu.htm">LIST.READU</a></span><span style="color: #000000;"> command can be used to determine whether the value of this parameter is appropriate.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="objects"></a><span style="color: #000000;">OBJECTS *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum number of programs which may be loaded into memory before discard is attempted. A program is a candidate to be discarded when it is not part of the call stack and it is not referenced from any subroutine variables from indirect calls. Setting this parameter to zero implies no limit on the number of concurrently loaded programs.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="objmem"></a><span style="color: #000000;">OBJMEM *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum size of all loaded programs in Kb before discard is attempted. Setting this parameter to zero implies no limit on the size of concurrently loaded programs.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="pdump"></a><span style="color: #000000;">PDUMP</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Additive flags to configure </span><span style="font-weight: bold; color: #000000;"><a href="pdump.htm">PDUMP</a></span><span style="color: #000000;"> (process dump) features. At this release the only flag value is</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">Ban use of PDUMP to dump processes running under other user names except when performed by a user with administrator rights. </span></td></tr></table></div></td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="portmap"></a><span style="color: #000000;">PORTMAP</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Allows users to create a fixed mapping between tcp/ip port numbers and QM user numbers. The format of this parameter is</span></p>
+<p style="margin: 5px 0px 5px 31px;"><span style="color: #000000;">PORTMAP=p,u,n</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">p is the lowest port number to be mapped.</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">u is the lowest corresponding user number.</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">n is the number of ports to be mapped.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The highest available QM user number is 1023. Therefore, the value of u + n must not exceed 1024.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Use of PORTMAP does not prevent users entering QM via the normal shared port defined by the QMSRVR PORT configuration parameter.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Note that this parameter appears in the QM section of the configuration file as it relates to both QM and QMSvc.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This feature is provided for compatibility with other environments in applications that rely on a fixed port number to user number relationship to recognise users. It is recommended that user login names should be used for this purpose in new applications as this gives a more secure system.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This feature is not supported on Windows 98/ME or on the PDA version of QM.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">On a Linux system, it will be necessary to create corresponding files in the /etc/xinetd.d directory for each port to be monitored. The format of these is</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;">service qmsrvr</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;">{</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = qmsrvr4001</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 4001</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> bind&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 0.0.0.0</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = UNLISTED</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> protocol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = tcp</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> flags&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = REUSE</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> socket_type&nbsp;&nbsp;&nbsp;&nbsp; = stream</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> wait&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = no</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = root</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> server&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = /usr/qmsys/bin/qm</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> server_args&nbsp;&nbsp;&nbsp;&nbsp; = -n</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> log_on_failure&nbsp; += USERID</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;"> disable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = no</span></p>
+<p style="margin: 0px 0px 0px 23px;"><span style="font-family: 'Courier New'; color: #000000;">}</span></p>
+<p><span style="color: #000000;">where the value 4001 in the above example is replaced by the port number.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmclient"></a><span style="color: #000000;">QMCLIENT</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Provides additional security control for <a href="qmclient.htm">QMClient</a> sessions.&nbsp; This parameter has one of three values:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="color: #000000;">0</span></td><td><span style="color: #000000;">No restrictions.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">Bans use of </span><span style="font-weight: bold; color: #000000;"><a href="qmopen.htm">QMOpen()</a></span><span style="color: #000000;"> and</span><span style="font-weight: bold; color: #000000;"><a href="qmexecute.htm"> QMExecute()</a></span><span style="color: #000000;">, limiting clients to calling subroutines.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">In addition to the level 1 restrictions, </span><span style="font-weight: bold; color: #000000;"><a href="qmcall.htm">QMCall()</a></span><span style="color: #000000;"> can only be used to call subroutines compiled with the <a href="qmbd_qmcall.htm">$QMCALL </a>compiler directive.</span></td></tr></table></div><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This parameter can be modified to a higher level in an individual process using the CONFIG command but cannot be taken to a lower level in this way. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsys"></a><span style="color: #000000;">QMSYS</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Identifies the location of the QMSYS account directory.&nbsp; If the QMSYS directory is moved for any reason, change this parameter to point to the new location and the system should operate with no other changes. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="reccache"></a><span style="color: #000000;">RECCACHE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets the size of the record cache (default zero, maximum 32). When a QM process reads a record, a copy of this record is retained in the cache. A subsequent read for the same record can find it from the cache rather than requiring an operating system call. The cache mechanism is most likely to benefit an application that makes heavy use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> function to read the same record many times during a long query, for example when looking up a tax rate that is applied to every record processed.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="ringwait"></a><span style="color: #000000;">RINGWAIT *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">QM uses a ring buffer to hold type-ahead characters received from the keyboard.&nbsp; If this becomes full, incoming data is thrown away and a bell character is sent back to the terminal.&nbsp; Some applications may need to send a large burst of data which would fill the ring buffer and hence be truncated.&nbsp; Setting the RINGWAIT parameter to 1 causes QM to wait for space to become available in the buffer rather than rejecting input.&nbsp; Enabling this feature could result in the inability to use the break key if the ring buffer is full. The AccuTerm terminal emulator requires this parameter to be set to 1. (This parameter currently only applies to the Windows version of QM).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="safedir"></a><span style="color: #000000;">SAFEDIR *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting this parameter to 1 causes QM to adopt a careful update process when writing records to directory files. The new record is written to a temporary file, the old record is deleted (if it exists) and the temporary item is renamed to replace it.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This mechanism results in reduced performance but ensures that the original data is not lost if the write fails because, for example, there is insufficient disk space available. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="sh"></a><span style="color: #000000;">SH *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">(Not Windows) Determines the shell processor and its options to be used when the SH command is used to start an interactive shell. If not set, this parameter defaults to &quot;/bin/bash -i&quot; on Linux and &quot;/bin/sh -i&quot; on FreeBSD. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="sh1"></a><span style="color: #000000;">SH1 *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">(Not Windows) Determines the shell processor and its options to be used when the SH command or the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_os_execute.htm">OS.EXECUTE</a></span><span style="color: #000000;"> statement is used to execute a single command. If not set, this parameter defaults to &quot;/bin/bash -c&quot; on Linux and &quot;/bin/sh -c&quot; on FreeBSD. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="sortmem"></a><span style="color: #000000;">SORTMEM *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The size in kilobytes at which a sort switches from memory based to disk based.&nbsp; The default value is 1024 (1Mb).&nbsp; Setting values lower than this may lead to poorer performance unless you are severely restricted by memory size.&nbsp; Setting values larger than this will require more memory for large sorts.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="sortmrg"></a><span style="color: #000000;">SORTMRG *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">A disk based sort produces a series of intermediate files that must be merged to produce the final result.&nbsp; The SORTMRG parameter specifies the number of files merged in each pass. This must be in the range 2 to 10 and defaults to 4.&nbsp; The effect of changes to this parameter on sort times is dependant on the relative performance of the disk and processor.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="sortwork"></a><span style="color: #000000;">SORTWORK *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The pathname of the directory to hold temporary sort workfiles. These are automatically deleted on normal completion of a sort.&nbsp; If this parameter is null or the specified directory does not exist, the directory defined by the TEMPDIR parameter is used. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="spooler"></a><span style="color: #000000;">SPOOLER *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets the name of the default spooler on non-Windows platforms. If this parameter is not specified or is a null string, the lp spooler is used. The name specific may be another standard spooler (e.g. lpr) or a user written program or shell script to perform custom print management.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The qualifying data to this configuration parameter can include other options to be passed to the selected spooler. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="startup"></a><span style="color: #000000;">STARTUP</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sets a command to be executed when QM starts. This may not exceed 80 characters and may not contain double quotes. This parameter is not applicable to the PDA version of QM.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">This process will run the MASTER.LOGIN and LOGIN paragraphs in the same way as any other QM session.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">On Windows. persistent shared memory must be enabled with the QMSRVR OPTIONS parameter. The command will be executed when the QMSvc service starts. Note that it will run as the powerful System user which could represent a security risk.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="tempdir"></a><span style="color: #000000;">TEMPDIR *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The pathname of the directory to hold temporary files. These are normally automatically deleted when no longer required but it is recommended that this parameter points to a directory that is cleared on restart of the system so that any files left behind at a system failure will be deleted.&nbsp; If this parameter is null or the specified directory does not exist, QM uses the TEMP subdirectory of the QMSYS account on Windows or the operating system temporary directory on other platforms. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="terminfo"></a><span style="color: #000000;">TERMINFO *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The pathname of the directory holding the <a href="terminfo.htm">terminfo</a> database. This defaults to a subdirectory named terminfo under the QMSYS directory. This parameter is not applicable to the PDA version of QM.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="yearbase"></a><span style="color: #000000;">YEARBASE *</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The earliest year in the 100 year range of dates entered with two digit year numbers.&nbsp; This parameter is optional and defaults to 1930.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -120px; margin: 10px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QMSRVR configuration parameters control the QMSvc service (Windows NT and later) or its predecessor, QMSrvr (Windows 98/ME and USB installations). They are not used on other platforms. These parameters are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="100%" cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.maxlog"></a><span style="color: #000000;">MAXLOG</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 1px;"><span style="color: #000000;">Sets the maximum size of the log file (QMSvc only). A value of zero causes QMSvc to start a new log each time the service is started, saving the previous log as QMSvcLog.old. A non-zero value sets the maximum size of the QMSvc.log file in kb. When this size is reached, the first half of the data in the file is removed.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.options"></a><span style="color: #000000;">OPTIONS</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">An additive value formed from QMSvc/QMSrvr option flags:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">1</span></td><td><span style="color: #000000;">Log client disconnection (QMSvc only). There is a very small system overhead for this but it should be negligible. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="31"><span style="color: #000000;">2</span></td><td><span style="color: #000000;">Persistent shared memory (QMSvc only). With this mode set, the shared memory structures used by QM are created by QMSvc (unless they already exist) and remain present until all user have logged out of QM and QMSvc is shut down. This mode of operation gives faster entry to QM and may be of use in web servers or other applications that use frequent, short life QM sessions..</span></td></tr></table></div></td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.port"></a><span style="color: #000000;">PORT</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The port for incoming client telnet connections.&nbsp; Leave blank to use the default port (4242).&nbsp; If QM is the only telnet style service used on the host system, it may be useful to set this to 23, the standard port used by telnet software.</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting this port to zero disables incoming telnet client connections. See also the PORTMAP QM configuration parameter described above.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.qmclient"></a><span style="color: #000000;">QMCLIENT</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The port for incoming QMClient telnet connections.&nbsp; Leave blank to use the default port (4243). </span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Setting this port to zero disables incoming QMClient connections.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.retries"></a><span style="color: #000000;">RETRIES</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum number of attempts allowed for entry of a valid username and password on QMSvc connections. This parameter defaults to 3.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrvr.serial"></a><span style="color: #000000;">SERIAL</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Defines a serial port to be monitored for incoming QM connections. Multiple SERIAL parameters may be specified. The format is</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="color: #000000;">SERIAL=</span><span style="font-style: italic; color: #000000;">port</span><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">rate</span><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">parity</span><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">bits</span><span style="color: #000000;">,</span><span style="font-style: italic; color: #000000;">stop</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">where</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="font-style: italic; color: #000000;">port</span><span style="color: #000000;"> = the port name (e.g. COM1)</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="font-style: italic; color: #000000;">rate</span><span style="color: #000000;"> = baud rate (e.g. 9600)</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="font-style: italic; color: #000000;">parity</span><span style="color: #000000;"> = none(0), odd(1), even(2)</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="font-style: italic; color: #000000;">bits</span><span style="color: #000000;"> = bits per byte (7 or 8)</span></p>
+<p style="margin: 10px 0px 0px 31px;"><span style="font-style: italic; color: #000000;">stop</span><span style="color: #000000;"> = number of stop bits (1 or 2)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="170px" style="width:170px;"><p style="margin: 10px 0px 0px 0px;"><a name="qmsrrv.timeout"></a><span style="color: #000000;">TIMEOUT</span></p>
+</td>
+<td valign="top"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">The maximum wait period in seconds allowed during entry of a valid username and password on QMSvc connections. This parameter defaults to 30.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-indent: -120px; margin: 10px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

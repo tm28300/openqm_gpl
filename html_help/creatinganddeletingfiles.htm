@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?creatinganddeletingfiles.htm"; }
+else { parent.quicksync('a4.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Creating and Deleting Files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Creating and deleting files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Creating and Deleting Files</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmfiles.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="directoryfiles.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">As a general rule, files that may be accessed&nbsp; from the operating system level must be <a href="directoryfiles.htm">directory files</a> and all other files should be <a href="dynamicfiles.htm">dynamic files.</a> Dynamic files give best performance but records cannot be accessed from outside of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> source programs are normally stored in directory files. Dictionaries are automatically created as dynamic files regardless of the type of the associated data file as a directory file dictionary could cause severe performance degradation in query processor commands.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files are created using the </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> command which normally creates both a data and dictionary portion for the file. Either may be created individually by use of the </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> keywords. Dictionary portions are not required for files used to hold </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> source programs or include records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;"> command creates the file and also writes an&nbsp; <a href="voc_f.htm">F-type</a> record to the <a href="voc.htm">VOC</a>. If the file is to be accessed from more than one account, this <a href="voc_f.htm">F-type</a> record may be duplicated in the other accounts, changing the pathnames in fields 2 and 3 to include the drive and directory components as necessary. A better method is to use <a href="voc_q.htm">Q-type</a> VOC entries for remote file pointers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The data portion of a file is created at the specified or default minimum modulus size and with no records. The dictionary portion has a single record, </span><span style="font-weight: bold; color: #000000;">@ID</span><span style="color: #000000;">, added to it to represent the record key.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Files may be deleted using the </span><span style="font-weight: bold; color: #000000;"><a href="delete_file.htm">DELETE.FILE</a></span><span style="color: #000000;"> command. The </span><span style="font-weight: bold; color: #000000;">DATA</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;"> keywords allow deletion of just the appropriate portion of the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where the file's pathname in the VOC includes drive or directory components, the </span><span style="font-weight: bold; color: #000000;"><a href="delete_file.htm">DELETE.FILE</a></span><span style="color: #000000;"> command assumes the file to be in some other account and prompts for confirmation that it should be deleted. If the file is to be retained but the reference to it from the current account is to be deleted, use the </span><span style="font-weight: bold; color: #000000;"><a href="delete.htm">DELETE</a></span><span style="color: #000000;"> command to delete the VOC record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Rules and Restrictions</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM file system uses the underlying operating system file structures to store its data. This imposes some rules on how the operating system level files should be managed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows XP systems, use of mapped drives can assign different physical locations to the same drive letter for different users. This will cause serious problems to QM as it is impossible to identify a file uniquely. In particular, the locking system is likely to become unreliable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All QM users should use the same mappings. For users entering QM via a network connection, including connections looped back to the same machine, the DOS SUBST command may need to be used to create the drive mapping. This can be included in the <a href="command_scripts.htm">LOGIN</a> or <a href="command_scripts.htm">MASTER.LOGIN</a> paragraphs in the form</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SH SUBST X: C:\ABC</span></p>
+<p><span style="color: #000000;">where&nbsp; X: is the mapped drive letter and C:\ABC is the target directory to which X: is to be mapped.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Similarly, use of chroot on non-Windows systems destroys the uniqueness of file names. Although this may work in some cases, it can lead to ambiguities that will cause QM to fail in unpredictable ways. Use of this command is at the user's own risk.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Systems other than Windows allow a file to be renamed or deleted while it is in use. This action is likely to cause QM to fail and should not be used.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

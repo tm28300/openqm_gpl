@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?id_sup.htm"; }
+else { parent.quicksync('a6.56'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ID.SUP</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ID.SUP,ID-SUPP" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ID.SUP, ID-SUPP</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="id_only.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="label.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ID.SUP</span><span style="color: #000000;"> display option keyword causes the record id to be omitted from the report. The synonym </span><span style="font-weight: bold; color: #000000;">ID-SUPP</span><span style="color: #000000;"> may be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ID.SUP</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The record id is normally included automatically as the first item in a </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;"> report. The </span><span style="font-weight: bold; color: #000000;">ID.SUP</span><span style="color: #000000;"> keyword can be used to suppress this item either where it is not required or where it is named explicitly in the command so that, for example, non-standard display attributes can be used</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK DESCRIPTION QTY WITH QTY &lt; REORDER.LEVEL</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">might produce a report such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK DESCRIPTION QTY WITH QTY &lt; REORDER.LEVEL</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Item code&nbsp; Description...............&nbsp; Stock</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A17439&nbsp;&nbsp;&nbsp;&nbsp; A4 four hole binder, black&nbsp;&nbsp;&nbsp;&nbsp; 12</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A50993&nbsp;&nbsp;&nbsp;&nbsp; Adhesive tape, 25mm x 30m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D94266&nbsp;&nbsp;&nbsp;&nbsp; Fibre pens, 10 pack, blue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">3 records listed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">including the </span><span style="font-weight: bold; color: #000000;">ID.SUP</span><span style="color: #000000;"> keyword would change this to become</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK DESCRIPTION QTY WITH QTY &lt; REORDER.LEVEL ID.SUP</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Description...............&nbsp; Stock</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A4 four hole binder, black&nbsp;&nbsp;&nbsp;&nbsp; 12</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Adhesive tape, 25mm x 30m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Fibre pens, 10 pack, blue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">3 records listed.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

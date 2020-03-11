@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?q_select.htm"; }
+else { parent.quicksync('a6.4'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SELECT and SSELECT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SELECT,SSELECT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000;"></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SELECT and SSELECT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="displayclause.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="search.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SSELECT</span><span style="color: #000000;"> verbs build a select list containing the keys of records meeting specified criteria. </span><span style="font-weight: bold; color: #000000;">SSELECT</span><span style="color: #000000;"> is equivalent to </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> with a final sort by record id.</span></p>
+<p><span style="color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">SAVING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">UNIQUE</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">MULTI.VALUE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.NULLS</span><span style="color: #000000;">}}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SSELECT</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">SAVING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">UNIQUE</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">MULTI.VALUE</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">NO.NULLS</span><span style="color: #000000;">}}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT VOC WITH F1 LIKE F...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command builds a select list containing the ids of VOC records with field one starting with an upper case F. Such a list corresponds to all files defined by the VOC.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

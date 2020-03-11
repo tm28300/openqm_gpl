@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_bindkey.htm"; }
+else { parent.quicksync('a7.5.15'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>BINDKEY()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="BINDKEY()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">BINDKEY()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_begin_transaction.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_bitand.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BINDKEY()</span><span style="color: #000000;"> function sets, removes, queries, saves or restores key bindings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">BINDKEY(</span><span style="font-style: italic; color: #000000;">key.string</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">action</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">key.string</span></td><td><span style="color: #000000;">The character sequence for the key to be bound, unbound or queried.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">action</span></td><td><span style="color: #000000;">identifies the action to be performed:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">&gt;= 0</span></td><td><span style="color: #000000;">Bind key to this code (0 to 255)</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-1</span></td><td><span style="color: #000000;">Remove binding for </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-2</span></td><td><span style="color: #000000;">Query binding for </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-3</span></td><td><span style="color: #000000;">Save bindings.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-4</span></td><td><span style="color: #000000;">Restore bindings from </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-5</span></td><td><span style="color: #000000;">Disables lone Esc key handling in </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-6</span></td><td><span style="color: #000000;">Re-enables lone Esc key handling in </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">BINDKEY()</span><span style="color: #000000;"> function used with an </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value in the range 0 to 255 binds the key sequence in </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;"> to the given </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value. This is the underlying mechanism of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyedit.htm">KEYEDIT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyexit.htm">KEYEXIT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keytrap.htm">KEYTRAP</a></span><span style="color: #000000;"> statements used to set up keys for special handling by </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT@</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inputfield.htm">INPUTFIELD</a></span><span style="color: #000000;">. If successful, the function returns true (1) and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function would return zero. If an error occurs, the function returns false(0) and the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function can be used to find the cause of the error:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">1 &nbsp; &nbsp; &nbsp; &nbsp;Invalid </span><span style="font-style: italic; color: #000000;">key.string</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">2 &nbsp; &nbsp; &nbsp; &nbsp;Invalid </span><span style="font-style: italic; color: #000000;">action</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">3 &nbsp; &nbsp; &nbsp; &nbsp;</span><span style="font-style: italic; color: #000000;">Key.string</span><span style="color: #000000;"> conflicts with an existing binding</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value of -1 removes any defined binding for </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">. Used in this mode, the function always returns true (1) even if there was no binding for this </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value of -2 returns the action number bound to the given </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;">. If there is no binding, the function returns -1.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value of -3 returns a string that contains all defined key bindings. The value of </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;"> is ignored. Programs should make no assumption about the format of this string as it may change between releases of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-style: italic; color: #000000;">action</span><span style="color: #000000;"> value of -4 restores the bindings define in a </span><span style="font-style: italic; color: #000000;">key.string</span><span style="color: #000000;"> that was returned by a previous call to </span><span style="font-weight: bold; color: #000000;">BINDKEY()</span><span style="color: #000000;"> with an action of -3. This action also restores the state of lone Esc key handling to its setting at the time when the key bindings were saved.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Actions -5 and -6 control whether the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;"> function returns char(27) on detection of an incoming Escape character that is not followed by further characters. When this mode is enabled (which is the default), the Esc is returned by </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">. When disabled, the Esc is always treated as the start of a control sequence. These two action codes return true (1) if lone Esc key handling was previously enabled, or false (0) if it was previously disabled.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because retrieval of a key binding returns -1 if the key is not bound, it is easy to save and restore a single key binding:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OLD.BINDING = BINDKEY(KEY.STRING, -2)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF BINDKEY(KEY.STRING, NEW.ACTION) THEN ...</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To restore the original binding, unbinding the key if there was no previous binding:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = BINDKEY(KEY.STRING, OLD.BINDING)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To save and subsequently restore all bindings:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SAVED.KEYS = BINDKEY('', -3)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">...rebind some keys and do some processing...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = BINDKEY(SAVED.KEYS, -4)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT@</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_inputfield.htm">INPUTFIELD</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keycode.htm">KEYCODE()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyedit.htm">KEYEDIT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyexit.htm">KEYEXIT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keytrap.htm">KEYTRAP</a></span><span style="color: #000000;"> </span></p>
+
+</td></tr></table>
+
+</body>
+</html>

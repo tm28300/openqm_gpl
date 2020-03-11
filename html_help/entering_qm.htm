@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?entering_qm.htm"; }
+else { parent.quicksync('a2.6'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Entering QM</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Entering QM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Entering QM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="accounts.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="loginprocess.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QM database can be accessed in a number of ways. The simplest is use of a </span><span style="font-weight: bold; color: #000000;">console session</span><span style="color: #000000;">. This is entry into QM directly from the system on which it is installed. Other methods allow direct connection over a network or via a serial port and are discussed later in this section.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">PDA users should enter QM by using the QM shortcut in the Programs folder. Some commands may be difficult to use with the default screen size settings. The remainder of this section is not applicable to PDA systems.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows systems, once QM has been successfully installed, the program group chosen during the install (usually QM) will contain an item titled &quot;QM Console&quot;. Clicking on this item will open a console window. You will see a copyright line and a site specific licence line. You will then be asked to enter the name of the account you wish to work in.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, login to the operating system and then type qm at the command prompt (this assumes that the operating system PATH environment variable has been set appropriately). This technique can also be used from a Command Prompt window on a Windows system. In all cases, if your current directory when you entered QM was not already a QM account, you will be asked if you wish to make it into one.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 5px 0px;"><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Entering QM Directly via a Network</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">TCP/IP network technology assigns each computer on the network a unique address, usually written as four numbers separated by dots (e.g. 193.118.13.14). When a connection is made to a network address, the caller also specifies a &quot;port number&quot; which identifies the service to which they wish to connect. If networking is new to you, it may help to consider the concept of network addresses and port numbers as being similar to telephone numbers and extensions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">With its default configuration, QM listens for users entering via a network connection on TCP/IP port 4242. This can be changed to an alternative port or disabled completely by amending the QM <a href="configparams.htm">configuration parameters</a>. Windows users who do not have any other telnet software running on their system may wish to change this to port 23, the default telnet port.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">You can connect to QM using most terminal emulators. A licence for the AccuTerm emulator from AccuSoft Enterprises is bundled with a commercial QM licence. This emulator includes several features specifically for QM. Although the licence is bundled, you will need to download the latest version of the emulator software from the AccuSoft website.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows 98/ME, the installation process installs a server program, QMSrvr, in the bin subdirectory of the account. This must be started manually though this can be automated via the Startup folder. Due to a published defect in Windows, the server cannot detect a system shutdown and must be closed manually.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On later versions of Windows, the QM installation process installs a Windows service (QMSvc) to manage the network. There should be no need to change anything as it will start and stop automatically as required.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On all Windows environments, there is a QM Network Control program in the QM program group that can be used to start and stop the appropriate network server.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, the install process will make the necessary changes to the operating system files that control the network. There should be no need for any manual user intervention unless you decide to modify the default settings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 20px 0px 5px 60px;"><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Port Mapping</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some software originating in other multivalue environments relies on being able to connect via multiple telnet ports, each leading to creation of a process with a fixed user number related to the port number. QM supports this capability via a feature known as port mapping. For more details, see the <a href="configparams.htm#portmap">PORTMAP</a> configuration parameter.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Port mapping is not available on Windows 98/ME.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 5px 0px;"><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Entering QM Directly via a Serial Port</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows NT and later, the QMSvc service can monitor one or more serial ports for incoming QM connections. This allows entry from directly connected terminals of via dial-up lines. See the <a href="configparams.htm#qmsrvr.serial">SERIAL</a> configuration parameter of QMSvc for more details.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">It is also possible to login a serial port from another QM process using the </span><span style="font-weight: bold; color: #000000;"><a href="login_port.htm">LOGIN.PORT</a></span><span style="color: #000000;"> command. This will skip the user authentication described below as the new process runs with the user name and access rights of the user who established the connection. This style of login can be useful when connecting to automated data collection devices. The <a href="command_scripts.htm">LOGIN paragraph</a> would typically be used to enter the application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 5px 0px;"><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Logging In to QM</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Users entering QM directly from a network connection or via a serial port must provide a valid user name and password for authentication purposes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows NT and upwards, the user name must also be known to the operating system. Many users of Windows XP choose to operate their systems with login at the server screen disabled, however, Windows enforces use of a valid user name on network connections, including &quot;loop back&quot; to the host system from a terminal emulator running on the same machine. User names can be set up using the User Administration area of the Windows Control Panel. The QM process will run as the specified user and with that user's access rights.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When using domain style logins, the format is </span><span style="font-style: italic; color: #000000;">username@domain</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Earlier versions of Windows (98/ME) did not provide a suitable user authentication system so QM provides its own. This can be disabled using the </span><span style="font-weight: bold; color: #000000;"><a href="security.htm">SECURITY</a></span><span style="color: #000000;"> command if required, leaving the system open for network users to connect with no authentication.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, the user name must be known to the underlying operating system. The resultant QM process will run as this user and with the access rights of that user. Use the appropriate operating system administration tools to create and maintain user names.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 20px 0px 5px 60px;"><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Suppressing the Copyright and Licence Lines</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The -quiet option to the QM executable suppresses display of the copyright and licence details. This is particularly useful in situations such as scripts using QM as part of a CGI web interface. The </span><span style="font-weight: bold; color: #000000;"><a href="login_port.htm">LOGIN.PORT</a></span><span style="color: #000000;"> command mentioned above, implies use of the -quiet option so that no data is sent to the port until the application starts execution.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_printer_close.htm"; }
+else { parent.quicksync('a7.5.184'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PRINTER CLOSE</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PRINTER CLOSE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PRINTER CLOSE</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_printcsv.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_printer_display.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> statement closes one or all print units.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">print.unit</span></td><td><span style="color: #000000;">identifies the print unit to be closed. If omitted, all print units are closed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> statement terminates activity on a print unit. If this print unit was directed to a spool file, the data will be printed. Any heading and footing text is discarded. Subsequent data sent to the same print unit starts a new output stream. If this is for the default printer, it will be necessary to use </span><span style="font-weight: bold; color: #000000;">PRINTER ON</span><span style="color: #000000;"> if the output is to be directed to a printer rather than the screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The implementation of </span><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> with no </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> specified differs on various multivalue database products. By default, in QM a </span><span style="font-weight: bold; color: #000000;">PRINTER CLOSE</span><span style="color: #000000;"> with no </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> causes all print units to be closed. The same effect can be achieved by using a </span><span style="font-style: italic; color: #000000;">print.unit</span><span style="color: #000000;"> value of -2 though this is not portable to other environments. The PRCLOSE.DEFAULT.0 option of the </span><span style="font-weight: bold; color: #000000;"><a href="qmbd_mode.htm">$MODE</a></span><span style="color: #000000;"> compiler directive can be used to modify this behaviour so that only printer zero is closed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All print units are closed automatically on return to the command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="printer.htm">PRINTER</a></span><span style="color: #000000;"> command has a </span><span style="font-weight: bold; color: #000000;">KEEP.OPEN</span><span style="color: #000000;"> option which, when used, causes requests from programs to close printers only to terminate the page and discard any heading and footing text. This printer remains open so that subsequent output to the same print unit will be merged to form a single print job.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

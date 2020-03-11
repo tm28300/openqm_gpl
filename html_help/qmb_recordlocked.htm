@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_recordlocked.htm"; }
+else { parent.quicksync('a7.5.215'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>RECORDLOCKED()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RECORDLOCKED()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">RECORDLOCKED()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_readvl.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_recordlockl.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RECORDLOCKED()</span><span style="color: #000000;"> function indicates whether a given record is locked.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RECORDLOCKED</span><span style="color: #000000;">(</span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the file.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">record.id</span></td><td><span style="color: #000000;">evaluates to the key of the record to be tested.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RECORDLOCKED()</span><span style="color: #000000;"> function returns a value indicating the state of any locks on record </span><span style="font-style: italic; color: #000000;">record.id</span><span style="color: #000000;"> of the file open as </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">. The tokens shown in the table below are defined in the KEYS.H record of the SYSCOM file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="font-weight: bold; color: #000000;">Value</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="font-weight: bold; color: #000000;">Token</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="font-weight: bold; color: #000000;">Lock state</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">-3</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$OTHER.FILELOCK</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">Another user holds a file lock</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">-2</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$OTHER.READU</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">Another user holds an update lock</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">-1</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$OTHER.READL</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">Another user holds a read lock</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$NO.LOCK</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">The record is not locked</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$MY.READL</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">This user holds a read lock</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$MY.READU</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">This user holds an update lock</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="83px" style="width:83px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="281px" style="width:281px;"><p><span style="color: #000000;">LOCK$MY.FILELOCK</span></p>
+</td>
+<td valign="top" width="474px" style="width:474px;"><p><span style="color: #000000;">This user holds a file lock</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A record may be multiply locked in which case the </span><span style="font-weight: bold; color: #000000;">RECORDLOCKED()</span><span style="color: #000000;"> function reports only one of the current locks. File locks take precedence over read or update locks. If no file lock is set, read or update locks held by the process in which the </span><span style="font-weight: bold; color: #000000;">RECORDLOCKED()</span><span style="color: #000000;"> function is performed take precedence over locks held by other processes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Executing the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> function after a </span><span style="font-weight: bold; color: #000000;">RECORDLOCKED()</span><span style="color: #000000;"> function indicates that a lock is active will return the user number of the user holding the lock.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF RECORDLOCKED(STOCK, &quot;ORDER.LIST&quot;) THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; DISPLAY &quot;Record is locked by user &quot; : STATUS()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment checks if record ORDER.LIST is locked and, if so, reports the user number of the process that holds the lock.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

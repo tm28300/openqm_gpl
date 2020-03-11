@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?ak.htm"; }
+else { parent.quicksync('a4.12'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Alternate Key Indices</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Alternate key indices" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Alternate Key Indices</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="locks.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="triggers.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-weight: bold; color: #000000;">alternate key index</span><span style="color: #000000;"> provides a method to access data file other than by the primary key (record id).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Consider a file holding information about orders with, for example, 100000 records in it. For simplicity, assume that these records are made up of 10 orders from each of 10000 customers. To locate all the orders placed by a specific customer would require all 100000 records to be processed to find the 10 that we want.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Using an alternate key index on the customer number field of the order records, QM can look up the customer in the index and then go directly to the 10 order records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An alternate key index is created using the </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;"> command. This defines the index content but does not populate it. The </span><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;"> command builds the actual index and activates it. From that point forwards, QM will maintain the index automatically and the query processor will use it automatically. No changes are required to application software.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The functions of the </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;"> commands are combined in the </span><span style="font-weight: bold; color: #000000;"><a href="make_index.htm">MAKE.INDEX</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Once an index has been built, it is maintained totally automatically by QM such that it is impossible to write or delete a record without the corresponding index updates being applied. The query processor will also use the index totally automatically where it appears relevant.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Indices can be built on real data stored in the file (dictionary D-type or A/S-type without a correlative) or on calculated values (dictionary I-type or A/S-type with a correlative). When using calculated values, it is essential that the expression relies only on data from the file to which the index applies and is not time variant. Thus an index using data retrieved from another file using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_trans.htm">TRANS()</a></span><span style="color: #000000;"> function, a T-conversion or a subroutine that performs a read will fail because the index will not be updated if the remote file is modified. Similarly, an index built using a calculation that uses the date or time (age calculated from a date of birth, for example) will fail because the expression does not always return the same output value for the same input. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">These are both examples of the one and only rule that determines whether an index based on a calculated value will work: </span><span style="font-weight: bold; color: #000000;">The virtual attribute expression must always return the same value when evaluated for the same data record</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For an index to be effective, each entry in the index should lead to a very small proportion of the data in the file. Index entries that lead to very large numbers of records are less effective and may also be costly to access or update. The worst case of this is indexing on a simple yes/no value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A file may have up to 32 indices. The more indices there are, the longer it will take to update a record in the data file though this should be outweighed by the advantage of being able to use the indices in queries. Also, it should be remembered that indexing on a multivalued field may require many index entries to be updated when writing a data record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Indices can be deleted using the </span><span style="font-weight: bold; color: #000000;"><a href="delete_index.htm">DELETE.INDEX</a></span><span style="color: #000000;"> command if they are no longer wanted. A report of any or all indices on a file can be produced with the </span><span style="font-weight: bold; color: #000000;"><a href="list_index.htm">LIST.INDEX</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Programmers can gain access to the index itself using the </span><span style="color: #000000;">QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectindex.htm">SELECTINDEX</a></span><span style="color: #000000;"> statement and advanced index scanning operations can be performed using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTLEFT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_selectleft.htm">SELECTRIGHT</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETLEFT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setleft.htm">SETRIGHT</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

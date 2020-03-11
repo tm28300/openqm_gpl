@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?matrix_file_io.htm"; }
+else { parent.quicksync('a7.1.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Matrix File I/O</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Matrix file i/o" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Matrix File I/O</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="file_processing.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sequential_file_io.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>&nbsp;</p>
+<p>QMBasic has two styles of file i/o that may be freely mixed within an application. Using <span style="font-weight: bold;"><a href="qmb_read.htm">READ</a></span> and <span style="font-weight: bold;"><a href="qmb_write.htm">WRITE</a></span> to transfer data using dynamic arrays is simpler and usually faster for programs that do little processing of the data. For programs that perform a significant amount of processing of the data in a record, it may be worth the cost of breaking the fields into separate elements of a dimensioned matrix using <span style="font-weight: bold;"><a href="qmb_matread.htm">MATREAD</a></span> and <span style="font-weight: bold;"><a href="qmb_matwrite.htm">MATWRITE</a></span>.</p>
+<p>&nbsp;</p>
+<p>These statement have the same locking variants as their dynamic array counterparts. They also share an almost identical syntax where the prefix MAT is used to select the matrix version of the operation and the variable representing the database record must be a dimensioned array. For example, the dynamic array read:</p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New';">READ </span><span style="font-family: 'Courier New'; font-style: italic;">var</span><span style="font-family: 'Courier New';"> FROM </span><span style="font-family: 'Courier New'; font-style: italic;">filevar</span><span style="font-family: 'Courier New';">, </span><span style="font-family: 'Courier New'; font-style: italic;">id</span></p>
+<p>becomes</p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-family: 'Courier New';">MATREAD </span><span style="font-family: 'Courier New'; font-style: italic;">array </span><span style="font-family: 'Courier New';">FROM </span><span style="font-family: 'Courier New'; font-style: italic;">filevar</span><span style="font-family: 'Courier New';">, </span><span style="font-family: 'Courier New'; font-style: italic;">id</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The <span style="font-weight: bold;"><a href="qmb_matread.htm">MATREAD</a></span> statement places each field of the record into a separate element of the array, keeping values and subvalues together as these are instances of the same data item.</p>
+<p>&nbsp;</p>
+<p>For example, if a record has three fields, the second of which is multivalued:</p>
+<p style="margin: 6px 0px 6px 30px;">A<span style="font-size: 6pt;">FM</span>B1<span style="font-size: 6pt;">VM</span>B2<span style="font-size: 6pt;">FM</span>C</p>
+<p>using <span style="font-weight: bold;"><a href="qmb_matread.htm">MATREAD</a></span> to read this into a three element (plus the zero element) matrix would result in:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>0</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>1</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>2</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>B1<span style="font-size: 6pt;">VM</span>B2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>3</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>C</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The <span style="font-weight: bold;"><a href="qmb_matwrite.htm">MATWRITE</a></span> operation joins together each element of the matrix, inserting field marks between them and writes this to the file.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>If the matrix has more elements than there are fields in the record, the excess elements are set to null strings:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>0</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>1</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>2</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>B1<span style="font-size: 6pt;">VM</span>B2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>3</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>C</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>4</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>5</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The <span style="font-weight: bold;"><a href="qmb_inmat.htm">INMAT()</a></span> function can be used to determine how many fields the record had. The <span style="font-weight: bold;"><a href="qmb_matwrite.htm">MATWRITE</a></span> operation ignores all trailing empty fields so that above situation would not write two empty fields at the end of the record.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>If the matrix has fewer elements than there are fields in the record, the zero element is used to store the excess data. Consider the a record with five fields and an array with three elements:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>0</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>D<span style="font-size: 6pt;">FM</span>E</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>1</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>2</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>B1<span style="font-size: 6pt;">VM</span>B2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>3</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>C</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>The <span style="font-weight: bold;"><a href="qmb_matwrite.htm">MATWRITE</a></span> operation adds the contents of the zero element to the record formed from the remaining elements of the matrix, reconstructing the correctly formed data. The zero element thus acts as an &quot;overflow bucket&quot; allowing programs that did not expect to find the excess data to function correctly.</p>
+<p>&nbsp;</p>
+<p>Pick style matrices do not have a zero element. In this case, the excess data is stored in the final element of the matrix:</p>
+<p>&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="3" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>1</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>2</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>B1<span style="font-size: 6pt;">VM</span>B2</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="47px" style="width:47px; border: solid 1px #000000;"><p>3</p>
+</td>
+<td valign="top" width="160px" style="width:160px; border: solid 1px #000000;"><p>C<span style="font-size: 6pt;">FM</span>D<span style="font-size: 6pt;">FM</span>E</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>This is likely to cause the program to malfunction if it updates element 3 where it expected only to find the third field of the database record. To avoid this, Pick style programmers usually ensure that the matrix has at least one more element than they expect it to need, effectively moving the &quot;overflow bucket&quot; to the end of the matrix.</p>
+
+</td></tr></table>
+
+</body>
+</html>

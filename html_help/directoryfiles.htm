@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?directoryfiles.htm"; }
+else { parent.quicksync('a4.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Directory Files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Directory files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Directory Files</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="creatinganddeletingfiles.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="dynamicfiles.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">directory file</span><span style="color: #000000;"> is represented by an operating system directory and the records within it by operating system files. The record key is the name of the operating system file holding the data for the record except where this would be an invalid name in which case QM performs automatic name mapping as described below.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Directory files do not give high performance because the process of searching a directory for a file is, with many operating systems, essentially a linear scan. Locating a record to be read would, therefore, require on average that half of the entries in the directory are examined. Writing a new record would require the entire directory to be processed to verify that the file does not already exist.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Directory files are mainly used for data that is to be processed from outside of QM or for very large records (hundreds of kilobytes) where the operating system file structures may give better performance than the hashed file system. Typical uses include storage of </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs, </span><span style="font-weight: bold; color: #000000;"><a href="como.htm">COMO</a></span><span style="color: #000000;"> (command output) files, and saved select lists.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When a record is written to a directory file, any field mark characters are converted to the operating system dependent representation of a newline. Thus, each field becomes a line of text which allows the data to be processed by external software that does not understand the concept of field marks. Conversely, when data is read from a directory file, the newlines are translated to field marks. Where the data contains value marks or subvalue marks, these are not translated as it is assumed that whatever software will process this data must understand multivalued data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">One common use of directory files is to store scanned documents, digital photographs, etc. In this case, the data is not text divided into fields using the field mark character but is simple binary data that may contain any sequence of bytes. The data will nearly always contain bytes that appear to be field marks and other bytes that are the ASCII linefeed character. On writing the data to disk, the field marks will be converted to newlines. On reading the record back again, </span><span style="color: #000000; text-decoration: underline;">all</span><span style="color: #000000;"> of the newlines get converted to field marks such that the record does not match the original data written. This is clearly unacceptable. Application developers using director files to store binary data must suppress the translation of field marks by use of the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_mark_mapping.htm">MARK.MAPPING</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where a record id contains characters that are not valid in operating system file names, QM automatically replaces them with an alternative representation. This is totally invisible from inside QM but other software that accesses directory file records must allow for these translations. Rather than have a different set of translations for each platform, QM adopts a single set based on the most restrictive platform (Windows) so that data may be moved between environments without modification of record names. The translations performed are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table width="400" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">*</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%A</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">&quot;</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%Q</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 24px;"><span style="color: #000000;">\</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%B</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">/</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%S</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">,</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%C</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">+</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%V</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">=</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%E</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">:</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%X</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">&gt;</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%G</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">;</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%Y</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">&lt;</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%L</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">?</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">%Z</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="122px" style="width:122px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">%</span></p>
+</td>
+<td valign="top" width="174px" style="width:174px;"><p><span style="color: #000000;">%P</span></p>
+</td>
+<td valign="top" width="148px" style="width:148px;"><p style="margin: 0px 0px 0px 25px;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="171px" style="width:171px;"><p style="margin: 0px 0px 0px 1px;"><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Depending on the operating system in use, record ids in directory files may be case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note also that the Windows file system does not allow file names that clash with Windows device names such as COM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When writing a record to a directory file, QM normally opens the operating system file that will represent this record and writes to it, overwriting any existing data. There is a possibility of data loss when updating an existing record if the system fails during this write (e.g. a power outage) or if there is insufficient disk space. To prevent this, the <a href="configparams.htm#safedir">SAFEDIR</a> configuration parameter can be set to adopt a &quot;safe update&quot; technique where the data is written to a temporary file, the original is deleted and the temporary item is renamed to replace the original. This removes nearly all possibility of losing the record but degrades performance of the write.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Records in directory files may be read, written or deleted by applications in exactly the same way as records in hashed files. The QMBasic programming language provides some additional operations for directory file access. A record may be opened using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_openseq.htm">OPENSEQ</a></span><span style="color: #000000;"> statement and then processed on a line by line basis (</span><span style="font-weight: bold; color: #000000;"><a href="qmb_readseq.htm">READSEQ</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeseq.htm">WRITESEQ</a></span><span style="color: #000000;">, etc) or as a simple binary item (</span><span style="font-weight: bold; color: #000000;"><a href="qmb_readblk.htm">READBLK</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writeblk.htm">WRITEBLK</a></span><span style="color: #000000;">, etc). In addition, programming statements are provided to simplify processing of comma separated variable format data (</span><span style="font-weight: bold; color: #000000;"><a href="qmb_readcsv.htm">READCSV</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_writecsv.htm">WRITECSV</a></span><span style="color: #000000;">).</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbd_list.htm"; }
+else { parent.quicksync('a7.2.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>$LIST compiler directive</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="$LIST" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">$LIST Compiler Directive</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbd_include.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbd_mode.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">$LIST</span><span style="color: #000000;"> directive can be used to start, suspend and resume generation of a listing of the program and any associated error messages. The format of this directive is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="font-weight: bold; color: #000000;">$LIST </span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ON</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">$LIST OFF</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The listing is directed to a record of the same name as the program source but with a suffix of .LIS. Any existing listing record is deleted by the compiler at the start of compilation regardless of whether a new listing is to be produced.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">$LIST ON</span><span style="color: #000000;"> directive in the main program starts generation of a listing record from that point onwards. The compiler LISTING option is equivalent to a </span><span style="font-weight: bold; color: #000000;">$LIST ON</span><span style="color: #000000;"> at the start of the program.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">$LIST OFF</span><span style="color: #000000;"> directive stops generation of the listing record. If this is on an include record, listing will resume on return to the source or include record from which it was entered.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">$LIST ON</span><span style="color: #000000;"> directive in an include record only resumes generation of the listing record if listing was active when processing of the include record began.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

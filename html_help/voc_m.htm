@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?voc_m.htm"; }
+else { parent.quicksync('a3.5.4'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>VOC M-type records - Menu definitions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Menu definitions,VOC M-type records" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">VOC M-Type Records&nbsp; -&nbsp; Menu Definitions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="voc_k.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="voc_pa.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A VOC menu record defines a menu of numbered options to be displayed to the user when the menu entry is executed. Because menu records may be very large, they are often stored in some other file with a <a href="voc_r.htm">VOC R-type record</a> as a remote pointer to the actual menu definition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A menu record has 11 fields:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">1:</span></td><td><span style="color: #000000;">M&nbsp; { descriptive text }</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">2:</span></td><td><span style="color: #000000;">Menu title line to appear at the top of the screen</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">3:</span></td><td><span style="color: #000000;">Item text. This field is multi-valued with one value for each menu entry. Blank entries are allowed to insert spacing in the menu. Each menu entry is numbered except as described under field 4 below.</span></td></tr></table></div><p style="text-indent: 1px; margin: 0px 0px 10px 59px;"><span style="color: #000000;">The descriptions are normally displayed starting on the third line of the screen, left justified. If the menu has more items than will fit in a single column on the screen and the items are all sufficiently short, the menu will be displayed as two columns. Any menu items that will not fit on the screen are lost.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">4:</span></td><td><span style="color: #000000;">Action. This field is multi-valued with entries corresponding to the text in field 3. If the action is terminated by a semicolon, the menu processor issues a &quot;Press return to continue&quot; prompt when the command is completed. Blank entries cause the field 3 text to be treated as a sub-title and not numbered on the displayed menu.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">5:</span></td><td><span style="color: #000000;">Help text. A multi-valued set of one line help texts corresponding to each menu option in the previous fields.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">6:</span></td><td><span style="color: #000000;">Access key. An optional multi-valued set of access control keys corresponding to the menu items. The access key value is passed to the access control subroutine if this is used.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">7:</span></td><td><span style="color: #000000;">Hide inaccessible entries. This field may be single valued in which case it applies to all menu entries or it may have one value for each menu item. Each value present is a boolean (1 or 0 corresponding to true or false) flag indicating whether inaccessible menu entries should be hidden (not displayed) or shown as unavailable.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">8:</span></td><td><span style="color: #000000;">Access subroutine. This optional field contains the name of an access control subroutine. When the menu is displayed, this subroutine is called for all entries with an access key in field 6 to determine whether the option is to be offered. The subroutine takes three arguments; the returned true/false accessibility flag, the menu name and the access key from field 6.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">9:</span></td><td><span style="color: #000000;">Prompt text. If present, this text replaces the default option prompt.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">10:</span></td><td><span style="color: #000000;">Exit codes. An optional multi-valued list of codes which when entered at the option prompt will exit from the menu. If this field is blank, entering a null response to the menu prompt will exit from the menu. Because exit codes are processed before option numbers, it is possible to include an option that causes an exit by specifying the option number as an exit code.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="29"><span style="color: #000000;">11:</span></td><td><span style="color: #000000;">Stop codes. An optional multi-valued list of codes which when entered at the option prompt will generate an abort event, terminating all active processing and returning to the command prompt. If this field is blank, it defaults to Q. Because stop codes are processed before option numbers, it is possible to include an option that causes a stop by specifying the option number as a stop code.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Menus may be constructed and maintained using the menu editor </span><span style="font-weight: bold; color: #000000;"><a href="med.htm">MED</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A summary of M-type VOC records may be displayed or printed using </span><span style="font-weight: bold; color: #000000;"><a href="listm.htm">LISTM</a></span><span style="font-family: 'Arial'; color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When used on a PDA, QM allows selection of menu options using a stylus tap. Clicking on or below the option line exits from the menu.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

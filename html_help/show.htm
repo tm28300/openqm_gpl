@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?show.htm"; }
+else { parent.quicksync('a6.12'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SHOW</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SHOW" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SHOW</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sum.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="querykeywords.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> command provides an interactive means of building select lists.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="text-indent: 60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="text-indent: 60px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">TO</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> command supports two special options:</span></p>
+<p style="text-indent: -180px; margin: 0px 0px 0px 210px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">MAX </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">specifies the maximum number of items that may be selected for the returned list.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">MIN </span><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">specifies the minimum number of items that may be selected for the returned list. Returning no items is always valid regardless of the value of </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SHOW BP</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Displays a list of records in the BP file from which items may be chosen to build a select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SHOW CLIENTS COMPANY EVAL &quot;BALANCE - CREDIT&quot; ID.SUP WITH BALANCE &gt; CREDIT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For each client in the CLIENTS file with an outstanding balance greater then their credit limit, display the company name and the calculated amount by which the client has exceeded their credit limit. Display of the CLIENTS file record id is suppressed. The result of the </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> operation becomes the default select list (list 0).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SHOW STOCK QTY REORDER.LEVEL TO 3</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Displays the id, quantity and reorder level fields of each item in the STOCK file. The result of the </span><span style="font-weight: bold; color: #000000;">SHOW </span><span style="color: #000000;">operation is saved in select list 3.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SHOW CLIENTS COMPANY FMT &quot;30T&quot; LAST.CALL CONV &quot;D2/&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Shows a list of CLIENTS file ids, the company name formatted to fit a 30 character wide field and the date on which the client was last called using the D2/ conversion for this date.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Using the SHOW Command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> command displays a list of records from the file being processed. This display consists of </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A page heading which may be omitted using the </span><span style="font-weight: bold; color: #000000;">HDR.SUP</span><span style="color: #000000;"> keyword. A default page heading is used unless specifically set by use of the </span><span style="font-weight: bold; color: #000000;">HEADING</span><span style="color: #000000;"> keyword. The </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> command does not support use of embedded control codes in page headings.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Column headings which may be omitted using the </span><span style="font-weight: bold; color: #000000;">COL.SUP</span><span style="color: #000000;"> keyword. The heading is taken from the display name field of the dictionary entry for the item in the column. If blank, the field name is used.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Data from records being processed. The items displayed are the record id (unless the </span><span style="font-weight: bold; color: #000000;">ID.SUP</span><span style="color: #000000;"> keyword has been used) and other fields named on the command line.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">If the total width of the named fields exceeds the available space, </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> will drop trailing fields until the data fits the display width or only one (plus the record id, if not suppressed) remains. If the data still does not fit after dropping fields, the remaining fields are displayed in reduced space.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SHOW</span><span style="color: #000000;"> command splits multi-valued items onto successive lines and correctly relates values and subvalues in associated fields. A record is never split between two pages, a new page being started if necessary. If a single record requires more lines than will fit on a screen page, it is truncated.</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">Each item on the page is numbered for reference in the commands that manipulate the list. The number starts at one for the first item on each page.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A status line showing the number of selected records.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An input line on which commands are entered.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">An error line on which error messages and help text appears.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Using the commands listed below, the user can scroll through the displayed records setting or clearing a marker (displayed as an asterisk next to the record number) which indicates whether the record is to be included in the generated select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">T</span></td><td><span style="color: #000000;">Move to the top of the list (first page).</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">N</span></td><td><span style="color: #000000;">Move to the next page. The return key with no command text has the same effect.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">P</span></td><td><span style="color: #000000;">Move to the previous page.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">Q</span></td><td><span style="color: #000000;">Quit from record selection. Any records marked with an asterisk are entered into the new select list.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">QC</span></td><td><span style="color: #000000;">Quit, clearing any record selection.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">R</span></td><td><span style="color: #000000;">Redisplay the screen. This is useful if a data transmission error causes screen corruption.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">^^</span></td><td><span style="color: #000000;">Synonym for R.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">?</span></td><td><span style="color: #000000;">Display help text on the error line. Use the return key to walk through this text, line by line. Any key other than the return key will terminate the help display.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">S </span><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">Select </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">. The space before the item description is optional. An asterisk will be displayed next to all selected items.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="color: #000000;">C </span><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">Clear </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">, removing the asterisk marker from the screen.</span></td></tr></table></div><p style="text-indent: -42px; margin: 0px 0px 0px 72px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="42"><span style="font-style: italic; color: #000000;">item</span></td><td><span style="color: #000000;">Synonym for S </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">item</span><span style="color: #000000;"> specification may be</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The number shown next to a displayed record.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A range of numbers in the form </span><span style="font-style: italic; color: #000000;">a</span><span style="font-weight: bold; color: #000000;">-</span><span style="font-style: italic; color: #000000;">b</span><span style="color: #000000;"> which indicates that the command is to be applied to all items from that tagged with number </span><span style="font-style: italic; color: #000000;">a</span><span style="color: #000000;"> to that tagged with number </span><span style="font-style: italic; color: #000000;">b</span><span style="color: #000000;">. There must be no spaces either side of the hyphen.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The keyword </span><span style="font-weight: bold; color: #000000;">VISIBLE</span><span style="color: #000000;"> to apply the command to all items on the current page.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The keyword </span><span style="font-weight: bold; color: #000000;">ALL</span><span style="color: #000000;"> to apply the command to all items in the list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Multiple item specifications may be included in a single command by using either a space or a comma as a separator. For example &quot;1,4,8-11&quot;.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">VISIBLE</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ALL</span><span style="color: #000000;"> keywords may be abbreviated by omitting any number of trailing letters (e.g. </span><span style="font-weight: bold; color: #000000;">VIS</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">V</span><span style="color: #000000;">).</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

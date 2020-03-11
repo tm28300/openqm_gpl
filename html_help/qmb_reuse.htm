@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_reuse.htm"; }
+else { parent.quicksync('a7.5.224'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>REUSE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="REUSE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">REUSE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_return.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_rnd.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function determines how arithmetic operators applied to numeric arrays handle unequal numbers of fields, values or subvalues.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">REUSE(</span><span style="font-style: italic; color: #000000;">num.array</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="121"><span style="font-style: italic; color: #000000;">num.array</span></td><td><span style="color: #000000;">is a numeric array.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Arithmetic operators such as addition applied to numeric arrays (dynamic arrays where each element is numeric) operate on each field, value or subvalue in turn. Where the layout of fields, values and subvalues in the two numeric arrays is identical there is no difficulty, each element of one array being added (etc) to its corresponding element from the second array.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the arrays are of different structure, such as one having more fields than the other or more values in one field than the corresponding field of the other array, the arithmetic operators normally use a default value for the missing item. This value is zero except for the divisor of a division operation which defaults to one.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function causes the previous field, value or subvalue to be reused in place of this default value where array structures do not match. The </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function applies only to values in expressions; its effect cannot be assigned to a variable but it can be used to qualify an argument in a subroutine or function call.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = &quot;1&quot; : @FM : &quot;2&quot; : @FM : &quot;3&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">B = &quot;10&quot; : @FM : &quot;20&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = A + B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D = A + REUSE(B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example, C is set to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">22</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">3&quot; and D to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">22</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">23&quot;. The </span><span style="font-weight: bold; color: #000000;">REUSE()</span><span style="color: #000000;"> function causes the final field of B to be reused in the addition with field 3 of A.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = &quot;1&quot; : @FM : &quot;2&quot; : @FM : &quot;3&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = A + 10</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D = A + REUSE(10)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example is similar except that numeric array B has been replaced by a simple numeric constant which can be considered to be a single element numeric array.</span></p>
+<p><span style="color: #000000;">In this case, C is set to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">2</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">3&quot; and D to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">12</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">13&quot;.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = &quot;1&quot;:@FM:&quot;2&quot;:@VM:&quot;3&quot;:@VM:&quot;4&quot;:@FM:&quot;5&quot;:@VM:&quot;6&quot;:@VM:&quot;7&quot;:@FM:&quot;8&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">B = &quot;10&quot;:@FM:&quot;20&quot;:@FM:&quot;30&quot;:@VM:&quot;40&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = A + B</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D = A + REUSE(B)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In this example individual fields and values of A and B are matched into pairs for the addition operations.</span></p>
+<p><span style="color: #000000;">C is set to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">22</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">3</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">4</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">35</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">36</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">7</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">8&quot;.</span></p>
+<p><span style="color: #000000;">D is set to &quot;11</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">22</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">23</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">24</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">35</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">36</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">37</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">48&quot;.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_ands.htm">ANDS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_eqs.htm">EQS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ges.htm">GES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_gts.htm">GTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ifs.htm">IFS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_les.htm">LES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_lts.htm">LTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_nes.htm">NES()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_not.htm">NOTS()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ors.htm">ORS()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

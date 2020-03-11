@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?transactions.htm"; }
+else { parent.quicksync('a4.15'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Transactions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Transactions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Transactions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="encryption.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="selectlists.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">transaction</span><span style="color: #000000;"> is a group of related database updates to be treated as a unit that must either happen in its entirety or not at all. From a programmer's point of view, the updates are enclosed between two QMBasic statements, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">BEGIN TRANSACTION</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">END TRANSACTION</a></span><span style="color: #000000;">. All writes and deletes appearing during the transaction are cached and only take place when the program executes a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">COMMIT</a></span><span style="color: #000000;"> statement. The program can abort the transaction by executing a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_begin_transaction.htm">ROLLBACK</a></span><span style="color: #000000;"> statement which causes all updates to be discarded.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An alternative transaction syntax is available using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_transaction.htm">TRANSACTION START</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_transaction.htm">TRANSACTION COMMIT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_transaction.htm">TRANSACTION ABORT</a> </span><span style="color: #000000;">statements. The two styles may be mixed in a single application.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Transactions affect the operation of file and record locks. Outside a transaction, locks are released when a write or delete occurs. Because transactional database updates are deferred until the transaction is committed, all locks acquired inside the transaction are held until the commit or rollback. Because of this change to the locking mechanism, converting an application to use transactions is usually rather more complex than simply inserting the transaction control statements into existing programs. The retention of locks can give rise to deadlock situations.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are some restrictions on what a program may do inside a transaction. In general, QM tries not to enforce prohibitive rules but leaves the application designer to consider the potential impact of the operations embedded inside the transaction. Note carefully, that developers should try to avoid user interactions (e.g. </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input.htm">INPUT</a></span><span style="color: #000000;"> statements) inside a transaction as these can result in locks being held for long periods if the user does not respond quickly.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">BEGIN TRANSACTION</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READU CUST1.REC FROM CUST.F, CUST1.ID ELSE ROLLBACK</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; CUST1.REC&lt;C.BALANCE&gt; -= TRANSFER.VALUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; WRITE CUST1.REC TO CUST.F, CUST1.ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; READU CUST2.REC FROM CUST.F, CUST2.ID ELSE ROLLBACK</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; CUST2.REC&lt;C.BALANCE&gt; += TRANSFER.VALUE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; WRITE CUST2.REC TO CUST.F, CUST2.ID</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; COMMIT</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END TRANSACTION</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above program fragment transfers money between two customer accounts. The updates are only committed if the entire transaction is successful.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

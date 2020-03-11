@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmexecute.htm"; }
+else { parent.quicksync('a8.17'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMExecute()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMExecute()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMExecute()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmerror.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmextract.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMExecute()</span><span style="color: #000000;"> function executes a command on the server.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMExecute(ByVal </span><span style="font-style: italic; color: #000000;">Cmnd </span><span style="font-weight: bold; color: #000000;">as String, ByRef </span><span style="font-style: italic; color: #000000;">Errno</span><span style="font-weight: bold; color: #000000;"> as Integer) as String</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">char * QMExecute(char * </span><span style="font-style: italic; color: #000000;">Cmnd</span><span style="font-weight: bold; color: #000000;">, int * </span><span style="font-style: italic; color: #000000;">Errno</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Obj</span></td><td><span style="font-style: italic; color: #000000;">Str</span><span style="font-weight: bold; color: #000000;"> = </span><span style="font-style: italic; color: #000000;">Session</span><span style="font-weight: bold; color: #000000;">-&gt;Execute(</span><span style="font-style: italic; color: #000000;">Cmnd</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">Errno</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -121px; margin: 0px 0px 0px 181px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p style="text-indent: -121px; margin: 0px 0px 0px 181px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="121"><span style="font-style: italic; color: #000000;">Cmnd</span></td><td><span style="color: #000000;">is the command to be executed.</span></td></tr></table></div><p style="text-indent: -121px; margin: 0px 0px 0px 151px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="121"><span style="font-style: italic; color: #000000;">Errno</span></td><td><span style="color: #000000;">is an integer variable to receive status information.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMExecute()</span><span style="color: #000000;"> function executes the specified command on the server. The output from this command is returned as a text string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the command completes without requesting input, the </span><span style="font-style: italic; color: #000000;">Errno</span><span style="color: #000000;"> variable is set to SV_OK.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the command requests input, any output up to that point is returned and the </span><span style="font-style: italic; color: #000000;">Errno</span><span style="color: #000000;"> variable is set to SV_PROMPT. The client may respond to this using the </span><span style="font-weight: bold; color: #000000;"><a href="qmrespond.htm">QMRespond()</a></span><span style="color: #000000;"> function or abort the command using the </span><span style="font-weight: bold; color: #000000;"><a href="qmendcommand.htm">QMEndCommand()</a></span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On completion of the command, </span><span style="font-weight: bold; color: #000000;"><a href="qmstatus.htm">QMStatus()</a></span><span style="color: #000000;"> will return the value of @SYSTEM.RETURN.CODE.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The executed command may perform most functions of the QM database. Specific restrictions are:</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Input may be requested from the client using the </span><span style="color: #000000;">QMBasic</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_input.htm">INPUT</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input_at.htm">INPUT@</a></span><span style="color: #000000;"> statements. Use of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_keyin.htm">KEYIN()</a></span><span style="color: #000000;"> function is not allowed.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Testing for input using the </span><span style="color: #000000;">QMBasic</span><span style="font-weight: bold; color: #000000;"> <a href="qmb_keyready.htm">KEYREADY()</a></span><span style="color: #000000;"> function or the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input.htm">INPUT&nbsp;-1</a></span><span style="color: #000000;"> syntax will not show input waiting.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The length parameter of an </span><span style="font-weight: bold; color: #000000;"><a href="qmb_input.htm">INPUT</a></span><span style="color: #000000;"> statement will be ignored if present.</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Execution of a further command from within the executed command may not behave correctly.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

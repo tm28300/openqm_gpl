@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_abort.htm"; }
+else { parent.quicksync('a7.5.2'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>ABORT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ABORT,ABORTE,ABORTM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ABORT, ABORTE, ABORTM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_at_fun.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_abs.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> statement terminates the current program, returning to the command prompt. </span><span style="font-weight: bold; color: #000000;">ABORTE</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ABORTM</span><span style="color: #000000;"> provide compatibility with other multivalue database products.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">print.list</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">print.list</span></td><td><span style="color: #000000;">evaluates to the message to be displayed. This is of the form described under the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_display.htm">DISPLAY</a></span><span style="color: #000000;"> statement.</span></td></tr></table></div><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If an </span><span style="color: #000000;"><a href="command_scripts.htm">ON.ABORT</a></span><span style="color: #000000;"> paragraph is defined in the VOC, this will be executed before the command prompt is issued.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The program location at which the abort was generated will be reported unless the SUPPRESS.ABORT.MSG option has been set using the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> terminates all active programs, menus, paragraphs, etc., it should only be used to handle error conditions.</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The Pick syntax of ABORT can be enabled by including a line</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">$MODE PICK.ERRMSG</span></p>
+<p><span style="color: #000000;">in the program before the first ABORT statement. In this syntax, the ABORT statement becomes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ABORT </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">msg.id</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">arg</span><span style="color: #000000;">...}}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="color: #000000;">msg.id</span></td><td><span style="color: #000000;">evaluates to the id of a record in the ERRMSG file which holds the message to be displayed. If this id is numeric, it will be copied to <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a>.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">arg</span><span style="color: #000000;">...</span></td><td><span style="color: #000000;">is an optional comma separated list of arguments to be substituted into the message.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_errmsg.htm">ERRMSG</a></span><span style="color: #000000;"> statement for a description of the ERRMSG file message format.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">ABORTE</span><span style="color: #000000;"> statement always uses Pick style message handling and the </span><span style="font-weight: bold; color: #000000;">ABORTM</span><span style="color: #000000;"> statement always uses Information style message handling, regardless of the setting of the PICK.ERRMSG option.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF NO.OF.ENTRIES = 0 THEN ABORT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement aborts to the command prompt if the value of the variable NO.OF.ENTRIES is zero. No error message is printed. </span><span style="font-weight: bold; color: #000000;">ABORT</span><span style="color: #000000;"> statements without error text messages can result in difficult diagnostic work to locate faults.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPEN &quot;STOCK.FILE&quot; TO STOCK ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ABORT &quot;Cannot open STOCK.FILE - Error &quot; : STATUS()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment attempts to open a file named STOCK.FILE. If the open fails, the program displays an error message and aborts to the command prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_stop.htm">STOP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?language.htm"; }
+else { parent.quicksync('a9.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Multi-Language Applications</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Non-English messages,LOAD.LANGUAGE,SET.LANGUAGE" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Multi-Language Applications</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="monitoring_the_system.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="errorlogging.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM includes support for text message output in multiple languages. The standard message library installed with QM contains English messages texts. Additional language libraries may be available from Ladybridge Systems or from QM dealers. Users can also perform their own translations of the source text downloaded from the product web site.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The message text source file includes comment lines detailing the rules for successful translation. It is highly recommended that users should use the two letter international country code as the language identifier in the PREFIX line (e.g. FR for French).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Having obtained a suitable set of message texts by download of a pre-translated file or by translation of the master source, this is installed by executing</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LOAD.LANGUAGE </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">pathname</span></p>
+<p><span style="color: #000000;">in the QMSYS account where </span><span style="font-style: italic; color: #000000;">pathname</span><span style="color: #000000;"> points to the message text file to be installed. A single system may have any number of languages installed and the non-English messages will be preserved at an upgrade.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">To select operation in a particular language, a QM process should execute</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SET.LANGUAGE </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">language.code</span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">language.code</span><span style="color: #000000;"> is the identifier used in the PREFIX line when the language was loaded. This would typically be included in the LOGIN or MASTER.LOGIN paragraph. If an application attempts to display a message for which there is no version in the selected language, the English version will be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

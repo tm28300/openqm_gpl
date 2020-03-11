@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_filehandling.htm"; }
+else { parent.quicksync('a5.133.11'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SED - File handling</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; File Handling</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed_macros.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed_repeatingfunctions.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Save record</span><span style="color: #000000;"> (Ctrl-X S or Ctrl-X Ctrl-S)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The current record is saved, overwriting the previous version (if any).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Write record</span><span style="color: #000000;"> (Ctrl-X W or Ctrl-X Ctrl-W)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A prompt is issued for the file and record names under which the data is to be saved. The file name may be prefixed by DICT to indicate that the dictionary portion is required.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">After saving the data, the selected file and record names become current. A later use of the </span><span style="font-weight: bold; color: #000000;">save record</span><span style="color: #000000;"> function would replace this record not the record that was specified when editing began.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The update lock is transferred to the new record by this function.</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Import</span><span style="color: #000000;"> (Ctrl-X I)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A prompt is issued for the file and record names for the data to be imported. The data is then inserted at the current cursor position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Export</span><span style="color: #000000;"> (Ctrl-X X)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">export</span><span style="color: #000000;"> function saves the contents of the region between the cursor and the mark to a file. A prompt is issued for the file and record names under which the data is to be saved. The file name may be prefixed by DICT to indicate that the dictionary portion is required.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Find record</span><span style="color: #000000;"> (Ctrl-X Ctrl-F)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The editor can handle multiple records simultaneously. The </span><span style="font-weight: bold; color: #000000;">find record</span><span style="color: #000000;"> function prompts for file and record names and reads the record for editing. The file name defaults to that of the record in the current buffer. If the named record does not exist, a prompt is issued to confirm that it is to be created. Multiple records are of particular use when copying data between records.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">find record</span><span style="color: #000000;"> function will accept the record name on the same response line as the file name as an alternative to entering the file and record names in response to separate prompts. This is achieved by separating the file and record names by a single space. </span><span style="font-weight: bold; color: #000000;">SED</span><span style="color: #000000;"> still attempts to open a file with a name corresponding to the complete prompt response first to allow for the unlikely situation of a file name which includes a space. </span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">find record</span><span style="color: #000000;"> function maintains a stack of the last 10 files referenced by this command. The </span><span style="font-weight: bold; color: #000000;">up line</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">down line</span><span style="color: #000000;"> functions can be used to restore previous file names from the stack when the file name prompt is displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">List buffers</span><span style="color: #000000;"> (Ctrl-X Ctrl-B)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">list buffers</span><span style="color: #000000;"> function displays a list of all currently defined buffers, showing the buffer number, and its corresponding file and record names. It is of use when multiple records have been read. The colon normally following the buffer number is replaced by an asterisk if the buffer has been modified or a hyphen if it is a read-only buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A marker is displayed to the left of the buffer number of the current buffer. This marker can be moved up and down using the </span><span style="font-weight: bold; color: #000000;">up line</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">down line</span><span style="color: #000000;"> functions. Pressing </span><span style="font-weight: bold; color: #000000;">return</span><span style="color: #000000;"> selects the marked buffer. The </span><span style="font-weight: bold; color: #000000;">cancel</span><span style="color: #000000;"> function will revert to the previous buffer.</span></p>
+<p><span style="color: #000000;">  </span></p>
+<p><span style="font-weight: bold; color: #000000;">Next buffer</span><span style="color: #000000;"> (Esc-N)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">When multiple records are in use, this function selects the next buffer as the current buffer for display and editing.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Previous buffer</span><span style="color: #000000;"> (Esc-P)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">When multiple records are in use, this function selects the previous buffer as the current buffer for display and editing.</span></p>
+<p><span style="color: #000000;">  </span></p>
+<p><span style="font-weight: bold; color: #000000;">Goto buffer</span><span style="color: #000000;"> (Ctrl-X B)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">This function selects the buffer identified by the repeat counter value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Delete buffer</span><span style="color: #000000;"> (Ctrl-X K)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The current buffer is deleted, freeing it for use by other records. A confirmation prompt is displayed if the buffer has been modified.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">List records</span><span style="color: #000000;"> (Ctrl-X D)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Displays a list of the records in a file allowing the user to explore the content of the file. The editor prompts for the file name which defaults to that of the record in the current buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The file name may be followed by a </span><span style="font-weight: bold; color: #000000;">selection template</span><span style="color: #000000;"> separated from the file name by a single space. If this template begins with the word </span><span style="font-weight: bold; color: #000000;">LIKE</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">WITH</span><span style="color: #000000;"> the entire template is taken as a selection clause for the internally executed SELECT command. If the template does not begin with either of these words, it is assumed to be a pattern for matching with the SELECT statement LIKE clause. Thus a template of</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">PRT...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">is equivalent to</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">WITH @ID LIKE PRT...</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Single or double quotes may be used as required to ensure correct parsing of the template. Multiple conditions may be included exactly as in a SELECT statement. A template not starting with </span><span style="font-weight: bold; color: #000000;">LIKE</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">WITH</span><span style="color: #000000;"> may not include both single and double quotes.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The list of records is displayed in a buffer which is tagged with a pseudo-record name of &shy;&shy;Explore&shy;&shy;. If an explore list already exists for this file, the list is rebuilt by this function, thus showing any changes to the file content.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The normal editor functions may be used to move around this buffer but it cannot be updated. The </span><span style="font-weight: bold; color: #000000;">return</span><span style="color: #000000;"> key or the </span><span style="font-weight: bold; color: #000000;">dive</span><span style="color: #000000;"> function (Ctrl-X Ctrl-D) will cause the editor to read and display the record identified by the line of the explore list on which the cursor lies. If this record is already loaded into a buffer, the existing buffer is selected.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">kill line</span><span style="color: #000000;"> function executed in an explore buffer deletes the record named on the current line. A confirmation prompt is issued before the record is deleted. If this record is currently loaded into a buffer, the buffer is also deleted. A second confirmation prompt is issued to confirm this action.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Up to parent</span><span style="color: #000000;"> (Ctrl-X U)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Moves 'up' from the displayed record to an explore list for the file holding the record. If the explore list already exists, the list is not rebuilt by this function.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Used in an explore buffer, this function moves up to a display of all files in the VOC. Diving into a file from this list shows a list of records in the file. It does not dive into the VOC record itself.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">Used in a value edit buffer, this function returns to the parent buffer, saving any changes into the main buffer.</span></p>
+<p><span style="font-weight: bold; color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Dive </span><span style="color: #000000;">(Ctrl-X Ctrl-D)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">When positioned on a $INCLUDE statement of a </span><span style="font-weight: bold; color: #000000;">QMBasic </span><span style="color: #000000;">program, this function loads the associated include record into a new buffer.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">When not positioned on a $INCLUDE statement, this function enters <a href="sed_multivalueddata.htm">edit value mode</a>.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

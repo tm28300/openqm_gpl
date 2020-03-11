@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_dynamickeybindings.htm"; }
+else { parent.quicksync('a5.133.17'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title> SED - Dynamic key bindings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; Dynamic Key Bindings</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed_sourcecontrol.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed_extensionprogramming.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The key bindings used in the function descriptions in this manual are the defaults used by </span><span style="font-weight: bold; color: #000000;">SED</span><span style="color: #000000;">, known as the </span><span style="font-weight: bold; color: #000000;">fundamental mode</span><span style="color: #000000;"> bindings. The dynamic key binding system allows these to be changed if desired.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On entry, </span><span style="font-weight: bold; color: #000000;">SED</span><span style="color: #000000;"> looks for a file named &amp;SED.BINDINGS&amp;. In most cases where this exists, it would be set up as a remote file pointer to a single file shared by all accounts. This file contains records defining named sets of key bindings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">SED</span><span style="color: #000000;"> works through a sequence of steps in locating the binding record to be used. This sequence, described below, is designed to allow almost any user or terminal specific precedence rules to be created.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try the (optional) name in field 3 of the &amp;SED.OPTIONS&amp; VOC record.</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try a name constructed from </span><span style="font-style: italic; color: #000000;">loginname</span><span style="color: #000000;">-</span><span style="font-style: italic; color: #000000;">termtype</span><span style="color: #000000;"> where both the login name and the terminal type are mapped to upper case.</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try USER.</span><span style="font-style: italic; color: #000000;">loginname</span><span style="color: #000000;"> where the login name is mapped to upper case.</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try </span><span style="font-style: italic; color: #000000;">termtype</span><span style="color: #000000;"> where the terminal type is mapped to upper case.</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try the (optional) name in field 4 of the &amp;SED.OPTIONS&amp; VOC record.</span></p>
+<p style="margin: 0px 0px 10px 30px;"><span style="color: #000000;">Try DEFAULT.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Arial'; color: #000000;">Revert to the fundamental mode bindings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If there is no &amp;SED.BINDINGS&amp; file, SED uses the fundamental mode key bindings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Key bindings can be changed at run time by use of the </span><span style="font-weight: bold; color: #000000;">LOAD.KEYS</span><span style="color: #000000;"> command. This takes the name of a key binding record as its argument and the bindings defined in that record will be loaded.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Fundamental mode can be restored by use of the </span><span style="font-weight: bold; color: #000000;">FUNDAMENTAL</span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SAVE.KEYS</span><span style="color: #000000;"> command saves the current key bindings into a record named in the command argument (e.g. SAVE.KEYS DEFAULT to generate the DEFAULT bindings record).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Key binding records consist of a series of lines (fields), each of which defines one or more bindings for the function associated with that line separated by value marks. Control characters are represented by @A, @B, etc. for Ctrl-A, Ctrl-B, etc. Thus escape is @[. The @ character can be included in a binding as @@. All characters before the first @ are ignored thus allowing comments to be included. The </span><span style="font-weight: bold; color: #000000;">SAVE.KEYS</span><span style="color: #000000;"> command inserts the function name as a comment in each binding.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">One way to create new bindings is to use </span><span style="font-weight: bold; color: #000000;">SAVE.KEYS</span><span style="color: #000000;"> to create a template which is then edited to make any desired modifications. The </span><span style="font-weight: bold; color: #000000;">quote char</span><span style="color: #000000;"> function followed by </span><span style="font-weight: bold; color: #000000;">K</span><span style="color: #000000;"> inserts the key binding expansion of the next key pressed and can be used while editing a key binding record. This function simply inserts the characters sent by the next key pressed. It does not validate the modified binding record for duplicate or ambiguous key sequences.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Used in this way, </span><span style="font-weight: bold; color: #000000;">quote char</span><span style="color: #000000;"> waits for the first character to arrive and then sleeps for one second. It then inserts the codes for all characters waiting to be processed. This ensures that the entire sequence sent by, for example, a function key is processed. You should wait until the character sequence appears on the screen before typing any further characters.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

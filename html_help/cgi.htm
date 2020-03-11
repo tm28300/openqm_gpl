@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?cgi.htm"; }
+else { parent.quicksync('a7.13'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Building a Web Server Application</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Web server" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Building a Web Server Application</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sxa.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmclient.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are advanced web based packages available for QM but for many applications a simple CGI program gives an easy way to achieve web connectivity with no additional software.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The program below requires the qmclilib library to be included when it is compiled and linked. The executable program file should be placed in the cgi-bin subdirectory of the relevant web account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#include &lt;stdio.h&gt;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#include &lt;string.h&gt;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#include &lt;stdlib.h&gt;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#include &lt;\qmsys\syscom\qmclilib.h&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ Windows ]</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#include &lt;/usr/qmsys/SYSCOM/qmclilib.h&gt;&nbsp;&nbsp; [ Linux / FreeBSD ]</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">// Set the following six lines as appropriate for your system</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_ADDRESS &quot;localhost&quot; /* Server network address or name... */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_PORT 4243&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* ...and port on which to connect */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_USER &quot;xxx&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Server user name... */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_PASSWORD &quot;xxxxx&quot;&nbsp;&nbsp;&nbsp; /* ...and password */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_ACCOUNT &quot;xxxxx&quot;&nbsp;&nbsp;&nbsp;&nbsp; /* Web server QM account name */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">#define SERVER_PROGRAM &quot;xxxxx&quot;&nbsp;&nbsp;&nbsp;&nbsp; /* Catalogued program to run on server */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">char NullString[] = &quot;&quot;;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">char InputData[32767] = &quot;&quot;;&nbsp;&nbsp; /* Incoming data stream */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">char Response[99999] = &quot;&quot;;&nbsp;&nbsp;&nbsp; /* Response to send */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">char * ClientIP;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Client IP address */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">char * ClientUser;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* User name if web authentication used */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">/* ====================================================================== */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">int main()</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">{</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> char * RequestMethod;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> char * p;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> RequestMethod = getenv(&quot;REQUEST_METHOD&quot;);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> if (RequestMethod == NULL)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; printf(&quot;Program must be executed by a Web browser\n&quot;);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; return 1;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> ClientIP = ((p = getenv(&quot;REMOTE_ADDR&quot;)) != NULL)?p:NullString;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> ClientUser = ((p = getenv(&quot;REMOTE_USER&quot;)) != NULL)?p:NullString;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> if (!strcmp(RequestMethod,&quot;GET&quot;))</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; if ((p = getenv(&quot;QUERY_STRING&quot;)) != NULL) strcpy(InputData, p);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> else if (!strcmp(RequestMethod,&quot;POST&quot;))</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; if ((p = getenv(&quot;CONTENT_LENGTH&quot;)) != NULL)</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp;&nbsp; fread(InputData, atoi(p), 1, stdin);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp;&nbsp; }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> /* Check for locally processed screens */</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> ParseInputData();</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">if (!QMConnect(SERVER_ADDRESS, SERVER_PORT, SERVER_USER, SERVER_PASSWORD, SERVER_ACCOUNT))</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; strcpy(Response, &quot;Failed to connect. The server may be offline.&quot;);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> else</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  {</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; QMCall(SERVER_PROGRAM, 4, InputData, ClientIP, ClientUser, Response);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; QMDisconnect();</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">  }</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> printf(&quot;Content-type: text/html\n\n&quot;);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> printf(&quot;&lt;meta http-equiv=\&quot;Pragma\&quot; content=\&quot;no-cache\&quot;&gt;\n&quot;);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> printf(&quot;%s\n&quot;, Response);</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;"> return 0;</span></p>
+<p><span style="font-family: 'Courier New'; color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Web requests received by this program will be passed to the catalogued QMBasic subroutine identified by SERVER_PROGRAM. The declaration of this is</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="font-family: 'Courier'; color: #000000;">SUBROUTINE SERVER(INPUT.DATA, CLIENT.IP, CLIENT.USER, RESPONSE)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When used with HTML forms with the method attribute set to &quot;post&quot; or &quot;get&quot;, any data sent with the form will be passed to the QM server program via the first argument (INPUT.DATA). Typically, the form would include an item in this data that can be used to determine the screen being processed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The CLIENT.IP is the network address of the client user and can be used for simple security checking.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the user has been authenticated using the conventional web user authentication process, the user name appears in CLIENT.USER. If authentication has not been performed, this will be a null string.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The server subroutine must return valid HTML data to be returned to the web client via the RESPONSE argument. For applications that return very large HTML strings it may be better for the QMBasic component to write the data to a temporary file and pass this name back to the C program. This avoids the need for the Response variable in the above example to be sized to fit the largest string that could ever be returned.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

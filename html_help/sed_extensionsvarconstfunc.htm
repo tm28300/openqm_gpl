@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?sed_extensionsvarconstfunc.htm"; }
+else { parent.quicksync('a5.133.18.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SED Extensions - Variables, constants and functions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SED&nbsp; -&nbsp; Variables, Constants and Functions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="sed_extensionprogramming.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sed_extensionsstdvarfunc.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All extension program source text is case insensitive except for literal strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Local Variables</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">These are names commencing with a letter and containing only letters, digits, periods (.) and dollar signs. A procedure or function can use at most 250 local variables. Local variables are private to the procedure or function and the same name used in another procedure refers to a different local variable.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Global Variables</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">These are names commencing with a dollar sign and containing only letters, digits, periods (.) and dollar signs. Global variables are common to all extensions and retain their values until the user leaves SED.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Global variables beginning with two dollar signs are reserved. Current usage of these names is:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="210"><span style="color: #000000;">$$EXTENSION.FILES</span></td><td><span style="color: #000000;">Contains a space separated list of the files to be searched for extension programs. By default, this variable contains &amp;SED.EXTENSIONS&amp; but it may be modified at any time by user written extension programs. File names are used left to right.</span></td></tr></table></div><p style="text-indent: -210px; margin: 0px 0px 0px 240px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Once an extension program has been loaded on first use, it remains loaded unless it is specifically unloaded by use of </span><span style="font-weight: bold; color: #000000;">unload</span><span style="color: #000000;"> or by recompilation by the user who has it loaded.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Constants</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Numeric constants are written as a sequence of digits, optionally prefixed by a sign or including a decimal point. A numeric constant with an absolute value of less than one must be written with a leading zero (e.g. 0.5).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A string constant may be enclosed in either single or double quotes. It may contain any character except the mark characters (which are available using the tokens shown below) and ASCII character 0 (nul).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The logical values are represented as 0 for false and 1 for true. In general, use of any value other than zero is treated as true by operations that expect logical values as their arguments.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Key Tokens</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">get.key</span><span style="color: #000000;"> function returns a code that relates to an internal function number. Each function has a corresponding symbolic name. These all begin with a period (.) and are the same as the comment inserted at the start of each line of a key binding record with spaces replaced by period. The names are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.newline</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.start.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.end.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.back.char</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.fwd.char</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.up.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.down.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.top</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.bottom</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.page.up</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.page.down</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.del.char</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.backspace</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.kill.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.save.record</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.quit</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.overlay</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.tab</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.goto.line</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.toggle.chars</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.fwd.search</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.replace</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.query.replace</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.swap.mark</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.execute.macro</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.nudge.down</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.nudge.up</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.set.mark</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.delete.region</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.copy.region</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.insert.killed</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.forward.word</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.delete.word</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.import</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.reverse.srch</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.lowercase</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.uppercase</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.capital.init</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.back.word</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.del.back.word</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.close.spaces</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.next.buffer</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.prev.buffer</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.goto.buffer</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.delete.buffer</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.up.to.list</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.repeat</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.refresh</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.quote.char</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.list.buffers</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.find.record</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.write.record</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.start.macro</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.end.macro</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.expand.char</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.list.records</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.export</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.command</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.cancel</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.run</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.insert</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">.align.text</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><br>
+</td>
+<td valign="top" width="176px" style="width:176px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">System Variables</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Extension programs may examine the current state of many editor features by use of system variables. These all begin with a percent sign (%) and are read only (i.e. they cannot be used in a set function).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following system variables may also be referenced in extensions:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@IM</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@FM</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@VM</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@SM</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@TM</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@LOGNAME</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@CRTHIGH</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@CRTWIDE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@DATE</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@TIME</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@PATH</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@SENTENCE</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@WHO</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@TTY</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><p><span style="color: #000000;">@USERNO</span></p>
+</td>
+<td valign="top" width="176px" style="width:176px;"><br>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Comments</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A comment is introduced by an asterisk (*) and extends to the end of the line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Erroneous Programs</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Extension programs may test whether the buffer being processed is read only. Attempts to change such a buffer are ignored. No error is displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Variables are type variant in the same way as for QMBasic programs and they follow the same rules. In most cases, attempts to use a non-numeric value where a number is required result in use of a default.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

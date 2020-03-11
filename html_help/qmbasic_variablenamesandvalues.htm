@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbasic_variablenamesandvalues.htm"; }
+else { parent.quicksync('a7.1.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMBasic - Variable names and values</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Variable names (QMBasic),Constants (QMBasic)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMBasic&nbsp; -&nbsp; Variable Names and Values</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbasic_overview.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbasic_scalarsmatricesanddynamicarrays.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Variable names must commence with a letter and may contain letters, digits, periods (full stops), percentage signs and dollar signs. Names may also contain underscore characters but not as the last character of the name. Users are discouraged from defining names containing dollar signs for their own purposes as these are reserved to identify system functions and constants. Except as indicated elsewhere, there is no restriction on the length of a name though very long names may appear truncated in debugging information.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> imposes few restrictions on the choice of names, it is advisable to avoid using names which correspond to </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statements, functions and keywords. The only reserved names which may not be usable in some contexts are</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 29px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">AND</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">GOSUB</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ON</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">BEFORE</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">GOTO</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">OR</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">BY</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">GT</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">REPEAT</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">CAPTURING</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">IN</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">RETURNING</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">CAT</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">LE</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">SETTING</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">DO</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">LOCKED</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">STEP</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ELSE</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">LT</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">THEN</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">EQ</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">MATCH</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">TO</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">FROM</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">MATCHES</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">TRAPPING</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">GE</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">NE</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">UNTIL</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="179px" style="width:179px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">GO</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">NEXT</span></p>
+</td>
+<td valign="top" width="172px" style="width:172px;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">WHILE</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic variables are </span><span style="font-weight: bold; color: #000000;">type variant</span><span style="color: #000000;">, that is, that they may hold, for example, an integer value at one point in time and a character string later on. The actual form in which the data is held is determined by how it was assigned. If a variable is set to contain a string of digits and is subsequently used in an arithmetic calculation, the value is converted internally to a numeric form without affecting the variable itself. If this arithmetic calculation was performed many times in a loop, it may be worth forcing a type conversion to prevent repeated temporary conversions. For this reason, QMBasic programs often contain apparently redundant looking statements of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = A + 0 &nbsp; &nbsp; &nbsp; &nbsp;;* Convert to numeric form</span></p>
+<p><span style="color: #000000;">or</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = S : &quot;&quot; &nbsp; &nbsp; &nbsp; &nbsp;;* Convert to string form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Numeric values may are held as integers wherever possible, conversion to floating point format occurring when the result of an arithmetic operation is non-integer or when the value is too large to be stored as an integer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A variable holding a string of no characters is referred to as a </span><span style="font-weight: bold; color: #000000;">null string</span><span style="color: #000000;"> and is treated as a special case in many operations. Users familiar with SQL type environments should take care to distinguish the multivalue database meaning of the word null from its SQL meaning.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A string variable may hold any number of characters. The actual total limit for all strings in a program is imposed by the disk space available for paging and is typically many megabytes. Although QMBasic avoids copying strings unnecessarily whenever it can, operations involving very large strings are likely to have a detrimental effect on performance.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A variable may hold many other types of information. For example, a </span><span style="font-weight: bold; color: #000000;">file variable</span><span style="color: #000000;"> holds a reference to an open file and is used in all statements that refer to that file. A </span><span style="font-weight: bold; color: #000000;">subroutine variable</span><span style="color: #000000;"> contains a fast reference to a catalogued subroutine that has been loaded into memory. Users cannot directly create subroutine variables, they are the result of transforming a string variable holding the subroutine name when it is first called. Until otherwise determined, variables are initially unassigned. Reference to an </span><span style="font-weight: bold; color: #000000;">unassigned variable</span><span style="color: #000000;"> (where no value has yet been stored) will cause a run time error.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Constants</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Constant values may be numbers or strings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Numeric constants</span><span style="color: #000000;"> are written as a sequence of digits, optionally preceded by a sign or containing a decimal point. If a sign is used, there must be no space between it and the first digit.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic also allows hexadecimal numbers in equated tokens and most expressions. These are written with a prefix of 0x as used in the C programming language (e.g. 0x23 is decimal 35).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">String constants</span><span style="color: #000000;"> are sequences of characters enclosed by delimiters. Valid delimiter characters are the single quote ('), the double quote (&quot;) and the back slash (\). The delimiter at the start and end of the string value must be the same but there is no difference in the internal treatment of the delimiters.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The compiler imposes no limit on the length of a string literal value though it may not extend from one line to the next. Very long strings can be constructed by concatenating component substrings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The mark characters are available as @FM, @VM, @SM, @TM and @IM. These are described in a later section.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

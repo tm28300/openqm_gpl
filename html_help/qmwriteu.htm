@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmwriteu.htm"; }
+else { parent.quicksync('a8.45'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMWriteu</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="QMWriteu" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMWriteu</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmwrite.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sysadmin.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMWriteu</span><span style="color: #000000;"> function writes a record, retaining the lock.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">VB</span></td><td><span style="font-weight: bold; color: #000000;">QMWriteu ByVal </span><span style="font-style: italic; color: #000000;">FileNo</span><span style="font-weight: bold; color: #000000;"> as Integer, ByVal </span><span style="font-style: italic; color: #000000;">Id</span><span style="font-weight: bold; color: #000000;"> as String, ByVal </span><span style="font-style: italic; color: #000000;">Rec </span><span style="font-weight: bold; color: #000000;">as String</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">C</span></td><td><span style="font-weight: bold; color: #000000;">void QMWriteu(int </span><span style="font-style: italic; color: #000000;">FileNo</span><span style="font-weight: bold; color: #000000;">, char * </span><span style="font-style: italic; color: #000000;">Id</span><span style="font-weight: bold; color: #000000;">, char * </span><span style="font-style: italic; color: #000000;">Rec</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">Obj</span></td><td><span style="font-style: italic; color: #000000;">Session</span><span style="font-weight: bold; color: #000000;">-&gt;Writeu(</span><span style="font-style: italic; color: #000000;">FileNo</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">Id</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">Rec</span><span style="font-weight: bold; color: #000000;">)</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">FileNo</span></td><td><span style="color: #000000;">is the file number returned by a previous </span><span style="font-weight: bold; color: #000000;"><a href="qmopen.htm">QMOpen()</a></span><span style="color: #000000;"> call.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Id</span></td><td><span style="color: #000000;">is the id of the record to be written.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">Rec</span></td><td><span style="color: #000000;">is the data to be written to this record.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">QMWriteu</span><span style="color: #000000;"> function writes the given data to the file opened as </span><span style="font-style: italic; color: #000000;">FileNo</span><span style="color: #000000;">. If a record with this </span><span style="font-style: italic; color: #000000;">Id</span><span style="color: #000000;"> already exists, it is replaced. If the record does not already exist, it is added.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An application should always obtain an update lock on the record before writing it. The lock is retained on return from this function. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

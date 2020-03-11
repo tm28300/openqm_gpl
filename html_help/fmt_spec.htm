@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?fmt_spec.htm"; }
+else { parent.quicksync('a4.10'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Format Specifications</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Format specifications" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Format Specifications</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="conv_u.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="locks.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Format specifications appear in field 5 of <a href="dict_c.htm">C-type</a>, <a href="dict_d.htm">D-type</a> and <a href="dict_i.htm">I-type</a> dictionary items to determine the default format of output from the </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">LIST</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="list.htm">SORT</a></span><span style="color: #000000;"> query processor commands. They are also used in the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;"><a href="qmb_fmt.htm">FMT()</a></span><span style="color: #000000;"> function and with the query processor </span><span style="font-weight: bold; color: #000000;"><a href="fmt.htm">FMT</a></span><span style="color: #000000;"> keyword.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The full form of a format code is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">justification</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;">}} {</span><span style="font-style: italic; color: #000000;">conv</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">mask</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">field.width</span></td><td><span style="color: #000000;">is the width of the field into which the data is to be formatted. If </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> is omitted, </span><span style="font-style: italic; color: #000000;">mask</span><span style="color: #000000;"> must be specified.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">fill.char</span></td><td><span style="color: #000000;">is the character to be used to expand the string to </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters. If omitted, a space is used by default. Where </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;"> is a digit, it must be enclosed in single or double quotes.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">justification</span></td><td><span style="color: #000000;">indicates the justification mode to be applied. It takes one of the following values:</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">C</span></td><td><span style="color: #000000;">specifies centered justification. The data is centered in a field of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters, additional </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;"> characters being added to either side if the data is shorter than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">. If the data is longer than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">, text marks are inserted at intervals of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> from the start of the data.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">L</span></td><td><span style="color: #000000;">specifies left justification. The data is left aligned in a field of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters, additional </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;"> characters being appended if the data is shorter than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">. If the data is longer than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">, text marks are inserted at intervals of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> from the start of the data.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">R</span></td><td><span style="color: #000000;">specifies right justification. The data is right aligned in a field of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters, additional </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;"> characters being inserted at the start if the data is shorter than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">. If the data is longer than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;">, text marks are inserted at intervals of </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> from the start of the data.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">T</span></td><td><span style="color: #000000;">specifies text justification. Text marks are inserted to break the data into fragments of no more than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters, aligning breaks onto the positions of spaces in the data. Where there is no suitable space at which to break the data, the text mark is inserted </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters after the last break position. The final fragment is padded using </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;"> to be </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> characters in length.</span></td></tr></table></div><p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 240px;"><span style="color: #000000;">When the data is displayed, output moves to a new line where a text mark is present in the formatted data.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 240px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 180px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">U</span></td><td><span style="color: #000000;">specifies left justification and is treated identically to the </span><span style="font-weight: bold; color: #000000;">L</span><span style="color: #000000;"> code by the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_fmt.htm">FMT()</a></span><span style="color: #000000;"> function. Within the query processor, data formatted with this code that is wider than </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> is not wrapped over multiple lines but extends into the space to its right, possibly overwriting whitespace in later columns.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">specifies the number of decimal places to appear in the result when formatting numeric data. The value is rounded in the normal manner. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is zero, the value is rounded to an integer.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">m</span></td><td><span style="color: #000000;">specifies the scaling factor to be applied. The value being formatted is scaled by moving the decimal point </span><span style="font-style: italic; color: #000000;">m</span><span style="color: #000000;"> - </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> places to the left, where </span><span style="font-style: italic; color: #000000;">p</span><span style="color: #000000;"> is the current <a href="qmb_precision.htm">precision</a> value.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">conv</span></td><td><span style="color: #000000;">is any meaningful combination of the following codes:</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-style: italic; color: #000000;">$</span></td><td><span style="color: #000000;">specifies that the national currency symbol should be used as a prefix to the converted data on output conversion and may be present on input conversion. The default currency symbol is a dollar sign but this may be changed by use of the </span><span style="font-weight: bold; color: #000000;"><a href="nls.htm">NLS</a> </span><span style="color: #000000;">command or the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setnls.htm">SETNLS</a> </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statement.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">,</span></td><td><span style="color: #000000;">indicates that the national language convention thousands delimiter is to be inserted every third digit to the left of the decimal point when converting numeric data. This delimiter defaults to a comma.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">B</span></td><td><span style="color: #000000;">appends db to negative numbers, two spaces to positive numbers. Use the </span><span style="font-weight: bold; color: #000000;">CRDB.UPCASE</span><span style="color: #000000;"> keyword of the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;">command to change this to DB</span><span style="font-family: 'Arial'; color: #000000;">.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">C</span></td><td><span style="color: #000000;">appends cr to negative numbers, two spaces to positive numbers. Use the </span><span style="font-weight: bold; color: #000000;">CRDB.UPCASE</span><span style="color: #000000;"> keyword of the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;">command to change this to CR</span><span style="font-family: 'Arial'; color: #000000;">.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;">appends db to positive numbers, two spaces to negative numbers. Use the </span><span style="font-weight: bold; color: #000000;">CRDB.UPCASE</span><span style="color: #000000;"> keyword of the&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;">command to change this to DB</span><span style="font-family: 'Arial'; color: #000000;">.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">E</span></td><td><span style="color: #000000;">encloses negative number in angle brackets (&lt;…&gt;). Positive numbers are followed by a single space.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">M</span></td><td><span style="color: #000000;">appends a minus sign to negative numbers.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">N</span></td><td><span style="color: #000000;">suppresses any sign indicator.</span></td></tr></table></div><p style="text-indent: -30px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 150px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-weight: bold; color: #000000;">Z</span></td><td><span style="color: #000000;">indicates that a value of zero should be represented by a null string.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">mask</span></td><td><span style="color: #000000;">specifies a mask to be used to format the data. If omitted, </span><span style="font-style: italic; color: #000000;">field.width</span><span style="color: #000000;"> must be specified. Both can be used together.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">The mask consists of a character string containing #, * or % characters and other characters. Each #, * or % is substituted by one character from the source data. Other characters are copied directly to the result string. Multiple #, * or % characters may be represented by a single #, * or % followed by a number indicating the number of characters to be inserted. Characters having special meaning within the format string may be prefixed by a backslash (\) to indicate that they are to be treated as text.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">The value 1234567 with a format specification of 9L#2-#3-#2 would return 1234567.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">Where the </span><span style="font-style: italic; color: #000000;">mask</span><span style="color: #000000;"> specifies more characters than in the data being converted, positions corresponding to # characters in the mask are replaced by the </span><span style="font-style: italic; color: #000000;">fill.char</span><span style="color: #000000;">, positions corresponding to * characters in the mask are replaced by asterisks and positions corresponding to % characters in the mask are replaced by zeros. If the data is left aligned, the padding is inserted in the rightmost positions. If the data is right aligned, the padding is inserted in the leftmost positions.</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 150px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">If the </span><span style="font-style: italic; color: #000000;">mask</span><span style="color: #000000;"> specifies fewer characters than in the data being converted, part of the source data will be lost. A left aligned format will truncate the source data and a right aligned format will lose data from the start of the source.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Data formatting attempts to handle the data as a number if the decimal places, currency symbol, comma insertion or null zero features are included in the format specification. If these features are all absent, or if the data cannot be converted to a number, it is handled as a string. The difference in handling is relevant when processing data such as a string with leading zeros.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format Code Examples</span></p>
+<p><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following table shows some uses of format codes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Value</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Format code</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Arial'; font-weight: bold; color: #000000;">Result</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'ABCDE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8L'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'ABCDE&nbsp;&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'ABCDE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8R'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'&nbsp;&nbsp; ABCDE'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'ABCDE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8'*'L'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'ABCDE***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'0012345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8R'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">' 0012345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'0012345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8RZ'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'&nbsp;&nbsp; 12345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'0000000'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'84RZ'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">''</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8&quot;0&quot;R'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'00012345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1234567'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'15R2'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'&nbsp;&nbsp;&nbsp;&nbsp; 1234567.00'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1234567'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'15R2$,'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'&nbsp; $1,234,567.00'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345.67'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'15*R2$,'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'*****$12,345.67'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1234567'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'14L2'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1234567.00&nbsp;&nbsp;&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'43'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L###m'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'43 m'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'43'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'R###m'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">' 43m'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'43'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'&quot;0&quot;R###m'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'043m'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1234567890'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L###-#######'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'123-4567890'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'123456789'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L#3-#3-#3'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'123-456-789'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L#'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'1'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'R#'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'5'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'123456789'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L#5'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'123456789'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'R#5'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'56789'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'L#6'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'12345'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'R#6'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">' 12345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG LINE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'6T'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">LINE&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG LINE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'7T'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">LINE&nbsp;&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG LINE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8T'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">LINE&nbsp;&nbsp;&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG LINE'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'8R'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'A LONG L</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">INE'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'BANANAS'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'3T'</span></p>
+</td>
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-family: 'Courier'; color: #000000;">'BAN</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">ANA</span><span style="font-size: 6pt; color: #000000;">TM</span><span style="font-family: 'Courier'; color: #000000;">S&nbsp; '</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier'; color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

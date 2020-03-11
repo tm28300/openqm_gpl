@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_fileinfo.htm"; }
+else { parent.quicksync('a7.5.89'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>FILEINFO()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FILEINFO()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">FILEINFO()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_file.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_filelock.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FILEINFO()</span><span style="color: #000000;"> function returns information about an open file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FILEINFO(</span><span style="font-style: italic; color: #000000;">file.var</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">file.var</span></td><td><span style="color: #000000;">is the file variable associated with the file.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">identifies the action to be performed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Values for the </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> to the </span><span style="font-weight: bold; color: #000000;">FILEINFO()</span><span style="color: #000000;"> function are defined in the KEYS.H record in the SYSCOM file. These are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$OPEN</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Check if file is open. Returns true (1) if </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;"> is associated with an open file, false (0) if it is not.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$VOCNAME</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns the VOC name used to open the file.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">2</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$PATH</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns pathname of open file.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$TYPE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">File type. Returns one of</span></p>
+<p><span style="color: #000000;">FL$TYPE.DH (3) - Dynamic file</span></p>
+<p><span style="color: #000000;">FL$TYPE.DIR (4) - Directory file</span></p>
+<p><span style="color: #000000;">FL$TYPE.SEQ (5) - Sequential file</span></p>
+<p><span style="color: #000000;">FL$TYPE.VFS (6) - Virtual file system</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">5</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$MODULUS</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">File modulus (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">6</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$MINMOD</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Minimum modulus (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">7</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$GRPSIZE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Group size (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">8</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$LARGEREC</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Large record size (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">9</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$MERGE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Merge load percentage (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">10</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$SPLIT</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Split load percentage (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">11</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$LOAD</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Current load percentage (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">13</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$AK</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">File has AK indices (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">14</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$LINE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Line to read or write next (sequential files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1000</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$LOADBYTES</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Current load bytes (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1001</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$READONLY</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns true (1) is file is read-only</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1002</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$TRIGGER</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns trigger function name, null if none</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1003</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$PHYSBYTES</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns total size of file, excluding indices</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1004</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$VERSION</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Internal file version (dynamic files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1005</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$STATS.QUERY</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns true (1) if file statistics gathering is enabled</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1006</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$SEQPOS</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">File position (sequential files only)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1007</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$TRG.MODES</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns mode flags for trigger function</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1008</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$NOCASE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns true (1) if the file uses case insensitive ids.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1009</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$FILENO</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns the internal file number for </span><span style="font-style: italic; color: #000000;">file.var</span><span style="color: #000000;">.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1011</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$AKPATH</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns the pathname of the alternate key index directory. This is a null string in the indices are in their default location.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1012</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$ID</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns the id of the last record read from the file. Used with a dynamic file that is configured for case insensitive record ids, this will return the actual id as stored in the file, which may differ in casing from that supplied in the associated </span><span style="font-weight: bold; color: #000000;">READ</span><span style="color: #000000;"> statement.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1013</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$STATUS</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns a dynamic array as for the </span><span style="font-weight: bold; color: #000000;">STATUS</span><span style="color: #000000;"> statement.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1014</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$MARK.MAPPING</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns true if mark mapping is enabled, false if not (directory files).</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1015</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$RECORD.COUNT</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns a count of the number of records in the file (dynamic files only). This count may be incorrect if the file was not closed in the event of an abnormal process termination such as a system failure. The counter will be corrected by use of a select operation during which there were no updates to the file or by use of the QMFix utility. The value will be returned as -1 until the count is set or for non-dynamic files.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1016</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$PRI.BYTES</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Physical size of the primary subfile in bytes (dynamic files only). This figure will include space previously used by groups that have been discarded as the result of a merge operation.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1017</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$OVF.BYTES</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Physical size of the overflow subfile in bytes (dynamic files only). This figure will include space previously used by overflow blocks that are no longer active and are retained for future use.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1018</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$NO.RESIZE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Is resizing inhibited on this file? See the description of <a href="dynamicfiles.htm">dynamic files</a> for more information.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1019</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$UPDATE</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns the file update counter. This counter, shared across all users of the file, is initially set to 1 when a file is first opened and is incremented by every write, delete or clear file operation. It can be used to detect whether a file has been updated by another process. </span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="85px" style="width:85px;"><p><span style="color: #000000;">1020</span></p>
+</td>
+<td valign="top" width="255px" style="width:255px;"><p><span style="color: #000000;">FL$ENCRYPTED</span></p>
+</td>
+<td valign="top" width="617px" style="width:617px;"><p><span style="color: #000000;">Returns true if the file uses encryption, false otherwise.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF FILEINFO(FVAR, FL$TYPE) # FL$TYPE.DH THEN</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ABORT &quot;Dynamic file required&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment checks whether a file variable is associated with a dynamic file and, if not, aborts.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_status_statement.htm">STATUS</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_sleep.htm"; }
+else { parent.quicksync('a7.5.247'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SLEEP</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SLEEP,RQM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SLEEP, RQM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_sin.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_socket_info.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;"> statement causes the program in which it is executed to pause for a given number of seconds or until a specific time. The synonym </span><span style="font-weight: bold; color: #000000;">RQM</span><span style="color: #000000;"> may be used in place of </span><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">time</span></td><td><span style="color: #000000;">determines the time for which the program is to sleep. If omitted, </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> defaults to one.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;"> statement operates in one of two ways depending on the format of </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> is a number, it is rounded to an integer value and the program sleeps for that number of seconds. If </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> is negative or zero, the program continues without sleeping.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> is not a number, an attempt is made to convert it to a time of day using any of the formats accepted by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_iconv.htm">ICONV()</a></span><span style="color: #000000;"> function </span><span style="font-weight: bold; color: #000000;">MT</span><span style="color: #000000;"> conversion. If successful, the program sleeps until this time. The </span><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;"> statement used in this way cannot sleep across midnight. If the time of day specified by </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> has already passed or if </span><span style="font-style: italic; color: #000000;">time</span><span style="color: #000000;"> cannot be converted to a time of day, the program continues without sleeping.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In all cases, if there is more than one process running, the </span><span style="font-weight: bold; color: #000000;">SLEEP</span><span style="color: #000000;"> statement causes a process switch to occur. It can therefore be used to relinquish the remainder of the timeslice of the current process if waiting for some event to occur in another process, such as release of a lock.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the break key is used to interrupt a program which is sleeping, selection of the G option will continue to sleep to the specified time. The Q option will abort the program immediately.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SLEEP &quot;10:30PM&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement causes the program to sleep until half past ten at night unless it is already later than that time. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SLEEP 10</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement causes the program to pause for 10 seconds</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DISPLAY &quot;Time to continue&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">INPUT T</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">DELAY = ICONV(T, &quot;MT&quot;) - TIME()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF DELAY &lt; 0 THEN DELAY += 86400</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SLEEP DELAY</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment prompts for and reads a time of day from the keyboard. It then converts this to a number of seconds from the current time and sleeps until this time. This technique, with the conditional statement handling times earlier than the current time allows the program to sleep across midnight.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="color: #000000;"><a href="qmb_nap.htm">NAP</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?selectionclause.htm"; }
+else { parent.quicksync('a6.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The Selection Clause</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Selection clause" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The Selection Clause</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="queryintro.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="sortclause.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">selection clause</span><span style="color: #000000;"> may be provided to specify criteria governing which records are processed by the command. If omitted, all records are processed. Selection clauses can be used with all query processor verbs</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The selection clause is described in detail under the </span><span style="font-weight: bold; color: #000000;"><a href="with.htm">WITH</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="when.htm">WHEN</a> </span><span style="color: #000000;">keywords.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The performance of queries against large files can be improved dramatically by use of alternate key indices. These are index files that relate a particular value of a data field or virtual attribute to the ids of records that have that value. Alternate key indices are created in a two step operation using the </span><span style="font-weight: bold; color: #000000;"><a href="create_index.htm">CREATE.INDEX</a></span><span style="color: #000000;">  and </span><span style="font-weight: bold; color: #000000;"><a href="build_index.htm">BUILD.INDEX</a></span><span style="color: #000000;"> commands. Once an index has been built, it is maintained automatically by </span><span style="color: #000000;">QM</span><span style="color: #000000;"> and is used by the query processor whenever it is advantageous to do so.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Ranges of values can also be satisfied using indices if the upper and lower limits are defined in the first two conditional elements. For example,</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QOH &gt; 3 AND QOH &lt; 10 AND SUPPLIER = 27</span></p>
+<p><span style="color: #000000;">will use an index on the QOH field to access the data whereas</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QOH &gt; 3 AND SUPPLIER = 27 AND QOH &lt; 10</span></p>
+<p><span style="color: #000000;">will not. Use of unnecessary brackets may also defeat the indexing system. For example,</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QOH &gt; 3 AND (QOH &lt; 10 AND SUPPLIER = 27)</span></p>
+<p><span style="color: #000000;">will not use the index as the second conditional element is not a simple item.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Selection clause comparisons are case sensitive by default. Case insensitivity can be applied by including the </span><span style="font-weight: bold; color: #000000;">NO.CASE</span><span style="color: #000000;"> qualifier after the relation operator or by use of the QUERY.NO.CASE mode of the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The PICK.IMPLIED.EQ mode of the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command can be used to select Pick style behaviour where a field name followed by a literal value enclosed in double quotes has and implied equals operator. Thus</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CLIENTS WITH CUST.NO &quot;1234&quot; &quot;5678&quot;</span></p>
+<p><span style="color: #000000;">is equivalent to</span></p>
+<p style="margin: 6px 0px 6px 29px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CLIENTS WITH CUST.NO = &quot;1234&quot; &quot;5678&quot;</span></p>
+<p><span style="color: #000000;">Without this option, the semantics of the query are such that the two literal values are treated as record ids and the selection element restricts processing to records in which the CUST.NO field is not empty.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

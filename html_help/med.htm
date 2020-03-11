@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?med.htm"; }
+else { parent.quicksync('a5.105'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>MED</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="MED" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">MED</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="map.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="merge_list.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> command creates or modifies a menu definition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">MED </span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">file.name </span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">menu.name</span><span style="color: #000000;">}}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">file.name</span></td><td><span style="color: #000000;">identifies the file holding the menu.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">menu.name</span></td><td><span style="color: #000000;">is the name of the menu record to be processed. Menu names are case sensitive.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the file or menu names are omitted from the command line, </span><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> prompts for these. When prompting for menu names, </span><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> will edit the given menu and then prompt for a further name. This is repeated until a null menu name is entered.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Menus are normally stored in the VOC file but can be stored in any file of the application designer's choice if an R-type (remote) VOC record is used to point to the menu record in the other file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the menu does not exist, </span><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> prompts for confirmation that it is to be created.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The display of a typical menu might appear as shown below:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Title :ORDER PROCESSING SYSTEM : MAIN MENU</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Subr&nbsp; :OPS.MENU.VALIDATE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Prompt:</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Exits :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Stops :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">--------------------------------------------------------------</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Text 1:Customer Maintenance</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Action:CUST.MENU</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Help&nbsp; :Enter customer maintenance menu</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Access:CUST</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Hide&nbsp; :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">--------------------------------------------------------------</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Text 2:Order Entry</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Action:RUN BP ORDER.ENTRY</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Help&nbsp; :Runs the order entry system</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Access:ORDERS</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Hide&nbsp; :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">--------------------------------------------------------------</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Text 3:Invoice Management</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Action:INV.MENU</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Help&nbsp; :Enter invoice management menu</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Access:INVOICES</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Hide&nbsp; :</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">VOC ORDERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F1=Help</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Access control subroutine key for this option</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> uses a subset of the </span><span style="font-weight: bold; color: #000000;"><a href="sed.htm">SED</a></span><span style="color: #000000;"> full screen editor default key bindings to allow the user to move around within the display and enter or modify text. These are:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Ctrl-A &nbsp; &nbsp; &nbsp; &nbsp;Home &nbsp; &nbsp; &nbsp; &nbsp;Move to start of line</span></p>
+<p><span style="color: #000000;">Ctrl-B &nbsp; &nbsp; &nbsp; &nbsp;Cursor left &nbsp; &nbsp; &nbsp; &nbsp;Move left one character</span></p>
+<p><span style="color: #000000;">Ctrl-D &nbsp; &nbsp; &nbsp; &nbsp;Del char &nbsp; &nbsp; &nbsp; &nbsp;Delete character</span></p>
+<p><span style="color: #000000;">Ctrl-E &nbsp; &nbsp; &nbsp; &nbsp;End &nbsp; &nbsp; &nbsp; &nbsp;Move to end of line</span></p>
+<p><span style="color: #000000;">Ctrl-F &nbsp; &nbsp; &nbsp; &nbsp;Cursor right &nbsp; &nbsp; &nbsp; &nbsp;Move right one character</span></p>
+<p><span style="color: #000000;">Ctrl-G &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Cancel</span></p>
+<p><span style="color: #000000;">Ctrl-K &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Kill line</span></p>
+<p><span style="color: #000000;">Ctrl-L &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Refresh screen</span></p>
+<p><span style="color: #000000;">Ctrl-N &nbsp; &nbsp; &nbsp; &nbsp;Cursor down &nbsp; &nbsp; &nbsp; &nbsp;Move down one line</span></p>
+<p><span style="color: #000000;">Ctrl-O &nbsp; &nbsp; &nbsp; &nbsp;Insert &nbsp; &nbsp; &nbsp; &nbsp;Toggle overlay mode</span></p>
+<p><span style="color: #000000;">Ctrl-P &nbsp; &nbsp; &nbsp; &nbsp;Cursor up &nbsp; &nbsp; &nbsp; &nbsp;Move up one line</span></p>
+<p><span style="color: #000000;">Ctrl-V &nbsp; &nbsp; &nbsp; &nbsp;Page down &nbsp; &nbsp; &nbsp; &nbsp;Move down one page</span></p>
+<p><span style="color: #000000;">Ctrl-X C &nbsp; &nbsp; &nbsp; &nbsp;Ctrl-X Ctrl-C &nbsp; &nbsp; &nbsp; &nbsp;Exit</span></p>
+<p><span style="color: #000000;">Ctrl-X S &nbsp; &nbsp; &nbsp; &nbsp;Ctrl-X Ctrl-S &nbsp; &nbsp; &nbsp; &nbsp;Save</span></p>
+<p><span style="color: #000000;">Ctrl-Y &nbsp; &nbsp; &nbsp; &nbsp;Esc-Y &nbsp; &nbsp; &nbsp; &nbsp;Paste</span></p>
+<p><span style="color: #000000;">Esc-V &nbsp; &nbsp; &nbsp; &nbsp;Page up &nbsp; &nbsp; &nbsp; &nbsp;Move up one page</span></p>
+<p><span style="color: #000000;">Esc-&lt; &nbsp; &nbsp; &nbsp; &nbsp;Ctrl-Home &nbsp; &nbsp; &nbsp; &nbsp;Move to top</span></p>
+<p><span style="color: #000000;">Esc-&gt; &nbsp; &nbsp; &nbsp; &nbsp;Ctrl-End &nbsp; &nbsp; &nbsp; &nbsp;Move to bottom</span></p>
+<p><span style="color: #000000;">Backspace &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Backspace</span></p>
+<p><span style="color: #000000;">F1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Help</span></p>
+<p><span style="color: #000000;">F4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Show menu</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The leftmost few characters of each line display a line type key. The remainder of the line is editable and the line on which the cursor is positioned will pan if required to allow text data wider than the display device.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The bottom line of the screen displays a single line help prompt at all times. Pressing F1 will display a help page appropriate to the line on which the cursor is positioned. Pressing F1 again while this help text is displayed will display help on the key bindings.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first section of the menu data displayed by </span><span style="font-weight: bold; color: #000000;">MED</span><span style="color: #000000;"> contains information that relates to the entire menu:</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The menu title line</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The access control subroutine name</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The prompt text</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Exit codes</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Stop codes</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The remainder of the displayed data is a set of sections corresponding to the menu options in the order in which they will appear on the menu. Each section contains:</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The option text</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The action sentence. Terminate with a semicolon for an automatic &quot;Press return to continue&quot; prompt</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">Help text for the option</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The access subroutine key</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">A flag indicating whether the option is to be hidden if it is unavailable</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The separator line between each section has some special features. Pressing the return key while on this line inserts a new menu option entry under the line. Use of the kill line function (Ctrl-K) on this line deletes the menu option under the line, placing it in the kill buffer. Repeated use of the kill line function places all of the deleted menu options in the kill buffer.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When the kill buffer contains one or more complete menu options, use of the paste function (Ctrl-Y) inserts the kill buffer content under the current option. Use of kill and paste can be used to move options within the menu.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When on a text line, the kill line function deletes all text after the cursor, placing it in the kill buffer. The paste function can be used to paste this text into another line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See <a href="voc_m.htm">VOC M-type records</a> for more details of menu definitions.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

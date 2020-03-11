@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_col1.htm"; }
+else { parent.quicksync('a7.5.41'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>COL1()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="COL1()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">COL1()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_close_socket.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_col2.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> function returns the character position immediately preceding the substring extracted by the last </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">COL1()</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> function is used after a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> function to find the character position of the character immediately preceding the extracted substring.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value of the </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> function is maintained on a per-program basis. If an external subroutine is called between the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> functions, the value returned relates to the last use of </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> in the current program. Any </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> functions executed by the subroutine will have no effect on the </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> returns zero if</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">No </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> function has been executed by this program</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The last field extracted was at the start of the string</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The delimiter to the last </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> function was a null string</span></p>
+<p style="margin: 10px 0px 0px 30px;"><span style="color: #000000;">The field number of the last </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span><span style="color: #000000;"> function was beyond the end of the string</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = &quot;A*BB*CCC*DDDD*EEEEE&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">X = FIELD(S, &quot;*&quot;, 3, 2)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">N = COL1()</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment extracts the string &quot;CCC*DDDD&quot; to variable X. The </span><span style="font-weight: bold; color: #000000;">COL1()</span><span style="color: #000000;"> function returns 5 and assigns this to N.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_col2.htm">COL2()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?create_key.htm"; }
+else { parent.quicksync('a5.37'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>CREATE.KEY</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="CREATE.KEY" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">CREATE.KEY</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="create_index.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="create_user.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CREATE.KEY</span><span style="color: #000000;"> command creates a data encryption key. This command can only be executed by users with administrator rights in the QMSYS account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CREATE.KEY</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">keyname</span><span style="color: #000000;">  {</span><span style="font-style: italic; color: #000000;">algorithm</span><span style="color: #000000;">  {</span><span style="font-style: italic; color: #000000;">keystring</span><span style="color: #000000;">}}}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">keyname</span></td><td><span style="color: #000000;">is the name for the new encryption key.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">algorithm</span></td><td><span style="color: #000000;">is the encryption algorithm to be associated with the key.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">keystring</span></td><td><span style="color: #000000;">is the actual encryption key.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The command prompts for items not supplied on the command line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CREATE.KEY</span><span style="color: #000000;"> command creates a new entry in the key vault defining the encryption algorithm and actual key string to be used. If the key vault does not already exist, this command will create it, prompting for the master key to be used to encrypt the key vault. If the key vault does exist, the user will be asked to enter the master key unless it has already been entered during this session.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">keyname</span><span style="color: #000000;"> may be any sequence of up to 64 letters, digits, periods and hyphens. It is case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">algorithm</span><span style="color: #000000;"> may be any of AES128, AES192 and AES256. The name is case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">keystring</span><span style="color: #000000;"> is up to 64 characters, is case sensitive and can contain any character. For best security, the length of the </span><span style="font-style: italic; color: #000000;">keystring</span><span style="color: #000000;"> should be close to the actual length needed by the selected algorithm. This is 16, 24 or 32 characters for the 18, 192 and 256 bit algorithms respectively. The </span><span style="font-weight: bold; color: #000000;">CREATE.KEY</span><span style="color: #000000;"> command will automatically transform the supplied key to the required length if necessary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Once a key has been defined, it may be referenced in commands that set up encryption without needing to enter the master key. The </span><span style="font-style: italic; color: #000000;">keyname</span><span style="color: #000000;"> does not need to be treated as a secure item. The </span><span style="font-style: italic; color: #000000;">keystring</span><span style="color: #000000;">, on the other hand, must not be disclosed. It is strongly recommended that a copy of the </span><span style="font-style: italic; color: #000000;">keystring</span><span style="color: #000000;"> is maintained off-site in case it is ever necessary to rebuild the key vault.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">CREATE.KEY</span><span style="color: #000000;"> automatically grants access to the key to the user that created it. Other users can be granted access using the </span><span style="font-weight: bold; color: #000000;">GRANT.KEY</span><span style="color: #000000;"> command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CREATE.KEY CARDNO AES256</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above command creates a 256 bit encryption key named CARDNO. The actual encryption string will be entered in response to a prompt.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="color: #000000;"><a href="encryption.htm">Data encryption</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="create_file.htm">CREATE.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="delete_key.htm">DELETE.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="encrypt_file.htm">ENCRYPT.FILE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="grant_key.htm">GRANT.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="list_keys.htm">LIST.KEYS</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="reset_master_key.htm">RESET.MASTER.KEY</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="revoke_key.htm">REVOKE.KEY</a></span><span style="color: #000000;">,</span><span style="font-weight: bold; color: #000000;"> <a href="set_encryption_key_name.htm">SET.ENCRYPTION.KEY.NAME</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

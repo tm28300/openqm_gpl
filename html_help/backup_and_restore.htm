@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?backup_and_restore.htm"; }
+else { parent.quicksync('a9.5'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Backup and Restore</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Backup and restore" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Backup and Restore</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="permissions.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="monitoring_the_system.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM does not provide any special backup and restore utilities but relies instead on use of standard operating system level backup tools. This section sets out some points to consider in planning a backup strategy. Hopefully, you have already thought of these...</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Determine what to backup. If your backup needs to be as quick as possible, remember that it is usually unnecessary to back up system files that can easily be recreated.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Do not forget that distributed applications sometimes have critical data stored on client PCs. These need to be backed up at the same time as the server to preserve data integrity across the entire backup.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">How often will you back up?&nbsp; You need to make a sensible trade-off between the time it takes to backup and the difficulty of bringing the system up to date in the event of a restore.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Consider when to backup in relation to your business routine. It is unsafe to backup a database while it is being used except as described below. You will end up with data integrity problems and, possibly, structural integrity problems in files that were being modified while the backup progressed. The safest approach is to log all users off while the backup is performed. It is not necessary to shutdown QM.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Use a cycle of backup media rather than continuously overwriting the same media so that you are secure from failures during the backup and also have multiple points in time to which you can revert.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Ensure that your backup media is kept away from the system that it represents. A fireproof safe or an offsite store is best.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Think carefully about how long you will keep your backups. There are often legal requirements to be able to restore business data for several years. Remember that technology moves on at a rapid pace. You need to ensure that you still have the appropriate drives to read your old backups.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="color: #000000;">Test your backups. Check that you really can restore your data if the need arises.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Backup Tools</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although it would be possible to use the </span><span style="font-weight: bold; color: #000000;"><a href="account_save.htm">ACCOUNT.SAVE</a></span><span style="color: #000000;"> command to create a backup of a QM account, it is recommended that operating system level tools are used for this purpose. The account transfer tools and </span><span style="font-weight: bold; color: #000000;"><a href="t_xxx.htm">T.xxx</a></span><span style="color: #000000;"> commands do, however, have the advantage that they can be used to merge data with existing files.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Because individual records in hashed files cannot be accessed from outside of QM, operating system level backup tools can only save and restore an entire file. The </span><span style="font-weight: bold; color: #000000;"><a href="t_dump.htm">T.DUMP</a></span><span style="color: #000000;"> command can take a select list specifying the records to be saved.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Live Backup</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Sometimes there is no alternative to backing up a system while users are logged in. As mentioned above, simply copying the database files while they are being updated will almost certainly lead to inconsistent data, perhaps with structural problems that make restore impossible.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM provides the ability to suspend database updates by use of&nbsp; qm -suspend from the operating system command prompt. When this mode is in effect, applications will pause at any attempt to modify a file until updates are enabled using qm -resume.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Rather than pausing the database for the duration of a full backup, various mechanisms are available to minimise the time for which updates are suspended. If using mirrored disks, it would be possible to suspend updates, break the mirror, resume updates, backup the offline half of the mirrored data and then reconnect the mirror to catch up with changes during the backup.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Some environments provide snapshot backup systems where updates can be suspended, the snapshot initiated and updates resumed. The actual backup process performed by the snapshot will handle the complexities of database updates that occur during the backup.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Regardless of the technique used, beware that suspending updates will ensure structural integrity of the saved files but will not ensure business level data integrity as the suspension may occur part way through a series of related updates. Use of transaction programming techniques will help as the suspension will occur on committal of the transaction but it is still possible that a business level transaction is formed from multiple database transactions.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

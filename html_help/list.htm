@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list.htm"; }
+else { parent.quicksync('a6.6'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST and SORT</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST,SORT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST and SORT</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="search.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_item.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SORT</span><span style="color: #000000;"> verbs produce reports from </span><span style="color: #000000;">QM</span><span style="font-weight: bold; color: #000000;"> </span><span style="color: #000000;">files. The </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> verb displays records in the order in which they are encountered in the file unless a sort clause in present in the command. The </span><span style="font-weight: bold; color: #000000;">SORT</span><span style="color: #000000;"> verb is equivalent to </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> with a final sort by record id.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SORT</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">USING</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">DICT</span><span style="color: #000000;">} </span><span style="font-style: italic; color: #000000;">file.name</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">field.name</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">field.qualifier</span><span style="color: #000000;">} ...}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="selectionclause.htm">selection.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="sortclause.htm">sort.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;"><a href="displayclause.htm">display.clause</a></span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">record.id...</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 52px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">FROM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">select.list.no</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The record id is always reported as the first item in the output unless the </span><span style="font-weight: bold; color: #000000;"><a href="id_sup.htm">ID.SUP</a></span><span style="color: #000000;"> keyword has been used to suppress it. The format of this item is determined by the @ID dictionary record. If this record is not found in the dictionary, a default format is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-weight: bold; color: #000000;">field names</span><span style="color: #000000;"> are specified in the command, these fields are displayed in the order specified. If no field names are present, the query processor looks for a phrase in the dictionary defining a default set of fields to be reported. If the </span><span style="font-weight: bold; color: #000000;"><a href="lptr.htm">LPTR</a></span><span style="color: #000000;"> keyword has been included, the query processor first looks for a phrase record named @LPTR. If this cannot be found or the </span><span style="font-weight: bold; color: #000000;"><a href="lptr.htm">LPTR</a></span><span style="color: #000000;"> keyword was not used, it looks for a phrase record named @. The @LPTR and @ phrases can be used to create separate default field name lists for output to the printer and the display respectively. If no @LPTR or @ record is found, only the record id is reported.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The default listing phrase may include field qualifiers, selection, sort and display clause items.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">SORT</span><span style="color: #000000;"> verbs normally produce a tabular format report with items listed side by side. If the total width of the items to be reported exceeds the width of the display or printer to which the report is directed, a vertical format report is produced. This can be forced by use of the </span><span style="font-weight: bold; color: #000000;"><a href="vertically.htm">VERTICALLY</a></span><span style="color: #000000;"> keyword.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="pan.htm">PAN</a></span><span style="color: #000000;"> keyword allows reports wider than the display to be produced using the left and right cursor keys to pan part or all of the displayed data.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;"><a href="scroll.htm">SCROLL</a></span><span style="color: #000000;"> keyword allows scrolling back and forward using the up and down cursor keys.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When </span><span style="font-weight: bold; color: #000000;">LIST</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">SORT</span><span style="color: #000000;"> are used to list a dictionary with the no display clause, the action of the default listing phrase (@), includes transformation of A and S-type dictionary items into a form that maps onto the standard dictionary display format used for other types.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK QTY REORDER.LEVEL WITH QTY &lt; REORDER.LEVEL</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command lists all records from the STOCK file for which the quantity in stock (QTY field) is less than or equal to the reorder level (REORDER.LEVEL field). These two fields are displayed together with the record id.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?list_readu.htm"; }
+else { parent.quicksync('a5.80'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>LIST.READU</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="LIST.READU" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">LIST.READU</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="list_locks.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="list_union.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.READU</span><span style="color: #000000;"> command displays details of file and record locks.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">LIST.READU</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">user</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">NO.PAGE</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}} {</span><span style="font-weight: bold; color: #000000;">WAIT</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">user</span></td><td><span style="color: #000000;">is the user number for which the locks are to be reported. If omitted, all locks are displayed.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">DETAIL</span></td><td><span style="color: #000000;">includes the limit, current count and peak number of record locks.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">NO.PAGE</span></td><td><span style="color: #000000;">suppresses display pagination.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">directs output to logical print unit </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">. If </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is omitted, it defaults to zero, the default print unit.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-weight: bold; color: #000000;">WAIT</span></td><td><span style="color: #000000;">includes details of users waiting for locks held by other users.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">LIST.READU</span><span style="color: #000000;"> command displays or prints details of file, read and update locks held by one or all users. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -120px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Record lock limit = 400, Current = 3, Peak = 73</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">User File Path......................... Type Id............................</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; 1&nbsp;&nbsp;&nbsp; 2 D:\SALES\STOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RU&nbsp;&nbsp; P-174-43</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; 1&nbsp;&nbsp;&nbsp; 2 D:\SALES\STOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RU&nbsp;&nbsp; P-967-47</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; 5&nbsp;&nbsp;&nbsp; 2 D:\SALES\STOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RU&nbsp;&nbsp; P-954-55</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; 2&nbsp;&nbsp;&nbsp; 4 D:\SALES\INVOICES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FX</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; 3&nbsp;&nbsp;&nbsp; 4 D:\SALES\INVOICES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WAIT 17565</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In the above report, users 1 and 5 hold record update locks in file 2 (D:\SALES\STOCK) and user 2 has a file lock on file 4 (D:\SALES\INVOICES). User 3 is waiting to lock record 17565 in file 4 but is blocked by user 2. Details of users waiting for locks are only shown if the </span><span style="font-weight: bold; color: #000000;">WAIT</span><span style="color: #000000;"> keyword is used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first line of the above report is only shown if the </span><span style="font-weight: bold; color: #000000;">DETAIL</span><span style="color: #000000;"> keyword is used. Note that the counts are for active record locks only. The file lock and the user waiting for a lock in this example do not contribute to these numbers. The peak number of locks is useful in determining a good value for the </span><span style="font-weight: bold; color: #000000;"><a href="configparams.htm#numlocks">NUMLOCKS</a></span><span style="color: #000000;"> configuration parameter.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The file number is an internal reference to the file and is also needed for the </span><span style="font-weight: bold; color: #000000;"><a href="unlock.htm">UNLOCK</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The lock type is shown as RL for shareable record locks, RU for record update locks and FX for file locks.&nbsp; A type code of WAIT is shown for users waiting for locks.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

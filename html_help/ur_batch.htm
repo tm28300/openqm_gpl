@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?ur_batch.htm"; }
+else { parent.quicksync('a5.161.1'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>UPDATE.RECORD batch mode</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="UPDATE.RECORD batch mode" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">UPDATE.RECORD&nbsp; -&nbsp; Batch Mode</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="update_record.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="ur_visual.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> runs in batch mode of the command line includes one or more </span><span style="font-style: italic; color: #000000;">field/value</span><span style="color: #000000;"> specifications.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">EXCLUSIVE</span><span style="color: #000000;"> keyword is used, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> will obtain exclusive access to the file by acquiring the file lock. If another user holds a record lock or the file lock when the command is issued, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> will terminate with an error message unless the </span><span style="font-weight: bold; color: #000000;">WAIT</span><span style="color: #000000;"> keyword has been used, in which case a message is displayed and it repeats the attempt to lock the file at five second intervals.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">For each record to be processed, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> first locks and reads the record. If another user has the record locked and the </span><span style="font-weight: bold; color: #000000;">WAIT</span><span style="color: #000000;"> keyword has been used, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> will wait for the record to become available. If the </span><span style="font-weight: bold; color: #000000;">WAIT</span><span style="color: #000000;"> keyword was not used, the record id is added to a list of locked records. If either the </span><span style="font-weight: bold; color: #000000;">INQUIRING</span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;">REPORTING</span><span style="color: #000000;"> keywords was used, a message is output showing the id of the record that could not be locked.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the specified record does not exist in the file and the </span><span style="font-weight: bold; color: #000000;">CREATING</span><span style="color: #000000;"> keyword has been used, a new, empty record is created to which the amendments are then applied. If the </span><span style="font-weight: bold; color: #000000;">CREATING</span><span style="color: #000000;"> keyword is not present, the record id is added to a list of missing records</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Once the record has been successfully locked, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> performs each of the specified amendments in the order in which they appear on the command line. Each amendment may draw on the result of preceding amendments. Note in particular, that use of the </span><span style="font-weight: bold; color: #000000;">DELETING</span><span style="color: #000000;"> option will result in new field positions for all later fields. The record id may be changed by specifying the target as field 0 or a dictionary item such as @ID that refers to field 0. Any I-type or EVAL expressions after the change of record id will see the new id in @ID.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;"> specification may be a numeric field position or the name of a D-type item from the dictionary or the VOC. The </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> specification may be:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">A number or a quoted string.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The name of an A, D, I or S-type dictionary or VOC item identifying the field from which data is to be copied. If this is an I-type item or an A/S-type item with a correlative expression, it must have been compiled prior to use by </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;">.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">The keyword </span><span style="font-weight: bold; color: #000000;">EVAL</span><span style="color: #000000;"> followed by an I-type expression in single or double quotes. This expression will be compiled by </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> and evaluated to determine the new value of the field. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> honours dictionary conversion specifications for both the source and target data items. Where the new </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> for a field is derived via a dictionary name, the value is first converted to its external form. Where the field to be updated is identified via a dictionary name, the new value is converted to its internal form prior to storing in the record. If the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> specification is followed by the </span><span style="font-weight: bold; color: #000000;">CONV</span><span style="color: #000000;"> keyword and a quoted conversion specification, this will overrule any conversion specified in the dictionary. </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> will report a warning message if the conversion generates an error when applied to </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REPORTING</span><span style="color: #000000;"> keyword causes </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> to produce a detailed report of each amendment made, including the record id together with the old and new values of each field amended. This report can be directed to a specific print unit using the </span><span style="font-weight: bold; color: #000000;">LPTR</span><span style="color: #000000;"> keyword.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In the absence of the </span><span style="font-weight: bold; color: #000000;">REPORTING</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">INQUIRING</span><span style="color: #000000;"> keywords or if the report is directed to a print unit rather than the display, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> displays a progress report in the form of a series of asterisks.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On completion of the update, </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> may create two entries in the $SAVEDLISTS file. If one or more records could not be updated because they were locked by other users, a select list named &amp;LOCK.</span><span style="font-style: italic; color: #000000;">userno</span><span style="color: #000000;">&amp; is created containing a list of such records. If one or more records specified for update did not exist in the file and the </span><span style="font-weight: bold; color: #000000;">CREATING</span><span style="color: #000000;"> keyword was not used, a select list named &amp;MISS.</span><span style="font-style: italic; color: #000000;">userno</span><span style="color: #000000;">&amp; is created containing a list of the missing record ids. </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> deletes any old versions of these lists at the start of the update.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Note that the database locking system is of a voluntary nature. Both the file and record level locking performed by </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> only prevent other users acquiring the locks. A program that does not use locks correctly may still be able to access the file during the update.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On completion of the update, </span><span style="font-weight: bold; color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> will be set to the number of records updated. If the command terminates due to a command line error, </span><span style="font-weight: bold; color: #000000;"><a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a></span><span style="color: #000000;"> will be negative.</span></p>
+<p><span style="font-weight: bold; color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000; text-decoration: underline;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UPDATE.RECORD STOCK 01-1745 IN.STOCK,0</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This update amends field IN.STOCK of record 01-1745 in the STOCK file to be zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UPDATE.RECORD SALES ALL TOTAL.SOLD, EVAL &quot;TOTAL.SOLD + THIS.MONTH&quot; THIS.MONTH,0 EXCLUSIVE REPORTING LPTR 2</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This update processes all records from the SALES file, adding the current value of the THIS.MONTH field into the TOTAL.SOLD field, resetting THIS.MONTH to zero. The </span><span style="font-weight: bold; color: #000000;">EXCLUSIVE</span><span style="color: #000000;"> keyword ensures that the file is not updated by other users during the amendment. A detailed report of the changes is sent to print unit 2.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UPDATE.RECORD PAYROLL INQUIRING SALARY,EVAL &quot;SALARY * 1.05&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This update processes entries of the PAYROLL file specified in response to a record id prompt, increasing the value of SALARY by 5%.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UPDATE.RECORD STOCK FROM 2 5,&quot;12/9/96&quot; CONV &quot;D2/&quot;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This update uses select list 2 to identify records of the STOCK file in which field 5 is to be set to the internal form of the date 12/9/96.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The Report</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">REPORTING</span><span style="color: #000000;"> keyword causes </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> to generate a detailed report of its actions. This can be used as a simple audit trail of the changes made to the file and also contains information that enables recovery from an incorrect amendment.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The report shows the start of the amendment for a given record, the changes made to each field and the termination of the update at the point when the record has been written back to the file. Missing records and records which have been created by </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;"> are highlighted in this report.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A command such as</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">UPDATE.RECORD STOCK FROM 2 OLD.VALUE,VALUE VALUE,EVAL &quot;VALUE*1.1&quot; CREATING</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">might produce a report including the following lines</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Start of update of record </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">01-1268</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Field OLD.VALUE was </span><span style="font-family: 'Courier New'; color: #000000;">‘’</span><span style="font-family: 'Courier New'; color: #000000;"> now </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">90</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Field VALUE was </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">90</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;">, now </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">99</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Completed update of record 01-1268</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Record </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">01-6723</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;"> locked by another user.</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Creating record </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">01-7491</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Field OLD.VALUE was </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">75</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;"> now </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">80</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Field VALUE was </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">80</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;">, now </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">88</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">  Completed update of record 01-7491</span><span style="font-family: 'Courier New'; color: #000000;">’</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This example shows the report entries for update of a record found in the file, a record that was not updated because it was locked by another user and a record that was created by </span><span style="font-weight: bold; color: #000000;">UPDATE.RECORD</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the </span><span style="font-weight: bold; color: #000000;">CREATING</span><span style="color: #000000;"> option was not used, record 01-7491 would have produced the following report line</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Record </span><span style="font-family: 'Courier New'; color: #000000;">‘</span><span style="font-family: 'Courier New'; color: #000000;">01-7491</span><span style="font-family: 'Courier New'; color: #000000;">’</span><span style="font-family: 'Courier New'; color: #000000;"> not found.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?locks.htm"; }
+else { parent.quicksync('a4.11'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Locks</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Locks" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Locks</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="fmt_spec.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="ak.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In order to prevent undesirable interaction between processes, QM provides a system of locks. Consider, for example, a process that reads a record, decrements a value in that record and writes it back to the file. There is no problem here if only one process is operating. If, however, there is a second process performing a similar operation on the file, there is a danger that both processes read the record, then both write back an updated copy. Only one of the updates will actually occur as they both started from an identical version of the original data, unaware that there was another process updating the record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although the single user environment of a PDA appears not to require locking, the PDA version of QM retains support for the locking operations for use with <a href="qmnet.htm">QMNet</a> connections and to minimise changes that need to be made when porting applications from other platforms.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Three types of lock are available on files; file, read and update locks. Each has a different role and care should be taken to use them correctly.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">file lock</span><span style="color: #000000;"> applies to the entire file and prevents any other user from obtaining any lock on the file or records therein. File locks are usually only needed during operations that must handle the file in a consistent &quot;snap shot&quot; manner when, for example, summing the values of some field from all records. A process can only acquire a file lock if no other process has any locks on the file or its records. Conversely, no other process can obtain any other sort of lock within the file while the file lock is active. Use of file locks can have a severe effect on performance and hence they should only be used where absolutely necessary.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A file lock is obtained by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_filelock.htm">FILELOCK</a></span><span style="color: #000000;"> statement and is released by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_fileunlock.htm">FILEUNLOCK</a></span><span style="font-family: 'Arial'; color: #000000;"> </span><span style="color: #000000;">or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_release.htm">RELEASE</a></span><span style="color: #000000;"> statements, or on closing the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A </span><span style="font-weight: bold; color: #000000;">read lock</span><span style="color: #000000;"> (sometimes called a </span><span style="font-weight: bold; color: #000000;">shared lock</span><span style="color: #000000;">) applies to an individual record and prevents other processes from obtaining the file lock or an update lock on the same record. Any number of processes may acquire read locks on the record at the same time. An attempt to obtain a read lock will fail if another process has the file is locked or has an update lock on the record. Read locks can be used to ensure that a program sees a consistent view of a set of records, without the risk that some other process has changed any of these records.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">An </span><span style="font-weight: bold; color: #000000;">update lock</span><span style="color: #000000;"> also applies to an individual record and prevents other processes from obtaining the file lock or either type of record lock on the same record. Only one process may acquire an update lock on a record at a time. An attempt to obtain an update lock will fail if another process has the file is locked or has a read or update lock on the record.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A read or update lock may be acquired on a record that does not exist in the file. This provides a means of locking a record that is about to be written for the first time.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Read and update locks are obtained by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readl.htm">READL</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readu.htm">READU</a></span><span style="color: #000000;"> statements (and others). These locks are released on closing the file, by the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_release.htm">RELEASE</a></span><span style="color: #000000;"> statement or on return to the command prompt. Additionally, read and update locks are normally released by writing or deleting the locked record, however, the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_write.htm">WRITEU</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_delete.htm">DELETEU</a></span><span style="color: #000000;"> statements provide a means of writing or deleting without releasing the lock.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Although it is possible to hold very many record locks at a time, this tends to indicate poor application design and may have an adverse effect on performance. The system wide limit on the number of concurrent locks is determined by the <a href="configparams.htm#numlocks">NUMLOCKS</a> configuration parameter. If this limit is reached, the program will behave as though the record is locked by another user, taking the </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> clause of the relevant QMBasic statement with a </span><span style="font-weight: bold; color: #000000;"><a href="qmb_status.htm">STATUS()</a></span><span style="color: #000000;"> value of -1 or, if no </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> clause is present, waiting for space to become available. A message will be written to the </span><span style="color: #000000;"><a href="errorlogging.htm">system error log file</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where an attempt to obtain a lock fails, the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> language provides two methods of handling the situation. A program may either wait automatically for the lock to be released or it may regain control and take some action of its own (see the </span><span style="font-weight: bold; color: #000000;">LOCKED</span><span style="color: #000000;"> clause of the QMBasic file handling statements).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A process is not affected by its own locks. Thus it is possible to take a record lock on a record from a file for which the file lock is held or, conversely, to take the file lock while holding one or more record locks. Taking a read lock on a record for which an update lock is held or vice versa will convert the lock type.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Locks are associated with the underlying operating system file, not the VOC reference to the file. QM will correctly track locks relating to the same file however it was opened. Where a file has been opened more than once simultaneously by a single process, the locks are released on the final close of the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Locks are also associated with the particular file variable referenced when they are acquired. Thus, if an application opens the same file more than once, closing one of the file references will automatically release any locks acquired using that file variable but leave other locks in place. Similarly, use of the form of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_release.htm">RELEASE</a></span><span style="color: #000000;"> statement that takes only a file variable will release locks associated with that file variable. This mechanism ensures that developers do not need to be aware of how other modules within the application operate.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Lock Rule Enforcement</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The lock handling operations of </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> only operate with correctly structured applications. The non-locking versions of the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_read.htm">READ</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_write.htm">WRITE</a></span><span style="color: #000000;"> operations, etc, take no part in the locking system and hence can access a file regardless of its lock state. The individual statement descriptions give more information.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A correctly written application never writes or deletes a record without locking it first, however, for compatibility with other multivalue database products, this is not enforced by default except within <a href="transactions.htm">transactions</a>. A poorly written program that uses </span><span style="font-weight: bold; color: #000000;"><a href="qmb_read.htm">READ</a></span><span style="color: #000000;"> in place of </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readu.htm">READU</a></span><span style="color: #000000;"> and then writes the record could overwrite a record that is locked by another user. The <a href="configparams.htm#mustlock">MUSTLOCK</a> configuration parameter can be used to enforce tight control of locks, eliminating this potential problem. This parameter is not supported on the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Enabling lock rule enforcement may not be easy when porting existing applications to QM. Because multivalue systems have not enforced these rules in the past, programmers sometimes omitted use of locks in situations where there would never be contention. For example, overnight processing might not use locks because the developer knew that it is run at a time when there are no other users on the system. Programs that write a record that is known not to exist also appear not to need locks. Both of these examples actually represent bad programming practice as the assumption made by the developer may subsequently turn out not to be true due to changes in business operation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Task Locks</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM also provides </span><span style="font-weight: bold; color: #000000;">task locks</span><span style="color: #000000;">, sometimes known as </span><span style="font-weight: bold; color: #000000;">process synchronisation locks</span><span style="color: #000000;">, that are not related to any particular file and are typically used to ensure that some task cannot be performed by two users simultaneously.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A task lock is simply an numbered entry in a 64 element locking table. A process acquires a task lock using the </span><span style="font-weight: bold; color: #000000;"><a href="lock.htm">LOCK</a></span><span style="color: #000000;"> command or the QMBasic&nbsp; </span><span style="font-weight: bold; color: #000000;"><a href="qmb_lock.htm">LOCK</a></span><span style="color: #000000;"> statement. If the lock is already owned by another user, the process either waits for it to be released or handles the situation for itself. On completion of the task, the process can release the lock using the </span><span style="font-weight: bold; color: #000000;"><a href="clear_locks.htm">CLEAR.LOCKS</a></span><span style="color: #000000;"> command or the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_unlock.htm">UNLOCK</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Task locks can be difficult to use because the lock is not related to a file, record, etc and the application designer must choose one that is not also used for some other purpose. Because task locks are shared across all accounts, this implies a possible unwanted interaction between different applications.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

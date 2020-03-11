@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_status.htm"; }
+else { parent.quicksync('a7.5.255'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>STATUS()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="STATUS()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">STATUS()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_sselect.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_status_statement.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">STATUS()</span><span style="color: #000000;"> function returns information following execution of certain other statements. In many cases, this information gives details of an error condition.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">STATUS()</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">STATUS()</span><span style="color: #000000;"> function is used to fetch status information set by other statements as documented in their descriptions. Where the value relates to an error condition, the tokens in the ERR.H record of the SYSCOM file can be used. Use of the actual values of error status codes is discouraged.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">STATUS()</span><span style="color: #000000;"> function can be used any number of times to retrieve the current status value but this value may be changed by other statements. In general, the </span><span style="font-weight: bold; color: #000000;">STATUS()</span><span style="color: #000000;"> function should be used as close a possible to the statement that set the value to be retrieved. In particular, use of </span><span style="font-weight: bold; color: #000000;"><a href="qmb_call.htm">CALL</a></span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="qmb_execute.htm">EXECUTE</a></span><span style="color: #000000;"> are very likely to result in execution of statements that destroy the previous value of the </span><span style="font-weight: bold; color: #000000;">STATUS()</span><span style="color: #000000;"> function.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There is a standard subroutine, </span><span style="font-weight: bold; color: #000000;"><a href="qmbs_errtext.htm">!ERRTEXT()</a></span><span style="color: #000000;">, that can be used to translate an error number to an equivalent text message.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">See the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_os_error.htm">OS.ERROR()</a></span><span style="color: #000000;"> function for a way to access operating system level error numbers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">OPEN &quot;STOCK.FILE&quot; TO FVAR ELSE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; ABORT &quot;Open failed : Error code &quot; : STATUS()</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">END</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment attempts to open a file and, if the </span><span style="font-weight: bold; color: #000000;">OPEN</span><span style="color: #000000;"> fails, reports the error code.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?conv_md.htm"; }
+else { parent.quicksync('a4.9.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Masked decimal conversion (MD, ML, MR)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Masked decimal conversion (MD, MR)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Masked Decimal Conversion (MD, ML, MR)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="conv_mc.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="conv_mt.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The masked decimal conversion codes convert a number between its internal and external forms. The formats available provide scaling, currency symbol insertion, thousands separation and a variety of methods for handling negative numbers.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Scaling provides a means by which items such as currency values which are usually written as pounds and pence (or dollars and cents) can be handled internally as integer numbers of pence (or cents) for faster and precise calculation. Scaling is performed by specifying the position of an assumed decimal point.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Input conversion allows for some degree of flexibility in the exact format used. For example, any of the negative value representations may be used regardless of the method actually defined in the conversion code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The three masked decimal conversion codes are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">MD</span></td><td><span style="color: #000000;">Convert without regard to justification</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">ML</span></td><td><span style="color: #000000;">Left justify the converted result</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-weight: bold; color: #000000;">MR</span></td><td><span style="color: #000000;">Right justify the converted result</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The full format of this conversion code is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">ML</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">$</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">s</span><span style="color: #000000;">}&nbsp; {</span><span style="font-weight: bold; color: #000000;">[</span><span style="font-style: italic; color: #000000;">intl</span><span style="font-weight: bold; color: #000000;">]</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">P</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">Z</span><span style="color: #000000;">} {</span><span style="font-weight: bold; color: #000000;">T</span><span style="color: #000000;">} {</span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}} {</span><span style="font-style: italic; color: #000000;">fx</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">is a digit in the range 0 to 9 specifying the number of digits to appear to the right of the decimal point. Rounding occurs on output conversion in the fractional part and, if the result is an integer, the decimal point does not appear.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">f</span></td><td><span style="color: #000000;">is a digit in the range 0 to 9 specifying the position of the implied decimal point in the data to be converted. For example, if the value supplied to an output conversion is 12345 and </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> is 2, the result is 123.45. Conversely, if the value supplied to an input conversion is 123.45 and </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> is 2, the result is 12345. If omitted, </span><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> defaults to the same value as </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">,</span></td><td><span style="color: #000000;">specifies that the national language convention thousands separator is to be inserted between every third digit to the left of the decimal point. The default delimiter is a comma but this may be changed by use of the </span><span style="font-weight: bold; color: #000000;"><a href="nls.htm">NLS</a> </span><span style="color: #000000;">command or the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setnls.htm">SETNLS</a> </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statement.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">$</span></td><td><span style="color: #000000;">specifies that the national currency symbol should be used as a prefix to the converted data on output conversion and may be present on input conversion. The default currency symbol is a dollar sign but this may be changed by use of the </span><span style="font-weight: bold; color: #000000;"><a href="nls.htm">NLS</a> </span><span style="color: #000000;">command or the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_setnls.htm">SETNLS</a> </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> statement.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">s</span></td><td><span style="color: #000000;">specifies the handling of the numeric sign of the value.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">+</span></td><td><span style="color: #000000;">places a + or - sign to the right of the converted data.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="color: #000000;">-</span></td><td><span style="color: #000000;">places a - sign to the right of negative values or a space to the right of positive values.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">(</span></td><td><span style="color: #000000;">encloses negative values in round brackets. A positive value has a space placed to its right.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">&lt;</span></td><td><span style="color: #000000;">encloses negative values in angle brackets. A positive value has a space placed to its right.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">C</span></td><td><span style="color: #000000;">places the letters cr to the right of negative values or two spaces to the right of positive values. Use the </span><span style="font-weight: bold; color: #000000;">CRDB.UPCASE</span><span style="color: #000000;"> keyword of the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command to change this to CR</span><span style="font-family: 'Arial'; color: #000000;">.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">D</span></td><td><span style="color: #000000;">places the letters db to the right of negative values or two spaces to the right of positive values. Use the </span><span style="font-weight: bold; color: #000000;">CRDB.UPCASE</span><span style="color: #000000;"> keyword of the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command to change this to DB</span><span style="font-family: 'Arial'; color: #000000;">.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 90px;"><span style="color: #000000;">Input conversion accepts any of these representations of a negative value regardless of the actual conversion code used.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">[</span><span style="font-style: italic; color: #000000;">intl</span><span style="font-weight: bold; color: #000000;">]</span></td><td><span style="color: #000000;">specifies alternative international handling of currency symbols and separators. </span><span style="font-style: italic; color: #000000;">intl</span><span style="color: #000000;"> consists of up to four comma separated items which specify the prefix, thousands separator, decimal separator and suffix to be applied to the converted value. These components should be quoted if there is any potential confusion.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">Z</span></td><td><span style="color: #000000;">specifies that a zero value should be represented by a null string on output conversion. This option is ignored on input conversion.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-weight: bold; color: #000000;">T</span></td><td><span style="color: #000000;">specifies that trailing decimal places should be truncated rather than rounded. This option is ignored on input conversion.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}</span></td><td><span style="color: #000000;">specifies that the result of an output conversion is to be a field of </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> characters, left or right justified as specified by use of ML or MR. If the converted data is longer than </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> characters it will be truncated to fit. If it is less than </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> characters it is padded using character </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> or spaces if </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> is not specified. The value of </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> may be one or two digits.</span></td></tr></table></div><p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">On input conversion, the value of </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> is ignored and all occurrences of character </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">, or spaces if </span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;"> is not specified, within the data are ignored.</span></p>
+<p style="text-indent: -60px; margin: 0px 0px 0px 90px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="60"><span style="font-style: italic; color: #000000;">fx</span></td><td><span style="color: #000000;">is an alternative style of padding specification. It cannot be used with </span><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;">{</span><span style="font-style: italic; color: #000000;">c</span><span style="color: #000000;">}.</span></td></tr></table></div><p style="margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">f</span><span style="color: #000000;"> specifies the padding character to be used; * for asterisk, # for space, % for zero.</span></p>
+<p style="margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">x</span><span style="color: #000000;"> specifies the field width.</span></p>
+<p style="margin: 10px 0px 0px 90px;"><span style="color: #000000;">The </span><span style="font-style: italic; color: #000000;">fx</span><span style="color: #000000;"> element may be a complete mask as used in&nbsp; </span><span style="color: #000000;"><a href="fmt_spec.htm">format specifications</a></span><span style="color: #000000;"> (e.g. #3-#4).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Masked Decimal Output Conversion</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following table sets out a variety of combinations of masked decimal output conversion features.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="font-weight: bold; color: #000000;">Value</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="font-weight: bold; color: #000000;">Conversion</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="font-weight: bold; color: #000000;">Result</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'0'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0Z</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">''</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Sign handling</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0+</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678+'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0+</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678-'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0-</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0-</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678-'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0&lt;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">' 12345678 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0&lt;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'&lt;12345678&gt;'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0(</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">' 12345678 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0(</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'(12345678)'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0C</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0C</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678CR'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0D</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0D</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678DB'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Scale factors</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD22</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'123456.78'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">1234567.89</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD22</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345.68'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD22</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'-123456.78'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD02</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'123457'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD02T</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'123456'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Thousands separators and currency symbols</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">1234567</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD0,</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'1,234,567'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MD2,$</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'$123,456.78'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Left justification and padding</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML004*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'0***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0010*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678**'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0+12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678+***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0+12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678-***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0-12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678 ***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0(12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678 ***'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0(12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'(12345678)**'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0C12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678&nbsp; **'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">ML0C12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'12345678CR**'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Right justification and padding</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">0</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR004*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'***0'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0010*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'**12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0+12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'***12345678+'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0+12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'***12345678-'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0-12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'***12345678 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0(12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'***12345678 '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0(12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'**(12345678)'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0C12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'**12345678&nbsp; '</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">-12345678</span></p>
+</td>
+<td valign="top" width="143px" style="width:143px;"><p><span style="color: #000000;">MR0C12*</span></p>
+</td>
+<td valign="top" width="555px" style="width:555px;"><p><span style="color: #000000;">'**12345678CR'</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Masked Decimal Input Conversion Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The following table sets out a variety of combinations of masked decimal conversion features.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="font-weight: bold; color: #000000;">Value</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="font-weight: bold; color: #000000;">Conversion</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="font-weight: bold; color: #000000;">Result</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">''</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">''</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'0'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'0'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Sign handling</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'12345678'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'12345678-'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'&lt;12345678&gt;'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'(12345678)'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'12345678CR'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'12345678DB'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Scale factors</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'123456.78'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD2</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'123456.78'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD23</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'1234567.8'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">&nbsp;</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="831px" style="width:831px;"><p><span style="color: #000000;">Currency symbols and thousands separators</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'12,345'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD0,</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'12345'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'$123,456.78'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD2,$</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'12345678'</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="133px" style="width:133px;"><p><span style="color: #000000;">'($123456.78)'</span></p>
+</td>
+<td valign="top" width="145px" style="width:145px;"><p><span style="color: #000000;">MD22$(</span></p>
+</td>
+<td valign="top" width="553px" style="width:553px;"><p><span style="color: #000000;">'-12345678'</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

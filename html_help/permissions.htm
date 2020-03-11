@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?permissions.htm"; }
+else { parent.quicksync('a9.4'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Permissions</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Permissions,Security - permissions" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Permissions</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="application_level_security.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="backup_and_restore.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM uses the underlying operating system to manage processes, files, devices, etc. Therefore, all issues of access permissions ultimately lie with the operating system. This section gives some guidance on setting permissions within a QM system but individual application needs should be taken into account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The QMSYS Account</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The only users who should be working in the QMSYS account are system administrators. It is reasonable that these people should have write access to QMSYS. No other user ever needs to create an item in the QMSYS directory itself. Therefore the directory can be protected so that only administrators can write to it.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">System administrators need write access to all items in the QMSYS account. The following table sets out the additional access rights needed for other users.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p><span style="font-weight: bold; color: #000000;">Developers</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p><span style="font-weight: bold; color: #000000;">Others</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$FORMS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Form queue definitions created with SET.QUEUE for use with SP.ASSIGN.</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$HOLD</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Hold file for QMSYS account</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$HOLD.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for $HOLD</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$IPC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Inter-process communication file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$LOGINS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">User name database</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$MAP</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Catalogue map</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full (note 1)</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$MAP.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for $MAP</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$SCREENS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Screens database</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$SVLISTS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$SAVEDLISTS file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">$VAULT</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Encryption key vault</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ACCOUNTS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Accounts database</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read (note 2)</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read (note 2)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ACCOUNTS.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for ACCOUNTS</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">audit.log</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Encryption audit log</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">bin</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Executable files</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">BP</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Sample QMBasic items</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">cat</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Private catalogue</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">DICT.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for dictionaries</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">DIR_DICT</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for directory files</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">DOCS</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Documentation (Windows only)</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">errlog</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Optional error log file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full (note 3)</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full (note 3)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ERRMSG</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Pick style error message file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read (note 4)</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read (note 4)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">ERRMSG.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for ERRMSG</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">gcat</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Global catalogue</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read (note 5)</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">MESSAGES</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Message database</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">NEWVOC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Template VOC file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">QM.VOCLIB</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">VOC extension</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">stacks</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Command stack repository</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">SYSCOM</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">System include records</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">temp</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Temporary directory (Windows only)</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">terminfo</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Terminfo database</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">terminfo.src</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Terminfo definitions</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">VOC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Vocabulary file</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">VOC.DIC</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Dictionary for VOC</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">errlog</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Error log</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Full</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">qm.hlp</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Help text (Windows only)</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">Read</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="166px" style="width:166px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">QMSvc.log</span></p>
+</td>
+<td valign="top" width="262px" style="width:262px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">QMSvc log (Windows only)</span></p>
+</td>
+<td valign="top" width="119px" style="width:119px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+<td valign="top" width="112px" style="width:112px; border: solid 2px #000000;"><p style="margin: 10px 0px 0px 0px;"><span style="color: #000000;">None</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">1.</span></td><td><span style="color: #000000;">Write access to $MAP is only needed by users who execute the </span><span style="font-weight: bold; color: #000000;"><a href="map.htm">MAP</a></span><span style="color: #000000;"> command to create a catalogue map with the default destination file name.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">2.</span></td><td><span style="color: #000000;">Any user who is to be allowed to create new accounts will need write access to this file. Restricting write access on this file closes a potential security risk by preventing users creating synonyms to existing accounts that might subvert application level security mechanisms.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">3.</span></td><td><span style="color: #000000;">If error logging is enabled (see the ERRLOG configuration parameter), all users need full access to the optional errlog file. Any user that does not have write access will not log errors.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">4.</span></td><td><span style="color: #000000;">This file contains standard Pick style messages. Although rare, some applications may write to this file.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">5.</span></td><td><span style="color: #000000;">It is possible to restrict access to individual items in the gcat subdirectory. Users need read access (not execute access) to run a compiled QMBasic program.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Application Accounts</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">In general, users should have free access to all files. Taking write access away on the VOC can be used to prevent users modifying its content but beware that some applications modify the VOC as part of their normal operation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Other System Files</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The only QM file located outside of account structures is the configuration file (qm.ini in the Windows directory on Windows, /etc/qmconfig on other platforms). All users need read access to this file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The configuration file is updated by the QMTerm terminal emulator and by the QMNet server related commands. Users of these features therefore need write access.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

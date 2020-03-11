@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_selectinfo.htm"; }
+else { parent.quicksync('a7.5.232'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>SELECTINFO()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="SELECTINFO()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">SELECTINFO()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_selectindex.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_selectleft.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">SELECTINFO()</span><span style="color: #000000;"> function returns information about a select list.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">SELECTINFO(</span><span style="font-style: italic; color: #000000;">list.no</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">key</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">list.no</span></td><td><span style="color: #000000;">evaluates to the number of the select list to be examined. If omitted, select list zero is used.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">key</span></td><td><span style="color: #000000;">identifies the action to be performed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Values for the </span><span style="font-style: italic; color: #000000;">key</span><span style="color: #000000;"> to the </span><span style="font-weight: bold; color: #000000;">SELECTINFO()</span><span style="color: #000000;"> function are defined in the KEYS.H record in the SYSCOM file. These are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">1</span></p>
+</td>
+<td valign="top" width="141px" style="width:141px;"><p><span style="color: #000000;">SL$ACTIVE</span></p>
+</td>
+<td valign="top" width="633px" style="width:633px;"><p><span style="color: #000000;">Returns true (1) if the select list is active, false (0) if it is not active.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="57px" style="width:57px;"><p><span style="color: #000000;">3</span></p>
+</td>
+<td valign="top" width="141px" style="width:141px;"><p><span style="color: #000000;">SL$COUNT</span></p>
+</td>
+<td valign="top" width="633px" style="width:633px;"><p><span style="color: #000000;">Returns the number of items remaining to be processed in the select list. If the list is not active, the </span><span style="font-weight: bold; color: #000000;">SELECTINFO()</span><span style="color: #000000;"> function will return zero.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of mode 3 with a list constructed using the </span><span style="color: #000000;">QMBasic </span><span style="font-weight: bold; color: #000000;">SELECT</span><span style="color: #000000;"> statement on a dynamic file requires completion of the selection process and thus may reduce application performance.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">SELECT STOCK.FILE</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PRINT &quot;Stock file has &quot; : SELECTINFO(0, SL$COUNT) : &quot; records&quot;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">CLEARSELECT</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment counts and reports the number of records in the file open with file variable STOCK.FILE..</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

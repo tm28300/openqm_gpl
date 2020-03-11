@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?startup.htm"; }
+else { parent.quicksync('a2.3'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Startup and Shutdown of QM</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Startup and shutdown" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Startup and Shutdown of QM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="installation.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="deinstallation.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM maintains some persistent data in shared memory that is accessed by all QM users. This includes the locking tables, user tables, configuration data and other information that must be visible to all QM user processes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This section does not apply to the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Windows Systems</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On a Windows system, the shared memory is created when the first user enters QM and is discarded when the last QM user logs out. It will be reloaded automatically when the next user enters QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The QMSvc <a href="configparams.htm#qmsrvr.options">OPTIONS</a> configuration parameter can be used to specify that the shared memory is to be loaded when QMSvc starts and is to remain in place until it shuts down. Use of this mode will result in a small performance improvement on entry to QM. Also, user numbers will not reset when the last user logs out. The <a href="configparams.htm#startup">STARTUP</a> configuration parameter described below is only available on Windows platforms when persistent memory mode is selected.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMSvc can be started and stopped from the QM Network Control program group item or by use of qmsvc -start and qmsvc -stop (assuming that the bin subdirectory of the QMSYS account is in the program search path). Shutting down the QMSvc service will automatically logout all QM users that have come in via a network connection.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Other Platforms</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, the QM shared memory must be explicitly loaded before users can enter QM. It may be manually discarded if required.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The installation process will add system startup and shutdown scripts to start QM when the system is booted and to take it down gracefully when the system is shutdown. QM may be started, stopped or restarted at any time by typing:</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; qm -start</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; qm -stop</span></p>
+<p style="margin: 10px 0px 0px 0px;"><span style="font-family: 'Courier New'; color: #000000;"> &nbsp; qm -restart</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Executing a Coldstart Script</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Sometimes it is useful to execute a paragraph or other command script when QM starts. This can be achieved using the <a href="configparams.htm#startup">STARTUP</a> configuration parameter to specify the command to be executed. This command will be run in the QMSYS account and would typically be the name of a VOC paragraph. The command is limited to 80 characters and may not include double quotes.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows, the command is run when QMSvc starts and is only available if QMSvc is running with the persistent memory option selected. The command runs as the SYSTEM user.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, the command is run when the qm -start command is used. The command runs as the user starting QM, normally root.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

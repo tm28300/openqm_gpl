@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?phantom.htm"; }
+else { parent.quicksync('a5.116'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>PHANTOM</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="PHANTOM" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">PHANTOM</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="pdump.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="printer.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">PHANTOM</span><span style="color: #000000;"> command starts execution of a verb, sentence or paragraph as a background process. This command is not available on the PDA version of QM.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">PHANTOM</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A new background process is started to execute the </span><span style="font-style: italic; color: #000000;">command</span><span style="color: #000000;"> which must be a valid verb, sentence or paragraph. The process from which the </span><span style="font-weight: bold; color: #000000;">PHANTOM</span><span style="color: #000000;"> command was performed continues without waiting for </span><span style="font-style: italic; color: #000000;">command</span><span style="color: #000000;"> to be completed. A message is displayed indicating the user number associated with the phantom. The user number is also returned in <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a>. If the phantom process cannot be started, <a href="at_variables.htm#system.return.code">@SYSTEM.RETURN.CODE</a> holds the negative error code.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When the background process terminates a message is queued for display immediately before the next command prompt. This message is</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Phantom </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">n</span><span style="font-family: 'Courier New'; color: #000000;"> : Normal termination.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is the user number if the process completed successfully or</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">Phantom </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">n</span><span style="font-family: 'Courier New'; color: #000000;"> : Abnormal termination.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">if the process aborted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The phantom process will automatically create a COMO file named PH</span><span style="font-style: italic; color: #000000;">n_date_time</span><span style="color: #000000;"> exactly as though it had commenced with the command</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">COMO ON PH</span><span style="font-style: italic; color: #000000;">n_date_time</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Output that would normally be directed to the display is suppressed except for recording in the COMO file. The COMO file may be switched off or redirected as desired.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Any attempt to read data from the keyboard will cause the process to abort. </span><span style="font-weight: bold; color: #000000;"><a href="data.htm">DATA</a></span><span style="color: #000000;"> statements may be used in the phantom to supply input that would normally be read from the keyboard.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Phantom processes may not be started within a transaction.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">All QM processes, including phantoms, execute the VOC LOGIN paragraph, if it exists. To exit from the LOGIN paragraph for a phantom process, insert a line</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @TTY = 'phantom' THEN STOP</span></p>
+<p><span style="color: #000000;">at the relevant point in the paragraph. See <a href="at_variables.htm#tty">@TTY</a> for more details.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">PHANTOM BASIC BP INVOICE</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command starts a phantom process to compile the QMBasic program in record INVOICE of the BP file.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_findstr.htm"; }
+else { parent.quicksync('a7.5.93'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>FINDSTR</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FINDSTR" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">FINDSTR</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_find.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_flush.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FINDSTR</span><span style="color: #000000;"> statement searches a dynamic array for a given substring in any position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FINDSTR</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">IN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">occurrence</span><span style="color: #000000;">} </span><span style="font-weight: bold; color: #000000;">SETTING</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> {</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">subvalue</span><span style="color: #000000;">}}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">{</span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">statement(s)</span><span style="color: #000000;">}</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">evaluates to the item to be located.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">dyn.array</span></td><td><span style="color: #000000;">is the dynamic array in which searching is to occur.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">occurrence</span></td><td><span style="color: #000000;">is the occurrence of </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> to be found. If omitted, the first occurrence is located.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">field</span></td><td><span style="color: #000000;">is the variable to receive the field number at which </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> is found.</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">is the variable to receive the value number at which </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> is found. If omitted, only the field position is returned</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">subvalue</span></td><td><span style="color: #000000;">is the variable to receive the subvalue number at which </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> is found. If omitted, only the field and, optionally, value positions are returned</span></td></tr></table></div><p style="text-indent: -150px; margin: 0px 0px 0px 180px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="150"><span style="font-style: italic; color: #000000;">statement(s)</span></td><td><span style="color: #000000;">are statements to be executed depending on the outcome of the </span><span style="font-weight: bold; color: #000000;">FINDSTR</span><span style="color: #000000;"> action.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">At least one of the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clauses must be present.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FINDSTR</span><span style="color: #000000;"> statement searches </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> for a field, value or subvalue containing </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">. This need not be the entire field, value or subvalue. If found, the position of </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> within </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> is returned in the </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">, and </span><span style="font-style: italic; color: #000000;">subvalue</span><span style="color: #000000;"> variables and the </span><span style="font-weight: bold; color: #000000;">THEN</span><span style="color: #000000;"> clause is executed. If not found or </span><span style="font-style: italic; color: #000000;">dyn.array</span><span style="color: #000000;"> is a null string, the </span><span style="font-style: italic; color: #000000;">field</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">, and </span><span style="font-style: italic; color: #000000;">subvalue</span><span style="color: #000000;"> variables are unchanged and the </span><span style="font-weight: bold; color: #000000;">ELSE</span><span style="color: #000000;"> clause is executed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the <a href="qmbd_nocase_strings.htm">$NOCASE.STRINGS</a> compiler directive makes the comparison case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Variable X contains ABC</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">DEF</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">GHI</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">JKL</span><span style="font-size: 6pt; color: #000000;">FM</span><span style="color: #000000;">MNO</span><span style="font-size: 6pt; color: #000000;">VM</span><span style="color: #000000;">PQR</span><span style="font-size: 6pt; color: #000000;">SM</span><span style="color: #000000;">STU</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">FINDSTR 'KL' IN X SETTING F, V, S</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The above FINDSTR would return F = 2, V = 3, S = 1</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_del.htm">DEL</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_del.htm">DELETE()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_extract.htm">EXTRACT()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_find.htm">FIND</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ins.htm">INS</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_ins.htm">INSERT()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_listindex.htm">LISTINDEX()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_locate.htm">LOCATE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_locate.htm">LOCATE()</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="qmb_replace.htm">REPLACE()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

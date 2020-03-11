@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?and.htm"; }
+else { parent.quicksync('a6.16'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>AND</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="AND,&amp;" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">AND, &amp;</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="all_match.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="as.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> selection clause operator links two selection criteria where both must be true for the record to be selected. The synonym </span><span style="font-weight: bold; color: #000000;">&amp;</span><span style="color: #000000;"> can be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">WITH</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">condition.1</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">condition.2</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="240"><span style="font-style: italic; color: #000000;">condition.1</span><span style="color: #000000;">, </span><span style="font-style: italic; color: #000000;">condition.2</span></td><td><span style="color: #000000;">are record selection criteria.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> selection clause operator returns true if both </span><span style="font-style: italic; color: #000000;">condition.1</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">condition.2</span><span style="color: #000000;"> are true. Alternatively, multiple </span><span style="font-weight: bold; color: #000000;">WITH</span><span style="color: #000000;"> clauses can be used.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> and </span><span style="font-weight: bold; color: #000000;"><a href="or.htm">OR</a></span><span style="color: #000000;"> operators are normally of equal priority and will be evaluated strictly left to right. Brackets may need to be used to enforce evaluation in an different order. Thus a query such as</span></p>
+<p style="margin: 6px 0px 6px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CLIENTS WITH REGION = 1 AND VALUE &gt; 1000 OR REGION = 2 AND VALUE &gt; 500</span></p>
+<p><span style="color: #000000;">may need brackets to achieve the desired effect</span></p>
+<p style="margin: 6px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST CLIENTS WITH (REGION = 1 AND VALUE &gt; 1000) OR (REGION = 2 AND VALUE &gt; 500)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Pick style multivalue database products give </span><span style="font-weight: bold; color: #000000;">AND</span><span style="color: #000000;"> priority over </span><span style="font-weight: bold; color: #000000;"><a href="or.htm">OR</a></span><span style="color: #000000;"> such that the above query would not need the brackets. This behaviour can be enabled in QM by use of the QUERY.PRIORITY.AND mode of the </span><span style="font-weight: bold; color: #000000;"><a href="option.htm">OPTION</a></span><span style="color: #000000;"> command.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QTY GT 100 AND REORDER LT 300</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This command lists items found on the STOCK file with a QTY field of over 100 and a REORDER field of less than 300.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The same results can be achieved with</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">LIST STOCK WITH QTY GT 100 WITH REORDER LT 300</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

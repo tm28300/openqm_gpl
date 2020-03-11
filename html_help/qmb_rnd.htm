@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_rnd.htm"; }
+else { parent.quicksync('a7.5.225'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>RND()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="RND()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">RND()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_reuse.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_save_screen.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RND()</span><span style="color: #000000;"> function returns a random number.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">RND(</span><span style="font-style: italic; color: #000000;">expr</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">expr</span></td><td><span style="color: #000000;">evaluates to an integer or a numeric array.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">RND()</span><span style="color: #000000;"> function returns a random number. The range of values is determined by the value of </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> rounded towards zero as an integer. If </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is positive, the number is in the range zero to </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> minus one. If </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is negative, the number is in the range </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> plus one to zero. If </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is zero, </span><span style="font-weight: bold; color: #000000;">RND()</span><span style="color: #000000;"> returns zero.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;"> is a numeric array (a dynamic array where all elements are numeric), the </span><span style="font-weight: bold; color: #000000;">RND()</span><span style="color: #000000;"> function operates on each element in turn and returns a numeric array with the same structure as </span><span style="font-style: italic; color: #000000;">expr</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The seed value of the random number generator may be set using </span><span style="font-weight: bold; color: #000000;"><a href="qmb_randomize.htm">RANDOMIZE</a></span><span style="color: #000000;">. Note that the sequence returned may vary between QM releases even if the same seed value is set.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">TWO.DICE = RND(6) + RND(6) + 2</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This statement produces a value in TWO.DICE equivalent to throwing a pair of dice. The two calls to the </span><span style="font-weight: bold; color: #000000;">RND()</span><span style="color: #000000;"> function will each return a value in the range 0 to 5. The values are then brought into the appropriate range by adding two.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_randomize.htm">RANDOMIZE</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

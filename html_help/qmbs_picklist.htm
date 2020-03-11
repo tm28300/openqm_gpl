@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbs_picklist.htm"; }
+else { parent.quicksync('a7.8.9'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>!PICKLIST()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="!PICKLIST()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">!PICKLIST()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbs_pick.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmbs_qmclient.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PICKLIST()</span><span style="color: #000000;"> subroutine displays a list of entries from which a user may select one.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">CALL !PICKLIST(</span><span style="font-style: italic; color: #000000;">value</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">list</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">return.col</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">index.col</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">value</span></td><td><span style="color: #000000;">is the returned item. This will be returned as a null string if no option is selected.</span></td></tr></table></div><p style="text-indent: -210px; margin: 0px 0px 0px 360px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">list</span></td><td><span style="color: #000000;">is a field mark delimited list of items to process. The display can show multiple items for each entry (e.g. a code and an expanded text) in which case each field is divided into values corresponding to the columns to be shown. The number of displayed columns is determined by the number of values in the first field.</span></td></tr></table></div><p style="text-indent: -90px; margin: 0px 0px 0px 120px;"><span style="font-style: italic; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">return.col</span></td><td><span style="color: #000000;">identifies which column (from 1) of the selected item is to be returned as </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="90"><span style="font-style: italic; color: #000000;">index.col</span></td><td><span style="color: #000000;">is the column number (from 1)&nbsp; for shortcut entry. The list must be sorted into ascending order of this column. A value of zero implies that no shortcut is to be allowed.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">!PICKLIST()</span><span style="color: #000000;"> subroutine displays a box containing the items to from </span><span style="font-style: italic; color: #000000;">list</span><span style="color: #000000;">. The user can use the up and down cursor keys to move through this list. If the list is longer than can be displayed, the subroutine will scroll the displayed items. The page up and down key can be used to move rapidly through the entries. The return key selects the current item, returning it in the </span><span style="font-style: italic; color: #000000;">value</span><span style="color: #000000;"> argument.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If </span><span style="font-style: italic; color: #000000;">index.col</span><span style="color: #000000;"> is non-zero, the user may enter the initial characters of an entry in the chosen column to position directly to the first entry starting with the entered prefix. The characters entered are displayed in the lower border of the box.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When used on a QMTerm or Windows QMConsole session or on a terminal that supports screen region save and restore, the area of the screen overwritten by the pick list box is automatically saved and restored. Programs using other terminal systems will need to arrange their own system to recover the screen.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier'; color: #000000;">LIST = 'Blue':@FM:'Green':@FM:'Red'</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier'; color: #000000;">CALL !PICKLIST(ITEM, LIST, 1, 1)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier'; color: #000000;">DISPLAY 'Selected item was ' : ITEM</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmbs_pick.htm">!PICK()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>

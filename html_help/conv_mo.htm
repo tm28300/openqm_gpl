@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?conv_mo.htm"; }
+else { parent.quicksync('a4.9.11'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Radix conversion (MB, MO, MX)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Radix conversions (MB, MX)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Radix Conversion (MB, MO, MX)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="conv_mt.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="conv_mcdx.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The radix conversion codes convert a number to/from binary (MB), octal (MO) or hexadecimal (MX).</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Input Conversion</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The MB, MO and MX conversions take a number represented by a character string of binary, octal or hexadecimal digits and converts it to an internal integer value.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Addition of the 0C suffix to these codes (MB0C, MO0C, MX0C) takes a character string holding a series of binary, octal or hexadecimal digits and translates each group of 8, 3 or 2 digits to the corresponding ASCII character. If the source data is not an exact multiple of 8, 3 or 2 digits in length, as appropriate to the conversion type, implied leading zeros are added.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Output Conversion</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The MB, MO and MX conversions convert a number to binary, octal or hexadecimal form as a character string. Non-integer values are truncated towards zero.&nbsp; Negative values are treated as unsigned 32 bit values. Leading zeros are suppressed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The addition of the 0C suffix to any of these conversion codes treats the source data as a character string and converts each character to its binary, octal or hexadecimal representation.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Examples</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="714px" style="width:714px;"><p><span style="font-weight: bold; color: #000000;">Input conversion:</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-weight: bold; color: #000000;">Source data</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="font-weight: bold; color: #000000;">Conversion</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="font-weight: bold; color: #000000;">Result</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">1110</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MB</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">14</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">37777777762</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MO</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">-14</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">31342E36</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MX</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">14.6</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">010000010100001001000011</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MB0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">101102103</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MO0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">414243</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MX0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><br>
+</td>
+<td valign="top" width="120px" style="width:120px;"><br>
+</td>
+<td valign="top" width="356px" style="width:356px;"><br>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td colspan="3" valign="top" width="714px" style="width:714px;"><p><span style="font-weight: bold; color: #000000;">Output conversion:</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="font-weight: bold; color: #000000;">Source data</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="font-weight: bold; color: #000000;">Conversion</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="font-weight: bold; color: #000000;">Result</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">19</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MB</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">10011</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">19</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MO</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">23</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">19</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MX</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">13</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MB0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">010000010100001001000011</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MO0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">101102103</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="238px" style="width:238px;"><p><span style="color: #000000;">ABC</span></p>
+</td>
+<td valign="top" width="120px" style="width:120px;"><p><span style="color: #000000;">MX0C</span></p>
+</td>
+<td valign="top" width="356px" style="width:356px;"><p><span style="color: #000000;">414243</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

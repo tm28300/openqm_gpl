@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmbasic_typeconversion.htm"; }
+else { parent.quicksync('a7.1.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>QMBasic - Type conversion</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Type conversion (QMBasic),Data types (QMBasic)" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">QMBasic&nbsp; -&nbsp; Type Conversion </span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmbasic_assignmentstatements.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="file_processing.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QMBasic variables are of variant type, the stored type being determined by the context in which the value was set and conversion being carried out on a temporary basis wherever necessary to perform processing. For example, the following program fragment</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = 962</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = A[2,1]</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">would result in A containing the integer value 962 and S containing the digit 6 as a string. The type conversion from integer to string is implicit in the use of the substring extraction on the second line.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Where a variable is accessed a very large number of times, there may be performance benefits to be obtained from ensuring that it is stored in an appropriate type thus minimising implicit temporary conversions. The QMBasic language does not have any specific type conversion functions as the automatic type variant nature of the language is adequate for most purposes. Where a variable is to be forced to be a number, this can be achieved by adding zero</span></p>
+<p style="margin: 5px 0px 5px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = A + 0</span></p>
+<p><span style="color: #000000;">or, more typically, combined with some other operation such as</span></p>
+<p style="margin: 5px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">NUM.INVOICES = CLI.REC&lt;C.INV.CT&gt; + 0</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Similarly, data can be forced to string format by appending a null string</span></p>
+<p style="margin: 5px 0px 5px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = A : &quot;&quot;</span></p>
+<p><span style="color: #000000;">This is a much less common operation in real programs.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?loginprocess.htm"; }
+else { parent.quicksync('a2.7'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>The Login Process</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Login process,MASTER.LOGIN,LOGIN VOC entry" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">The Login Process</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="entering_qm.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="command_scripts.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">There are two stages to login; user authentication and process initialisation. The first applies only to network connections</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">User Authentication</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows NT and later, users connecting to QM via a network must enter a valid Windows username and password. The new process runs as that user and with the associated access permissions.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">QM implements a further layer of security on top of the Windows authentication by maintaining a register of usernames allowed to use QM. A username may be added to this register using the </span><span style="font-weight: bold; color: #000000;"><a href="create_user.htm">CREATE.USER</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="admin_user.htm">ADMIN.USER</a></span><span style="color: #000000;"> commands. The register entry determines:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">1.</span></td><td><span style="color: #000000;">whether the user is allowed to use QM at all. This check can be suppressed using the </span><span style="font-weight: bold; color: #000000;"><a href="security.htm">SECURITY</a></span><span style="color: #000000;"> command.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">2.</span></td><td><span style="color: #000000;">whether the user is to be granted administrator rights within QM.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">3.</span></td><td><span style="color: #000000;">the name of the account that the user should start in. If no account is specified, a prompt is displayed for the account name. </span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If security has been turned off and the username does not appear in the user register, the user runs without administrator rights and an account name prompt is displayed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On Windows 98/ME, the above mechanism is extended such that QM performs the username and password validation using its own internal user register as these platforms do not provide an adequate user authentication system. The newly created process runs with the Windows user name and access permissions of the user that started the QMServer process.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">On other platforms, users connecting to QM via a network usually open telnet sessions as normal users and then enter QM, perhaps automatically via their profile script. It is, however, possible to connect directly to QM in which case the security mechanisms described above for Windows NT and later apply.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Process Initialisation</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">When a user successfully enters an interactive QM session, the following steps occur:</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">1.</span></td><td><span style="color: #000000;">For users entering QM directly from a network connection, QM attempts to determine the terminal type by use of telnet negotiation commands. If the emulator in use does not support these, QM looks for an environment variable named TERM and, if this is found, uses it to set the default terminal type. If this also fails, vt100 is used by default.</span></td></tr></table></div><p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">For PDA users, the terminal type is set to pda.</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">For QMConsole users on Windows, the terminal type is set to qmterm.</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">For users entering QM from an operating command prompt on other platforms, QM looks for an environment variable named TERM and, if this is found, uses it to set the default terminal type. If this fails, vt100 is used by default. </span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">In all cases except for PDA users, the terminal type can be changed later from within QM using the </span><span style="font-weight: bold; color: #000000;"><a href="term.htm">TERM</a></span><span style="color: #000000;"> command. When using AccuTerm, it is strongly recommended that the terminal types with the -at suffix (e.g. vt220-at) are used as these enable AccuTerm specific features such as the screen switching required for the full screen mode of the QMBasic debugger.</span></p>
+<p style="text-indent: -1px; margin: 0px 0px 0px 60px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">2.</span></td><td><span style="color: #000000;">On all platforms except the PDA, QM then looks for environment variables named LINES and COLUMNS and, if found and valid, uses these to set the initial size of the terminal window. When using a QMConsole session on Windows, the displayed window will be adjusted to be this size. On other connections, it is the user's responsibility to ensure that the terminal emulator screen dimensions match those expected by QM.</span></td></tr></table></div><p style="margin: 0px 0px 0px 30px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">3.</span></td><td><span style="color: #000000;">The system looks in the QMSYS account <a href="voc.htm">VOC</a> file to find a paragraph named <a href="command_scripts.htm">MASTER.LOGIN</a> and, if this exists, executes it. This paragraph can be used for system wide initialisation such as setting European date format or standard printer associations.</span></td></tr></table></div><p style="text-indent: 4px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">4.</span></td><td><span style="color: #000000;">The system checks in the user's account <a href="voc.htm">VOC</a> file to find an executable (menu, paragraph, sentence, verb) item named <a href="command_scripts.htm">LOGIN</a> and, if this exists, executes it. The LOGIN item is typically used to perform account specific initialisation and the enter the application. Note that this happens for all QM processes, including phantoms and QMClient sessions. To exit from the LOGIN paragraph for a phantom process, insert a line</span></td></tr></table></div><p style="margin: 6px 0px 6px 90px;"><span style="font-family: 'Courier New'; color: #000000;">IF @TTY = 'phantom' THEN STOP</span></p>
+<p style="margin: 0px 0px 0px 60px;"><span style="color: #000000;">at the relevant point in the paragraph. For a QMClient session, test for 'vbsrvr'. See <a href="at_variables.htm#tty">@TTY</a> for more details.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="30"><span style="font-size: 11pt; font-family: 'Times New Roman'; color: #000000;">5.</span></td><td><span style="color: #000000;">The break key is enabled. By running the MASTER.LOGIN and LOGIN paragraphs with the break key disabled, the user cannot quit out of any security checking done in these paragraphs. If a LOGIN paragraph is used to start the application, it may be necessary to enable the break key at this stage by including a </span><span style="font-weight: bold; color: #000000;"><a href="break.htm">BREAK&nbsp;ON</a></span><span style="color: #000000;"> command.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Step 4 above is also executed when the </span><span style="font-weight: bold; color: #000000;"><a href="logto.htm">LOGTO</a></span><span style="color: #000000;"> command is used to move to a new account.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">User specific process initialisation can be performed by testing the content of the <a href="at_variables.htm#logname">@LOGNAME</a> variable in the MASTER.LOGIN or LOGIN paragraphs. For example,</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">IF @LOGNAME = 'ADMINISTRATOR' THEN ADMIN.STARTUP</span></p>
+<p><span style="color: #000000;">or even executing a user name dependant paragraph by a command of the form</span></p>
+<p style="margin: 10px 0px 10px 30px;"><span style="font-family: 'Courier New'; color: #000000;">START.&lt;&lt;@LOGNAME&gt;&gt;</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

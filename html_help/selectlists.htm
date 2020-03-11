@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?selectlists.htm"; }
+else { parent.quicksync('a4.16'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>Select Lists</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Select lists" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Select Lists</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="transactions.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qm_commands.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Select lists are lists of things to be processed, usually record keys from a file. The list may contain all record keys or only those where the key or record data meets some specified criteria. Using select lists simplifies and speeds up many data processing operations using commands or within </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs. There are 11 select lists numbered 0 to 10. List 0 is referred to as the </span><span style="font-weight: bold; color: #000000;">default select list</span><span style="color: #000000;"> and is used by some verbs such as </span><span style="font-weight: bold; color: #000000;"><a href="copy.htm">COPY</a></span><span style="color: #000000;"> to determine the records (or files for other verbs) to be processed.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Select lists are created by the </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SELECT</a></span><span style="color: #000000;"> or </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SSELECT</a></span><span style="color: #000000;"> query processor commands. The </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SELECT</a></span><span style="color: #000000;"> command builds a list of keys of records meeting the specified criteria but with no apparent ordering to the list. The </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SSELECT</a></span><span style="color: #000000;"> command is similar but the list is in order of record key value. The </span><span style="font-weight: bold; color: #000000;"><a href="select.htm">SELECT</a></span><span style="color: #000000;"> command is faster both during generation of the list and subsequent processing of records as its order reflects the placement of records within the file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Select lists can also be created by the </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> </span><span style="font-weight: bold; color: #000000;"><a href="qmb_select.htm">SELECT</a></span><span style="color: #000000;"> statement. This statement builds a list of all records in the file and provides no means of including or excluding records by selection criteria. Programs can then read keys sequentially from the list using the </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readnext.htm">READNEXT</a></span><span style="color: #000000;"> statement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Select lists may also be saved to records in the </span><span style="color: #000000;">$SAVEDLISTS</span><span style="color: #000000;"> file using </span><span style="font-weight: bold; color: #000000;"><a href="save_list.htm">SAVE.LIST</a></span><span style="color: #000000;"> and later restored using </span><span style="font-weight: bold; color: #000000;"><a href="get_list.htm">GET.LIST</a></span><span style="color: #000000;">. Lists that have been written to other files by </span><span style="color: #000000;">QMBasic</span><span style="color: #000000;"> programs may be restored using </span><span style="font-weight: bold; color: #000000;"><a href="form_list.htm">FORM.LIST</a></span><span style="color: #000000;">. The </span><span style="font-weight: bold; color: #000000;"><a href="edit_list.htm">EDIT.LIST</a></span><span style="color: #000000;"> command allows editing of select lists. Saved select lists may be copied using </span><span style="font-weight: bold; color: #000000;"><a href="copy_list.htm">COPY.LIST</a></span><span style="color: #000000;">, deleted using </span><span style="font-weight: bold; color: #000000;"><a href="delete_list.htm">DELETE.LIST</a></span><span style="color: #000000;"> or merged using </span><span style="font-weight: bold; color: #000000;"><a href="merge_list.htm">MERGE.LIST</a></span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A select list represents a &quot;snapshot&quot; of the file at the time when it was generated. Adding, deleting or modifying records will not affect the select list. Thus, if a file may be modified by another process between generation of the select list and retrieval of records for processing, the program must allow for records that have been deleted or no longer meet the selection criteria.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A special type of select list, an </span><span style="font-weight: bold; color: #000000;">exploded list</span><span style="color: #000000;">, is constructed using the <a href="by_exp.htm">BY.EXP</a> or <a href="by_exp_dsnd.htm">BY.EXP.DSND</a> keywords of the query processor. In an exploded select list, the multivalued field from which it was created generates a separate entry for each value or subvalue. The internal representation of this list includes information to identify the value and subvalue positions of the corresponding data element. This can be retrieved by the QMBasic </span><span style="font-weight: bold; color: #000000;"><a href="qmb_readnext.htm">READNEXT</a></span><span style="color: #000000;"> statement and is used automatically by some operations within the query processor.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

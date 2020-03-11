@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0029)http://www.helpandmanual.com/ -->
+<head><script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if(top.frames.length==0) { top.location.href="index.html?qmb_fieldstore.htm"; }
+else { parent.quicksync('a7.5.87'); }
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script>
+   <title>FIELDSTORE()</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="FIELDSTORE()" />
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#649CCC">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">FIELDSTORE()</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="_.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="qmb_field.htm"><img src="previous.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="qmb_file.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The </span><span style="font-weight: bold; color: #000000;">FIELDSTORE()</span><span style="color: #000000;"> function provides delimited substring assignment.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Format</span></p>
+<p><span style="font-weight: bold; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-weight: bold; color: #000000;">FIELDSTORE(</span><span style="font-style: italic; color: #000000;">string</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">i</span><span style="font-weight: bold; color: #000000;">,</span><span style="color: #000000;"> </span><span style="font-style: italic; color: #000000;">n</span><span style="font-weight: bold; color: #000000;">, </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="font-weight: bold; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">where</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">string</span></td><td><span style="color: #000000;">evaluates to the string in which replacement is to occur. If </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> is a variable name, the contents of this variable are not changed unless it also appears on the left hand side of the assignment statement in which the </span><span style="font-weight: bold; color: #000000;">FIELDSTORE()</span><span style="color: #000000;"> function appears.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">delimiter</span></td><td><span style="color: #000000;">evaluates to a string, the first character of which is used as the delimiter separating the substrings within </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">. A null </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;"> string will cause a run time error.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">i</span></td><td><span style="color: #000000;">evaluates to the position of the first substring to be replaced. Substring positions are numbered from one.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">n</span></td><td><span style="color: #000000;">evaluates to the number of substrings to be replaced.</span></td></tr></table></div><p style="text-indent: -120px; margin: 0px 0px 0px 150px;"><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="120"><span style="font-style: italic; color: #000000;">rep.string</span></td><td><span style="color: #000000;">evaluates to the new data to be inserted in </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">.</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The value returned by the </span><span style="font-weight: bold; color: #000000;">FIELDSTORE()</span><span style="color: #000000;"> function is the result of the replacement.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">A statement of the form</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = FIELDSTORE(S, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">d</span><span style="font-family: 'Courier New'; color: #000000;">, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">i</span><span style="font-family: 'Courier New'; color: #000000;">, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">n</span><span style="font-family: 'Courier New'; color: #000000;">, </span><span style="font-family: 'Courier New'; font-style: italic; color: #000000;">rep.string</span><span style="font-family: 'Courier New'; color: #000000;">)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">is equivalent to the delimited substring assignment operation</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S[d, i, n] = rep.string</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The action of </span><span style="font-weight: bold; color: #000000;">FIELDSTORE()</span><span style="color: #000000;"> depends on the values of </span><span style="font-style: italic; color: #000000;">i</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> and the number of substrings within </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;">.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the value of the position expression, </span><span style="font-style: italic; color: #000000;">i</span><span style="color: #000000;">, is less than one, a value of one is assumed. If there are fewer than </span><span style="font-style: italic; color: #000000;">i</span><span style="color: #000000;"> delimited substrings present in </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;">, additional delimiters are added to reach the required position.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the value of the number of substrings expression, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">, is positive, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> substrings are replaced by the same number of substrings from </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;">. If </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> contains fewer than </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> substrings, additional delimiters are inserted.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">If the value of the number of substrings expression, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">, is zero or negative, </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> substrings are deleted from </span><span style="font-style: italic; color: #000000;">string</span><span style="color: #000000;"> and the whole of </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> is inserted regardless of the number of substrings that it contains.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Use of the <a href="qmbd_nocase_strings.htm">$NOCASE.STRINGS</a> compiler directive makes the </span><span style="font-style: italic; color: #000000;">delimiter</span><span style="color: #000000;"> case insensitive.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">Example</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">S = 1*2*3*4*5</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">A = FIELDSTORE(S, &quot;*&quot;, 2, 3, &quot;A*B&quot;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">B = FIELDSTORE(S, &quot;*&quot;, 2, 3, &quot;A*B*C&quot;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">C = FIELDSTORE(S, &quot;*&quot;, 2, 3, &quot;A*B*C*D&quot;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">D = FIELDSTORE(S, &quot;*&quot;, 2, 0, &quot;A*B&quot;)</span></p>
+<p style="margin: 0px 0px 0px 30px;"><span style="font-family: 'Courier New'; color: #000000;">E = FIELDSTORE(S, &quot;*&quot;, 2, -3, &quot;A*B&quot;)</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">This program fragment performs the </span><span style="font-weight: bold; color: #000000;">FIELDSTORE()</span><span style="color: #000000;"> function on the string S using different values for </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> and </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;">. The results are</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="232"><span style="font-family: 'Courier New'; color: #000000;">A = 1*A*B**5</span></td><td><span style="color: #000000;">Note inserted delimiter as </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> has only 2 substrings</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="232"><span style="font-family: 'Courier New'; color: #000000;">B = 1*A*B*C*5</span></td><td><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> replaces substrings 2 to 5</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="232"><span style="font-family: 'Courier New'; color: #000000;">C = 1*A*B*C*5</span></td><td><span style="color: #000000;">Final substring of </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> is not inserted</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="232"><span style="font-family: 'Courier New'; color: #000000;">D = 1*A*B*2*3*4*5</span></td><td><span style="color: #000000;">No substrings are deleted as </span><span style="font-style: italic; color: #000000;">n</span><span style="color: #000000;"> is zero</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="232"><span style="font-family: 'Courier New'; color: #000000;">E = 1*A*B*5</span></td><td><span style="color: #000000;">Three substrings are deleted and </span><span style="font-style: italic; color: #000000;">rep.string</span><span style="color: #000000;"> is inserted</span></td></tr></table></div><p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">See also:</span></p>
+<p><span style="font-weight: bold; color: #000000;"><a href="qmb_field.htm">FIELD()</a></span></p>
+
+</td></tr></table>
+
+</body>
+</html>
