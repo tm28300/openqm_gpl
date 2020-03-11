@@ -19,6 +19,8 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 11 Mar 20        Add $CATALOG.OPTIONS record in voc and add an option to
+*                  ignore the extension of source code in catalog name.
 * 02 Nov 06  2.4-15 VOC record types now case insensitive.
 * 01 Sep 06  2.4-13 Added NO.QUERY option.
 * 28 Aug 06  2.4-12 Allow object code to be in a multifile.
@@ -89,6 +91,25 @@ $define CAT_PCODE  3
       if upcase(voc.rec[1,1]) = 'X' then private.catalogue = voc.rec<2>
    end
 
+   read options.rec from @voc, "$CATALOG.OPTIONS" else options.rec = ''
+
+   extension.to.ignore = ''
+   if upcase(options.rec[1,1]) = 'X' then
+      loop
+         del options.rec<1>
+      while len(options.rec) do
+         one.option = trim(options.rec<1>)
+         option1 = upcase(field(one.option, ' ', 1))
+         begin case
+            case option1 = "IGNORE.EXTENSION"
+               extension.to.ignore = upcase(convert(" ", @AM, one.option))
+               del extension.to.ignore<1>
+               if extension.to.ignore = '' then
+                  extension.to.ignore = '*'
+               end
+         end case
+      repeat
+   end
 
    call @parser(PARSER$RESET, 0, @sentence, 0)
    call @parser(PARSER$GET.TOKEN, token.type, token, keyword) ;* Verb
@@ -274,8 +295,20 @@ catalogue.program:
 
    * Ensure call name is in object code
 
+   object.call.name = call.name
    if mode # CAT_PCODE then
-      object.code[hdr.program.name, hdr.program.name.len] = call.name:char(0)
+      if extension.to.ignore # "" then
+         extension.call.name = object.call.name['.', dcount(object.call.name, '.'), 1]
+         if extension.to.ignore # "*" then
+            locate extension.call.name in extension.to.ignore<1> setting pos.ext else
+               extension.call.name = ""
+            end
+         end
+         if extension.call.name # "" then
+            object.call.name = object.call.name[1, len(object.call.name) - 1 - len(extension.call.name)]
+         end
+      end
+      object.code[hdr.program.name, hdr.program.name.len] = object.call.name:char(0)
    end
 
    * Remove symbol and line tables if NOXREF option used
@@ -306,28 +339,28 @@ catalogue.program:
 
    begin case
       case mode = CAT_LOCAL
-         readu voc.rec from @voc, call.name then
+         readu voc.rec from @voc, object.call.name then
             if upcase(voc.rec[1,1]) # 'V' or voc.rec<2> # 'CS' then
-               release @voc, call.name
-               display sysmsg(3028, call.name) ;* VOC already contains a conflicting entry named xx
+               release @voc, object.call.name
+               display sysmsg(3028, object.call.name) ;* VOC already contains a conflicting entry named xx
                return
             end
          end
 
          program.path = fileinfo(object.file, fl$path) : @ds : program.name
          voc.rec = "V" : @fm : "CS" : @fm : program.path
-         write voc.rec to @voc, call.name
+         write voc.rec to @voc, object.call.name
 
-         display sysmsg(3029, call.name) ;* xx added to local catalogue
+         display sysmsg(3029, object.call.name) ;* xx added to local catalogue
          gosub check.private
          gosub check.global
 
       case mode = CAT_GLOBAL
-         recordlocku gcat.f, call.name
+         recordlocku gcat.f, object.call.name
          mark.mapping gcat.f, off
-         write object.code to gcat.f, call.name
+         write object.code to gcat.f, object.call.name
       
-         display sysmsg(3030, call.name) ;* xx added to global catalogue
+         display sysmsg(3030, object.call.name) ;* xx added to global catalogue
 
          gosub check.local
          gosub check.private
@@ -378,14 +411,14 @@ catalogue.program:
 
          write pcode to bin.f, 'pcode'
          close bin.f
-         display sysmsg(7700, call.name) ;* xx added to pcode library
+         display sysmsg(7700, object.call.name) ;* xx added to pcode library
 
       case 1
-         recordlocku cat.f, call.name
+         recordlocku cat.f, object.call.name
          mark.mapping cat.f, off
-         write object.code to cat.f, call.name
+         write object.code to cat.f, object.call.name
       
-         display sysmsg(3031, call.name) ;* xx added to private catalogue
+         display sysmsg(3031, object.call.name) ;* xx added to private catalogue
 
          gosub check.local
          gosub check.global
@@ -408,10 +441,10 @@ validate.call.name:
 * ======================================================================
 
 check.local:
-   readu voc.rec from @voc, call.name then
+   readu voc.rec from @voc, object.call.name then
       if upcase(voc.rec[1,1]) = 'V' and voc.rec<2> = 'CS' then
          if no.query then
-            delete @voc, call.name
+            delete @voc, object.call.name
          end else
             loop
                display sysmsg(3033) : ;* Program is also in local catalogue. Remove?
@@ -420,21 +453,21 @@ check.local:
             until yn = 'Y' or yn = 'N'
             repeat
 
-            if yn = 'Y' then delete @voc, call.name
+            if yn = 'Y' then delete @voc, object.call.name
          end
       end
    end
 
-   release @voc, call.name    ;* Ensure released for all paths
+   release @voc, object.call.name    ;* Ensure released for all paths
 
    return
 
 * ======================================================================
 
 check.private:
-   readvu s from cat.f, call.name, 0 then
+   readvu s from cat.f, object.call.name, 0 then
       if no.query then
-         delete cat.f, call.name
+         delete cat.f, object.call.name
       end else
          loop
             display sysmsg(3034) : ;* Program is also in private catalogue. Remove?
@@ -443,20 +476,20 @@ check.private:
          until yn = 'Y' or yn = 'N'
          repeat
    
-         if yn = 'Y' then delete cat.f, call.name
+         if yn = 'Y' then delete cat.f, object.call.name
       end
    end
 
-   release cat.f, call.name    ;* Ensure released for all paths
+   release cat.f, object.call.name    ;* Ensure released for all paths
 
    return
 
 * ======================================================================
 
 check.global:
-   readvu s from gcat.f, call.name, 0 then
+   readvu s from gcat.f, object.call.name, 0 then
       if no.query then
-         delete gcat.f, call.name
+         delete gcat.f, object.call.name
       end else
          loop
             display sysmsg(3035) : ;* Program is also in global catalogue. Remove?
@@ -465,11 +498,11 @@ check.global:
          until yn = 'Y' or yn = 'N'
          repeat
    
-         if yn = 'Y' then delete gcat.f, call.name
+         if yn = 'Y' then delete gcat.f, object.call.name
       end
    end
 
-   release gcat.f, call.name    ;* Ensure released for all paths
+   release gcat.f, object.call.name    ;* Ensure released for all paths
 
    return
 end

@@ -84,6 +84,16 @@ else { parent.quicksync('a5.15'); }
 <p><span style="color: #000000;">The VOC entry for a locally catalogued program is of type V (verb) and has a dispatch field of CS. The third field holds the pathname of the executable program.</span></p>
 <p><span style="color: #000000;">&nbsp;</span></p>
 <p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="font-weight: bold; color: #000000;">The $CATALOG.OPTIONS VOC Record</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The CATALOGUE command options that you wish to use every time you run this command can be placed in an X-type VOC record named $CATALOG.OPTIONS. There is not specific options for a specific file.</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">The first line of the record holds the type code X. The second and subsequent lines of this record should contain catalogue option keywords from the list below. The keywords allowed are:</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 10px 0px 0px 30px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="330"><span style="font-weight: bold; color: #000000;">IGNORE.EXTENSION</span><span style="color: #000000;"> [</span><span style="font-style: italic; color: #000000;">*</span><span style="color: #000000;"> | </span><span style="font-style: italic; color: #000000;">extension</span><span style="color: #000000;"> {</span><span style="font-style: italic; color: #000000;">extension</span><span style="color: #000000;">}]</span></td><td><span style="color: #000000;">To ignore the extension of source program name when it is catalogued. The name of catalogued program is the name of source code without the extension. The value "*" to ignore all extensions, else the list of extensions to ignore. For example if option is "IGNORE.EXTENTION b", the program sample.b is catalogued just sample and can execute with "sample" command, and not by "sample.b" command. For example this extension can be used to make a type of the file in the editor or in source version control, but the extension should be ignored when launch the program or call to the routine.</span></td></tr></table>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">Unrecognised keywords in this record are ignored. </span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
+<p><span style="color: #000000;">&nbsp;</span></p>
 <p><span style="font-weight: bold; color: #000000;">See also:</span></p>
 <p><span style="font-weight: bold; color: #000000;"><a href="basic.htm">BASIC</a>, <a href="delete_catalogue.htm">DELETE.CATALOGUE</a></span><span style="color: #000000;">, </span><span style="font-weight: bold; color: #000000;"><a href="map.htm">MAP</a></span></p>
 
