@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 14 Mar 20        Add ++ and -- unary operator.
 * 25 Feb 20        Add CHANGE statement.
 * 17 Oct 07  2.6-5 0565 A line such as
 *                     123 * This is a comment,
@@ -2400,6 +2401,9 @@ is.statement:
       if err then return
       goto process.operator
       
+   case token = TKN.PLUS2 or token = TKN.MINUS2
+      goto st.plusminus2
+
    case token = TKN.END
       goto exit.proc.statement
 
@@ -9750,6 +9754,22 @@ st.pause:
    end
 
    opcode.byte = OP.PAUSE ; gosub emit.simple
+   return
+
+*****************************************************************************
+* ST.PLUSMINUS2 - ++ or -- operator
+
+st.plusminus2:
+
+   if token = TKN.PLUS2 then
+      plusminus2.operator = OP.INC
+   end else
+      plusminus2.operator = OP.DEC
+   end
+   gosub get.token ; * Get variable name
+   gosub emit.lvar.reference   ;* Set up a reference to the target variable
+   opcode.byte = plusminus2.operator ; gosub emit.simple
+
    return
 
 *****************************************************************************

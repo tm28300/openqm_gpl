@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 14 Mar 20        Added TKN.PLUS2 and TKN.MINUS2.
 * 07 Dec 04  2.1-0 Added TKN.LCBR and TKN.RCBR.
 * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
 * END-HISTORY
@@ -86,6 +87,8 @@ $define TKN.LCBR       44  ;* {
 $define TKN.RCBR       45  ;* }
 $define TKN.HEXNUM     46  ;* Hexadecimal number
 $define TKN.OBJREF     47  ;* -> (Object reference)
+$define TKN.PLUS2      48  ;* ++
+$define TKN.MINUS2     49  ;* --
 
 $define TKN.UNCLOSED   62  ;* Unclosed string
 $define TKN.UNKNOWN    63

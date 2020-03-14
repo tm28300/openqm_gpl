@@ -19,6 +19,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 22 Mar 20        Add ++ and -- operator.
  * 15 Aug 07  2.6-0 Reworked remove pointers.
  * 01 Jul 07  2.5-7 Extensive change for PDA merge.
  * 18 Apr 06  2.4-1 0475 Operators names (EG, MATCHES, etc) should be case
@@ -86,6 +87,8 @@
  *        45  TKN_RCBR        }
  *        46  TKN_HEXNUM      Hexadecimal number (0xnnn)
  *        47  TKN_OBJREF      -> (Object reference)
+ *        48  TKN_PLUS2       ++
+ *        49  TKN_MINUS2      --
  *        62  TKN_UNCLOSED    Unclosed string
  *        63  TKN_UNKNOWN     Unrecognised token
  *
@@ -144,6 +147,8 @@
 #define TKN_RCBR       45
 #define TKN_HEXNUM     46
 #define TKN_OBJREF     47
+#define TKN_PLUS2      48
+#define TKN_MINUS2     49
 
 #define TKN_UNCLOSED   62
 #define TKN_UNKNOWN    63
@@ -567,6 +572,11 @@ token_substituted:
                   token_type = TKN_ADDEQ;
                   done_after = TRUE;
                  }
+		else if (c == '+')       /* ++ */
+                 {
+                  token_type = TKN_PLUS2;
+                  done_after = TRUE;
+                 }
                 else done = TRUE;
                 break;
 
@@ -579,6 +589,11 @@ token_substituted:
                 else if (c == '>')       /* -> */
                  {
                   token_type = TKN_OBJREF;
+                  done_after = TRUE;
+                 }
+                else if (c == '-')       /* -- */
+                 {
+                  token_type = TKN_MINUS2;
                   done_after = TRUE;
                  }
                 else done = TRUE;
