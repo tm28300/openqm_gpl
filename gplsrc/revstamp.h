@@ -1,6 +1,7 @@
 /* REVSTAMP.H
  * Revision information
  * Copyright (c) 2007 Ladybridge Systems, All Rights Reserved
+ * Copyright (c) 2020 Thierry MARTIN, All Rights Reserved
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +20,7 @@
  * Ladybridge Systems can be contacted via the www.openqm.com web site.
  * 
  * START-HISTORY:
+ * 15 Apr 20  2.6-7 First release by Thierry MARTIN
  * 16 Sep 04  2.0-1 OpenQM launch. Earlier history details suppressed.
  * END-HISTORY
  *
@@ -32,9 +34,9 @@
 
 #define MAJOR_REV      2
 #define MINOR_REV      6
-#define BUILD          6
-#define QM_REV_STAMP   "2.6-6"
+#define BUILD          7
+#define QM_REV_STAMP   "2.6-7"
 
-#define QM_COPYRIGHT_YEAR "2007"
+#define QM_COPYRIGHT_YEAR "2020"
 
 /* END-CODE */

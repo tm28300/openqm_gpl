@@ -19,6 +19,7 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
+* 15 Apr 20  2.6-7 Add REVSTAMP compile and file name to execute.
 * 04 Oct 07  2.6-5 Added network traffic logging option.
 * 03 Oct 07  2.6-5 Use parse.pathname.tokens() when processing ACCOUNTS record.
 * 23 Jul 07  2.5-7 Added checks for QMNet on operations that should not be
@@ -77,7 +78,8 @@ $catalog $VBSRVR
 $flags cproc
 $flags trusted
 
-$execute 'RUN REVSTAMP'
+$execute 'BASIC GPL.BP REVSTAMP'
+$execute 'RUN GPL.BP REVSTAMP'
 $include revstamp.h
 
 $include syscom.h

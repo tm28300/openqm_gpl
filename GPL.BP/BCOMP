@@ -9766,6 +9766,7 @@ st.plusminus2:
    end else
       plusminus2.operator = OP.DEC
    end
+   if debug then gosub generate.debug
    gosub get.token ; * Get variable name
    gosub emit.lvar.reference   ;* Set up a reference to the target variable
    opcode.byte = plusminus2.operator ; gosub emit.simple
