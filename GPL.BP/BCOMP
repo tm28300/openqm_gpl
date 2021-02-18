@@ -19,8 +19,9 @@
 * Ladybridge Systems can be contacted via the www.openqm.com web site.
 * 
 * START-HISTORY:
-* 14 Mar 20        Add ++ and -- unary operator.
-* 25 Feb 20        Add CHANGE statement.
+* 18 Feb 21        Fixed hush setting variable is assigned.
+* 14 Mar 20        Added ++ and -- unary operator.
+* 25 Feb 20        Added CHANGE statement.
 * 17 Oct 07  2.6-5 0565 A line such as
 *                     123 * This is a comment,
 *                  would treat the trailing comma as an implicit
@@ -8070,7 +8071,7 @@ st.hush:
    if u.look.ahead.token.string = "SETTING" then
       gosub get.token            ;* Skip SETTING
 
-      gosub simple.var.reference ; if err then return
+      gosub simple.lvar.reference ; if err then return
       opcode.byte = OP.STATUS ; gosub emit.simple
       opcode.byte = OP.STOR ; gosub emit.simple
    end
