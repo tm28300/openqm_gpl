@@ -132,6 +132,12 @@ else { parent.quicksync('a7.7'); }
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><a name="gid"></a><span style="color: #000000;">@GID</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Current Unix group identifier.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="hostname"></a><span style="color: #000000;">@HOSTNAME</span></p>
 </td>
 <td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The name of the server computer system. Same as SYSTEM(1015).</span></p>
@@ -168,6 +174,12 @@ else { parent.quicksync('a7.7'); }
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><a name="lpv"></a><span style="color: #000000;">@LPV</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Reserved for unknown futur use in query processor command. At time only initialized to 0.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="lptrhigh"></a><span style="color: #000000;">@LPTRHIGH</span></p>
 </td>
 <td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Contains the number of lines per page of print unit zero. Depending on the current setting of the PRINTER flag, this may refer to the display or to the printer.</span></p>
@@ -188,13 +200,31 @@ else { parent.quicksync('a7.7'); }
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="nb"></a><span style="color: #000000;">@NB</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Break number level. Set to zero on detail lines and one upwards on break lines. A value of 255 represents the grand total line.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Break level. Only in I-types definition, set to zero on detail lines and one upwards on break lines. A value of 255 represents the grand total line.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p><a name="nd"></a><span style="color: #000000;">@ND</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Detail counter. Used in I-types definition or subroutine, this holds the number of records retrieved since the last break.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="ni"></a><span style="color: #000000;">@NI</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Item counter. Used in I-types, this holds the number of records retrieved by the query processor command.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Item counter. Used in I-types definition or subroutine, this holds the number of records retrieved by the query processor command.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p><a name="ns"></a><span style="color: #000000;">@NS</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Reserved for unknown futur use in query processor command. At time only initialized to 0.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p><a name="nv"></a><span style="color: #000000;">@NV</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Used in query processor command. Set to 1 if list, sort or reformat, otherwise set to 0.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
@@ -218,13 +248,13 @@ else { parent.quicksync('a7.7'); }
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="pib"></a><span style="color: #000000;">@PIB</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC primary input buffer.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC primary input buffer. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="pob"></a><span style="color: #000000;">@POB</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC primary output buffer.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC primary output buffer. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
@@ -242,7 +272,7 @@ else { parent.quicksync('a7.7'); }
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><a name="selected"></a><span style="color: #000000;">@SELECTED</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Contains the total record count for the most recent SELECT or SSELECT operation. Note that a QMBasic SELECT operation against a dynamic file processes the file one group at a time and this variable will show the record count for the group being processed.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Contains the total record count for the most recent SELECT or SSELECT operation. Note that a QMBasic SELECT operation against a dynamic file processes the file one group at a time and this variable will show the record count for the group being processed. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
@@ -254,25 +284,31 @@ else { parent.quicksync('a7.7'); }
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><a name="sib"></a><span style="color: #000000;">@SIB</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC secondary input buffer.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC secondary input buffer. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="sob"></a><span style="color: #000000;">@SOB</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC secondary output buffer.</span></p>
-</td>
-</tr>
-<tr style="text-align:left;vertical-align:top;">
-<td valign="top" width="244px" style="width:244px;"><p><a name="system.return.code"></a><span style="color: #000000;">@SYSTEM.RETURN.CODE</span></p>
-</td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">A status value returned from most commands.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">The PROC secondary output buffer. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="sys.bell"></a><span style="color: #000000;">@SYS.BELL</span></p>
 </td>
 <td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">This variable is available to QMBasic programs and initially contains the ASCII BEL character (character 7) which, when sent to the display, causes the audible warning to sound. The BELL OFF command changes @SYS.BELL to a null string and BELL ON reverts to the default character. Thus use of @SYS.BELL in QMBasic programs results in an audible alarm which can be disabled by the user.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p><a name="sys0"></a><span style="color: #000000;">@SYS0</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Used internaly by query processor command for pagination key response.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p><a name="system.return.code"></a><span style="color: #000000;">@SYSTEM.RETURN.CODE</span> or <span style="color: #000000;">@SYSTEM.SET</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">A status value returned from most commands (for example EXECUTE SETTING/RETURNING value).</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
@@ -302,7 +338,7 @@ else { parent.quicksync('a7.7'); }
 <tr style="text-align:left;vertical-align:top;">
 <td valign="top" width="244px" style="width:244px;"><p><a name="trigger.return.code"></a><span style="color: #000000;">@TRIGGER.RETURN.CODE</span></p>
 </td>
-<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">A status value returned set by trigger functions that return a STATUS() value of ER$TRIGGER.</span></p>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">A status value returned set by trigger functions that return a STATUS() value of ER$TRIGGER. This variable may be updated by a QMBasic program.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
@@ -310,6 +346,12 @@ else { parent.quicksync('a7.7'); }
 </td>
 <td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Terminal device name. This variable is provided for compatibility with other systems. It contains one of the following values:</span></p>
 <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">console</span></td><td><span style="color: #000000;">QMConsole interactive session on Windows</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">/dev/...</span></td><td><span style="color: #000000;">QMConsole interactive session on other platforms</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">telnet</span></td><td><span style="color: #000000;">Telnet session</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">phantom</span></td><td><span style="color: #000000;">Phantom process</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">port</span></td><td><span style="color: #000000;">Serial port connection</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="112"><span style="color: #000000;">vbsrvr</span></td><td><span style="color: #000000;">QMClient process</span></td></tr></table></div><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><span style="color: #000000;">Other process types may be added in future.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="244px" style="width:244px;"><p style="text-indent: -181px; margin: 0px 0px 0px 181px;"><a name="uid"></a><span style="color: #000000;">@UID</span></p>
+</td>
+<td valign="top" width="750px" style="width:750px;"><p><span style="color: #000000;">Current Unix user identifier.</span></p>
 </td>
 </tr>
 <tr style="text-align:left;vertical-align:top;">
