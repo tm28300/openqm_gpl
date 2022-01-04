@@ -208,8 +208,8 @@ $define NLS$DECIMAL              3
 $define PP$PORT                  1    ;* Port number
 $define PP$BAUD.RATE             2    ;* Baud rate
 $define PP$CHECK.PARITY          3    ;* 1 = enable, 0 = disable
-$define PP$PARITY.MODE           4    ;* 0=None, 1=Odd, 2=Even, 3=Mark, 4=Space */
-$define PP$BYTE.SIZE             5    :* Bits per byte
+$define PP$PARITY.MODE           4    ;* 0=None, 1=Odd, 2=Even, 3=Mark, 4=Space
+$define PP$BYTE.SIZE             5    ;* Bits per byte
 $define PP$STOP.BITS             6    ;* 0=One, 1= One and a half, 2 = Two
 
 * Socket interface tokens

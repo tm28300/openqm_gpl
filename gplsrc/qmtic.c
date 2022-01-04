@@ -733,7 +733,7 @@ void process_escapes(p)
 
                if ((n == 0) || (n > 255))
                 {
-                 err("\nnn construct not in range \001 to \377 in %s\n", id);
+                 err("\\nnn construct (\\%d) not in range \\001 to \\377 in %s\n", n, id);
                 }
               }
              else *(r++) = *q;

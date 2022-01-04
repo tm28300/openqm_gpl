@@ -1214,7 +1214,7 @@ void op_lower()
      while(tgt_bytes_remaining-- > 0)
       {
        c = *(p++);
-       if (IsMark(c) && (c != TEXT_MARK)) c--;
+       if ((unsigned int) c >= 249) c--;
        *(q++) = c;
       }
 
@@ -1233,7 +1233,7 @@ void op_lower()
    while(src_len-- > 0)
     {
      c = *(p++);
-     if (IsMark(c) && (c != TEXT_MARK)) c--;
+     if ((unsigned int) c >= 249) c--;
      *(q++) = c;
     }
 
@@ -1372,7 +1372,7 @@ void op_raise()
      while(tgt_bytes_remaining-- > 0)
       {
        c = *(p++);
-       if (IsMark(c) && (c != ITEM_MARK)) c++;
+       if ((unsigned int) c >= 248 && (c != ITEM_MARK)) c++;
        *(q++) = c;
       }
 
@@ -1391,7 +1391,7 @@ void op_raise()
    while(src_len-- > 0)
     {
      c = *(p++);
-     if (IsMark(c) && (c != ITEM_MARK)) c++;
+     if ((unsigned int) c >= 248 && (c != ITEM_MARK)) c++;
      *(q++) = c;
     }
 

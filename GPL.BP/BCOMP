@@ -10318,8 +10318,6 @@ st.readcsv:
 
    goto st.if.back.end
 
-   return
-
 *****************************************************************************
 * ST.READLIST   -  READLIST statement
 

@@ -1135,7 +1135,7 @@ xterm|X11 terminal emulator,
 
 xterm-256color|X11 terminal emulator with color,
     am, mir, msgr, mc5i,
-    cols#80, it#8, lines#24, colors#8, pairs#64, ncv#3,
+    cols#80, it#8, lines#24, colors#16, pairs#64, ncv#3,
     cbt=\E[Z, bel=^G, cr=\r, tbc=\E[2g, clear=\E[H\E[J, el=\E[K, ed=\E[J,
     hpa=\E[%i%p1%dG, cup=\E[%i%p1%d;%p2%dH, cud1=\E[B, home=\E[H, cub1=\E[D,
     cuf1=\E[C, cuu1=\E[A, dch1=\E[P, dl1=\E[M, smacs=\E[11m, blink=\E[5m,
@@ -1149,7 +1149,10 @@ xterm-256color|X11 terminal emulator with color,
     sgr=\E[0;10%?%p1%t;7%;%?%p2%t;4%;%?%p3%t;7%;%?%p4%t;5%;%?%p6%t;1%;%?%p7%t;8%;%?%p9%t;11%;m,
     hts=\EH, ht=\E[I, kcbt=\E[Z, el1=\E[1K, op=\E[39;49m, setaf=\E[3%p1%dm,
     setab=\E[4%p1%dm, s0ds=\E(B, s1ds=\E)B, s2ds=\E*B, s3ds=\E+B, smpch=\E[11m,
-    rmpch=\E[10m
+    rmpch=\E[10m,
+    setf=\E[38;5;%p1%dm,
+    setb=\E[48;5;%p1%dm,
+    colourmap=0|4|2|5|1|6|3|7|8|12|10|13|9|14|11|15
 
 null|null terminal,
     am, xenl, msgr, xon,
