@@ -587,6 +587,7 @@ void op_readv()
    if (id_len <= 0)
     {
      status = process.status = ER_IID;
+     log_message ("Empty key");
     }
    else
     {
@@ -622,6 +623,7 @@ void op_readv()
          if (!map_t1_id(id, id_len, mapped_id))
           {
            status = process.status = ER_IID;
+           log_message ("Invalid key");
            goto exit_op_readv;  /* Illegal record id */
           }
         }
@@ -1109,6 +1111,7 @@ Private void read_record(bool matread)
  if (id_len <= 0)
   {
    process.status = ER_IID;
+   log_message ("Empty key");
    status = (short int)process.status;
    goto exit_op_read;  /* We failed to extract the record id */
   }
@@ -1217,6 +1220,7 @@ Private void read_record(bool matread)
       if (!map_t1_id(id, id_len, mapped_id))
        {
         process.status = ER_IID;
+        log_message ("Invalid key");
         goto exit_op_read;  /* Illegal record id */
        }
 
@@ -1243,6 +1247,7 @@ Private void read_record(bool matread)
       if (fstat(t1_fu, &statbuf) || !(statbuf.st_mode & S_IFREG))
        {
         status = process.status = ER_IID;
+        log_message ("Invalid key");
         goto exit_op_read;
        }
 

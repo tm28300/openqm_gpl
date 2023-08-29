@@ -184,6 +184,7 @@ void op_delseq()
  if ((rec_name_len < 0) || !map_t1_id(unmapped_name, rec_name_len, rec_name))
   {
    process.status = ER_IID;
+   log_message ("Empty or invalid key");
    goto exit_op_delseq;
   }
 
@@ -461,6 +462,7 @@ Private void openseq(bool map_name)
    if ((rec_name_len < 1) || !map_t1_id(unmapped_name, rec_name_len, record_name))
     {
      process.status = ER_IID;
+     log_message ("Empty or invalid key");
      goto exit_op_openseq;
     }
 
@@ -555,6 +557,7 @@ Private void openseq(bool map_name)
           separator. Impossible!                                             */
 
        process.status = ER_IID;
+       log_message ("Empty key");
        goto exit_op_openseq;
       }
 

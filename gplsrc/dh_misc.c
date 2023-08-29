@@ -409,6 +409,7 @@ void op_settrig()
  if ((name_len < 0) || (name_len && !valid_call_name(call_name)))
   {
    process.status = ER_IID;
+   log_message ("Empty or invalid key");
    goto exit_op_settrig;
   }
 

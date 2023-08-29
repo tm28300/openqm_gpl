@@ -220,6 +220,7 @@ void op_akdelete()
  if (id_len < 0)
   {
    process.status = ER_IID;
+   log_message ("Empty key");
   }
  else  /* Delete the record */
   {
@@ -331,6 +332,7 @@ void op_akread()
  if (id_len < 0)
   {
    process.status = ER_IID;
+   log_message ("Empty key");
   }
  else  /* Read the record */
   {
@@ -427,6 +429,7 @@ void op_akwrite()
  if (id_len < 0)
   {
    process.status = ER_IID;
+   log_message ("Empty key");
   }
  else  /* Write the record */
   {

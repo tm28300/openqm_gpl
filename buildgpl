@@ -12,11 +12,9 @@
 # the source modules that are used to build the qm executable.
 
 # Define a few things:
-#    QMSYS           Pathname of QMSYS directory
 #    GPLSRC          Source directory
 #    GPLOBJ          Target directory for object files
 #    GPLBIN          Target directory for executables
-#    QM_ARCH         Compiler/linker architectures options
 #    QM_GCC_OPTIONS  Compiler options
 #    QMLIBS          Libraries
 
@@ -24,13 +22,19 @@ OPENQM_BASE=`dirname $0`
 
 cd ${OPENQM_BASE}
 
-QMSYS=/usr/qmsys
 GPLSRC=gplsrc
 GPLOBJ=gplobj
 GPLBIN=bin
-QM_ARCH="-m32"
 QM_GCC_OPTIONS="-Wall -Wformat-overflow=0 -DLINUX -D_FILE_OFFSET_BITS=64 -DGPL -g -fPIC"
-QMLIBS="-Wl,--no-as-needed -lm -lcrypt -ldl"
+QMLIBS_MINI="-Wl,--no-as-needed -lc"
+QMLIBS="$QMLIBS_MINI -lm -lcrypt -ldl"
+if [ "$HOSTTYPE" = "aarch64" ]; then
+    GCC="arm-linux-gnueabihf-gcc-10"
+    GCC64="gcc"
+else
+    GCC="gcc -m32"
+    GCC64="gcc -m64"
+fi
 
 STAGE=$1
 if test "$STAGE" = ""
@@ -38,6 +42,13 @@ then
    STAGE=1
 fi
 
+if [ ! -d $GPLOBJ ] ; then
+    mkdir $GPLOBJ
+fi
+
+if [ ! -d $GPLBIN ] ; then
+    mkdir $GPLBIN
+fi
 
 ######################### STAGE 1  -  Build QM #########################
 
@@ -50,7 +61,7 @@ then
    for file in `cat gpl.src`
    do
       echo $file
-      gcc -c $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/$file.o $GPLSRC/$file.c
+      $GCC -c $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/$file.o $GPLSRC/$file.c
       if test $? -ne 0
       then
          errors=`expr $errors + 1`
@@ -80,7 +91,7 @@ then
    do
       objects="$objects $GPLOBJ/$file.o"
    done
-   gcc -o $GPLBIN/qm $QM_ARCH $QMLIBS $objects
+   $GCC -o $GPLBIN/qm $objects $QMLIBS
 
    echo
 fi
@@ -91,20 +102,23 @@ if test $STAGE -le 3
 then
    echo ===== Stage 3 =====
    echo "Building qmclilib.o and qmclilib.so"
-   gcc -c $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/qmclilib.o $GPLSRC/qmclilib.c
+   $GCC -c $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/qmclilib.o $GPLSRC/qmclilib.c
    cp $GPLOBJ/qmclilib.o $GPLBIN/qmclilib.o
 
-   gcc $QM_ARCH -shared -Wl,-soname,$GPLOBJ/qmclilib.so -o $GPLOBJ/qmclilib.so $GPLOBJ/qmclilib.o $GPLOBJ/match_template.o -lc
+   $GCC -shared -Wl,-soname,$GPLOBJ/qmclilib.so -o $GPLOBJ/qmclilib.so $GPLOBJ/qmclilib.o $GPLOBJ/match_template.o $QMLIBS_MINI
    cp $GPLOBJ/qmclilib.so $GPLBIN/qmclilib.so
 
-   gcc -c -m64 $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/qmclilib64.o $GPLSRC/qmclilib.c
-   cp $GPLOBJ/qmclilib64.o $GPLBIN/qmclilib64.o
+   if [ -n "$GCC64" ]; then
 
-   gcc -c -m64 $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/match_template64.o $GPLSRC/match_template.c
-   cp $GPLOBJ/qmclilib64.o $GPLBIN/qmclilib64.o
+       $GCC64 -c $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/qmclilib64.o $GPLSRC/qmclilib.c
+       cp $GPLOBJ/qmclilib64.o $GPLBIN/qmclilib64.o
 
-   gcc -m64 -shared -Wl,-soname,$GPLOBJ/qmclilib64.so -o $GPLOBJ/qmclilib64.so $GPLOBJ/qmclilib64.o $GPLOBJ/match_template64.o -lc
-   cp $GPLOBJ/qmclilib64.so $GPLBIN/qmclilib64.so
+       $GCC64 -c $QM_GCC_OPTIONS -I$GPLSRC -o $GPLOBJ/match_template64.o $GPLSRC/match_template.c
+       cp $GPLOBJ/qmclilib64.o $GPLBIN/qmclilib64.o
+
+       $GCC64 -shared -Wl,-soname,$GPLOBJ/qmclilib64.so -o $GPLOBJ/qmclilib64.so $GPLOBJ/qmclilib64.o $GPLOBJ/match_template64.o $QMLIBS_MINI
+       cp $GPLOBJ/qmclilib64.so $GPLBIN/qmclilib64.so
+   fi
 
    echo
 fi
@@ -115,7 +129,7 @@ if test $STAGE -le 4
 then
    echo ===== Stage 4 =====
    echo "Building qmtic"
-   gcc -o $GPLBIN/qmtic $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -lc $GPLSRC/qmtic.c \
+   $GCC -o $GPLBIN/qmtic $QM_GCC_OPTIONS -I$GPLSRC $QMLIBS_MINI $GPLSRC/qmtic.c \
        $GPLSRC/inipath.c
    echo
 fi
@@ -126,7 +140,7 @@ if test $STAGE -le 5
 then
    echo ===== Stage 5 =====
    echo "Building qmfix"
-   gcc -o $GPLBIN/qmfix $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -lc $GPLSRC/qmfix.c \
+   $GCC -o $GPLBIN/qmfix $QM_GCC_OPTIONS -I$GPLSRC $QMLIBS_MINI $GPLSRC/qmfix.c \
        $GPLOBJ/ctype.o $GPLOBJ/linuxlb.o $GPLOBJ/dh_hash.o $GPLOBJ/inipath.o
    echo
 fi
@@ -137,7 +151,7 @@ if test $STAGE -le 6
 then
    echo ===== Stage 6 =====
    echo Building qmconv
-   gcc -o $GPLBIN/qmconv $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -lc $GPLSRC/qmconv.c \
+   $GCC -o $GPLBIN/qmconv $QM_GCC_OPTIONS -I$GPLSRC $QMLIBS_MINI $GPLSRC/qmconv.c \
        $GPLOBJ/linuxlb.o $GPLOBJ/dh_hash.o $GPLOBJ/ctype.o
    echo
 fi
@@ -148,7 +162,7 @@ if test $STAGE -le 7
 then
    echo ===== Stage 7 =====
    echo Building qmidx
-   gcc -o $GPLBIN/qmidx $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -lc $GPLSRC/qmidx.c
+   $GCC -o $GPLBIN/qmidx $QM_GCC_OPTIONS -I$GPLSRC $QMLIBS_MINI $GPLSRC/qmidx.c
    echo
 fi
 
@@ -159,7 +173,7 @@ then
    # Build qmlnxd
    echo ===== Stage 8 =====
    echo Building qmlnxd
-   gcc -o $GPLBIN/qmlnxd $QM_ARCH $QM_GCC_OPTIONS -I$GPLSRC -lc \
+   $GCC -o $GPLBIN/qmlnxd $QM_GCC_OPTIONS -I$GPLSRC $QMLIBS_MINI \
        $GPLSRC/qmlnxd.c $GPLSRC/qmsem.c
    echo
 fi

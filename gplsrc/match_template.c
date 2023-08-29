@@ -35,12 +35,7 @@
  * START-CODE
  */
 
-#define Public
 #include <qm.h>
-
-/* Matching data */
-const char * component_start;
-const char * component_end;
 
 /* ======================================================================
    match_template()  -  Match string against template                     */
